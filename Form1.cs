@@ -15,6 +15,12 @@ namespace AppPlanillas
         public Form1()
         {
             InitializeComponent();
+            Console.WriteLine("HOla Padre");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
