@@ -9,15 +9,41 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using AppPlanillas.GUI;
 
 namespace AppPlanillas
 {
     public partial class Form1 : Form
     {
+        private Form activeForm = null;
         public Form1()
         {
             InitializeComponent();
-           
+            this.EstadoMenu(1, false);
+            this.EstadoMenu(2, false);
+        }
+
+        private void CLoseChildForm()
+        {
+            if (this.activeForm != null)
+            {
+                activeForm.Close();
+            }
+        }
+            private void OpenChildForm(Form ChildForm)
+        {
+            if (this.activeForm != null)
+            {
+                activeForm.Close();
+            }
+            this.activeForm = ChildForm;
+            ChildForm.TopLevel = false;
+            ChildForm.FormBorderStyle = FormBorderStyle.None;
+            ChildForm.Dock = DockStyle.Fill;
+            this.panelMenuHorizontal.Controls.Add(ChildForm);
+            this.panelMenuHorizontal.Tag = ChildForm;
+            ChildForm.BringToFront();
+            ChildForm.Show();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -80,6 +106,27 @@ namespace AppPlanillas
 
         }
 
+        private void EstadoMenu(int posicionMenu, bool visible)
+        {
+            if (posicionMenu == 1)
+            {
+                this.panelMantenimiento.Visible = visible;
+                this.lblEspacionMantenimiento1.Visible = visible;
+                this.lblEspacionMantenimiento2.Visible = visible;
+                this.lblEspacionMantenimiento3.Visible = visible;
+                this.lblEspacionMantenimiento4.Visible = visible;
+                this.lblEspacionMantenimiento5.Visible = visible;
+                this.lblEspacionMantenimiento6.Visible = visible;
+            }
+            if (posicionMenu == 2)
+            {
+                this.panelProcesos.Visible = visible;
+                this.lblEspacionProceso1.Visible = visible;
+                this.lblEspacionProceso2.Visible = visible;
+                this.lblEspacioProceso3.Visible = visible;
+            }
+        }
+
         private void btnMinimize_MouseHover(object sender, EventArgs e)
         {
             this.btnMinimize.Image = new Bitmap(Application.StartupPath + @"\IMG\minimizeBig.png");
@@ -101,6 +148,91 @@ namespace AppPlanillas
         {
             ReleaseCapture();
             SendMessage(this.Handle,0x112,0xf012,0);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.CLoseChildForm();
+            if (this.panelMantenimiento.Visible)
+            {
+                this.EstadoMenu(1, false);
+            }
+            else
+            {
+                this.EstadoMenu(1, true);
+            }
+            
+        }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            this.CLoseChildForm();
+            if (this.panelMantenimiento.Visible)
+            {
+                this.EstadoMenu(1, false);
+            }
+            else
+            {
+                this.EstadoMenu(1, true);
+            }
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.CLoseChildForm();
+            if (this.panelProcesos.Visible)
+            {
+                this.EstadoMenu(2, false);
+            }
+            else
+            {
+                this.EstadoMenu(2, true);
+            }
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            this.CLoseChildForm();
+            if (this.panelProcesos.Visible)
+            {
+                this.EstadoMenu(2, false);
+            }
+            else
+            {
+                this.EstadoMenu(2, true);
+            }
+        }
+
+        private void btnEmpleado_Click(object sender, EventArgs e)
+        {
+            this.OpenChildForm(new SubMenuEmpleados());
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+            this.OpenChildForm(new SubMenuDepartamentos());
+        }
+
+        private void panelMenuHorizontal_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnTamañoPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
