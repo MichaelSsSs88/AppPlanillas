@@ -21,6 +21,7 @@ namespace AppPlanillas
             InitializeComponent();
             this.EstadoMenu(1, false);
             this.EstadoMenu(2, false);
+            this.EstadoMenu(3, false);
         }
 
         private void CLoseChildForm()
@@ -124,6 +125,10 @@ namespace AppPlanillas
                 this.lblEspacionProceso1.Visible = visible;
                 this.lblEspacionProceso2.Visible = visible;
                 this.lblEspacioProceso3.Visible = visible;
+            }
+            if(posicionMenu == 3)
+            {
+                this.panelSeguridad.Visible = visible;
             }
         }
 
@@ -234,5 +239,37 @@ namespace AppPlanillas
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void panel5_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+
+        }
+
+        private void btnSeguridad_Click(object sender, EventArgs e)
+        {
+            this.CLoseChildForm();
+            if (this.panelSeguridad.Visible)
+            {
+                this.EstadoMenu(3, false);
+            }
+            else
+            {
+                this.EstadoMenu(3, true);
+            }
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.OpenChildForm(new SubMenuFeriados(3));
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.OpenChildForm(new SubMenuFeriados(4));
+        }
+    
     }
 }

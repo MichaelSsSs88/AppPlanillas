@@ -52,17 +52,23 @@
     <Compile Include="GUI\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\SubMenuFeriados.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GUI\SubMenuDepartamentos.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SubMenuEMpleados - Copia.Designer - Copia.cs">
+      <DependentUpon>SubMenuFeriados.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\SubMenuEMpleados - Copia.Designer.cs">
       <DependentUpon>SubMenuDepartamentos.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\SubMenuEMpleados.cs">
+    <Compile Include="GUI\SubMenuEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\SubMenuEMpleados.Designer.cs">
-      <DependentUpon>SubMenuEMpleados.cs</DependentUpon>
+    <Compile Include="GUI\SubMenuEmpleados.Designer.cs">
+      <DependentUpon>SubMenuEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,8 +78,11 @@
     <EmbeddedResource Include="GUI\SubMenuEMpleados - Copia.resx">
       <DependentUpon>SubMenuDepartamentos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\SubMenuEMpleados.resx">
-      <DependentUpon>SubMenuEMpleados.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\SubMenuEmpleados.resx">
+      <DependentUpon>SubMenuEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SubMenuFeriados.resx">
+      <DependentUpon>SubMenuFeriados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,6 +139,15 @@
     <Content Include="IMG\deleteSmall.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="IMG\deleteSpendBig.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\deleteSpendMedium.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\deleteSpendSmall.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="IMG\editBig.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -142,10 +160,37 @@
     <Content Include="IMG\editdepartamentSmall.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="IMG\editHolidayBig.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\editHolidayMedium.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\editHolidaySmall.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="IMG\editMedium.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="IMG\editSmall.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\deleteholidayBig.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\deleteholidayMedium.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\deleteholidaySmall.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\editSpendBig.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\editSpendMedium.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\editSpendSmall.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="IMG\insertBig.png">
@@ -160,10 +205,28 @@
     <Content Include="IMG\insertdepartamentSmall.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="IMG\insertHolidayBig.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\insertHolidayMedium.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\insertHolidaySmall.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="IMG\insertMedium.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="IMG\insertSmall.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\insertSpendBig.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\insertSpendMedium.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\insertSpendSmall.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="IMG\minimizaMedium.png">
