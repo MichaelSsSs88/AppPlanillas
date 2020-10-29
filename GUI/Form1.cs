@@ -16,12 +16,14 @@ namespace AppPlanillas
     public partial class Form1 : Form
     {
         private Form activeForm = null;
+        private Form activeFormContenedor = null;
         public Form1()
         {
             InitializeComponent();
             this.EstadoMenu(1, false);
             this.EstadoMenu(2, false);
             this.EstadoMenu(3, false);
+            this.Size= Screen.PrimaryScreen.WorkingArea.Size;
         }
 
         private void CLoseChildForm()
@@ -46,6 +48,31 @@ namespace AppPlanillas
             ChildForm.BringToFront();
             ChildForm.Show();
         }
+
+        private void CLoseChildFormContenedor()
+        {
+            if (this.activeFormContenedor != null)
+            {
+                activeFormContenedor.Close();
+            }
+        }
+        private void OpenChildFormContenedor(Form ChildForm)
+        {
+            if (this.activeFormContenedor != null)
+            {
+                activeFormContenedor.Close();
+            }
+            this.activeFormContenedor = ChildForm;
+            ChildForm.TopLevel = false;
+            ChildForm.FormBorderStyle = FormBorderStyle.None;
+            ChildForm.Dock = DockStyle.Fill;
+            this.PanelContenedor.Controls.Add(ChildForm);
+            this.PanelContenedor.Tag = ChildForm;
+            ChildForm.BringToFront();
+            ChildForm.Show();
+        }
+
+
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -218,8 +245,8 @@ namespace AppPlanillas
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
-            this.OpenChildForm(new SubMenuDepartamentos());
+            this.OpenChildForm(new SubMenuFeriados(2, this));
+            //this.OpenChildForm(new SubMenuDepartamentos());
         }
 
         private void panelMenuHorizontal_MouseDown(object sender, MouseEventArgs e)
@@ -263,13 +290,54 @@ namespace AppPlanillas
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.OpenChildForm(new SubMenuFeriados(3));
+            this.OpenChildForm(new SubMenuFeriados(3,this));
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.OpenChildForm(new SubMenuFeriados(4));
+            this.OpenChildForm(new SubMenuFeriados(4,this));
         }
-    
+
+        private void btnHorario_Click(object sender, EventArgs e)
+        {
+            this.OpenChildForm(new SubMenuFeriados(5, this));
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.btnEmpleado_Click(sender, e);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.button2_Click(sender, e);
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.button4_Click(sender, e);
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            this.button5_Click(sender, e);
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            this.btnHorario_Click(sender, e);
+        }
+
+        public void Clic(object emisor)
+        {
+            SubMenuFeriados entrada = (SubMenuFeriados)emisor;
+            if ((entrada.subMenu==2))
+            {
+                this.OpenChildFormContenedor(new PanelDepartamento(entrada.boton-1));
+            }
+
+        }
+
     }
+
 }

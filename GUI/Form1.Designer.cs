@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.panelSeguridad = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnSeguridad = new System.Windows.Forms.Button();
             this.panelProcesos = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
@@ -41,6 +45,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.panelMantenimiento = new System.Windows.Forms.Panel();
+            this.btnHorario = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -77,12 +82,9 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.SubMenu = new System.Windows.Forms.Panel();
             this.panelMenuHorizontal = new System.Windows.Forms.Panel();
-            this.panelSeguridad = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnHorario = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
+            this.panelSeguridad.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panelProcesos.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panelMantenimiento.SuspendLayout();
@@ -92,8 +94,6 @@
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SubMenu.SuspendLayout();
-            this.panelSeguridad.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -112,6 +112,48 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(250, 788);
             this.MenuVertical.TabIndex = 0;
+            // 
+            // panelSeguridad
+            // 
+            this.panelSeguridad.Controls.Add(this.button3);
+            this.panelSeguridad.Controls.Add(this.panel8);
+            this.panelSeguridad.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSeguridad.Location = new System.Drawing.Point(60, 731);
+            this.panelSeguridad.Name = "panelSeguridad";
+            this.panelSeguridad.Size = new System.Drawing.Size(190, 50);
+            this.panelSeguridad.TabIndex = 0;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(60, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(130, 50);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Usuarios";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.label4);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(60, 50);
+            this.panel8.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 50);
+            this.label4.TabIndex = 4;
             // 
             // btnSeguridad
             // 
@@ -251,6 +293,21 @@
             this.panelMantenimiento.Size = new System.Drawing.Size(190, 300);
             this.panelMantenimiento.TabIndex = 0;
             // 
+            // btnHorario
+            // 
+            this.btnHorario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHorario.FlatAppearance.BorderSize = 0;
+            this.btnHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHorario.Location = new System.Drawing.Point(60, 200);
+            this.btnHorario.Name = "btnHorario";
+            this.btnHorario.Size = new System.Drawing.Size(130, 50);
+            this.btnHorario.TabIndex = 6;
+            this.btnHorario.Text = "Horarios";
+            this.btnHorario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHorario.UseVisualStyleBackColor = true;
+            this.btnHorario.Click += new System.EventHandler(this.btnHorario_Click);
+            // 
             // button5
             // 
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
@@ -332,6 +389,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(60, 50);
             this.label13.TabIndex = 6;
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label6
             // 
@@ -341,6 +399,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 50);
             this.label6.TabIndex = 5;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -350,6 +409,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 50);
             this.label5.TabIndex = 4;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label3
             // 
@@ -359,6 +419,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 50);
             this.label3.TabIndex = 2;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -368,6 +429,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 50);
             this.label2.TabIndex = 1;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnEmpleados
             // 
@@ -641,62 +703,6 @@
             this.panelMenuHorizontal.TabIndex = 9;
             this.panelMenuHorizontal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenuHorizontal_MouseDown);
             // 
-            // panelSeguridad
-            // 
-            this.panelSeguridad.Controls.Add(this.button3);
-            this.panelSeguridad.Controls.Add(this.panel8);
-            this.panelSeguridad.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSeguridad.Location = new System.Drawing.Point(60, 731);
-            this.panelSeguridad.Name = "panelSeguridad";
-            this.panelSeguridad.Size = new System.Drawing.Size(190, 50);
-            this.panelSeguridad.TabIndex = 0;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.label4);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(60, 50);
-            this.panel8.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 50);
-            this.label4.TabIndex = 4;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(60, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 50);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Usuarios";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // btnHorario
-            // 
-            this.btnHorario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHorario.FlatAppearance.BorderSize = 0;
-            this.btnHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorario.Location = new System.Drawing.Point(60, 200);
-            this.btnHorario.Name = "btnHorario";
-            this.btnHorario.Size = new System.Drawing.Size(130, 50);
-            this.btnHorario.TabIndex = 6;
-            this.btnHorario.Text = "Horarios";
-            this.btnHorario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHorario.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -711,6 +717,8 @@
             this.Text = "Ventana Principal";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MenuVertical.ResumeLayout(false);
+            this.panelSeguridad.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.panelProcesos.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panelMantenimiento.ResumeLayout(false);
@@ -720,8 +728,6 @@
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.SubMenu.ResumeLayout(false);
-            this.panelSeguridad.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\..\Downloads\CLASE 6 P3\clase\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\..\..\Downloads\CLASE 6 P3\clase\Npgsql.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,11 +52,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\AccesoDatosPostgre.cs" />
+    <Compile Include="DAL\GenerarCSV.cs" />
+    <Compile Include="DAL\Parametro.cs" />
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PanelDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PanelDepartamento.Designer.cs">
+      <DependentUpon>PanelDepartamento.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\SubMenuFeriados.cs">
       <SubType>Form</SubType>
@@ -74,6 +89,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PanelDepartamento.resx">
+      <DependentUpon>PanelDepartamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SubMenuEMpleados - Copia.resx">
       <DependentUpon>SubMenuDepartamentos.cs</DependentUpon>
@@ -107,7 +125,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAL\" />
     <Folder Include="DLL\" />
     <Folder Include="ENT\" />
   </ItemGroup>
@@ -212,6 +229,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="IMG\insertHolidaySmall.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\insertHourBig.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\insertHourMedium.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\insertHourSmall.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="IMG\insertMedium.png">
