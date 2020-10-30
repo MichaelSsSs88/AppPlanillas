@@ -34,10 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Security">
-      <HintPath>..\..\..\Downloads\CLASE 6 P3\clase\Mono.Security.dll</HintPath>
+      <HintPath>..\..\..\Downloads\Programación III\CLASE 6 P3\clase\Mono.Security.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql">
-      <HintPath>..\..\..\Downloads\CLASE 6 P3\clase\Npgsql.dll</HintPath>
+      <HintPath>..\..\..\Downloads\Programación III\CLASE 6 P3\clase\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -75,6 +75,7 @@
     </Compile>
     <Compile Include="GUI\SubMenuEMpleados - Copia.Designer - Copia.cs">
       <DependentUpon>SubMenuFeriados.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\SubMenuEMpleados - Copia.Designer.cs">
       <DependentUpon>SubMenuDepartamentos.cs</DependentUpon>

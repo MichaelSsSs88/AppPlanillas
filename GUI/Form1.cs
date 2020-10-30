@@ -24,6 +24,7 @@ namespace AppPlanillas
             this.EstadoMenu(2, false);
             this.EstadoMenu(3, false);
             this.Size= Screen.PrimaryScreen.WorkingArea.Size;
+            Console.WriteLine("Prueba");
         }
 
         private void CLoseChildForm()
