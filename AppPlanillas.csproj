@@ -61,11 +61,23 @@
     <Compile Include="GUI\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\PanelDepartamento.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\PanelDepartamento.Designer.cs">
       <DependentUpon>PanelDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PanelEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PanelEmpleados.Designer.cs">
+      <DependentUpon>PanelEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\SubMenuFeriados.cs">
       <SubType>Form</SubType>
@@ -91,8 +103,14 @@
     <EmbeddedResource Include="GUI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\PanelDepartamento.resx">
       <DependentUpon>PanelDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PanelEmpleados.resx">
+      <DependentUpon>PanelEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SubMenuEMpleados - Copia.resx">
       <DependentUpon>SubMenuDepartamentos.cs</DependentUpon>
@@ -274,6 +292,21 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="IMG\PanelSmall.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\password.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\startBig.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\startMedium.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\startSmall.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\username.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

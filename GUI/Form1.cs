@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using AppPlanillas.GUI;
+using GUI;
 
 namespace AppPlanillas
 {
@@ -335,6 +336,11 @@ namespace AppPlanillas
             if ((entrada.subMenu==2))
             {
                 this.OpenChildFormContenedor(new PanelDepartamento(entrada.boton-1));
+            }
+
+            if ((entrada.subMenu == 3))
+            {
+                this.OpenChildFormContenedor(new PanelEmpleados(entrada.boton - 1));
             }
 
         }
