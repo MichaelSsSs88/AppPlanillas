@@ -241,7 +241,8 @@ namespace AppPlanillas
 
         private void btnEmpleado_Click(object sender, EventArgs e)
         {
-            this.OpenChildForm(new SubMenuEmpleados());
+            //this.OpenChildForm(new SubMenuEmpleados());
+            this.OpenChildForm(new SubMenuFeriados(1, this));
 
         }
 
@@ -333,6 +334,10 @@ namespace AppPlanillas
         public void Clic(object emisor)
         {
             SubMenuFeriados entrada = (SubMenuFeriados)emisor;
+            if ((entrada.subMenu == 1))
+            {
+                this.OpenChildFormContenedor(new PanelEmpleados(entrada.boton - 1));
+            }
             if ((entrada.subMenu==2))
             {
                 this.OpenChildFormContenedor(new PanelDepartamento(entrada.boton-1));

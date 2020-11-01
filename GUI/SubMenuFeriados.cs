@@ -25,6 +25,15 @@ namespace AppPlanillas.GUI
 
         public void ajustarBotones(int numeroSubMenu)
         {
+            if (numeroSubMenu == 1)
+            {
+                this.btnInsertar.Text = "Insertar Empleado";
+                this.btnEditar.Text = "Editar Empleado";
+                this.btnEliminar.Text = "Eliminar Empleado";
+                this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertMedium.png");
+                this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editMedium.png");
+                this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteMedium.png");
+            }
             if (numeroSubMenu == 2)
             {
                 this.btnInsertar.Text = "Insertar Departamento";
@@ -69,6 +78,10 @@ namespace AppPlanillas.GUI
 
         private void btnInsertar_MouseHover(object sender, EventArgs e)
         {
+            if (this.subMenu == 1)
+            {
+                this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertBig.png");
+            }
             if (this.subMenu == 2)
             {
                 this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertdepartamentBig.png");
@@ -89,6 +102,10 @@ namespace AppPlanillas.GUI
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
+            if (this.subMenu == 1)
+            {
+                this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertSmall.png");
+            }
             if (this.subMenu == 2)
             {
                 this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertdepartamentSmall.png");
@@ -112,6 +129,10 @@ namespace AppPlanillas.GUI
 
         private void btnInsertar_MouseLeave(object sender, EventArgs e)
         {
+            if (this.subMenu == 1)
+            {
+                this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertMedium.png");
+            }
             if (this.subMenu == 2)
             {
                 this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertdepartamentMedium.png");
@@ -134,6 +155,10 @@ namespace AppPlanillas.GUI
 
         private void btnEditarEmpleado_Click(object sender, EventArgs e)
         {
+            if (this.subMenu == 1)
+            {
+                this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editSmall.png");
+            }
             if (this.subMenu == 2)
             {
                 this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editdepartamentSmall.png");
@@ -157,6 +182,10 @@ namespace AppPlanillas.GUI
 
         private void btnEditarEmpleado_MouseHover(object sender, EventArgs e)
         {
+            if (this.subMenu == 1)
+            {
+                this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editBig.png");
+            }
             if (this.subMenu == 2)
             {
                 this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editdepartamentBig.png");
@@ -177,6 +206,10 @@ namespace AppPlanillas.GUI
 
         private void btnEditarEmpleado_MouseLeave(object sender, EventArgs e)
         {
+            if (this.subMenu == 1)
+            {
+                this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editMedium.png");
+            }
             if (this.subMenu == 2)
             {
                 this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editdepartamentMedium.png");
@@ -197,7 +230,9 @@ namespace AppPlanillas.GUI
 
         private void btnEliminarEmpleado_Click(object sender, EventArgs e)
         {
-            if(this.subMenu==2)
+            if (this.subMenu == 1)
+                this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteSmall.png");
+            if (this.subMenu==2)
                 this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deletedepartamentSmall.png");
             if (this.subMenu == 3)
                 this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteHolidaySmall.png");
@@ -212,6 +247,8 @@ namespace AppPlanillas.GUI
 
         private void btnEliminarEmpleado_MouseHover(object sender, EventArgs e)
         {
+            if (this.subMenu == 1)
+                this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteBig.png");
             if (this.subMenu == 2)
                 this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deletedepartamentBig.png");
             if (this.subMenu == 3)
@@ -224,6 +261,8 @@ namespace AppPlanillas.GUI
 
         private void btnEliminarEmpleado_MouseLeave(object sender, EventArgs e)
         {
+            if (this.subMenu == 1)
+                this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteMedium.png");
             if (this.subMenu == 2)
                 this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deletedepartamentMedium.png");
             if (this.subMenu == 3)
