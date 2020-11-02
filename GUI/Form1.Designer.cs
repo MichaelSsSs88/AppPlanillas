@@ -82,6 +82,8 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.SubMenu = new System.Windows.Forms.Panel();
             this.panelMenuHorizontal = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             this.panelSeguridad.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -281,6 +283,7 @@
             // 
             // panelMantenimiento
             // 
+            this.panelMantenimiento.Controls.Add(this.button1);
             this.panelMantenimiento.Controls.Add(this.btnHorario);
             this.panelMantenimiento.Controls.Add(this.button5);
             this.panelMantenimiento.Controls.Add(this.button4);
@@ -370,6 +373,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
@@ -475,6 +479,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 60);
             this.label10.TabIndex = 11;
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // lblEspacioProceso3
             // 
@@ -703,6 +708,29 @@
             this.panelMenuHorizontal.TabIndex = 9;
             this.panelMenuHorizontal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenuHorizontal_MouseDown);
             // 
+            // label11
+            // 
+            this.label11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label11.Image = ((System.Drawing.Image)(resources.GetObject("label11.Image")));
+            this.label11.Location = new System.Drawing.Point(0, 250);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 50);
+            this.label11.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(60, 250);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 50);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Puestos";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -787,6 +815,8 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnHorario;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label11;
     }
 }
 

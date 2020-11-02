@@ -187,6 +187,7 @@ namespace AppPlanillas
         private void label1_Click(object sender, EventArgs e)
         {
             this.CLoseChildForm();
+            this.CLoseChildFormContenedor();
             if (this.panelMantenimiento.Visible)
             {
                 this.EstadoMenu(1, false);
@@ -200,6 +201,7 @@ namespace AppPlanillas
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
+            this.CLoseChildFormContenedor();
             this.CLoseChildForm();
             if (this.panelMantenimiento.Visible)
             {
@@ -214,6 +216,7 @@ namespace AppPlanillas
 
         private void button6_Click(object sender, EventArgs e)
         {
+            this.CLoseChildFormContenedor();
             this.CLoseChildForm();
             if (this.panelProcesos.Visible)
             {
@@ -228,6 +231,7 @@ namespace AppPlanillas
 
         private void label14_Click(object sender, EventArgs e)
         {
+            this.CLoseChildFormContenedor();
             this.CLoseChildForm();
             if (this.panelProcesos.Visible)
             {
@@ -242,12 +246,14 @@ namespace AppPlanillas
         private void btnEmpleado_Click(object sender, EventArgs e)
         {
             //this.OpenChildForm(new SubMenuEmpleados());
+            this.CLoseChildFormContenedor();
             this.OpenChildForm(new SubMenuFeriados(1, this));
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.CLoseChildFormContenedor();
             this.OpenChildForm(new SubMenuFeriados(2, this));
             //this.OpenChildForm(new SubMenuDepartamentos());
         }
@@ -279,6 +285,7 @@ namespace AppPlanillas
 
         private void btnSeguridad_Click(object sender, EventArgs e)
         {
+            this.CLoseChildFormContenedor();
             this.CLoseChildForm();
             if (this.panelSeguridad.Visible)
             {
@@ -293,16 +300,19 @@ namespace AppPlanillas
 
         private void button4_Click(object sender, EventArgs e)
         {
+            this.CLoseChildFormContenedor();
             this.OpenChildForm(new SubMenuFeriados(3,this));
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            this.CLoseChildFormContenedor();
             this.OpenChildForm(new SubMenuFeriados(4,this));
         }
 
         private void btnHorario_Click(object sender, EventArgs e)
         {
+            this.CLoseChildFormContenedor();
             this.OpenChildForm(new SubMenuFeriados(5, this));
         }
 
@@ -345,11 +355,19 @@ namespace AppPlanillas
 
             if ((entrada.subMenu == 3))
             {
-                this.OpenChildFormContenedor(new PanelEmpleados(entrada.boton - 1));
+                this.OpenChildFormContenedor(new PanelFeriado(entrada.boton - 1));
             }
-
+            if ((entrada.subMenu == 4))
+            {
+                this.OpenChildFormContenedor(new PanelDeduccion(entrada.boton - 1));
+            }
         }
 
+        private void label10_Click(object sender, EventArgs e)
+        {
+            //this.CLoseChildFormContenedor();
+            this.btnSeguridad_Click(sender, e);
+        }
     }
 
 }
