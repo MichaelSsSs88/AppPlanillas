@@ -53,8 +53,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\AccesoDatosPostgre.cs" />
+    <Compile Include="DAL\Deduccion.cs" />
     <Compile Include="DAL\GenerarCSV.cs" />
     <Compile Include="DAL\Parametro.cs" />
+    <Compile Include="ENT\Deduccion.cs" />
+    <Compile Include="ENT\Departamento.cs" />
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,7 +166,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DLL\" />
-    <Folder Include="ENT\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="IMG\CloseOverOut.png">
