@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="DAL\AccesoDatosPostgre.cs" />
     <Compile Include="DAL\Deduccion.cs" />
+    <Compile Include="DAL\Departamento.cs" />
     <Compile Include="DAL\GenerarCSV.cs" />
     <Compile Include="DAL\Parametro.cs" />
     <Compile Include="ENT\Deduccion.cs" />

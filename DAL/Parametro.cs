@@ -17,7 +17,7 @@ namespace DAL
             this.parametros = new List<NpgsqlParameter>();
         }
 
-        public void agregarParametro(string nombre, NpgsqlDbType tipo, Object valor)
+        public void AgregarParametro(string nombre, NpgsqlDbType tipo, Object valor)
         {
             NpgsqlParameter oParametro = new NpgsqlParameter();
             oParametro.ParameterName = nombre;
@@ -27,7 +27,7 @@ namespace DAL
             this.parametros.Add(oParametro);
         }
 
-        public NpgsqlParameter[] obtenerParametros()
+        public NpgsqlParameter[] ObtenerParametros()
         {
             NpgsqlParameter[] array = new NpgsqlParameter[this.parametros.Count];
 
