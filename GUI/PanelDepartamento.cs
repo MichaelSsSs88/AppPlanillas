@@ -26,7 +26,8 @@ namespace AppPlanillas.GUI
             this.ShowTab(pestaña);
             DepartamentoENT nuevoDepartamento = new DepartamentoENT();
             this.dataGridView1.DataSource = nuevoDepartamento.departamentos;
-        }
+            Console.WriteLine("sasasa465454544");
+        } 
 
         private void InitControl()
         {
