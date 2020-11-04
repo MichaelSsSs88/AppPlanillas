@@ -36,13 +36,21 @@ namespace AppPlanillas.DAL
             }
         }
 
-        public int ActualizarDepartamento (DepartamentoENT pDepartamento)
+        public int ActualizarDepartamento (bool elmininar, DepartamentoENT pDepartamento)
         {
             
                 int numero = 0;
                 try
                 {
-                    string sentenciaSQL = "UPDATE departamento set nombre =" + pDepartamento.getNombre + " where id = " + pDepartamento.getId;
+                    string sentenciaSQL = ""; 
+                    if (!elmininar)
+                    {
+                        sentenciaSQL = "UPDATE departamento SET nombre = " + pDepartamento.getNombre + "fecha_creacion = " +pDepartamento.getFechaCreacion + "creado_por = " + pDepartamento.getCreador + "fecha_modificacion = " + pDepartamento.getFechaModificacion + "modificado_por = " + pDepartamento.getModificador + "WHERE id = " + pDepartamento.getId;
+                    }
+                    else
+                    {
+                        sentenciaSQL = "UPDATE departamento SET nombre = " + pDepartamento.getNombre + "fecha_creacion = " + pDepartamento.getFechaCreacion + "creado_por = " + pDepartamento.getCreador + "fecha_modificacion = " + pDepartamento.getFechaModificacion + "modificado_por = " + pDepartamento.getModificador + "activo = false" + "WHERE id = " + pDepartamento.getId;
+                    }
                     AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
                     conexion.EjecutarSQL(sentenciaSQL);
                 }

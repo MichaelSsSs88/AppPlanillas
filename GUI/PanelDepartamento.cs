@@ -17,6 +17,7 @@ namespace AppPlanillas.GUI
 
         private List<System.Windows.Forms.TabPage> objColPages = null;
         private bool[] arrBoolPagesVisible;
+        private DepartamentoENT nuevoDepartamento;
         public PanelDepartamento(int pestaña)
         {
             InitializeComponent();
@@ -24,8 +25,8 @@ namespace AppPlanillas.GUI
             this.HideTab(1);
             this.HideTab(2);
             this.ShowTab(pestaña);
-            DepartamentoENT nuevoDepartamento = new DepartamentoENT();
-            this.dataGridView1.DataSource = nuevoDepartamento.departamentos;
+            this.nuevoDepartamento = new DepartamentoENT();
+            this.dataGridView1.DataSource = this.nuevoDepartamento.departamentos;
         }
 
         private void InitControl()
@@ -119,5 +120,6 @@ namespace AppPlanillas.GUI
         {
             this.btnReporte.Image = new Bitmap(Application.StartupPath + @"\IMG\csvSmall.png");
         }
+
     }
 }
