@@ -94,5 +94,20 @@ namespace AppPlanillas.GUI
         {
             this.btnGuardar.Image = new Bitmap(Application.StartupPath + @"\IMG\SaveSmall.png");
         }
+
+        private void btnReporte_MouseEnter(object sender, EventArgs e)
+        {
+            this.btnReporte.Image = new Bitmap(Application.StartupPath + @"\IMG\csvBig.png");
+        }
+
+        private void btnReporte_MouseLeave(object sender, EventArgs e)
+        {
+            this.btnReporte.Image = new Bitmap(Application.StartupPath + @"\IMG\csvMedium.png");
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            this.btnReporte.Image = new Bitmap(Application.StartupPath + @"\IMG\csvSmall.png");
+        }
     }
 }
