@@ -344,6 +344,7 @@ namespace AppPlanillas
         public void Clic(object emisor)
         {
             SubMenuFeriados entrada = (SubMenuFeriados)emisor;
+           
             if ((entrada.subMenu == 1))
             {
                 this.OpenChildFormContenedor(new PanelEmpleados(entrada.boton - 1));
@@ -360,6 +361,11 @@ namespace AppPlanillas
             if ((entrada.subMenu == 4))
             {
                 this.OpenChildFormContenedor(new PanelDeduccion(entrada.boton - 1));
+            }
+            if ((entrada.subMenu == 5))
+            {
+               
+                this.OpenChildFormContenedor(new PanelHorario(entrada.boton - 1));
             }
         }
 

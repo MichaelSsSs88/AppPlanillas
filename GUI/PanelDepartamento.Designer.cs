@@ -35,13 +35,14 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnEditarEmpleado = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabEditDepartment = new System.Windows.Forms.TabPage();
-            this.tabDeleteDepartment = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label14 = new System.Windows.Forms.Label();
@@ -51,10 +52,13 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnGuardarEditar = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.tabDeleteDepartment = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,34 +68,34 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Creador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Modificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabDepartamentos.SuspendLayout();
             this.tabInsertDepartment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.tabEditDepartment.SuspendLayout();
-            this.tabDeleteDepartment.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panelFiltro.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.tabDeleteDepartment.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel5.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabDepartamentos
@@ -125,6 +129,13 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Identificador,
+            this.Nombre,
+            this.Creador,
+            this.FechaCreacion,
+            this.Modificador,
+            this.FechaModificacion});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.Location = new System.Drawing.Point(3, 350);
@@ -168,8 +179,6 @@
             this.groupBox1.Controls.Add(this.checkBox3);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
@@ -179,29 +188,70 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Completar datos";
             // 
-            // btnEditarEmpleado
+            // panel3
             // 
-            this.btnEditarEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEditarEmpleado.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnEditarEmpleado.FlatAppearance.BorderSize = 0;
-            this.btnEditarEmpleado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnEditarEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnEditarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnEditarEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarEmpleado.Image")));
-            this.btnEditarEmpleado.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditarEmpleado.Location = new System.Drawing.Point(0, 0);
-            this.btnEditarEmpleado.Name = "btnEditarEmpleado";
-            this.btnEditarEmpleado.Size = new System.Drawing.Size(344, 111);
-            this.btnEditarEmpleado.TabIndex = 7;
-            this.btnEditarEmpleado.Text = "Editar Empleado";
-            this.btnEditarEmpleado.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEditarEmpleado.UseVisualStyleBackColor = true;
+            this.panel3.Controls.Add(this.btnGuardar);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(338, 90);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(344, 157);
+            this.panel3.TabIndex = 37;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.Location = new System.Drawing.Point(0, 0);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(344, 157);
+            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.Text = "Guardar Departamento";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnGuardar.MouseLeave += new System.EventHandler(this.btnGuardar_MouseLeave);
+            this.btnGuardar.MouseHover += new System.EventHandler(this.btnGuardar_MouseHover);
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(682, 90);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(335, 157);
+            this.panel2.TabIndex = 36;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(3, 90);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(335, 157);
+            this.panel1.TabIndex = 35;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.checkBox3.Location = new System.Drawing.Point(3, 59);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.checkBox3.Size = new System.Drawing.Size(1014, 31);
+            this.checkBox3.TabIndex = 34;
+            this.checkBox3.Text = "Activo";
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox2.Location = new System.Drawing.Point(3, 82);
+            this.textBox2.Location = new System.Drawing.Point(3, 36);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(1014, 23);
             this.textBox2.TabIndex = 3;
@@ -211,29 +261,11 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(3, 65);
+            this.label3.Location = new System.Drawing.Point(3, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(241, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Ingrese el nombre del departamento:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Location = new System.Drawing.Point(3, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1014, 23);
-            this.textBox1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(3, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1014, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ingrese el codigo del departamento:";
             // 
             // tabEditDepartment
             // 
@@ -246,17 +278,6 @@
             this.tabEditDepartment.TabIndex = 1;
             this.tabEditDepartment.Text = "Editar Departamento";
             this.tabEditDepartment.UseVisualStyleBackColor = true;
-            // 
-            // tabDeleteDepartment
-            // 
-            this.tabDeleteDepartment.Controls.Add(this.groupBox4);
-            this.tabDeleteDepartment.Controls.Add(this.groupBox5);
-            this.tabDeleteDepartment.Location = new System.Drawing.Point(4, 25);
-            this.tabDeleteDepartment.Name = "tabDeleteDepartment";
-            this.tabDeleteDepartment.Size = new System.Drawing.Size(1026, 640);
-            this.tabDeleteDepartment.TabIndex = 2;
-            this.tabDeleteDepartment.Text = "Eliminar Departamento";
-            this.tabDeleteDepartment.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -352,7 +373,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.btnGuardarEditar);
             this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Controls.Add(this.textBox7);
             this.groupBox2.Controls.Add(this.label11);
@@ -368,6 +389,42 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Completar datos del departamento";
+            // 
+            // btnGuardarEditar
+            // 
+            this.btnGuardarEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGuardarEditar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnGuardarEditar.FlatAppearance.BorderSize = 0;
+            this.btnGuardarEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnGuardarEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnGuardarEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnGuardarEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarEditar.Image")));
+            this.btnGuardarEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGuardarEditar.Location = new System.Drawing.Point(10, 161);
+            this.btnGuardarEditar.Name = "btnGuardarEditar";
+            this.btnGuardarEditar.Size = new System.Drawing.Size(489, 83);
+            this.btnGuardarEditar.TabIndex = 36;
+            this.btnGuardarEditar.Text = "Guardar Departamento";
+            this.btnGuardarEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGuardarEditar.UseVisualStyleBackColor = true;
+            this.btnGuardarEditar.Click += new System.EventHandler(this.btnGuardarEditar_Click);
+            this.btnGuardarEditar.MouseLeave += new System.EventHandler(this.btnGuardar_MouseLeave);
+            this.btnGuardarEditar.MouseHover += new System.EventHandler(this.btnGuardar_MouseHover);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.checkBox1.Location = new System.Drawing.Point(10, 130);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.checkBox1.Size = new System.Drawing.Size(489, 31);
+            this.checkBox1.TabIndex = 35;
+            this.checkBox1.Text = "Activo";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // textBox7
             // 
@@ -409,6 +466,17 @@
             this.label12.Size = new System.Drawing.Size(489, 28);
             this.label12.TabIndex = 0;
             this.label12.Text = "Código del departamento:";
+            // 
+            // tabDeleteDepartment
+            // 
+            this.tabDeleteDepartment.Controls.Add(this.groupBox4);
+            this.tabDeleteDepartment.Controls.Add(this.groupBox5);
+            this.tabDeleteDepartment.Location = new System.Drawing.Point(4, 25);
+            this.tabDeleteDepartment.Name = "tabDeleteDepartment";
+            this.tabDeleteDepartment.Size = new System.Drawing.Size(1026, 640);
+            this.tabDeleteDepartment.TabIndex = 2;
+            this.tabDeleteDepartment.Text = "Eliminar Departamento";
+            this.tabDeleteDepartment.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -522,6 +590,39 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Verificar datos del departamentoa eliminar";
             // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button3.Location = new System.Drawing.Point(10, 161);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(489, 83);
+            this.button3.TabIndex = 37;
+            this.button3.Text = "Editar Empleado";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.checkBox2.Location = new System.Drawing.Point(10, 130);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.checkBox2.Size = new System.Drawing.Size(489, 31);
+            this.checkBox2.TabIndex = 36;
+            this.checkBox2.Text = "Activo";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
             // textBox4
             // 
             this.textBox4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -563,110 +664,46 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Código del departamento:";
             // 
-            // checkBox3
+            // Identificador
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Checked = true;
-            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.checkBox3.Location = new System.Drawing.Point(3, 105);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.checkBox3.Size = new System.Drawing.Size(1014, 31);
-            this.checkBox3.TabIndex = 34;
-            this.checkBox3.Text = "Activo";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.Identificador.DataPropertyName = "getId";
+            this.Identificador.HeaderText = "Identificador";
+            this.Identificador.Name = "Identificador";
             // 
-            // panel1
+            // Nombre
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(3, 136);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(335, 111);
-            this.panel1.TabIndex = 35;
+            this.Nombre.DataPropertyName = "getNombre";
+            this.Nombre.HeaderText = "Departamento";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 200;
             // 
-            // panel2
+            // Creador
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(682, 136);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(335, 111);
-            this.panel2.TabIndex = 36;
+            this.Creador.DataPropertyName = "getCreador";
+            this.Creador.HeaderText = "Creardor";
+            this.Creador.Name = "Creador";
+            this.Creador.Width = 200;
             // 
-            // panel3
+            // FechaCreacion
             // 
-            this.panel3.Controls.Add(this.btnEditarEmpleado);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(338, 136);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(344, 111);
-            this.panel3.TabIndex = 37;
+            this.FechaCreacion.DataPropertyName = "getFechaCreacion";
+            this.FechaCreacion.HeaderText = "Fecha Creación";
+            this.FechaCreacion.Name = "FechaCreacion";
+            this.FechaCreacion.Width = 150;
             // 
-            // checkBox1
+            // Modificador
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.checkBox1.Location = new System.Drawing.Point(10, 130);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.checkBox1.Size = new System.Drawing.Size(489, 31);
-            this.checkBox1.TabIndex = 35;
-            this.checkBox1.Text = "Activo";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.Modificador.DataPropertyName = "getModificador";
+            this.Modificador.HeaderText = "Modificador";
+            this.Modificador.Name = "Modificador";
+            this.Modificador.Width = 200;
             // 
-            // button2
+            // FechaModificacion
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(10, 161);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(489, 83);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "Editar Empleado";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.checkBox2.Location = new System.Drawing.Point(10, 130);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.checkBox2.Size = new System.Drawing.Size(489, 31);
-            this.checkBox2.TabIndex = 36;
-            this.checkBox2.Text = "Activo";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(10, 161);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(489, 83);
-            this.button3.TabIndex = 37;
-            this.button3.Text = "Editar Empleado";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
+            this.FechaModificacion.DataPropertyName = "getFechaModificacion";
+            this.FechaModificacion.HeaderText = "FechaModificacion";
+            this.FechaModificacion.Name = "FechaModificacion";
+            this.FechaModificacion.Width = 150;
             // 
             // PanelDepartamento
             // 
@@ -682,21 +719,21 @@
             this.panel4.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.tabEditDepartment.ResumeLayout(false);
-            this.tabDeleteDepartment.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panelFiltro.ResumeLayout(false);
             this.panelFiltro.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.tabDeleteDepartment.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -710,9 +747,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnEditarEmpleado;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button1;
@@ -746,9 +781,15 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnGuardarEditar;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Identificador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Creador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaCreacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Modificador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaModificacion;
     }
 }

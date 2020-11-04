@@ -74,5 +74,25 @@ namespace AppPlanillas.GUI
                 if (arrBoolPagesVisible[intIndex])
                     this.tabDepartamentos.TabPages.Add(objColPages[intIndex]);
         }
+
+        private void btnGuardar_MouseHover(object sender, EventArgs e)
+        {
+            this.btnGuardar.Image = new Bitmap(Application.StartupPath + @"\IMG\SaveBig.png");
+        }
+
+        private void btnGuardar_MouseLeave(object sender, EventArgs e)
+        {
+            this.btnGuardar.Image = new Bitmap(Application.StartupPath + @"\IMG\SaveMedium1.png");
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            this.btnGuardar.Image = new Bitmap(Application.StartupPath + @"\IMG\SaveSmall.png");
+        }
+
+        private void btnGuardarEditar_Click(object sender, EventArgs e)
+        {
+            this.btnGuardar.Image = new Bitmap(Application.StartupPath + @"\IMG\SaveSmall.png");
+        }
     }
 }

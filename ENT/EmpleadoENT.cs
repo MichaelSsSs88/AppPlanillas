@@ -16,6 +16,7 @@ namespace ProyectoIIIC
         private int id_departamento { get; set; }
         private byte[] imagen { get; set; }
         public List<EmpleadoENT> empleados { get; set; }
+
         public EmpleadoENT(int pId, string pNombre, string pApellido_uno, string pApellido_dos, int pEdad, int pId_departamento, byte[] pImagen)
         {
             this.id = pId;

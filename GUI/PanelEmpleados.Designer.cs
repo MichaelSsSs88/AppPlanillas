@@ -1283,6 +1283,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PanelEmpleados";
             this.Text = "PanelEmpleados";
+            this.Load += new System.EventHandler(this.PanelEmpleados_Load);
             this.tabDepartamentos.ResumeLayout(false);
             this.tabInsertEmployed.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);

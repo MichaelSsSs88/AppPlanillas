@@ -144,6 +144,11 @@ namespace GUI
         {
 
         }
+
+        private void PanelEmpleados_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
     
