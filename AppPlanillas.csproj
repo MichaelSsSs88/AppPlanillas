@@ -55,10 +55,18 @@
     <Compile Include="DAL\AccesoDatosPostgre.cs" />
     <Compile Include="DAL\Deduccion.cs" />
     <Compile Include="DAL\Departamento.cs" />
+    <Compile Include="DAL\Dia_feriadoDAL.cs" />
+    <Compile Include="DAL\EmpleadoDAL.cs" />
     <Compile Include="DAL\GenerarCSV.cs" />
+    <Compile Include="DAL\HorarioDAL.cs" />
     <Compile Include="DAL\Parametro.cs" />
+    <Compile Include="DAL\UsuarioDAL.cs" />
     <Compile Include="ENT\Deduccion.cs" />
     <Compile Include="ENT\Departamento.cs" />
+    <Compile Include="ENT\Dia_feriadoENT.cs" />
+    <Compile Include="ENT\EmpleadoENT.cs" />
+    <Compile Include="ENT\HorarioENT.cs" />
+    <Compile Include="ENT\UsuarioENT.cs" />
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +102,18 @@
     </Compile>
     <Compile Include="GUI\PanelFeriado.Designer.cs">
       <DependentUpon>PanelFeriado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PanelHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PanelHorario.Designer.cs">
+      <DependentUpon>PanelHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PanelUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PanelUsuario.Designer.cs">
+      <DependentUpon>PanelUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\SubMenuFeriados.cs">
       <SubType>Form</SubType>
@@ -133,6 +153,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PanelFeriado.resx">
       <DependentUpon>PanelFeriado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PanelHorario.resx">
+      <DependentUpon>PanelHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PanelUsuario.resx">
+      <DependentUpon>PanelUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SubMenuEMpleados - Copia.resx">
       <DependentUpon>SubMenuDepartamentos.cs</DependentUpon>

@@ -139,6 +139,11 @@ namespace GUI
                 
             }*/
         }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     
