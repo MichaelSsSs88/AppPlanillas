@@ -53,16 +53,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\AccesoDatosPostgre.cs" />
-    <Compile Include="DAL\Deduccion.cs" />
-    <Compile Include="DAL\Departamento.cs" />
+    <Compile Include="DAL\DeduccionDAL.cs" />
+    <Compile Include="DAL\DepartamentoDAL.cs" />
     <Compile Include="DAL\Dia_feriadoDAL.cs" />
     <Compile Include="DAL\EmpleadoDAL.cs" />
     <Compile Include="DAL\GenerarCSV.cs" />
     <Compile Include="DAL\HorarioDAL.cs" />
     <Compile Include="DAL\Parametro.cs" />
     <Compile Include="DAL\UsuarioDAL.cs" />
-    <Compile Include="ENT\Deduccion.cs" />
-    <Compile Include="ENT\Departamento.cs" />
+    <Compile Include="ENT\DeduccionENT.cs" />
+    <Compile Include="ENT\DepartamentoENT.cs" />
     <Compile Include="ENT\Dia_feriadoENT.cs" />
     <Compile Include="ENT\EmpleadoENT.cs" />
     <Compile Include="ENT\HorarioENT.cs" />

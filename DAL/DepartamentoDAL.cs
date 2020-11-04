@@ -8,12 +8,12 @@ using DAL;
 
 namespace AppPlanillas.DAL
 {
-    class Departamento
+    class DepartamentoDAL
     {
 
-        public Departamento () { }
+        public DepartamentoDAL () { }
 
-        public void AgregarDepartamento (ENT.Departamento pDepartamento)
+        public void AgregarDepartamento (ENT.DepartamentoENT pDepartamento)
         {
             try
             {
@@ -35,15 +35,15 @@ namespace AppPlanillas.DAL
             }
         }
 
-        public List<ENT.Departamento> ObtenerDepartamentos()
+        public List<ENT.DepartamentoENT> ObtenerDepartamentos()
         {
-            List<ENT.Departamento> departamentos = new List<ENT.Departamento>();
+            List<ENT.DepartamentoENT> departamentos = new List<ENT.DepartamentoENT>();
             try
             {
                 DataSet dsetDepartamentos = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("SELECT * FROM departamento");
                 foreach (DataRow fila in dsetDepartamentos.Tables[0].Rows)
                 {
-                    ENT.Departamento departamento = new ENT.Departamento();
+                    ENT.DepartamentoENT departamento = new ENT.DepartamentoENT();
                     departamento.Id = (int)fila["id"];
                     departamento.Nombre = fila["nombre"].ToString();
                     departamento.fechaCreacion = (DateTime)fila["fecha_creacion"];

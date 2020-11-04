@@ -4,15 +4,16 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AppPlanillas.ENT;
 using DAL;
 
 namespace AppPlanillas.DAL
 {
-    class Deduccion
+    class DeduccionDAL
     {
-        public Deduccion () { }
+        public DeduccionDAL () { }
 
-        public void AgregarDeduccion (ENT.Deduccion pDeduccion)
+        public void AgregarDeduccion (ENT.DeduccionENT pDeduccion)
         {
             try
             {
@@ -36,26 +37,17 @@ namespace AppPlanillas.DAL
             }
         }
 
-        public List<ENT.Deduccion> ObtenerDeducciones (int id, String descripcion)
+        public List<DeduccionENT> ObtenerDeducciones (int id, String descripcion)
         {
-            List<ENT.Deduccion> deducciones = new List<ENT.Deduccion>();
-            if ((id == null) && (descripcion == ""))
+            List<DeduccionENT> deducciones = new List<DeduccionENT>();
+            if ((id == -1) && (descripcion == ""))
             {
-                
                 try
                 {
                     DataSet dsetDeducciones = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("SELECT * FROM deduccion");
                     foreach (DataRow fila in dsetDeducciones.Tables[0].Rows)
                     {
-                        ENT.Deduccion deduccion = new ENT.Deduccion();
-                        deduccion.Id = (int)fila["id"];
-                        deduccion.Nombre = fila["nombre"].ToString();
-                        deduccion.Porcentaje = (double)fila["porcentaje"];
-                        deduccion.Sistema = fila["sistema"].ToString();
-                        deduccion.fechaCreacion = (DateTime)fila["fecha_creacion"];
-                        deduccion.creadoPor = fila["creado_por"].ToString();
-                        deduccion.fechaModificacion = (DateTime)fila["fecha_modificacion"];
-                        deduccion.modificadoPor = fila["modificado_por"].ToString();
+                        DeduccionENT deduccion = new DeduccionENT((int)fila["id"], fila["nombre"].ToString(), (double)fila["porcentaje"], fila["sistema"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
                         deducciones.Add(deduccion);
                     }
                 }
@@ -64,22 +56,14 @@ namespace AppPlanillas.DAL
                     throw e;
                 }
             }
-            else if (id != null)
+            else if (id > -1)
             {
                 try
                 {
                     DataSet dsetDeducciones = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("SELECT * FROM deduccion where id=" + id);
                     foreach (DataRow fila in dsetDeducciones.Tables[0].Rows)
                     {
-                        ENT.Deduccion deduccion = new ENT.Deduccion();
-                        deduccion.Id = (int)fila["id"];
-                        deduccion.Nombre = fila["nombre"].ToString();
-                        deduccion.Porcentaje = (double)fila["porcentaje"];
-                        deduccion.Sistema = fila["sistema"].ToString();
-                        deduccion.fechaCreacion = (DateTime)fila["fecha_creacion"];
-                        deduccion.creadoPor = fila["creado_por"].ToString();
-                        deduccion.fechaModificacion = (DateTime)fila["fecha_modificacion"];
-                        deduccion.modificadoPor = fila["modificado_por"].ToString();
+                        DeduccionENT deduccion = new DeduccionENT((int)fila["id"], fila["nombre"].ToString(), (double)fila["porcentaje"], fila["sistema"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
                         deducciones.Add(deduccion);
                     }
                 }
@@ -93,18 +77,10 @@ namespace AppPlanillas.DAL
             {
                 try
                 {
-                    DataSet dsetDeducciones = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("SELECT * FROM deduccion where nombre=" + descripcion);
+                    DataSet dsetDeducciones = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("SELECT * FROM deduccion where nombre = " + descripcion);
                     foreach (DataRow fila in dsetDeducciones.Tables[0].Rows)
                     {
-                        ENT.Deduccion deduccion = new ENT.Deduccion();
-                        deduccion.Id = (int)fila["id"];
-                        deduccion.Nombre = fila["nombre"].ToString();
-                        deduccion.Porcentaje = (double)fila["porcentaje"];
-                        deduccion.Sistema = fila["sistema"].ToString();
-                        deduccion.fechaCreacion = (DateTime)fila["fecha_creacion"];
-                        deduccion.creadoPor = fila["creado_por"].ToString();
-                        deduccion.fechaModificacion = (DateTime)fila["fecha_modificacion"];
-                        deduccion.modificadoPor = fila["modificado_por"].ToString();
+                        DeduccionENT deduccion = new DeduccionENT((int)fila["id"], fila["nombre"].ToString(), (double)fila["porcentaje"], fila["sistema"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
                         deducciones.Add(deduccion);
                     }
                 }
