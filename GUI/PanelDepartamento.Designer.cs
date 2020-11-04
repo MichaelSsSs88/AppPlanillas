@@ -40,7 +40,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNombreDepartamento = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tabEditDepartment = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -80,6 +80,7 @@
             this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Modificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabDepartamentos.SuspendLayout();
             this.tabInsertDepartment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -135,7 +136,8 @@
             this.Creador,
             this.FechaCreacion,
             this.Modificador,
-            this.FechaModificacion});
+            this.FechaModificacion,
+            this.colActivo});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.Location = new System.Drawing.Point(3, 350);
@@ -180,7 +182,7 @@
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtNombreDepartamento);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -251,13 +253,13 @@
             this.checkBox3.Text = "Activo";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtNombreDepartamento
             // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox2.Location = new System.Drawing.Point(3, 36);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(1014, 23);
-            this.textBox2.TabIndex = 3;
+            this.txtNombreDepartamento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtNombreDepartamento.Location = new System.Drawing.Point(3, 36);
+            this.txtNombreDepartamento.Name = "txtNombreDepartamento";
+            this.txtNombreDepartamento.Size = new System.Drawing.Size(1014, 23);
+            this.txtNombreDepartamento.TabIndex = 3;
             // 
             // label3
             // 
@@ -704,9 +706,16 @@
             // FechaModificacion
             // 
             this.FechaModificacion.DataPropertyName = "getFechaModificacion";
-            this.FechaModificacion.HeaderText = "FechaModificacion";
+            this.FechaModificacion.HeaderText = "Fecha Modificacion";
             this.FechaModificacion.Name = "FechaModificacion";
             this.FechaModificacion.Width = 150;
+            // 
+            // colActivo
+            // 
+            this.colActivo.DataPropertyName = "getActivo";
+            this.colActivo.HeaderText = "Activo";
+            this.colActivo.Name = "colActivo";
+            this.colActivo.ReadOnly = true;
             // 
             // PanelDepartamento
             // 
@@ -748,7 +757,7 @@
         private System.Windows.Forms.TabPage tabEditDepartment;
         private System.Windows.Forms.TabPage tabDeleteDepartment;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNombreDepartamento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -794,5 +803,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaCreacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Modificador;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaModificacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colActivo;
     }
 }

@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AppPlanillas.ENT;
 using DAL;
 
 namespace AppPlanillas.DAL
@@ -13,7 +14,7 @@ namespace AppPlanillas.DAL
 
         public DepartamentoDAL () { }
 
-        public void AgregarDepartamento (ENT.DepartamentoENT pDepartamento)
+        public void AgregarDepartamento (DepartamentoENT pDepartamento)
         {
             try
             {
@@ -21,12 +22,12 @@ namespace AppPlanillas.DAL
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
                 string sentenciaSQL = "INSERT INTO departamento (nombre, fecha_creacion, creado_por, fecha_modificacion, modificado_por, activo)" +
                                                               "VALUES (@nombre, @fecha_creacion, @creado_por, @fecha_modificacion, @modificado_por, @activo)";
-                parametros.AgregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pDepartamento.Nombre);
-                parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDepartamento.fechaCreacion);
-                parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDepartamento.creadoPor);
-                parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDepartamento.fechaModificacion);
-                parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDepartamento.modificadoPor);
-                parametros.AgregarParametro("@activo", NpgsqlTypes.NpgsqlDbType.Boolean, pDepartamento.activo);
+                parametros.AgregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pDepartamento.getNombre);
+                parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDepartamento.getFechaCreacion);
+                parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDepartamento.getCreador);
+                parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDepartamento.getFechaModificacion);
+                parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDepartamento.getModificador);
+                parametros.AgregarParametro("@activo", NpgsqlTypes.NpgsqlDbType.Boolean, pDepartamento.getActivo);
                 conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());
             }
             catch (Exception e)
@@ -35,21 +36,33 @@ namespace AppPlanillas.DAL
             }
         }
 
-        public List<ENT.DepartamentoENT> ObtenerDepartamentos()
+        public int ActualizarDepartamento (DepartamentoENT pDepartamento)
         {
-            List<ENT.DepartamentoENT> departamentos = new List<ENT.DepartamentoENT>();
+            
+                int numero = 0;
+                try
+                {
+                    string sentenciaSQL = "UPDATE departamento set nombre =" + pDepartamento.getNombre + " where id = " + pDepartamento.getId;
+                    AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
+                    conexion.EjecutarSQL(sentenciaSQL);
+                }
+                catch (Exception e)
+                {
+                    numero = 1;
+                    throw e;
+                }
+            return numero;
+        }
+
+        public List<DepartamentoENT> ObtenerDepartamentos()
+        {
+            List<DepartamentoENT> departamentos = new List<DepartamentoENT>();
             try
             {
                 DataSet dsetDepartamentos = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("SELECT * FROM departamento");
                 foreach (DataRow fila in dsetDepartamentos.Tables[0].Rows)
                 {
-                    ENT.DepartamentoENT departamento = new ENT.DepartamentoENT();
-                    departamento.Id = (int)fila["id"];
-                    departamento.Nombre = fila["nombre"].ToString();
-                    departamento.fechaCreacion = (DateTime)fila["fecha_creacion"];
-                    departamento.creadoPor = fila["creado_por"].ToString();
-                    departamento.fechaModificacion = (DateTime)fila["fecha_modificacion"];
-                    departamento.modificadoPor = fila["modificado_por"].ToString();
+                    ENT.DepartamentoENT departamento = new ENT.DepartamentoENT((int)fila["id"], fila["nombre"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
                     departamentos.Add(departamento);
                 }
             }

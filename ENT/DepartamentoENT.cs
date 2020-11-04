@@ -16,7 +16,7 @@ namespace AppPlanillas.ENT
         private DateTime fechaModificacion { get; set; } 
         private string modificadoPor { get; set; }
         private Boolean activo { get; set; }
-        private List<DepartamentoENT> departamentos { get; }
+        public List<DepartamentoENT> departamentos { get; }
 
         public DepartamentoENT () 
         {
@@ -79,6 +79,14 @@ namespace AppPlanillas.ENT
             get
             {
                 return this.fechaModificacion;
+            }
+        }
+
+        public Boolean getActivo
+        {
+            get
+            {
+                return this.activo;
             }
         }
 

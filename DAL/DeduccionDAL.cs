@@ -21,14 +21,14 @@ namespace AppPlanillas.DAL
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
                 string sentenciaSQL = "INSERT INTO deduccion (nombre, porcentaje, sistema, fecha_creacion, creado_por, fecha_modificacion, modificado_por, activo)" +
                                                               "VALUES (@nombre, @porcentaje, @sistema, @fecha_creacion, @creado_por, @fecha_modificacion, @modificado_por, @activo)";
-                parametros.AgregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.Nombre);
-                parametros.AgregarParametro("@porcentaje", NpgsqlTypes.NpgsqlDbType.Double, pDeduccion.Porcentaje);
-                parametros.AgregarParametro("@sistema", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.Sistema);
-                parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDeduccion.fechaCreacion);
-                parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.creadoPor);
-                parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDeduccion.fechaModificacion);
-                parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.modificadoPor);
-                parametros.AgregarParametro("@activo", NpgsqlTypes.NpgsqlDbType.Boolean, pDeduccion.activo);
+                parametros.AgregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getNombre);
+                parametros.AgregarParametro("@porcentaje", NpgsqlTypes.NpgsqlDbType.Double, pDeduccion.getPorcentaje);
+                parametros.AgregarParametro("@sistema", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getSistema);
+                parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDeduccion.getFechaCreacion);
+                parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getCreador);
+                parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDeduccion.getFechaModificacion);
+                parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getModificador);
+                parametros.AgregarParametro("@activo", NpgsqlTypes.NpgsqlDbType.Boolean, pDeduccion.getActivo);
                 conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());
             }
             catch (Exception e)

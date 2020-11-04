@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppPlanillas.DAL;
+using AppPlanillas.ENT;
 
 namespace AppPlanillas.GUI
 {
@@ -22,6 +24,8 @@ namespace AppPlanillas.GUI
             this.HideTab(1);
             this.HideTab(2);
             this.ShowTab(pestaña);
+            DepartamentoENT nuevoDepartamento = new DepartamentoENT();
+            this.dataGridView1.DataSource = nuevoDepartamento.departamentos;
         }
 
         private void InitControl()
@@ -88,6 +92,12 @@ namespace AppPlanillas.GUI
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             this.btnGuardar.Image = new Bitmap(Application.StartupPath + @"\IMG\SaveSmall.png");
+            DepartamentoENT nuevoDepartamento = new DepartamentoENT(-1,this.txtNombreDepartamento.Text,DateTime.Now.Date, "Prueba", DateTime.Now.Date, "Prueba", true);
+            DepartamentoDAL guardarDepartamento = new DepartamentoDAL();
+            guardarDepartamento.AgregarDepartamento(nuevoDepartamento);
+            MessageBox.Show("¡Departamento insertado correctamente!", "Nuevo departamento", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            nuevoDepartamento = new DepartamentoENT();
+            this.dataGridView1.DataSource = nuevoDepartamento.departamentos;
         }
 
         private void btnGuardarEditar_Click(object sender, EventArgs e)

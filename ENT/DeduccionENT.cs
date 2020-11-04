@@ -103,5 +103,13 @@ namespace AppPlanillas.ENT
             }
         }
 
+        public Boolean getActivo
+        {
+            get
+            {
+                return this.activo;
+            }
+        }
+
     }
 }
