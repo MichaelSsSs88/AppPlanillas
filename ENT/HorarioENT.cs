@@ -12,21 +12,35 @@ namespace ProyectoIIIC
         private DateTime hora_inicio { get; set; }
         private DateTime hora_final { get; set; }
         private string descripcion { get; set; }
+        private string dia { get; set; }
         private int horas_ordinarias { get; set; }
+        private string creadoPor { get; set; }
+        private DateTime fechaCreacion { get; set; }
+        private DateTime fechaModificacion { get; set; }
+        private string modificadoPor { get; set; }
+        private Boolean activo { get; set; }
         public List<HorarioENT> horarios { get; set; }
-        public HorarioENT(int pId, DateTime pHora_inicio, DateTime pHora_final, string pDescripcion, int pHoras_ordinarias)
+
+        public HorarioENT(int pId, DateTime pHora_inicio, DateTime pHora_final, string pDia, string pDescripcion, int pHoras_ordinarias, DateTime pFechaCreacion, string pCreadoPor, DateTime pFechaModificacion, string pModificadoPor, Boolean pActivo)
         {
             this.id = pId;
             this.hora_inicio = pHora_inicio;
             this.hora_final = pHora_final;
             this.descripcion = pDescripcion;
+            this.dia = pDia;
             this.horas_ordinarias = pHoras_ordinarias;
+            this.fechaCreacion = pFechaCreacion;
+            this.creadoPor = pCreadoPor;
+            this.fechaModificacion = pFechaModificacion;
+            this.modificadoPor = pModificadoPor;
+            this.activo = pActivo;
+            
         }
 
         public HorarioENT()
         {
             HorarioDAL horario = new HorarioDAL();
-            horarios = horario.ObtenerHorarios();
+            horarios = horario.ObtenerHorarios(-1,"");
         }
 
         public int Id
@@ -37,21 +51,37 @@ namespace ProyectoIIIC
             }
         }
 
-        public DateTime Hora_Inicio
+       /* public DateTime Hora_Inicio
         {
             get
             {
                 return this.hora_inicio;
             }
+        }*/
+        public String Hora_Inicio_Tiempo
+        {
+            get
+            {
+                return this.hora_inicio.ToString("HH:mm:ss");
+            }
         }
 
-        public DateTime Hora_Final
+        public String Hora_Final_Tiempo
+        {
+            get
+            {
+                //TimeSpan.Parse(pHorario.Hora_Inicio.ToString("HH:mm:ss"))
+                return this.hora_final.ToString("HH:mm:ss");
+            }
+        }
+
+        /*public DateTime Hora_Final
         {
             get
             {
                 return this.hora_final;
             }
-        }
+        }*/
 
         public string Descripcion
         {
@@ -61,11 +91,59 @@ namespace ProyectoIIIC
             }
         }
 
+        public string Dia
+        {
+            get
+            {
+                return this.dia;
+            }
+        }
+
         public int Horas_Ordinarias
         {
             get
             {
-                return this.Horas_Ordinarias;
+                return this.horas_ordinarias;
+            }
+        }
+
+        public string getCreador
+        {
+            get
+            {
+                return this.creadoPor;
+            }
+        }
+
+        public DateTime getFechaCreacion
+        {
+            get
+            {
+                return this.fechaCreacion;
+            }
+        }
+
+        public string getModificador
+        {
+            get
+            {
+                return this.modificadoPor;
+            }
+        }
+
+        public DateTime getFechaModificacion
+        {
+            get
+            {
+                return this.fechaModificacion;
+            }
+        }
+
+        public Boolean getActivo
+        {
+            get
+            {
+                return this.activo;
             }
         }
     }
