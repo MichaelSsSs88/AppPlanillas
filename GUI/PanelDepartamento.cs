@@ -26,8 +26,11 @@ namespace AppPlanillas.GUI
             this.HideTab(2);
             this.ShowTab(pestaña);
             this.nuevoDepartamento = new DepartamentoENT();
-            this.dataGridView2.DataSource = this.nuevoDepartamento.departamentos;
-            this.panelFiltro.Visible = false;
+            this.grdInsertar.DataSource = this.nuevoDepartamento.departamentos;
+            this.grdActualizar.DataSource = this.nuevoDepartamento.departamentos;
+            this.grdEliminar.DataSource = this.nuevoDepartamento.departamentos;
+            this.pnlFiltroActualizar.Visible = false;
+            this.pnlFiltroEliminar.Visible = false;
         }
 
         private void InitControl()
@@ -99,20 +102,27 @@ namespace AppPlanillas.GUI
             guardarDepartamento.AgregarDepartamento(nuevoDepartamento);
             MessageBox.Show("¡Departamento insertado correctamente!", "Nuevo departamento", MessageBoxButtons.OK, MessageBoxIcon.Information);
             nuevoDepartamento = new DepartamentoENT();
-            this.dataGridView1.DataSource = nuevoDepartamento.departamentos;
+            this.grdInsertar.DataSource = nuevoDepartamento.departamentos;
         }
 
         private void btnGuardarEditar_Click(object sender, EventArgs e)
         {
             this.btnGuardar.Image = new Bitmap(Application.StartupPath + @"\IMG\SaveSmall.png");
-            DepartamentoDAL actualizarDepartamento = new DepartamentoDAL();
-            this.nuevoDepartamento = new DepartamentoENT(Int32.Parse(this.txtCodigoDepartamentoEditar.Text), this.txtNombreDepartamentoEditar.Text, DateTime.Now.Date, "Jean Ca", DateTime.Now.Date, "Jean Ca", true);
-            actualizarDepartamento.ActualizarDepartamento(false, this.nuevoDepartamento);
-            this.nuevoDepartamento = new DepartamentoENT();
-            this.dataGridView2.DataSource = this.nuevoDepartamento.departamentos;
-            this.txtCodigoDepartamentoEditar.Text = "";
-            this.txtNombreDepartamentoEditar.Text = "";
-            MessageBox.Show("¡Se modificado correctamente el departamento!", "Actualización de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if ((this.txtCodigoDepartamentoActualizar.Text != "") && (this.txtNombreDepartamentoActualizar.Text!="")) 
+            { 
+                DepartamentoDAL actualizarDepartamento = new DepartamentoDAL();
+                this.nuevoDepartamento = new DepartamentoENT(Int32.Parse(this.txtCodigoDepartamentoActualizar.Text), this.txtNombreDepartamentoActualizar.Text, DateTime.Now.Date, "Jean Ca", DateTime.Now.Date, "Jean Ca", true);
+                actualizarDepartamento.ActualizarDepartamento(false, this.nuevoDepartamento);
+                this.nuevoDepartamento = new DepartamentoENT();
+                this.grdActualizar.DataSource = this.nuevoDepartamento.departamentos;
+                this.txtCodigoDepartamentoActualizar.Text = "";
+                this.txtNombreDepartamentoActualizar.Text = "";
+                MessageBox.Show("¡Se modificado correctamente el departamento!", "Actualización de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("¡Debe seleccionar un departamento para editar!", "Actualización de registro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnReporte_MouseEnter(object sender, EventArgs e)
@@ -130,63 +140,131 @@ namespace AppPlanillas.GUI
             this.btnReporte.Image = new Bitmap(Application.StartupPath + @"\IMG\csvSmall.png");
         }
 
-        private void CargarDepartamentos(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                switch (this.comboBox3.Text)
-                {
-                    case "Todos":
-                        this.dataGridView2.DataSource = this.nuevoDepartamento.departamentos;
-                        break;
-                    case "Codigo":
-                        this.dataGridView2.DataSource = new DepartamentoDAL().ObtenerDepartamentos(Int32.Parse(this.textBox9.Text), "");
-                        break;
-                    case "Descripción":
-                        this.dataGridView2.DataSource = new DepartamentoDAL().ObtenerDepartamentos(-1, this.textBox9.Text);
-                        break;
-                    default:
-                        break;
-                }
-            } 
-            catch
-            {
-                MessageBox.Show("Error al cargar los datos de departamentos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void textBox9_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.CargarDepartamentos(sender, e);
+                try
+                {
+                    switch (this.cmbTipoBusquedaActualizar.Text)
+                    {
+                        case "Todos":
+                            this.grdActualizar.DataSource = this.nuevoDepartamento.departamentos;
+                            break;
+                        case "Codigo":
+                            this.grdActualizar.DataSource = new DepartamentoDAL().ObtenerDepartamentos(Int32.Parse(this.txtBuscarActualizar.Text), "");
+                            break;
+                        case "Descripción":
+                            this.grdActualizar.DataSource = new DepartamentoDAL().ObtenerDepartamentos(-1, this.txtBuscarActualizar.Text);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Error al cargar los datos de departamentos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (this.comboBox3.SelectedIndex == 0)
+            if (this.cmbTipoBusquedaActualizar.SelectedIndex == 0)
             {
-                this.panelFiltro.Visible = false;
-                this.dataGridView2.DataSource = this.nuevoDepartamento.departamentos;
+                this.pnlFiltroActualizar.Visible = false;
+                this.grdActualizar.DataSource = this.nuevoDepartamento.departamentos;
             }
-            if (this.comboBox3.SelectedIndex == 1)
+            if (this.cmbTipoBusquedaActualizar.SelectedIndex == 1)
             {
                 lblValorABuscar.Text = "Digite el código del departamento";
-                this.panelFiltro.Visible = true;
+                this.pnlFiltroActualizar.Visible = true;
             }
-            if (this.comboBox3.SelectedIndex == 2)
+            if (this.cmbTipoBusquedaActualizar.SelectedIndex == 2)
             {
                 lblValorABuscar.Text = "Digite el nombre del departamento";
-                this.panelFiltro.Visible = true;
+                this.pnlFiltroActualizar.Visible = true;
             }
         }
 
         private void dataGridView2_Click(object sender, EventArgs e)
         {
-            int fila = this.dataGridView2.CurrentRow.Index;
-            this.txtCodigoDepartamentoEditar.Text = this.dataGridView2.Rows[fila].Cells[0].Value.ToString();
-            this.txtNombreDepartamentoEditar.Text = this.dataGridView2.Rows[fila].Cells[1].Value.ToString();
+            int fila = this.grdActualizar.CurrentRow.Index;
+            this.txtCodigoDepartamentoActualizar.Text = this.grdActualizar.Rows[fila].Cells[0].Value.ToString();
+            this.txtNombreDepartamentoActualizar.Text = this.grdActualizar.Rows[fila].Cells[1].Value.ToString();
+        }
+
+        private void btnEliminarDepartamento_Click(object sender, EventArgs e)
+        {
+            if ((this.txtCodigoEliminar.Text != "") && (this.txtDescripcionEliminar.Text != ""))
+            {
+                DepartamentoDAL eliminarDepartamento = new DepartamentoDAL();
+                this.nuevoDepartamento = new DepartamentoENT(Int32.Parse(this.txtCodigoEliminar.Text), this.txtDescripcionEliminar.Text, DateTime.Now.Date, "Jean Ca", DateTime.Now.Date, "Jean Ca", false);
+                eliminarDepartamento.ActualizarDepartamento(true, this.nuevoDepartamento);
+                this.nuevoDepartamento = new DepartamentoENT();
+                this.grdEliminar.DataSource = this.nuevoDepartamento.departamentos;
+                this.txtCodigoEliminar.Text = "";
+                this.txtDescripcionEliminar.Text = "";
+                MessageBox.Show("¡Se ha eliminado correctamente el departamento!", "Actualización de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("¡Debe seleccionar un departamento para eliminar!", "Actualización de registro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void cmbTipoBusquedaEliminar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.cmbTipoBusquedaEliminar.SelectedIndex == 0)
+            {
+                this.pnlFiltroEliminar.Visible = false;
+                this.grdEliminar.DataSource = this.nuevoDepartamento.departamentos;
+            }
+            if (this.cmbTipoBusquedaEliminar.SelectedIndex == 1)
+            {
+                this.lblDigiteEliminar.Text = "Digite el código del departamento";
+                this.pnlFiltroEliminar.Visible = true;
+            }
+            if (this.cmbTipoBusquedaEliminar.SelectedIndex == 2)
+            {
+                this.lblDigiteEliminar.Text = "Digite el nombre del departamento";
+                this.pnlFiltroEliminar.Visible = true;
+            }
+        }
+
+        private void txtBuscarEliminar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                try
+                {
+                    switch (this.cmbTipoBusquedaEliminar.Text)
+                    {
+                        case "Todos":
+                            this.grdEliminar.DataSource = this.nuevoDepartamento.departamentos;
+                            break;
+                        case "Codigo":
+                            this.grdEliminar.DataSource = new DepartamentoDAL().ObtenerDepartamentos(Int32.Parse(this.txtBuscarEliminar.Text), "");
+                            break;
+                        case "Descripción":
+                            this.grdEliminar.DataSource = new DepartamentoDAL().ObtenerDepartamentos(-1, this.txtBuscarEliminar.Text);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Error al cargar los datos de departamentos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void grdEliminar_Click(object sender, EventArgs e)
+        {
+            int fila = this.grdEliminar.CurrentRow.Index;
+            this.txtCodigoEliminar.Text = this.grdEliminar.Rows[fila].Cells[0].Value.ToString();
+            this.txtDescripcionEliminar.Text = this.grdEliminar.Rows[fila].Cells[1].Value.ToString();
         }
     }
 }
