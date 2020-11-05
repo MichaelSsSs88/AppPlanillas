@@ -42,6 +42,7 @@ namespace AppPlanillas.DAL
                 int numero = 0;
                 try
                 {
+                   
                     string sentenciaSQL = "UPDATE departamento set nombre =" + pDepartamento.getNombre + " where id = " + pDepartamento.getId;
                     AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
                     conexion.EjecutarSQL(sentenciaSQL);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoIIIC;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,11 +15,14 @@ namespace AppPlanillas.GUI
     {
         private List<System.Windows.Forms.TabPage> objColPages = null;
         private bool[] arrBoolPagesVisible;
+        HorarioENT HorarioENT;
         public PanelHorario(int pestaña)
         {
             
+           
             InitializeComponent();
-            
+            // this.dataGridView1.DataSource = this.HorarioENT.horarios;
+            this.CargarTabla(1,1);
             this.HideTab(0);
             this.HideTab(1);
             this.HideTab(2);
@@ -47,6 +51,7 @@ namespace AppPlanillas.GUI
             }
 
         }
+
 
         /// <summary>
         ///     Muestra una ficha
@@ -78,6 +83,45 @@ namespace AppPlanillas.GUI
             for (int intIndex = 0; intIndex < objColPages.Count; intIndex++)
                 if (arrBoolPagesVisible[intIndex])
                     this.tabHorario.TabPages.Add(objColPages[intIndex]);
+        }
+
+        private void CargarTabla(int busqueda, int pestaña)
+        {
+            this.HorarioENT = new HorarioENT();
+            HorarioDAL horarioDAL = new HorarioDAL();
+            if (busqueda == 1)
+            {
+
+                this.HorarioENT.horarios = horarioDAL.ObtenerHorarios(-1, "");
+                this.dataGridView1.DataSource = this.HorarioENT.horarios;
+            }
+            if(busqueda == 2)
+            {
+                this.HorarioENT.horarios = horarioDAL.ObtenerHorarios(Int32.Parse(this.txtDatoABuscar.Text), "") ;
+            }
+            if(busqueda == 3)
+            {
+                this.HorarioENT.horarios = horarioDAL.ObtenerHorarios(-1, this.txtDatoABuscar.Text);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Console.WriteLine(this.dtpHoraSalida.Value.ToShortTimeString());
+           // DateTime hora this.dtpHoraSalida.
+                TimeSpan hora2 = TimeSpan.Parse(this.dtpHoraSalida.Value.ToString("HH:mm"));
+            DateTime hora = hora2;
+            Console.WriteLine(hora);
+            /*this.HorarioENT = new HorarioENT(-1, this.dtpHoraEntrada.Value, this.dtpHoraSalida.Value.ToString(), this.cmbDia.SelectedItem.ToString(), this.txtDescripcion.Text, Int32.Parse(this.txtHorasOrdinarias.Text), DateTime.Now.Date, "Pablo", DateTime.Now.Date, "Pablo", true);
+            HorarioDAL horarioDAL = new HorarioDAL();
+            horarioDAL.AgregarHorario(this.HorarioENT);
+            this.CargarTabla(1,1);*/
+
         }
     }
 }
