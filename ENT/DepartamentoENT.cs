@@ -20,7 +20,7 @@ namespace AppPlanillas.ENT
 
         public DepartamentoENT () 
         {
-            this.departamentos = new DepartamentoDAL().ObtenerDepartamentos();
+            this.departamentos = new DepartamentoDAL().ObtenerDepartamentos(-1, "");
         }
 
         public DepartamentoENT (int pId, string pNombre, DateTime pFechaCreacion, string pCreadoPor, DateTime pFechaModificacion, string pModificadoPor, Boolean pActivo)

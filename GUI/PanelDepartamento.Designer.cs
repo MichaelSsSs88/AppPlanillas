@@ -32,6 +32,13 @@
             this.tabDepartamentos = new System.Windows.Forms.TabControl();
             this.tabInsertDepartment = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Creador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Modificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnReporte = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -45,6 +52,13 @@
             this.tabEditDepartment = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCreador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colModificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFechaModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colActiv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label14 = new System.Windows.Forms.Label();
             this.panelFiltro = new System.Windows.Forms.Panel();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -53,10 +67,10 @@
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnGuardarEditar = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.cbxActivoEditar = new System.Windows.Forms.CheckBox();
+            this.txtNombreDepartamentoEditar = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtCodigoDepartamentoEditar = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tabDeleteDepartment = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -74,13 +88,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.Identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Creador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Modificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabDepartamentos.SuspendLayout();
             this.tabInsertDepartment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -144,6 +151,54 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1020, 287);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // Identificador
+            // 
+            this.Identificador.DataPropertyName = "getId";
+            this.Identificador.HeaderText = "Identificador";
+            this.Identificador.Name = "Identificador";
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "getNombre";
+            this.Nombre.HeaderText = "Departamento";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 200;
+            // 
+            // Creador
+            // 
+            this.Creador.DataPropertyName = "getCreador";
+            this.Creador.HeaderText = "Creardor";
+            this.Creador.Name = "Creador";
+            this.Creador.Width = 200;
+            // 
+            // FechaCreacion
+            // 
+            this.FechaCreacion.DataPropertyName = "getFechaCreacion";
+            this.FechaCreacion.HeaderText = "Fecha Creación";
+            this.FechaCreacion.Name = "FechaCreacion";
+            this.FechaCreacion.Width = 150;
+            // 
+            // Modificador
+            // 
+            this.Modificador.DataPropertyName = "getModificador";
+            this.Modificador.HeaderText = "Modificador";
+            this.Modificador.Name = "Modificador";
+            this.Modificador.Width = 200;
+            // 
+            // FechaModificacion
+            // 
+            this.FechaModificacion.DataPropertyName = "getFechaModificacion";
+            this.FechaModificacion.HeaderText = "Fecha Modificacion";
+            this.FechaModificacion.Name = "FechaModificacion";
+            this.FechaModificacion.Width = 150;
+            // 
+            // colActivo
+            // 
+            this.colActivo.DataPropertyName = "getActivo";
+            this.colActivo.HeaderText = "Activo";
+            this.colActivo.Name = "colActivo";
+            this.colActivo.ReadOnly = true;
             // 
             // panel4
             // 
@@ -304,12 +359,72 @@
             // 
             this.dataGridView2.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colId,
+            this.colNombre,
+            this.colCreador,
+            this.colFechaCreacion,
+            this.colModificador,
+            this.colFechaModificacion,
+            this.colActiv});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView2.Location = new System.Drawing.Point(10, 174);
+            this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(491, 450);
             this.dataGridView2.TabIndex = 5;
+            this.dataGridView2.Click += new System.EventHandler(this.dataGridView2_Click);
+            // 
+            // colId
+            // 
+            this.colId.DataPropertyName = "getId";
+            this.colId.HeaderText = "ID";
+            this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
+            // 
+            // colNombre
+            // 
+            this.colNombre.DataPropertyName = "getNombre";
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            // 
+            // colCreador
+            // 
+            this.colCreador.DataPropertyName = "getCreador";
+            this.colCreador.HeaderText = "Creador";
+            this.colCreador.Name = "colCreador";
+            this.colCreador.ReadOnly = true;
+            // 
+            // colFechaCreacion
+            // 
+            this.colFechaCreacion.DataPropertyName = "getFechaCreacion";
+            this.colFechaCreacion.HeaderText = "Fecha creación";
+            this.colFechaCreacion.Name = "colFechaCreacion";
+            this.colFechaCreacion.ReadOnly = true;
+            // 
+            // colModificador
+            // 
+            this.colModificador.DataPropertyName = "getModificador";
+            this.colModificador.HeaderText = "Modificado por";
+            this.colModificador.Name = "colModificador";
+            this.colModificador.ReadOnly = true;
+            // 
+            // colFechaModificacion
+            // 
+            this.colFechaModificacion.DataPropertyName = "getFechaModificacion";
+            this.colFechaModificacion.HeaderText = "Fecha modificación";
+            this.colFechaModificacion.Name = "colFechaModificacion";
+            this.colFechaModificacion.ReadOnly = true;
+            // 
+            // colActiv
+            // 
+            this.colActiv.DataPropertyName = "getActivo";
+            this.colActiv.HeaderText = "Activo";
+            this.colActiv.Name = "colActiv";
+            this.colActiv.ReadOnly = true;
             // 
             // label14
             // 
@@ -340,6 +455,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(491, 23);
             this.textBox9.TabIndex = 4;
+            this.textBox9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox9_KeyDown);
             // 
             // lblValorABuscar
             // 
@@ -364,6 +480,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(491, 24);
             this.comboBox3.TabIndex = 2;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -379,10 +496,10 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnGuardarEditar);
-            this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.cbxActivoEditar);
+            this.groupBox2.Controls.Add(this.txtNombreDepartamentoEditar);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.textBox8);
+            this.groupBox2.Controls.Add(this.txtCodigoDepartamentoEditar);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -417,28 +534,29 @@
             this.btnGuardarEditar.MouseLeave += new System.EventHandler(this.btnGuardar_MouseLeave);
             this.btnGuardarEditar.MouseHover += new System.EventHandler(this.btnGuardar_MouseHover);
             // 
-            // checkBox1
+            // cbxActivoEditar
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.checkBox1.Location = new System.Drawing.Point(10, 130);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.checkBox1.Size = new System.Drawing.Size(489, 31);
-            this.checkBox1.TabIndex = 35;
-            this.checkBox1.Text = "Activo";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbxActivoEditar.AutoSize = true;
+            this.cbxActivoEditar.Checked = true;
+            this.cbxActivoEditar.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxActivoEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbxActivoEditar.Enabled = false;
+            this.cbxActivoEditar.Location = new System.Drawing.Point(10, 130);
+            this.cbxActivoEditar.Name = "cbxActivoEditar";
+            this.cbxActivoEditar.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.cbxActivoEditar.Size = new System.Drawing.Size(489, 31);
+            this.cbxActivoEditar.TabIndex = 35;
+            this.cbxActivoEditar.Text = "Activo";
+            this.cbxActivoEditar.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // txtNombreDepartamentoEditar
             // 
-            this.textBox7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox7.Location = new System.Drawing.Point(10, 107);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(489, 23);
-            this.textBox7.TabIndex = 17;
+            this.txtNombreDepartamentoEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtNombreDepartamentoEditar.Location = new System.Drawing.Point(10, 107);
+            this.txtNombreDepartamentoEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombreDepartamentoEditar.Name = "txtNombreDepartamentoEditar";
+            this.txtNombreDepartamentoEditar.Size = new System.Drawing.Size(489, 23);
+            this.txtNombreDepartamentoEditar.TabIndex = 17;
             // 
             // label11
             // 
@@ -452,14 +570,15 @@
             this.label11.TabIndex = 16;
             this.label11.Text = "Descripción del departamento:";
             // 
-            // textBox8
+            // txtCodigoDepartamentoEditar
             // 
-            this.textBox8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox8.Location = new System.Drawing.Point(10, 54);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(489, 23);
-            this.textBox8.TabIndex = 1;
+            this.txtCodigoDepartamentoEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtCodigoDepartamentoEditar.Location = new System.Drawing.Point(10, 54);
+            this.txtCodigoDepartamentoEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigoDepartamentoEditar.Name = "txtCodigoDepartamentoEditar";
+            this.txtCodigoDepartamentoEditar.ReadOnly = true;
+            this.txtCodigoDepartamentoEditar.Size = new System.Drawing.Size(489, 23);
+            this.txtCodigoDepartamentoEditar.TabIndex = 1;
             // 
             // label12
             // 
@@ -669,54 +788,6 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Código del departamento:";
             // 
-            // Identificador
-            // 
-            this.Identificador.DataPropertyName = "getId";
-            this.Identificador.HeaderText = "Identificador";
-            this.Identificador.Name = "Identificador";
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "getNombre";
-            this.Nombre.HeaderText = "Departamento";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 200;
-            // 
-            // Creador
-            // 
-            this.Creador.DataPropertyName = "getCreador";
-            this.Creador.HeaderText = "Creardor";
-            this.Creador.Name = "Creador";
-            this.Creador.Width = 200;
-            // 
-            // FechaCreacion
-            // 
-            this.FechaCreacion.DataPropertyName = "getFechaCreacion";
-            this.FechaCreacion.HeaderText = "Fecha Creación";
-            this.FechaCreacion.Name = "FechaCreacion";
-            this.FechaCreacion.Width = 150;
-            // 
-            // Modificador
-            // 
-            this.Modificador.DataPropertyName = "getModificador";
-            this.Modificador.HeaderText = "Modificador";
-            this.Modificador.Name = "Modificador";
-            this.Modificador.Width = 200;
-            // 
-            // FechaModificacion
-            // 
-            this.FechaModificacion.DataPropertyName = "getFechaModificacion";
-            this.FechaModificacion.HeaderText = "Fecha Modificacion";
-            this.FechaModificacion.Name = "FechaModificacion";
-            this.FechaModificacion.Width = 150;
-            // 
-            // colActivo
-            // 
-            this.colActivo.DataPropertyName = "getActivo";
-            this.colActivo.HeaderText = "Activo";
-            this.colActivo.Name = "colActivo";
-            this.colActivo.ReadOnly = true;
-            // 
             // PanelDepartamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -772,9 +843,9 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtNombreDepartamentoEditar;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtCodigoDepartamentoEditar;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView3;
@@ -794,7 +865,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.Button btnGuardarEditar;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbxActivoEditar;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Identificador;
@@ -804,5 +875,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Modificador;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaModificacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn colActivo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCreador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFechaCreacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colModificador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFechaModificacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colActiv;
     }
 }
