@@ -86,17 +86,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Motivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HorasOrdinarias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Creador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaDeCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Modificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaDeModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -128,6 +117,17 @@
             this.button2 = new System.Windows.Forms.Button();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.Identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Motivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HorasOrdinarias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Creador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaDeCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Modificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaDeModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabHorario.SuspendLayout();
             this.tabInsertSchedule.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -267,6 +267,7 @@
             this.dtpHoraSalida.Name = "dtpHoraSalida";
             this.dtpHoraSalida.Size = new System.Drawing.Size(484, 23);
             this.dtpHoraSalida.TabIndex = 35;
+            this.dtpHoraSalida.ValueChanged += new System.EventHandler(this.dtpHoraSalida_ValueChanged);
             // 
             // label1
             // 
@@ -289,6 +290,7 @@
             this.dtpHoraEntrada.Name = "dtpHoraEntrada";
             this.dtpHoraEntrada.Size = new System.Drawing.Size(484, 23);
             this.dtpHoraEntrada.TabIndex = 33;
+            this.dtpHoraEntrada.ValueChanged += new System.EventHandler(this.dtpHoraEntrada_ValueChanged);
             // 
             // label3
             // 
@@ -318,6 +320,7 @@
             this.cmbDia.Name = "cmbDia";
             this.cmbDia.Size = new System.Drawing.Size(484, 24);
             this.cmbDia.TabIndex = 19;
+            this.cmbDia.SelectedIndexChanged += new System.EventHandler(this.cmbDia_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -393,7 +396,7 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(466, 34);
             this.label14.TabIndex = 4;
-            this.label14.Text = "Seleccione el feriado a modificar::";
+            this.label14.Text = "Seleccione el horario a modificar::";
             // 
             // panelFiltro
             // 
@@ -415,6 +418,7 @@
             this.txtDatoABuscar.Name = "txtDatoABuscar";
             this.txtDatoABuscar.Size = new System.Drawing.Size(466, 23);
             this.txtDatoABuscar.TabIndex = 4;
+            this.txtDatoABuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDatoABuscar_KeyDown);
             // 
             // lblValorABuscar
             // 
@@ -440,6 +444,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(466, 24);
             this.comboBox3.TabIndex = 2;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -902,72 +907,6 @@
             this.panel2.Size = new System.Drawing.Size(473, 46);
             this.panel2.TabIndex = 7;
             // 
-            // Identificador
-            // 
-            this.Identificador.DataPropertyName = "Id";
-            this.Identificador.HeaderText = "Identificador";
-            this.Identificador.Name = "Identificador";
-            // 
-            // Motivo
-            // 
-            this.Motivo.DataPropertyName = "Descripcion";
-            this.Motivo.HeaderText = "Motivo";
-            this.Motivo.Name = "Motivo";
-            // 
-            // Dia
-            // 
-            this.Dia.DataPropertyName = "Dia";
-            this.Dia.HeaderText = "Día";
-            this.Dia.Name = "Dia";
-            // 
-            // HoraInicio
-            // 
-            this.HoraInicio.DataPropertyName = "Hora_Inicio";
-            this.HoraInicio.HeaderText = "Hora Inicio";
-            this.HoraInicio.Name = "HoraInicio";
-            // 
-            // HoraFinal
-            // 
-            this.HoraFinal.DataPropertyName = "Hora_final";
-            this.HoraFinal.HeaderText = "Hora Final";
-            this.HoraFinal.Name = "HoraFinal";
-            // 
-            // HorasOrdinarias
-            // 
-            this.HorasOrdinarias.DataPropertyName = "Horas_Ordinarias";
-            this.HorasOrdinarias.HeaderText = "Horas Ordinarias";
-            this.HorasOrdinarias.Name = "HorasOrdinarias";
-            // 
-            // Creador
-            // 
-            this.Creador.DataPropertyName = "getCreador";
-            this.Creador.HeaderText = "Creador";
-            this.Creador.Name = "Creador";
-            // 
-            // FechaDeCreacion
-            // 
-            this.FechaDeCreacion.DataPropertyName = "getFechaCreacion";
-            this.FechaDeCreacion.HeaderText = "Fecha de creación";
-            this.FechaDeCreacion.Name = "FechaDeCreacion";
-            // 
-            // Modificador
-            // 
-            this.Modificador.DataPropertyName = "getModificador";
-            this.Modificador.HeaderText = "Modificador";
-            this.Modificador.Name = "Modificador";
-            // 
-            // FechaDeModificacion
-            // 
-            this.FechaDeModificacion.DataPropertyName = "getFechaModificacion";
-            this.FechaDeModificacion.HeaderText = "Fecha de modificación";
-            this.FechaDeModificacion.Name = "FechaDeModificacion";
-            // 
-            // Activo
-            // 
-            this.Activo.DataPropertyName = "getActivo";
-            this.Activo.HeaderText = "Activo";
-            this.Activo.Name = "Activo";
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
@@ -1233,6 +1172,72 @@
             this.textBox6.Size = new System.Drawing.Size(501, 23);
             this.textBox6.TabIndex = 67;
             // 
+            // Identificador
+            // 
+            this.Identificador.DataPropertyName = "Id";
+            this.Identificador.HeaderText = "Identificador";
+            this.Identificador.Name = "Identificador";
+            // 
+            // Motivo
+            // 
+            this.Motivo.DataPropertyName = "Descripcion";
+            this.Motivo.HeaderText = "Motivo";
+            this.Motivo.Name = "Motivo";
+            // 
+            // Dia
+            // 
+            this.Dia.DataPropertyName = "Dia";
+            this.Dia.HeaderText = "Día";
+            this.Dia.Name = "Dia";
+            // 
+            // HoraInicio
+            // 
+            this.HoraInicio.DataPropertyName = "Hora_Inicio_Tiempo";
+            this.HoraInicio.HeaderText = "Hora Inicio";
+            this.HoraInicio.Name = "HoraInicio";
+            // 
+            // HoraFinal
+            // 
+            this.HoraFinal.DataPropertyName = "Hora_final_Tiempo";
+            this.HoraFinal.HeaderText = "Hora Final";
+            this.HoraFinal.Name = "HoraFinal";
+            // 
+            // HorasOrdinarias
+            // 
+            this.HorasOrdinarias.DataPropertyName = "Horas_Ordinarias";
+            this.HorasOrdinarias.HeaderText = "Horas Ordinarias";
+            this.HorasOrdinarias.Name = "HorasOrdinarias";
+            // 
+            // Creador
+            // 
+            this.Creador.DataPropertyName = "getCreador";
+            this.Creador.HeaderText = "Creador";
+            this.Creador.Name = "Creador";
+            // 
+            // FechaDeCreacion
+            // 
+            this.FechaDeCreacion.DataPropertyName = "getFechaCreacion";
+            this.FechaDeCreacion.HeaderText = "Fecha de creación";
+            this.FechaDeCreacion.Name = "FechaDeCreacion";
+            // 
+            // Modificador
+            // 
+            this.Modificador.DataPropertyName = "getModificador";
+            this.Modificador.HeaderText = "Modificador";
+            this.Modificador.Name = "Modificador";
+            // 
+            // FechaDeModificacion
+            // 
+            this.FechaDeModificacion.DataPropertyName = "getFechaModificacion";
+            this.FechaDeModificacion.HeaderText = "Fecha de modificación";
+            this.FechaDeModificacion.Name = "FechaDeModificacion";
+            // 
+            // Activo
+            // 
+            this.Activo.DataPropertyName = "getActivo";
+            this.Activo.HeaderText = "Activo";
+            this.Activo.Name = "Activo";
+            // 
             // PanelHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1324,17 +1329,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Identificador;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Motivo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoraFinal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HorasOrdinarias;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Creador;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaDeCreacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Modificador;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaDeModificacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Activo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -1366,5 +1360,16 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Identificador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Motivo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoraFinal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HorasOrdinarias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Creador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaDeCreacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Modificador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaDeModificacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Activo;
     }
 }
