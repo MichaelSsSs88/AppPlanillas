@@ -36,31 +36,68 @@ namespace AppPlanillas.DAL
             }
         }
 
-        public int ActualizarDepartamento (DepartamentoENT pDepartamento)
+        public int ActualizarDepartamento (bool elmininar, DepartamentoENT pDepartamento)
         {
             
-                int numero = 0;
-                try
+            int numero = 0;
+            try
+            {
+                Parametro parametros;
+                string sentenciaSQL = "";
+                if (!elmininar)
                 {
-                   
-                    string sentenciaSQL = "UPDATE departamento set nombre =" + pDepartamento.getNombre + " where id = " + pDepartamento.getId;
+                    parametros = new Parametro();
                     AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
-                    conexion.EjecutarSQL(sentenciaSQL);
+                    sentenciaSQL = "UPDATE departamento SET nombre = @nombre, fecha_creacion = @fecha_creacion, creado_por = @creado_por, fecha_modificacion = @fecha_modificacion, modificado_por = @modificado_por, activo = @activo WHERE id = '" + pDepartamento.getId + "'";
+                    parametros.AgregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pDepartamento.getNombre);
+                    parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDepartamento.getFechaCreacion);
+                    parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDepartamento.getCreador);
+                    parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDepartamento.getFechaModificacion);
+                    parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDepartamento.getModificador);
+                    parametros.AgregarParametro("@activo", NpgsqlTypes.NpgsqlDbType.Boolean, pDepartamento.getActivo);
+                    conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());
                 }
-                catch (Exception e)
+                else
                 {
-                    numero = 1;
-                    throw e;
+                    parametros = new Parametro();
+                    AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
+                    sentenciaSQL = "UPDATE departamento SET nombre = @nombre, fecha_creacion = @fecha_creacion, creado_por = @creado_por, fecha_modificacion = @fecha_modificacion, modificado_por = @modificado_por, activo = @activo WHERE id = '" + pDepartamento.getId + "'";
+                    parametros.AgregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pDepartamento.getNombre);
+                    parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDepartamento.getFechaCreacion);
+                    parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDepartamento.getCreador);
+                    parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDepartamento.getFechaModificacion);
+                    parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDepartamento.getModificador);
+                    parametros.AgregarParametro("@activo", NpgsqlTypes.NpgsqlDbType.Boolean, pDepartamento.getActivo);
+                    conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());
                 }
+            }
+            catch (Exception e)
+            {
+                numero = 1;
+                throw e;
+            }
             return numero;
         }
 
-        public List<DepartamentoENT> ObtenerDepartamentos()
+        public List<DepartamentoENT> ObtenerDepartamentos(int pId, string pDescripcion)
         {
+            string consultaSQL = "SELECT * FROM departamento";
+            if (pId > -1)
+            {
+                consultaSQL += " WHERE (id = " + pId + ")";
+                if (pDescripcion != "")
+                {
+                    consultaSQL += " AND (nombre = " + pDescripcion + ")";
+                }
+            }
+            else if (pDescripcion != "")
+            {
+                consultaSQL += " WHERE (id = " + pId + ")";
+            }
             List<DepartamentoENT> departamentos = new List<DepartamentoENT>();
             try
             {
-                DataSet dsetDepartamentos = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("SELECT * FROM departamento");
+                DataSet dsetDepartamentos = AccesoDatosPostgre.Instance.EjecutarConsultaSQL(consultaSQL);
                 foreach (DataRow fila in dsetDepartamentos.Tables[0].Rows)
                 {
                     ENT.DepartamentoENT departamento = new ENT.DepartamentoENT((int)fila["id"], fila["nombre"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);

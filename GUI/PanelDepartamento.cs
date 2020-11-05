@@ -17,6 +17,7 @@ namespace AppPlanillas.GUI
 
         private List<System.Windows.Forms.TabPage> objColPages = null;
         private bool[] arrBoolPagesVisible;
+        private DepartamentoENT nuevoDepartamento;
         public PanelDepartamento(int pestaña)
         {
             InitializeComponent();
@@ -24,10 +25,10 @@ namespace AppPlanillas.GUI
             this.HideTab(1);
             this.HideTab(2);
             this.ShowTab(pestaña);
-            DepartamentoENT nuevoDepartamento = new DepartamentoENT();
-            this.dataGridView1.DataSource = nuevoDepartamento.departamentos;
-            Console.WriteLine("sasasa465454544");
-        } 
+            this.nuevoDepartamento = new DepartamentoENT();
+            this.dataGridView2.DataSource = this.nuevoDepartamento.departamentos;
+            this.panelFiltro.Visible = false;
+        }
 
         private void InitControl()
         {
@@ -104,6 +105,14 @@ namespace AppPlanillas.GUI
         private void btnGuardarEditar_Click(object sender, EventArgs e)
         {
             this.btnGuardar.Image = new Bitmap(Application.StartupPath + @"\IMG\SaveSmall.png");
+            DepartamentoDAL actualizarDepartamento = new DepartamentoDAL();
+            this.nuevoDepartamento = new DepartamentoENT(Int32.Parse(this.txtCodigoDepartamentoEditar.Text), this.txtNombreDepartamentoEditar.Text, DateTime.Now.Date, "Jean Ca", DateTime.Now.Date, "Jean Ca", true);
+            actualizarDepartamento.ActualizarDepartamento(false, this.nuevoDepartamento);
+            this.nuevoDepartamento = new DepartamentoENT();
+            this.dataGridView2.DataSource = this.nuevoDepartamento.departamentos;
+            this.txtCodigoDepartamentoEditar.Text = "";
+            this.txtNombreDepartamentoEditar.Text = "";
+            MessageBox.Show("¡Se modificado correctamente el departamento!", "Actualización de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnReporte_MouseEnter(object sender, EventArgs e)
@@ -119,6 +128,65 @@ namespace AppPlanillas.GUI
         private void btnReporte_Click(object sender, EventArgs e)
         {
             this.btnReporte.Image = new Bitmap(Application.StartupPath + @"\IMG\csvSmall.png");
+        }
+
+        private void CargarDepartamentos(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                switch (this.comboBox3.Text)
+                {
+                    case "Todos":
+                        this.dataGridView2.DataSource = this.nuevoDepartamento.departamentos;
+                        break;
+                    case "Codigo":
+                        this.dataGridView2.DataSource = new DepartamentoDAL().ObtenerDepartamentos(Int32.Parse(this.textBox9.Text), "");
+                        break;
+                    case "Descripción":
+                        this.dataGridView2.DataSource = new DepartamentoDAL().ObtenerDepartamentos(-1, this.textBox9.Text);
+                        break;
+                    default:
+                        break;
+                }
+            } 
+            catch
+            {
+                MessageBox.Show("Error al cargar los datos de departamentos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void textBox9_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.CargarDepartamentos(sender, e);
+            }
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.comboBox3.SelectedIndex == 0)
+            {
+                this.panelFiltro.Visible = false;
+                this.dataGridView2.DataSource = this.nuevoDepartamento.departamentos;
+            }
+            if (this.comboBox3.SelectedIndex == 1)
+            {
+                lblValorABuscar.Text = "Digite el código del departamento";
+                this.panelFiltro.Visible = true;
+            }
+            if (this.comboBox3.SelectedIndex == 2)
+            {
+                lblValorABuscar.Text = "Digite el nombre del departamento";
+                this.panelFiltro.Visible = true;
+            }
+        }
+
+        private void dataGridView2_Click(object sender, EventArgs e)
+        {
+            int fila = this.dataGridView2.CurrentRow.Index;
+            this.txtCodigoDepartamentoEditar.Text = this.dataGridView2.Rows[fila].Cells[0].Value.ToString();
+            this.txtNombreDepartamentoEditar.Text = this.dataGridView2.Rows[fila].Cells[1].Value.ToString();
         }
     }
 }
