@@ -4,8 +4,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL;
 
-namespace ProyectoIIIC
+namespace AppPlanillas.DAL
 {
     class UsuarioDAL
     {
@@ -87,17 +88,17 @@ namespace ProyectoIIIC
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
                 string sentenciaSQL = "INSERT INTO deduccion (nombre, correo, tipo, contraseña, fecha_creacion, creado_por, fecha_modificacion, modificado_por, activo)" +
                                       "VALUES (@nombre, @correo, @tipo, MD5( @contraseña ), @fecha_creacion, @creado_por, @fecha_modificacion, @modificado_por, @activo)";
-                parametros.agregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Nombre);
-                parametros.agregarParametro("@correo", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Correo);
-                parametros.agregarParametro("@tipo", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Tipo);
-                parametros.agregarParametro("@contraseña", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Contrasena);
-                parametros.agregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pUsuario.getFechaCreacion);
-                parametros.agregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.getCreador);
-                parametros.agregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pUsuario.getFechaModificacion);
-                parametros.agregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.getModificador);
-                parametros.agregarParametro("@activo", NpgsqlTypes.NpgsqlDbType.Boolean, pUsuario.getActivo);
+                parametros.AgregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Nombre);
+                parametros.AgregarParametro("@correo", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Correo);
+                parametros.AgregarParametro("@tipo", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Tipo);
+                parametros.AgregarParametro("@contraseña", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Contrasena);
+                parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pUsuario.getFechaCreacion);
+                parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.getCreador);
+                parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pUsuario.getFechaModificacion);
+                parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.getModificador);
+                parametros.AgregarParametro("@activo", NpgsqlTypes.NpgsqlDbType.Boolean, pUsuario.getActivo);
 
-                conexion.EjecutarSQL(sentenciaSQL, parametros.obtenerParametros());
+                conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());
             }
             catch (Exception e)
             {
@@ -114,12 +115,12 @@ namespace ProyectoIIIC
                 Parametro parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
                 string sentenciaSQL = "UPDATE usuario SET nombre =@nombre, correo =@correo, tipo =@tipo, contraseña =MD5(@contraseña) WHERE id " + pUsuario.Id;
-                parametros.agregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Nombre);
-                parametros.agregarParametro("@correo", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Correo);
-                parametros.agregarParametro("@tipo", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Tipo);
-                parametros.agregarParametro("@contraseña", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Contrasena);
+                parametros.AgregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Nombre);
+                parametros.AgregarParametro("@correo", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Correo);
+                parametros.AgregarParametro("@tipo", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Tipo);
+                parametros.AgregarParametro("@contraseña", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Contrasena);
 
-                conexion.EjecutarSQL(sentenciaSQL, parametros.obtenerParametros());
+                conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());
             }
             catch (Exception e)
             {
@@ -134,10 +135,10 @@ namespace ProyectoIIIC
                 Parametro parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
                 string sentenciaSQL = "DELETE FROM usuario WHERE id = @id";
-                parametros.agregarParametro("@id", NpgsqlTypes.NpgsqlDbType.Integer, pUsuario.Id);
+                parametros.AgregarParametro("@id", NpgsqlTypes.NpgsqlDbType.Integer, pUsuario.Id);
 
 
-                conexion.EjecutarSQL(sentenciaSQL, parametros.obtenerParametros());
+                conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());
             }
             catch (Exception e)
             {

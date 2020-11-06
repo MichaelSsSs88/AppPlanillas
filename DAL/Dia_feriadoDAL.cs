@@ -4,8 +4,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL;
 
-namespace ProyectoIIIC
+namespace AppPlanillas.DAL
 {
     class Dia_feriadoDAL
     {
@@ -86,15 +87,15 @@ namespace ProyectoIIIC
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
                 string sentenciaSQL = "INSERT INTO deduccion (fecha, motivo, fecha_creacion, creado_por, fecha_modificacion, modificado_por, activo)" +
                                       "VALUES (@fecha, @motivo, @fecha_creacion, @creado_por, @fecha_modificacion, @modificado_por, @activo)";
-                parametros.agregarParametro("@fecha", NpgsqlTypes.NpgsqlDbType.Date, pFeriado.Fecha);
-                parametros.agregarParametro("@motivo", NpgsqlTypes.NpgsqlDbType.Varchar, pFeriado.Motivo);
-                parametros.agregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pFeriado.getFechaCreacion);
-                parametros.agregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pFeriado.getCreador);
-                parametros.agregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pFeriado.getFechaModificacion);
-                parametros.agregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pFeriado.getModificador);
-                parametros.agregarParametro("@activo", NpgsqlTypes.NpgsqlDbType.Boolean, pFeriado.getActivo);
+                parametros.AgregarParametro("@fecha", NpgsqlTypes.NpgsqlDbType.Date, pFeriado.Fecha);
+                parametros.AgregarParametro("@motivo", NpgsqlTypes.NpgsqlDbType.Varchar, pFeriado.Motivo);
+                parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pFeriado.getFechaCreacion);
+                parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pFeriado.getCreador);
+                parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pFeriado.getFechaModificacion);
+                parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pFeriado.getModificador);
+                parametros.AgregarParametro("@activo", NpgsqlTypes.NpgsqlDbType.Boolean, pFeriado.getActivo);
 
-                conexion.EjecutarSQL(sentenciaSQL, parametros.obtenerParametros());
+                conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());
             }
             catch (Exception e)
             {
@@ -108,11 +109,11 @@ namespace ProyectoIIIC
                 Parametro parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
                 string sentenciaSQL = "UPDATE dia_feriado SET fecha =@fecha, motivo =@motivo WHERE id " + pFeriado.Id;
-                parametros.agregarParametro("@fecha", NpgsqlTypes.NpgsqlDbType.Date, pFeriado.Fecha);
-                parametros.agregarParametro("@motivo", NpgsqlTypes.NpgsqlDbType.Varchar, pFeriado.Motivo);
+                parametros.AgregarParametro("@fecha", NpgsqlTypes.NpgsqlDbType.Date, pFeriado.Fecha);
+                parametros.AgregarParametro("@motivo", NpgsqlTypes.NpgsqlDbType.Varchar, pFeriado.Motivo);
                 
 
-                conexion.EjecutarSQL(sentenciaSQL, parametros.obtenerParametros());
+                conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());
             }
             catch (Exception e)
             {
@@ -127,10 +128,10 @@ namespace ProyectoIIIC
                 Parametro parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
                 string sentenciaSQL = "DELETE FROM dia_feriado WHERE id = @id";
-                parametros.agregarParametro("@id", NpgsqlTypes.NpgsqlDbType.Integer, pFeriado.Id);
+                parametros.AgregarParametro("@id", NpgsqlTypes.NpgsqlDbType.Integer, pFeriado.Id);
                 
 
-                conexion.EjecutarSQL(sentenciaSQL, parametros.obtenerParametros());
+                conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());
             }
             catch (Exception e)
             {
