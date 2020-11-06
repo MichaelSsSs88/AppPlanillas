@@ -28,7 +28,7 @@ namespace AppPlanillas.GUI
             this.HideTab(2);
             this.ShowTab(pestaña);
             this.CargarTabla(1, pestaña);
-            if (this.comboBox3.SelectedIndex < 0)
+            if (this.cmbEditarHorario.SelectedIndex < 0)
             {
                 this.panelFiltro.Visible = false;
             }
@@ -100,19 +100,19 @@ namespace AppPlanillas.GUI
                     this.dataGridView1.DataSource = this.HorarioENT.horarios;
 
                 if(pestaña==1)
-                    this.dataGridView2.DataSource = this.HorarioENT.horarios;
+                    this.dgvEditar.DataSource = this.HorarioENT.horarios;
             }
             if(busqueda == 2)
             {
                 this.HorarioENT.horarios = horarioDAL.ObtenerHorarios(Int32.Parse(this.txtDatoABuscar.Text), "") ;
                 if (pestaña == 1)
-                    this.dataGridView2.DataSource = this.HorarioENT.horarios;
+                    this.dgvEditar.DataSource = this.HorarioENT.horarios;
             }
             if(busqueda == 3)
             {
                 this.HorarioENT.horarios = horarioDAL.ObtenerHorarios(-1, this.txtDatoABuscar.Text);
                 if (pestaña == 1)
-                    this.dataGridView2.DataSource = this.HorarioENT.horarios;
+                    this.dgvEditar.DataSource = this.HorarioENT.horarios;
             }
         }
 
@@ -171,18 +171,18 @@ namespace AppPlanillas.GUI
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (this.comboBox3.SelectedIndex == 0)
+            if (this.cmbEditarHorario.SelectedIndex == 0)
             {
                 this.panelFiltro.Visible = false;
                 this.txtDatoABuscar.Text = "";
                 this.CargarTabla(1,1);
             }
-            if (this.comboBox3.SelectedIndex == 1)
+            if (this.cmbEditarHorario.SelectedIndex == 1)
             {
                 this.panelFiltro.Visible = true;
                 this.lblValorABuscar.Text = "Digite el codigo del horario: ";
             }
-            if (this.comboBox3.SelectedIndex == 2)
+            if (this.cmbEditarHorario.SelectedIndex == 2)
             {
                 this.panelFiltro.Visible = true;
                 this.lblValorABuscar.Text = "Digite el día del horario: ";
@@ -192,14 +192,65 @@ namespace AppPlanillas.GUI
 
         private void txtDatoABuscar_KeyDown(object sender, KeyEventArgs e)
         {
+            
+
             if (e.KeyCode == Keys.Enter)
             {
-                if(this.comboBox3.SelectedIndex==1)
+                if(this.cmbEditarHorario.SelectedIndex==1)
                    this.CargarTabla(2,1);
                 else
                 {
                     this.CargarTabla(3, 1);
                 }
+            }
+        }
+
+        private void panel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvEditar_MouseClick(object sender, MouseEventArgs e)
+        {
+            int fila = this.dgvEditar.CurrentRow.Index;
+            this.txtEditarId.Text = this.dgvEditar.Rows[fila].Cells[0].Value.ToString();
+            this.txtEditarDescripcion.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn2"].Value.ToString();
+            this.cmbEditarDia.SelectedItem = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn3"].Value.ToString();
+            Console.WriteLine("hola" + this.dgvEditar.Rows[fila].Cells[3].Value.ToString());
+            this.dtpEditarEntrada.Value =  DateTime.Parse(this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn4"].Value.ToString());
+            this.dtpEditarSalida.Value = DateTime.Parse(this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn5"].Value.ToString());
+            this.txtEditarHoras.Text= this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn6"].Value.ToString();
+            this.chbActivo.Checked= Boolean.Parse(this.dgvEditar.Rows[fila].Cells[10].Value.ToString());
+            //this.txtCodigoDepartamentoActualizar.Text = this.grdActualizar.Rows[fila].Cells[0].Value.ToString();
+            //this.txtNombreDepartamentoActualizar.Text = this.grdActualizar.Rows[fila].Cells[1].Value.ToString();
+        }
+
+        private void dtpEditarEntrada_ValueChanged(object sender, EventArgs e)
+        {
+            TimeSpan horas = TimeSpan.Parse(this.dtpEditarSalida.Value.ToString("HH:mm")) - TimeSpan.Parse(this.dtpEditarEntrada.Value.ToString("HH:mm"));
+            this.txtEditarHoras.Text = horas.Hours.ToString();
+        }
+
+        private void dtpEditarSalida_ValueChanged(object sender, EventArgs e)
+        {
+            TimeSpan horas = TimeSpan.Parse(this.dtpEditarSalida.Value.ToString("HH:mm")) - TimeSpan.Parse(this.dtpEditarEntrada.Value.ToString("HH:mm"));
+            this.txtEditarHoras.Text = horas.Hours.ToString();
+        }
+
+        private void txtDatoABuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (this.txtDatoABuscar.Text == "")
+            {
+                this.CargarTabla(1, 1);
+            }
+            else if (this.cmbEditarHorario.SelectedIndex == 1)
+            {
+
+                this.CargarTabla(2, 1);
+            }
+            else if (this.cmbEditarHorario.SelectedIndex == 2)
+            {
+                this.CargarTabla(3, 1);
             }
         }
     }

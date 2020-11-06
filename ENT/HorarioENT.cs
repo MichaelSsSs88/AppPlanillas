@@ -58,20 +58,20 @@ namespace ProyectoIIIC
                 return this.hora_inicio;
             }
         }*/
-        public String Hora_Inicio_Tiempo
+        public String Hora_Inicio
         {
             get
             {
-                return this.hora_inicio.ToString("HH:mm:ss");
+                return this.hora_inicio.ToString("HH:mm");
             }
         }
 
-        public String Hora_Final_Tiempo
+        public String Hora_Final
         {
             get
             {
                 //TimeSpan.Parse(pHorario.Hora_Inicio.ToString("HH:mm:ss"))
-                return this.hora_final.ToString("HH:mm:ss");
+                return this.hora_final.ToString("HH:mm");
             }
         }
 
