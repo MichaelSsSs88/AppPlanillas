@@ -111,7 +111,7 @@ namespace AppPlanillas.GUI
             if ((this.txtCodigoDepartamentoActualizar.Text != "") && (this.txtNombreDepartamentoActualizar.Text!="")) 
             { 
                 DepartamentoDAL actualizarDepartamento = new DepartamentoDAL();
-                this.nuevoDepartamento = new DepartamentoENT(Int32.Parse(this.txtCodigoDepartamentoActualizar.Text), this.txtNombreDepartamentoActualizar.Text, DateTime.Now.Date, "Jean Ca", DateTime.Now.Date, "Jean Ca", true);
+                this.nuevoDepartamento = new DepartamentoENT(Int32.Parse(this.txtCodigoDepartamentoActualizar.Text), this.txtNombreDepartamentoActualizar.Text, DateTime.Now.Date, "Jean Ca", DateTime.Now.Date, "Jean Ca", this.cbxActivoActualizar.Checked);
                 actualizarDepartamento.ActualizarDepartamento(false, this.nuevoDepartamento);
                 this.nuevoDepartamento = new DepartamentoENT();
                 this.grdActualizar.DataSource = this.nuevoDepartamento.departamentos;
@@ -192,6 +192,7 @@ namespace AppPlanillas.GUI
             int fila = this.grdActualizar.CurrentRow.Index;
             this.txtCodigoDepartamentoActualizar.Text = this.grdActualizar.Rows[fila].Cells[0].Value.ToString();
             this.txtNombreDepartamentoActualizar.Text = this.grdActualizar.Rows[fila].Cells[1].Value.ToString();
+            this.cbxActivoActualizar.Checked = (bool)this.grdActualizar.Rows[fila].Cells[6].Value;
         }
 
         private void btnEliminarDepartamento_Click(object sender, EventArgs e)
@@ -266,5 +267,6 @@ namespace AppPlanillas.GUI
             this.txtCodigoEliminar.Text = this.grdEliminar.Rows[fila].Cells[0].Value.ToString();
             this.txtDescripcionEliminar.Text = this.grdEliminar.Rows[fila].Cells[1].Value.ToString();
         }
+
     }
 }

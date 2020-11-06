@@ -81,10 +81,10 @@ namespace AppPlanillas.DAL
 
         public List<DepartamentoENT> ObtenerDepartamentos(int pId, string pDescripcion)
         {
-            string consultaSQL = "SELECT * FROM departamento WHERE (activo = true)";
+            string consultaSQL = "SELECT * FROM departamento";
             if (pId > -1)
             {
-                consultaSQL += " AND (id = " + pId + ")";
+                consultaSQL += " WHERE (id = " + pId + ")";
                 if (pDescripcion != "")
                 {
                     consultaSQL += " AND (nombre = " + pDescripcion + ")";
@@ -92,7 +92,7 @@ namespace AppPlanillas.DAL
             }
             else if (pDescripcion != "")
             {
-                consultaSQL += " AND (id = " + pId + ")";
+                consultaSQL += " WHERE (id = " + pId + ")";
             }
             List<DepartamentoENT> departamentos = new List<DepartamentoENT>();
             try

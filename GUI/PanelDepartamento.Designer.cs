@@ -66,6 +66,7 @@
             this.cmbTipoBusquedaActualizar = new System.Windows.Forms.ComboBox();
             this.lblTipoBusquedaActualizar = new System.Windows.Forms.Label();
             this.gbxActualizar = new System.Windows.Forms.GroupBox();
+            this.cbxActivoActualizar = new System.Windows.Forms.CheckBox();
             this.btnGuardarActualizar = new System.Windows.Forms.Button();
             this.txtNombreDepartamentoActualizar = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -74,6 +75,13 @@
             this.tabDeleteDepartment = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.grdEliminar = new System.Windows.Forms.DataGridView();
+            this.colIdEliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombreEliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCreadorEliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFechaCreacionEliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colModificadorEliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFechaModificacionEliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colActivoEliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblSeleccionarEliminar = new System.Windows.Forms.Label();
             this.pnlFiltroEliminar = new System.Windows.Forms.Panel();
             this.txtBuscarEliminar = new System.Windows.Forms.TextBox();
@@ -86,13 +94,6 @@
             this.lblDescripcionEliminar = new System.Windows.Forms.Label();
             this.txtCodigoEliminar = new System.Windows.Forms.TextBox();
             this.lblCodigoEliminar = new System.Windows.Forms.Label();
-            this.colIdEliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombreEliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCreadorEliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFechaCreacionEliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colModificadorEliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFechaModificacionEliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colActivoEliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabDepartamentos.SuspendLayout();
             this.tabInsertDepartment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdInsertar)).BeginInit();
@@ -500,6 +501,7 @@
             // 
             // gbxActualizar
             // 
+            this.gbxActualizar.Controls.Add(this.cbxActivoActualizar);
             this.gbxActualizar.Controls.Add(this.btnGuardarActualizar);
             this.gbxActualizar.Controls.Add(this.txtNombreDepartamentoActualizar);
             this.gbxActualizar.Controls.Add(this.label11);
@@ -515,6 +517,16 @@
             this.gbxActualizar.TabIndex = 4;
             this.gbxActualizar.TabStop = false;
             this.gbxActualizar.Text = "Completar datos del departamento";
+            // 
+            // cbxActivoActualizar
+            // 
+            this.cbxActivoActualizar.AutoSize = true;
+            this.cbxActivoActualizar.Location = new System.Drawing.Point(13, 140);
+            this.cbxActivoActualizar.Name = "cbxActivoActualizar";
+            this.cbxActivoActualizar.Size = new System.Drawing.Size(65, 21);
+            this.cbxActivoActualizar.TabIndex = 37;
+            this.cbxActivoActualizar.Text = "Activo";
+            this.cbxActivoActualizar.UseVisualStyleBackColor = true;
             // 
             // btnGuardarActualizar
             // 
@@ -626,6 +638,55 @@
             this.grdEliminar.Size = new System.Drawing.Size(497, 454);
             this.grdEliminar.TabIndex = 5;
             this.grdEliminar.Click += new System.EventHandler(this.grdEliminar_Click);
+            // 
+            // colIdEliminar
+            // 
+            this.colIdEliminar.DataPropertyName = "getId";
+            this.colIdEliminar.HeaderText = "ID";
+            this.colIdEliminar.Name = "colIdEliminar";
+            this.colIdEliminar.ReadOnly = true;
+            // 
+            // colNombreEliminar
+            // 
+            this.colNombreEliminar.DataPropertyName = "getNombre";
+            this.colNombreEliminar.HeaderText = "Nombre";
+            this.colNombreEliminar.Name = "colNombreEliminar";
+            this.colNombreEliminar.ReadOnly = true;
+            // 
+            // colCreadorEliminar
+            // 
+            this.colCreadorEliminar.DataPropertyName = "getCreador";
+            this.colCreadorEliminar.HeaderText = "Creador";
+            this.colCreadorEliminar.Name = "colCreadorEliminar";
+            this.colCreadorEliminar.ReadOnly = true;
+            // 
+            // colFechaCreacionEliminar
+            // 
+            this.colFechaCreacionEliminar.DataPropertyName = "getFechaCreacion";
+            this.colFechaCreacionEliminar.HeaderText = "Fecha creación";
+            this.colFechaCreacionEliminar.Name = "colFechaCreacionEliminar";
+            this.colFechaCreacionEliminar.ReadOnly = true;
+            // 
+            // colModificadorEliminar
+            // 
+            this.colModificadorEliminar.DataPropertyName = "getModificador";
+            this.colModificadorEliminar.HeaderText = "Modificador";
+            this.colModificadorEliminar.Name = "colModificadorEliminar";
+            this.colModificadorEliminar.ReadOnly = true;
+            // 
+            // colFechaModificacionEliminar
+            // 
+            this.colFechaModificacionEliminar.DataPropertyName = "getFechaModificacion";
+            this.colFechaModificacionEliminar.HeaderText = "Fecha modificación";
+            this.colFechaModificacionEliminar.Name = "colFechaModificacionEliminar";
+            this.colFechaModificacionEliminar.ReadOnly = true;
+            // 
+            // colActivoEliminar
+            // 
+            this.colActivoEliminar.DataPropertyName = "getActivo";
+            this.colActivoEliminar.HeaderText = "Activo";
+            this.colActivoEliminar.Name = "colActivoEliminar";
+            this.colActivoEliminar.ReadOnly = true;
             // 
             // lblSeleccionarEliminar
             // 
@@ -776,55 +837,6 @@
             this.lblCodigoEliminar.TabIndex = 0;
             this.lblCodigoEliminar.Text = "Código del departamento:";
             // 
-            // colIdEliminar
-            // 
-            this.colIdEliminar.DataPropertyName = "getId";
-            this.colIdEliminar.HeaderText = "ID";
-            this.colIdEliminar.Name = "colIdEliminar";
-            this.colIdEliminar.ReadOnly = true;
-            // 
-            // colNombreEliminar
-            // 
-            this.colNombreEliminar.DataPropertyName = "getNombre";
-            this.colNombreEliminar.HeaderText = "Nombre";
-            this.colNombreEliminar.Name = "colNombreEliminar";
-            this.colNombreEliminar.ReadOnly = true;
-            // 
-            // colCreadorEliminar
-            // 
-            this.colCreadorEliminar.DataPropertyName = "getCreador";
-            this.colCreadorEliminar.HeaderText = "Creador";
-            this.colCreadorEliminar.Name = "colCreadorEliminar";
-            this.colCreadorEliminar.ReadOnly = true;
-            // 
-            // colFechaCreacionEliminar
-            // 
-            this.colFechaCreacionEliminar.DataPropertyName = "getFechaCreacion";
-            this.colFechaCreacionEliminar.HeaderText = "Fecha creación";
-            this.colFechaCreacionEliminar.Name = "colFechaCreacionEliminar";
-            this.colFechaCreacionEliminar.ReadOnly = true;
-            // 
-            // colModificadorEliminar
-            // 
-            this.colModificadorEliminar.DataPropertyName = "getModificador";
-            this.colModificadorEliminar.HeaderText = "Modificador";
-            this.colModificadorEliminar.Name = "colModificadorEliminar";
-            this.colModificadorEliminar.ReadOnly = true;
-            // 
-            // colFechaModificacionEliminar
-            // 
-            this.colFechaModificacionEliminar.DataPropertyName = "getFechaModificacion";
-            this.colFechaModificacionEliminar.HeaderText = "Fecha modificación";
-            this.colFechaModificacionEliminar.Name = "colFechaModificacionEliminar";
-            this.colFechaModificacionEliminar.ReadOnly = true;
-            // 
-            // colActivoEliminar
-            // 
-            this.colActivoEliminar.DataPropertyName = "getActivo";
-            this.colActivoEliminar.HeaderText = "Activo";
-            this.colActivoEliminar.Name = "colActivoEliminar";
-            this.colActivoEliminar.ReadOnly = true;
-            // 
             // PanelDepartamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -924,5 +936,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colModificadorEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaModificacionEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colActivoEliminar;
+        private System.Windows.Forms.CheckBox cbxActivoActualizar;
     }
 }

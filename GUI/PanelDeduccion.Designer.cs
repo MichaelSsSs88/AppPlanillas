@@ -104,10 +104,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.lblSistema = new System.Windows.Forms.Label();
+            this.txtDescripcionInsertar = new System.Windows.Forms.TextBox();
+            this.lblDescripcion = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabDeleteDeducción.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -850,9 +850,9 @@
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblSistema);
+            this.groupBox1.Controls.Add(this.txtDescripcionInsertar);
+            this.groupBox1.Controls.Add(this.lblDescripcion);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(5, 5);
@@ -942,6 +942,39 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "Seleccione el porcentaje:";
             // 
+            // lblSistema
+            // 
+            this.lblSistema.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblSistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblSistema.Location = new System.Drawing.Point(13, 94);
+            this.lblSistema.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblSistema.Name = "lblSistema";
+            this.lblSistema.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.lblSistema.Size = new System.Drawing.Size(484, 37);
+            this.lblSistema.TabIndex = 16;
+            this.lblSistema.Text = "Seleccione el sistema de aplicación";
+            // 
+            // txtDescripcionInsertar
+            // 
+            this.txtDescripcionInsertar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtDescripcionInsertar.Location = new System.Drawing.Point(13, 71);
+            this.txtDescripcionInsertar.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDescripcionInsertar.Name = "txtDescripcionInsertar";
+            this.txtDescripcionInsertar.Size = new System.Drawing.Size(484, 23);
+            this.txtDescripcionInsertar.TabIndex = 1;
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblDescripcion.Location = new System.Drawing.Point(13, 28);
+            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.lblDescripcion.Size = new System.Drawing.Size(484, 43);
+            this.lblDescripcion.TabIndex = 0;
+            this.lblDescripcion.Text = "Ingrese la descripción";
+            // 
             // textBox4
             // 
             this.textBox4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -950,39 +983,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(484, 23);
             this.textBox4.TabIndex = 17;
-            // 
-            // label4
-            // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(13, 94);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label4.Size = new System.Drawing.Size(484, 37);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Ingrese la descripción:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Location = new System.Drawing.Point(13, 71);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(484, 23);
-            this.textBox1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(13, 28);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.label1.Size = new System.Drawing.Size(484, 43);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ingrese el identificador:";
             // 
             // PanelDeduccion
             // 
@@ -1093,9 +1093,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblSistema;
+        private System.Windows.Forms.TextBox txtDescripcionInsertar;
+        private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
     }
 }
