@@ -104,13 +104,14 @@ namespace ProyectoIIIC
             {
                 Parametro parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
-                string sentenciaSQL = "UPDATE horario SET descripcion =@descripcion, dia =@dia, hora_inicio =@hora_inicio, hora_final =@hora_final, horas_ordinarias =@horas_ordinarias, fecha_creacion =@fecha_creacion, creado_por =@creado_por, fecha_modificacion =@fecha_modificacion, modificado_por =@modificado_por, activo =@activo WHERE id " + pHorario.Id ;
+                string sentenciaSQL = "UPDATE horario SET descripcion =@descripcion, dia =@dia, hora_inicio =@hora_inicio, hora_final =@hora_final, horas_ordinarias =@horas_ordinarias, fecha_modificacion =@fecha_modificacion, modificado_por =@modificado_por, activo =@activo WHERE id =" + pHorario.Id ;
                 parametros.AgregarParametro("@descripcion", NpgsqlTypes.NpgsqlDbType.Varchar, pHorario.Descripcion);
                 parametros.AgregarParametro("@dia", NpgsqlTypes.NpgsqlDbType.Varchar, pHorario.Dia);
-                parametros.AgregarParametro("@hora_inicio", NpgsqlTypes.NpgsqlDbType.Timestamp, TimeSpan.Parse(pHorario.Hora_Inicio));
-                parametros.AgregarParametro("@hora_final", NpgsqlTypes.NpgsqlDbType.Timestamp, TimeSpan.Parse(pHorario.Hora_Final));
-                parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pHorario.getFechaCreacion);
-                parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pHorario.getCreador);
+                parametros.AgregarParametro("@hora_inicio", NpgsqlTypes.NpgsqlDbType.Time, TimeSpan.Parse(pHorario.Hora_Inicio));
+                parametros.AgregarParametro("@hora_final", NpgsqlTypes.NpgsqlDbType.Time, TimeSpan.Parse(pHorario.Hora_Final));
+                parametros.AgregarParametro("@horas_ordinarias", NpgsqlTypes.NpgsqlDbType.Integer, pHorario.Horas_Ordinarias);
+                //parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pHorario.getFechaCreacion);
+                //parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pHorario.getCreador);
                 parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pHorario.getFechaModificacion);
                 parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pHorario.getModificador);
                 parametros.AgregarParametro("@activo", NpgsqlTypes.NpgsqlDbType.Boolean, pHorario.getActivo);
@@ -122,23 +123,15 @@ namespace ProyectoIIIC
             }
         }
 
-        public void EliminarHorario(HorarioENT pHorario)
+        public void EliminarHorario(int id)
         {
             try
             {
                 Parametro parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
-                string sentenciaSQL = "UPDATE horario SET descripcion =@descripcion, dia =@dia, hora_inicio =@hora_inicio, hora_final =@hora_final, horas_ordinarias =@horas_ordinarias, fecha_creacion =@fecha_creacion, creado_por =@creado_por, fecha_modificacion =@fecha_modificacion, modificado_por =@modificado_por, activo =@activo WHERE id =" + pHorario.Id;
-                parametros.AgregarParametro("@descripcion", NpgsqlTypes.NpgsqlDbType.Varchar, pHorario.Descripcion);
-                parametros.AgregarParametro("@dia", NpgsqlTypes.NpgsqlDbType.Varchar, pHorario.Dia);
-                parametros.AgregarParametro("@hora_inicio", NpgsqlTypes.NpgsqlDbType.Timestamp, TimeSpan.Parse(pHorario.Hora_Inicio));
-                parametros.AgregarParametro("@hora_final", NpgsqlTypes.NpgsqlDbType.Timestamp, TimeSpan.Parse(pHorario.Hora_Final));
-                parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pHorario.getFechaCreacion);
-                parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pHorario.getCreador);
-                parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pHorario.getFechaModificacion);
-                parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pHorario.getModificador);
-                parametros.AgregarParametro("@activo", NpgsqlTypes.NpgsqlDbType.Boolean, pHorario.getActivo);
-                conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());
+                string sentenciaSQL = "delete from horario where id = " + id;
+                conexion.EjecutarSQL(sentenciaSQL);
+
             }
             catch (Exception e)
             {

@@ -97,7 +97,7 @@ namespace AppPlanillas.GUI
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             this.btnGuardar.Image = new Bitmap(Application.StartupPath + @"\IMG\SaveSmall.png");
-            DepartamentoENT nuevoDepartamento = new DepartamentoENT(-1,this.txtNombreDepartamento.Text,DateTime.Now.Date, "Prueba", DateTime.Now.Date, "Prueba", true);
+            DepartamentoENT nuevoDepartamento = new DepartamentoENT(-1,this.txtNombreDepartamento.Text,DateTime.Now.Date, "Prueba", DateTime.Now.Date, "Prueba", this.cbxActivoIngresar.Checked);
             DepartamentoDAL guardarDepartamento = new DepartamentoDAL();
             guardarDepartamento.AgregarDepartamento(nuevoDepartamento);
             MessageBox.Show("¡Departamento insertado correctamente!", "Nuevo departamento", MessageBoxButtons.OK, MessageBoxIcon.Information);

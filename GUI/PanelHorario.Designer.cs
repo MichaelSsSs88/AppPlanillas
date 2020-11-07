@@ -33,6 +33,17 @@
             this.tabInsertSchedule = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Motivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HorasOrdinarias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Creador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaDeCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Modificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaDeModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -69,11 +80,23 @@
             this.cmbEditarHorario = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.chbEditarActivo = new System.Windows.Forms.CheckBox();
+            this.txtEditarHoras = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtpEditarSalida = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtpEditarEntrada = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbEditarDia = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtEditarDescripcion = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.txtEditarId = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.tabDeleteShedule = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvEliminar = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,49 +110,26 @@
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.panelEliminarFiltro = new System.Windows.Forms.Panel();
+            this.txtBuscarEliminar = new System.Windows.Forms.TextBox();
+            this.lblValorEliminar = new System.Windows.Forms.Label();
+            this.cmbEliminarHorario = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.chbEliminarActivo = new System.Windows.Forms.CheckBox();
+            this.txtEliminarHoras = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
+            this.dtpEliminarSalida = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
-            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
+            this.dtpEliminarEntrada = new System.Windows.Forms.DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.cmbEliminarDia = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEliminarDescripcion = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtEliminarId = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.Identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Motivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HorasOrdinarias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Creador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaDeCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Modificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaDeModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.chbActivo = new System.Windows.Forms.CheckBox();
-            this.txtEditarHoras = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtpEditarSalida = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dtpEditarEntrada = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cmbEditarDia = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtEditarDescripcion = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.tabHorario.SuspendLayout();
             this.tabInsertSchedule.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -142,8 +142,8 @@
             this.groupBox2.SuspendLayout();
             this.tabDeleteShedule.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEliminar)).BeginInit();
+            this.panelEliminarFiltro.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -214,6 +214,72 @@
             this.dataGridView1.Size = new System.Drawing.Size(480, 544);
             this.dataGridView1.TabIndex = 6;
             // 
+            // Identificador
+            // 
+            this.Identificador.DataPropertyName = "Id";
+            this.Identificador.HeaderText = "Identificador";
+            this.Identificador.Name = "Identificador";
+            // 
+            // Motivo
+            // 
+            this.Motivo.DataPropertyName = "Descripcion";
+            this.Motivo.HeaderText = "Motivo";
+            this.Motivo.Name = "Motivo";
+            // 
+            // Dia
+            // 
+            this.Dia.DataPropertyName = "Dia";
+            this.Dia.HeaderText = "Día";
+            this.Dia.Name = "Dia";
+            // 
+            // HoraInicio
+            // 
+            this.HoraInicio.DataPropertyName = "Hora_Inicio";
+            this.HoraInicio.HeaderText = "Hora Inicio";
+            this.HoraInicio.Name = "HoraInicio";
+            // 
+            // HoraFinal
+            // 
+            this.HoraFinal.DataPropertyName = "Hora_final";
+            this.HoraFinal.HeaderText = "Hora Final";
+            this.HoraFinal.Name = "HoraFinal";
+            // 
+            // HorasOrdinarias
+            // 
+            this.HorasOrdinarias.DataPropertyName = "Horas_Ordinarias";
+            this.HorasOrdinarias.HeaderText = "Horas Ordinarias";
+            this.HorasOrdinarias.Name = "HorasOrdinarias";
+            // 
+            // Creador
+            // 
+            this.Creador.DataPropertyName = "getCreador";
+            this.Creador.HeaderText = "Creador";
+            this.Creador.Name = "Creador";
+            // 
+            // FechaDeCreacion
+            // 
+            this.FechaDeCreacion.DataPropertyName = "getFechaCreacion";
+            this.FechaDeCreacion.HeaderText = "Fecha de creación";
+            this.FechaDeCreacion.Name = "FechaDeCreacion";
+            // 
+            // Modificador
+            // 
+            this.Modificador.DataPropertyName = "getModificador";
+            this.Modificador.HeaderText = "Modificador";
+            this.Modificador.Name = "Modificador";
+            // 
+            // FechaDeModificacion
+            // 
+            this.FechaDeModificacion.DataPropertyName = "getFechaModificacion";
+            this.FechaDeModificacion.HeaderText = "Fecha de modificación";
+            this.FechaDeModificacion.Name = "FechaDeModificacion";
+            // 
+            // Activo
+            // 
+            this.Activo.DataPropertyName = "getActivo";
+            this.Activo.HeaderText = "Activo";
+            this.Activo.Name = "Activo";
+            // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -265,10 +331,12 @@
             this.button3.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
             this.button3.Size = new System.Drawing.Size(484, 102);
             this.button3.TabIndex = 60;
-            this.button3.Text = "Editar Empleado";
+            this.button3.Text = "Guardar Horario";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.button3.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
+            this.button3.MouseHover += new System.EventHandler(this.button3_MouseHover);
             // 
             // ckbActivo
             // 
@@ -609,7 +677,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.chbActivo);
+            this.groupBox2.Controls.Add(this.chbEditarActivo);
             this.groupBox2.Controls.Add(this.txtEditarHoras);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.dtpEditarSalida);
@@ -632,6 +700,162 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Completar datos del horario";
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(13, 408);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.button1.Size = new System.Drawing.Size(498, 102);
+            this.button1.TabIndex = 81;
+            this.button1.Text = "Editar Horario";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
+            // 
+            // chbEditarActivo
+            // 
+            this.chbEditarActivo.AutoSize = true;
+            this.chbEditarActivo.Checked = true;
+            this.chbEditarActivo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbEditarActivo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.chbEditarActivo.Location = new System.Drawing.Point(13, 375);
+            this.chbEditarActivo.Margin = new System.Windows.Forms.Padding(4);
+            this.chbEditarActivo.Name = "chbEditarActivo";
+            this.chbEditarActivo.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.chbEditarActivo.Size = new System.Drawing.Size(498, 33);
+            this.chbEditarActivo.TabIndex = 80;
+            this.chbEditarActivo.Text = "Activo";
+            this.chbEditarActivo.UseVisualStyleBackColor = true;
+            // 
+            // txtEditarHoras
+            // 
+            this.txtEditarHoras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEditarHoras.Location = new System.Drawing.Point(13, 352);
+            this.txtEditarHoras.Name = "txtEditarHoras";
+            this.txtEditarHoras.ReadOnly = true;
+            this.txtEditarHoras.Size = new System.Drawing.Size(498, 23);
+            this.txtEditarHoras.TabIndex = 79;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(13, 315);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label2.Size = new System.Drawing.Size(498, 37);
+            this.label2.TabIndex = 78;
+            this.label2.Text = "Horas ordinarias:";
+            // 
+            // dtpEditarSalida
+            // 
+            this.dtpEditarSalida.CustomFormat = "HH:mm";
+            this.dtpEditarSalida.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpEditarSalida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEditarSalida.Location = new System.Drawing.Point(13, 292);
+            this.dtpEditarSalida.Name = "dtpEditarSalida";
+            this.dtpEditarSalida.Size = new System.Drawing.Size(498, 23);
+            this.dtpEditarSalida.TabIndex = 77;
+            this.dtpEditarSalida.ValueChanged += new System.EventHandler(this.dtpEditarSalida_ValueChanged);
+            // 
+            // label6
+            // 
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label6.Location = new System.Drawing.Point(13, 255);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.Name = "label6";
+            this.label6.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label6.Size = new System.Drawing.Size(498, 37);
+            this.label6.TabIndex = 76;
+            this.label6.Text = "Seleccione la hora de salida:";
+            // 
+            // dtpEditarEntrada
+            // 
+            this.dtpEditarEntrada.CustomFormat = "HH:mm";
+            this.dtpEditarEntrada.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpEditarEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEditarEntrada.Location = new System.Drawing.Point(13, 232);
+            this.dtpEditarEntrada.Name = "dtpEditarEntrada";
+            this.dtpEditarEntrada.Size = new System.Drawing.Size(498, 23);
+            this.dtpEditarEntrada.TabIndex = 75;
+            this.dtpEditarEntrada.ValueChanged += new System.EventHandler(this.dtpEditarEntrada_ValueChanged);
+            // 
+            // label7
+            // 
+            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label7.Location = new System.Drawing.Point(13, 195);
+            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label7.Name = "label7";
+            this.label7.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label7.Size = new System.Drawing.Size(498, 37);
+            this.label7.TabIndex = 74;
+            this.label7.Text = "Seleccione la hora de entrada:";
+            // 
+            // cmbEditarDia
+            // 
+            this.cmbEditarDia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmbEditarDia.FormattingEnabled = true;
+            this.cmbEditarDia.Items.AddRange(new object[] {
+            "Lunes",
+            "Martes",
+            "Miércoles",
+            "Jueves",
+            "Viernes",
+            "Sábado",
+            "Domingo"});
+            this.cmbEditarDia.Location = new System.Drawing.Point(13, 171);
+            this.cmbEditarDia.Name = "cmbEditarDia";
+            this.cmbEditarDia.Size = new System.Drawing.Size(498, 24);
+            this.cmbEditarDia.TabIndex = 73;
+            // 
+            // label8
+            // 
+            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label8.Location = new System.Drawing.Point(13, 134);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label8.Name = "label8";
+            this.label8.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label8.Size = new System.Drawing.Size(498, 37);
+            this.label8.TabIndex = 72;
+            this.label8.Text = "Seleccione el día:";
+            // 
+            // txtEditarDescripcion
+            // 
+            this.txtEditarDescripcion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEditarDescripcion.Location = new System.Drawing.Point(13, 111);
+            this.txtEditarDescripcion.Margin = new System.Windows.Forms.Padding(5);
+            this.txtEditarDescripcion.Name = "txtEditarDescripcion";
+            this.txtEditarDescripcion.Size = new System.Drawing.Size(498, 23);
+            this.txtEditarDescripcion.TabIndex = 71;
+            // 
+            // label22
+            // 
+            this.label22.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label22.Location = new System.Drawing.Point(13, 81);
+            this.label22.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label22.Name = "label22";
+            this.label22.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label22.Size = new System.Drawing.Size(498, 30);
+            this.label22.TabIndex = 70;
+            this.label22.Text = "Ingrese la descripción:";
             // 
             // txtEditarId
             // 
@@ -669,11 +893,11 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.dataGridView3);
+            this.groupBox5.Controls.Add(this.dgvEliminar);
             this.groupBox5.Controls.Add(this.panel2);
             this.groupBox5.Controls.Add(this.label9);
-            this.groupBox5.Controls.Add(this.panel4);
-            this.groupBox5.Controls.Add(this.comboBox4);
+            this.groupBox5.Controls.Add(this.panelEliminarFiltro);
+            this.groupBox5.Controls.Add(this.cmbEliminarHorario);
             this.groupBox5.Controls.Add(this.label11);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -686,11 +910,11 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Filtrar horarios:";
             // 
-            // dataGridView3
+            // dgvEliminar
             // 
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvEliminar.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dgvEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEliminar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
@@ -702,13 +926,14 @@
             this.dataGridViewTextBoxColumn20,
             this.dataGridViewTextBoxColumn21,
             this.dataGridViewTextBoxColumn22});
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView3.Location = new System.Drawing.Point(13, 250);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(473, 378);
-            this.dataGridView3.TabIndex = 8;
+            this.dgvEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEliminar.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvEliminar.Location = new System.Drawing.Point(13, 250);
+            this.dgvEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvEliminar.Name = "dgvEliminar";
+            this.dgvEliminar.Size = new System.Drawing.Size(473, 378);
+            this.dgvEliminar.TabIndex = 8;
+            this.dgvEliminar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvEliminar_MouseClick);
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -796,51 +1021,53 @@
             this.label9.TabIndex = 4;
             this.label9.Text = "Seleccione el horario a modificar::";
             // 
-            // panel4
+            // panelEliminarFiltro
             // 
-            this.panel4.Controls.Add(this.textBox5);
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(13, 86);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
-            this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.panel4.Size = new System.Drawing.Size(473, 84);
-            this.panel4.TabIndex = 3;
+            this.panelEliminarFiltro.Controls.Add(this.txtBuscarEliminar);
+            this.panelEliminarFiltro.Controls.Add(this.lblValorEliminar);
+            this.panelEliminarFiltro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelEliminarFiltro.Location = new System.Drawing.Point(13, 86);
+            this.panelEliminarFiltro.Margin = new System.Windows.Forms.Padding(4);
+            this.panelEliminarFiltro.Name = "panelEliminarFiltro";
+            this.panelEliminarFiltro.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.panelEliminarFiltro.Size = new System.Drawing.Size(473, 84);
+            this.panelEliminarFiltro.TabIndex = 3;
             // 
-            // textBox5
+            // txtBuscarEliminar
             // 
-            this.textBox5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox5.Location = new System.Drawing.Point(0, 46);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(473, 23);
-            this.textBox5.TabIndex = 4;
+            this.txtBuscarEliminar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtBuscarEliminar.Location = new System.Drawing.Point(0, 46);
+            this.txtBuscarEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscarEliminar.Name = "txtBuscarEliminar";
+            this.txtBuscarEliminar.Size = new System.Drawing.Size(473, 23);
+            this.txtBuscarEliminar.TabIndex = 4;
+            this.txtBuscarEliminar.TextChanged += new System.EventHandler(this.txtBuscarEliminar_TextChanged);
             // 
-            // label10
+            // lblValorEliminar
             // 
-            this.label10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label10.Location = new System.Drawing.Point(0, 12);
-            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(473, 34);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Digite :";
+            this.lblValorEliminar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblValorEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblValorEliminar.Location = new System.Drawing.Point(0, 12);
+            this.lblValorEliminar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblValorEliminar.Name = "lblValorEliminar";
+            this.lblValorEliminar.Size = new System.Drawing.Size(473, 34);
+            this.lblValorEliminar.TabIndex = 3;
+            this.lblValorEliminar.Text = "Digite :";
             // 
-            // comboBox4
+            // cmbEliminarHorario
             // 
-            this.comboBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.cmbEliminarHorario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmbEliminarHorario.FormattingEnabled = true;
+            this.cmbEliminarHorario.Items.AddRange(new object[] {
             "Todos",
             "Identificador",
             "Dia"});
-            this.comboBox4.Location = new System.Drawing.Point(13, 62);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(473, 24);
-            this.comboBox4.TabIndex = 2;
+            this.cmbEliminarHorario.Location = new System.Drawing.Point(13, 62);
+            this.cmbEliminarHorario.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbEliminarHorario.Name = "cmbEliminarHorario";
+            this.cmbEliminarHorario.Size = new System.Drawing.Size(473, 24);
+            this.cmbEliminarHorario.TabIndex = 2;
+            this.cmbEliminarHorario.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -856,18 +1083,18 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.button2);
-            this.groupBox6.Controls.Add(this.checkBox3);
-            this.groupBox6.Controls.Add(this.textBox6);
+            this.groupBox6.Controls.Add(this.chbEliminarActivo);
+            this.groupBox6.Controls.Add(this.txtEliminarHoras);
             this.groupBox6.Controls.Add(this.label12);
-            this.groupBox6.Controls.Add(this.dateTimePicker5);
+            this.groupBox6.Controls.Add(this.dtpEliminarSalida);
             this.groupBox6.Controls.Add(this.label15);
-            this.groupBox6.Controls.Add(this.dateTimePicker6);
+            this.groupBox6.Controls.Add(this.dtpEliminarEntrada);
             this.groupBox6.Controls.Add(this.label16);
-            this.groupBox6.Controls.Add(this.comboBox8);
+            this.groupBox6.Controls.Add(this.cmbEliminarDia);
             this.groupBox6.Controls.Add(this.label20);
-            this.groupBox6.Controls.Add(this.textBox2);
+            this.groupBox6.Controls.Add(this.txtEliminarDescripcion);
             this.groupBox6.Controls.Add(this.label21);
-            this.groupBox6.Controls.Add(this.textBox7);
+            this.groupBox6.Controls.Add(this.txtEliminarId);
             this.groupBox6.Controls.Add(this.label17);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -897,32 +1124,36 @@
             this.button2.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
             this.button2.Size = new System.Drawing.Size(501, 102);
             this.button2.TabIndex = 69;
-            this.button2.Text = "Editar Empleado";
+            this.button2.Text = "Eliminar Horario";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
+            this.button2.MouseHover += new System.EventHandler(this.button2_MouseHover);
             // 
-            // checkBox3
+            // chbEliminarActivo
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Checked = true;
-            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.checkBox3.Location = new System.Drawing.Point(13, 395);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.checkBox3.Size = new System.Drawing.Size(501, 33);
-            this.checkBox3.TabIndex = 68;
-            this.checkBox3.Text = "Activo";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chbEliminarActivo.AutoSize = true;
+            this.chbEliminarActivo.Checked = true;
+            this.chbEliminarActivo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbEliminarActivo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.chbEliminarActivo.Location = new System.Drawing.Point(13, 395);
+            this.chbEliminarActivo.Margin = new System.Windows.Forms.Padding(4);
+            this.chbEliminarActivo.Name = "chbEliminarActivo";
+            this.chbEliminarActivo.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.chbEliminarActivo.Size = new System.Drawing.Size(501, 33);
+            this.chbEliminarActivo.TabIndex = 68;
+            this.chbEliminarActivo.Text = "Activo";
+            this.chbEliminarActivo.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // txtEliminarHoras
             // 
-            this.textBox6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox6.Location = new System.Drawing.Point(13, 372);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(501, 23);
-            this.textBox6.TabIndex = 67;
+            this.txtEliminarHoras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEliminarHoras.Location = new System.Drawing.Point(13, 372);
+            this.txtEliminarHoras.Name = "txtEliminarHoras";
+            this.txtEliminarHoras.ReadOnly = true;
+            this.txtEliminarHoras.Size = new System.Drawing.Size(501, 23);
+            this.txtEliminarHoras.TabIndex = 67;
             // 
             // label12
             // 
@@ -936,15 +1167,16 @@
             this.label12.TabIndex = 66;
             this.label12.Text = "Horas ordinarias:";
             // 
-            // dateTimePicker5
+            // dtpEliminarSalida
             // 
-            this.dateTimePicker5.CustomFormat = "HH:MM";
-            this.dateTimePicker5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker5.Location = new System.Drawing.Point(13, 312);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(501, 23);
-            this.dateTimePicker5.TabIndex = 65;
+            this.dtpEliminarSalida.CustomFormat = "HH:MM";
+            this.dtpEliminarSalida.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpEliminarSalida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEliminarSalida.Location = new System.Drawing.Point(13, 312);
+            this.dtpEliminarSalida.Name = "dtpEliminarSalida";
+            this.dtpEliminarSalida.Size = new System.Drawing.Size(501, 23);
+            this.dtpEliminarSalida.TabIndex = 65;
+            this.dtpEliminarSalida.ValueChanged += new System.EventHandler(this.dtpEliminarSalida_ValueChanged);
             // 
             // label15
             // 
@@ -958,15 +1190,16 @@
             this.label15.TabIndex = 64;
             this.label15.Text = "Hora de salida:";
             // 
-            // dateTimePicker6
+            // dtpEliminarEntrada
             // 
-            this.dateTimePicker6.CustomFormat = "HH:MM";
-            this.dateTimePicker6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dateTimePicker6.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker6.Location = new System.Drawing.Point(13, 252);
-            this.dateTimePicker6.Name = "dateTimePicker6";
-            this.dateTimePicker6.Size = new System.Drawing.Size(501, 23);
-            this.dateTimePicker6.TabIndex = 63;
+            this.dtpEliminarEntrada.CustomFormat = "HH:MM";
+            this.dtpEliminarEntrada.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpEliminarEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEliminarEntrada.Location = new System.Drawing.Point(13, 252);
+            this.dtpEliminarEntrada.Name = "dtpEliminarEntrada";
+            this.dtpEliminarEntrada.Size = new System.Drawing.Size(501, 23);
+            this.dtpEliminarEntrada.TabIndex = 63;
+            this.dtpEliminarEntrada.ValueChanged += new System.EventHandler(this.dtpEliminarEntrada_ValueChanged);
             // 
             // label16
             // 
@@ -980,11 +1213,11 @@
             this.label16.TabIndex = 62;
             this.label16.Text = "Hora de entrada:";
             // 
-            // comboBox8
+            // cmbEliminarDia
             // 
-            this.comboBox8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
+            this.cmbEliminarDia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmbEliminarDia.FormattingEnabled = true;
+            this.cmbEliminarDia.Items.AddRange(new object[] {
             "Lunes",
             "Martes",
             "Miércoles",
@@ -992,10 +1225,10 @@
             "Viernes",
             "Sábado",
             "Domingo"});
-            this.comboBox8.Location = new System.Drawing.Point(13, 191);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(501, 24);
-            this.comboBox8.TabIndex = 61;
+            this.cmbEliminarDia.Location = new System.Drawing.Point(13, 191);
+            this.cmbEliminarDia.Name = "cmbEliminarDia";
+            this.cmbEliminarDia.Size = new System.Drawing.Size(501, 24);
+            this.cmbEliminarDia.TabIndex = 61;
             // 
             // label20
             // 
@@ -1009,14 +1242,14 @@
             this.label20.TabIndex = 60;
             this.label20.Text = "Día:";
             // 
-            // textBox2
+            // txtEliminarDescripcion
             // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox2.Location = new System.Drawing.Point(13, 131);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(501, 23);
-            this.textBox2.TabIndex = 59;
+            this.txtEliminarDescripcion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEliminarDescripcion.Location = new System.Drawing.Point(13, 131);
+            this.txtEliminarDescripcion.Margin = new System.Windows.Forms.Padding(5);
+            this.txtEliminarDescripcion.Name = "txtEliminarDescripcion";
+            this.txtEliminarDescripcion.Size = new System.Drawing.Size(501, 23);
+            this.txtEliminarDescripcion.TabIndex = 59;
             // 
             // label21
             // 
@@ -1030,14 +1263,15 @@
             this.label21.TabIndex = 58;
             this.label21.Text = "Descripción:";
             // 
-            // textBox7
+            // txtEliminarId
             // 
-            this.textBox7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox7.Location = new System.Drawing.Point(13, 71);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(501, 23);
-            this.textBox7.TabIndex = 1;
+            this.txtEliminarId.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEliminarId.Location = new System.Drawing.Point(13, 71);
+            this.txtEliminarId.Margin = new System.Windows.Forms.Padding(5);
+            this.txtEliminarId.Name = "txtEliminarId";
+            this.txtEliminarId.ReadOnly = true;
+            this.txtEliminarId.Size = new System.Drawing.Size(501, 23);
+            this.txtEliminarId.TabIndex = 1;
             // 
             // label17
             // 
@@ -1049,224 +1283,7 @@
             this.label17.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
             this.label17.Size = new System.Drawing.Size(501, 43);
             this.label17.TabIndex = 0;
-            this.label17.Text = "Identificador:";
-            // 
-            // Identificador
-            // 
-            this.Identificador.DataPropertyName = "Id";
-            this.Identificador.HeaderText = "Identificador";
-            this.Identificador.Name = "Identificador";
-            // 
-            // Motivo
-            // 
-            this.Motivo.DataPropertyName = "Descripcion";
-            this.Motivo.HeaderText = "Motivo";
-            this.Motivo.Name = "Motivo";
-            // 
-            // Dia
-            // 
-            this.Dia.DataPropertyName = "Dia";
-            this.Dia.HeaderText = "Día";
-            this.Dia.Name = "Dia";
-            // 
-            // HoraInicio
-            // 
-            this.HoraInicio.DataPropertyName = "Hora_Inicio";
-            this.HoraInicio.HeaderText = "Hora Inicio";
-            this.HoraInicio.Name = "HoraInicio";
-            // 
-            // HoraFinal
-            // 
-            this.HoraFinal.DataPropertyName = "Hora_final";
-            this.HoraFinal.HeaderText = "Hora Final";
-            this.HoraFinal.Name = "HoraFinal";
-            // 
-            // HorasOrdinarias
-            // 
-            this.HorasOrdinarias.DataPropertyName = "Horas_Ordinarias";
-            this.HorasOrdinarias.HeaderText = "Horas Ordinarias";
-            this.HorasOrdinarias.Name = "HorasOrdinarias";
-            // 
-            // Creador
-            // 
-            this.Creador.DataPropertyName = "getCreador";
-            this.Creador.HeaderText = "Creador";
-            this.Creador.Name = "Creador";
-            // 
-            // FechaDeCreacion
-            // 
-            this.FechaDeCreacion.DataPropertyName = "getFechaCreacion";
-            this.FechaDeCreacion.HeaderText = "Fecha de creación";
-            this.FechaDeCreacion.Name = "FechaDeCreacion";
-            // 
-            // Modificador
-            // 
-            this.Modificador.DataPropertyName = "getModificador";
-            this.Modificador.HeaderText = "Modificador";
-            this.Modificador.Name = "Modificador";
-            // 
-            // FechaDeModificacion
-            // 
-            this.FechaDeModificacion.DataPropertyName = "getFechaModificacion";
-            this.FechaDeModificacion.HeaderText = "Fecha de modificación";
-            this.FechaDeModificacion.Name = "FechaDeModificacion";
-            // 
-            // Activo
-            // 
-            this.Activo.DataPropertyName = "getActivo";
-            this.Activo.HeaderText = "Activo";
-            this.Activo.Name = "Activo";
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(13, 408);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.button1.Size = new System.Drawing.Size(498, 102);
-            this.button1.TabIndex = 81;
-            this.button1.Text = "Editar Empleado";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // chbActivo
-            // 
-            this.chbActivo.AutoSize = true;
-            this.chbActivo.Checked = true;
-            this.chbActivo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chbActivo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chbActivo.Location = new System.Drawing.Point(13, 375);
-            this.chbActivo.Margin = new System.Windows.Forms.Padding(4);
-            this.chbActivo.Name = "chbActivo";
-            this.chbActivo.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.chbActivo.Size = new System.Drawing.Size(498, 33);
-            this.chbActivo.TabIndex = 80;
-            this.chbActivo.Text = "Activo";
-            this.chbActivo.UseVisualStyleBackColor = true;
-            // 
-            // txtEditarHoras
-            // 
-            this.txtEditarHoras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEditarHoras.Location = new System.Drawing.Point(13, 352);
-            this.txtEditarHoras.Name = "txtEditarHoras";
-            this.txtEditarHoras.ReadOnly = true;
-            this.txtEditarHoras.Size = new System.Drawing.Size(498, 23);
-            this.txtEditarHoras.TabIndex = 79;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(13, 315);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label2.Size = new System.Drawing.Size(498, 37);
-            this.label2.TabIndex = 78;
-            this.label2.Text = "Horas ordinarias:";
-            // 
-            // dtpEditarSalida
-            // 
-            this.dtpEditarSalida.CustomFormat = "HH:mm";
-            this.dtpEditarSalida.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtpEditarSalida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEditarSalida.Location = new System.Drawing.Point(13, 292);
-            this.dtpEditarSalida.Name = "dtpEditarSalida";
-            this.dtpEditarSalida.Size = new System.Drawing.Size(498, 23);
-            this.dtpEditarSalida.TabIndex = 77;
-            // 
-            // label6
-            // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(13, 255);
-            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label6.Size = new System.Drawing.Size(498, 37);
-            this.label6.TabIndex = 76;
-            this.label6.Text = "Seleccione la hora de salida:";
-            // 
-            // dtpEditarEntrada
-            // 
-            this.dtpEditarEntrada.CustomFormat = "HH:mm";
-            this.dtpEditarEntrada.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtpEditarEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEditarEntrada.Location = new System.Drawing.Point(13, 232);
-            this.dtpEditarEntrada.Name = "dtpEditarEntrada";
-            this.dtpEditarEntrada.Size = new System.Drawing.Size(498, 23);
-            this.dtpEditarEntrada.TabIndex = 75;
-            // 
-            // label7
-            // 
-            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(13, 195);
-            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label7.Size = new System.Drawing.Size(498, 37);
-            this.label7.TabIndex = 74;
-            this.label7.Text = "Seleccione la hora de entrada:";
-            // 
-            // cmbEditarDia
-            // 
-            this.cmbEditarDia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmbEditarDia.FormattingEnabled = true;
-            this.cmbEditarDia.Items.AddRange(new object[] {
-            "Lunes",
-            "Martes",
-            "Miércoles",
-            "Jueves",
-            "Viernes",
-            "Sábado",
-            "Domingo"});
-            this.cmbEditarDia.Location = new System.Drawing.Point(13, 171);
-            this.cmbEditarDia.Name = "cmbEditarDia";
-            this.cmbEditarDia.Size = new System.Drawing.Size(498, 24);
-            this.cmbEditarDia.TabIndex = 73;
-            // 
-            // label8
-            // 
-            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label8.Location = new System.Drawing.Point(13, 134);
-            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label8.Name = "label8";
-            this.label8.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label8.Size = new System.Drawing.Size(498, 37);
-            this.label8.TabIndex = 72;
-            this.label8.Text = "Seleccione el día:";
-            // 
-            // txtEditarDescripcion
-            // 
-            this.txtEditarDescripcion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEditarDescripcion.Location = new System.Drawing.Point(13, 111);
-            this.txtEditarDescripcion.Margin = new System.Windows.Forms.Padding(5);
-            this.txtEditarDescripcion.Name = "txtEditarDescripcion";
-            this.txtEditarDescripcion.Size = new System.Drawing.Size(498, 23);
-            this.txtEditarDescripcion.TabIndex = 71;
-            // 
-            // label22
-            // 
-            this.label22.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label22.Location = new System.Drawing.Point(13, 81);
-            this.label22.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label22.Name = "label22";
-            this.label22.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label22.Size = new System.Drawing.Size(498, 30);
-            this.label22.TabIndex = 70;
-            this.label22.Text = "Ingrese la descripción:";
+            this.label17.Text = "Código:";
             // 
             // PanelHorario
             // 
@@ -1291,9 +1308,9 @@
             this.groupBox2.PerformLayout();
             this.tabDeleteShedule.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEliminar)).EndInit();
+            this.panelEliminarFiltro.ResumeLayout(false);
+            this.panelEliminarFiltro.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
@@ -1315,24 +1332,24 @@
         private System.Windows.Forms.TabPage tabDeleteShedule;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Panel panelEliminarFiltro;
+        private System.Windows.Forms.TextBox txtBuscarEliminar;
+        private System.Windows.Forms.Label lblValorEliminar;
+        private System.Windows.Forms.ComboBox cmbEliminarHorario;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtEliminarId;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtEditarId;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DateTimePicker dateTimePicker5;
+        private System.Windows.Forms.DateTimePicker dtpEliminarSalida;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DateTimePicker dateTimePicker6;
+        private System.Windows.Forms.DateTimePicker dtpEliminarEntrada;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox cmbEliminarDia;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEliminarDescripcion;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TabPage tabInsertSchedule;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -1350,7 +1367,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvEditar;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvEliminar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -1378,8 +1395,8 @@
         private System.Windows.Forms.CheckBox ckbActivo;
         private System.Windows.Forms.TextBox txtHorasOrdinarias;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.CheckBox chbEliminarActivo;
+        private System.Windows.Forms.TextBox txtEliminarHoras;
         private System.Windows.Forms.DataGridViewTextBoxColumn Identificador;
         private System.Windows.Forms.DataGridViewTextBoxColumn Motivo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Dia;
@@ -1392,7 +1409,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaDeModificacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Activo;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox chbActivo;
+        private System.Windows.Forms.CheckBox chbEditarActivo;
         private System.Windows.Forms.TextBox txtEditarHoras;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpEditarSalida;
