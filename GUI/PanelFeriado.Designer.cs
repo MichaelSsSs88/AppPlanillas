@@ -33,13 +33,6 @@
             this.tabInsertHoliday = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgvInsertar = new System.Windows.Forms.DataGridView();
-            this.Identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Motivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PagoDoble = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -53,15 +46,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tabEditHoliday = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dgvEditar = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.panelFiltro = new System.Windows.Forms.Panel();
             this.txtBuscarEditar = new System.Windows.Forms.TextBox();
@@ -82,19 +66,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tabDeleteHoliday = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.dgvEliminar = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panelEliminarFiltro = new System.Windows.Forms.Panel();
             this.txtEliminarBuscar = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblEliminarBusca = new System.Windows.Forms.Label();
             this.cmbEliminarFeriado = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -109,6 +84,40 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txtEliminarId = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.Identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Motivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PagoDoble = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Creador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Modificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvEditar = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dgvEliminar = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabFeriado.SuspendLayout();
             this.tabInsertHoliday.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -116,14 +125,14 @@
             this.groupBox1.SuspendLayout();
             this.tabEditHoliday.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEditar)).BeginInit();
             this.panelFiltro.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabDeleteHoliday.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEliminar)).BeginInit();
             this.panelEliminarFiltro.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEditar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEliminar)).BeginInit();
             this.SuspendLayout();
             // 
             // tabFeriado
@@ -177,7 +186,10 @@
             this.Dia,
             this.Mes,
             this.PagoDoble,
-            this.Puesto,
+            this.Creador,
+            this.FechaCreacion,
+            this.Modificador,
+            this.FechaModificacion,
             this.Activo});
             this.dgvInsertar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInsertar.GridColor = System.Drawing.SystemColors.Control;
@@ -186,41 +198,6 @@
             this.dgvInsertar.Name = "dgvInsertar";
             this.dgvInsertar.Size = new System.Drawing.Size(480, 544);
             this.dgvInsertar.TabIndex = 6;
-            // 
-            // Identificador
-            // 
-            this.Identificador.HeaderText = "Identificador";
-            this.Identificador.Name = "Identificador";
-            // 
-            // Motivo
-            // 
-            this.Motivo.HeaderText = "Motivo";
-            this.Motivo.Name = "Motivo";
-            // 
-            // Dia
-            // 
-            this.Dia.HeaderText = "Día";
-            this.Dia.Name = "Dia";
-            // 
-            // Mes
-            // 
-            this.Mes.HeaderText = "Mes";
-            this.Mes.Name = "Mes";
-            // 
-            // PagoDoble
-            // 
-            this.PagoDoble.HeaderText = "Pago Doble";
-            this.PagoDoble.Name = "PagoDoble";
-            // 
-            // Puesto
-            // 
-            this.Puesto.HeaderText = "Puesto";
-            this.Puesto.Name = "Puesto";
-            // 
-            // Activo
-            // 
-            this.Activo.HeaderText = "Activo";
-            this.Activo.Name = "Activo";
             // 
             // panel1
             // 
@@ -273,6 +250,7 @@
             this.button4.Text = "Insertar Feriado";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // ckbActivo
             // 
@@ -440,70 +418,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Filtrar feriados:";
             // 
-            // dgvEditar
-            // 
-            this.dgvEditar.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dgvEditar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEditar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn13});
-            this.dgvEditar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEditar.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvEditar.Location = new System.Drawing.Point(13, 250);
-            this.dgvEditar.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvEditar.Name = "dgvEditar";
-            this.dgvEditar.Size = new System.Drawing.Size(466, 368);
-            this.dgvEditar.TabIndex = 8;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Identificador";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Motivo";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Día";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Mes";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Pago Doble";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Puesto";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.HeaderText = "Activo";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(13, 204);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(466, 46);
-            this.panel3.TabIndex = 7;
-            // 
             // label14
             // 
             this.label14.Dock = System.Windows.Forms.DockStyle.Top;
@@ -535,6 +449,7 @@
             this.txtBuscarEditar.Name = "txtBuscarEditar";
             this.txtBuscarEditar.Size = new System.Drawing.Size(466, 23);
             this.txtBuscarEditar.TabIndex = 4;
+            this.txtBuscarEditar.TextChanged += new System.EventHandler(this.txtBuscarEditar_TextChanged);
             // 
             // lblValorABuscar
             // 
@@ -553,13 +468,15 @@
             this.cmbEditarFeriado.FormattingEnabled = true;
             this.cmbEditarFeriado.Items.AddRange(new object[] {
             "Todos",
-            "Nombre",
-            "Cédula"});
+            "Codigo",
+            "Mes",
+            "Motivo"});
             this.cmbEditarFeriado.Location = new System.Drawing.Point(13, 62);
             this.cmbEditarFeriado.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEditarFeriado.Name = "cmbEditarFeriado";
             this.cmbEditarFeriado.Size = new System.Drawing.Size(466, 24);
             this.cmbEditarFeriado.TabIndex = 2;
+            this.cmbEditarFeriado.SelectedIndexChanged += new System.EventHandler(this.cmbEditarFeriado_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -616,6 +533,9 @@
             this.button1.Text = "Editar Feriado";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // ckbEditarActivo
             // 
@@ -648,6 +568,38 @@
             // 
             this.cmbEditarDia.Dock = System.Windows.Forms.DockStyle.Top;
             this.cmbEditarDia.FormattingEnabled = true;
+            this.cmbEditarDia.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
             this.cmbEditarDia.Location = new System.Drawing.Point(13, 252);
             this.cmbEditarDia.Name = "cmbEditarDia";
             this.cmbEditarDia.Size = new System.Drawing.Size(498, 24);
@@ -669,6 +621,19 @@
             // 
             this.cmbEditarMes.Dock = System.Windows.Forms.DockStyle.Top;
             this.cmbEditarMes.FormattingEnabled = true;
+            this.cmbEditarMes.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
             this.cmbEditarMes.Location = new System.Drawing.Point(13, 191);
             this.cmbEditarMes.Name = "cmbEditarMes";
             this.cmbEditarMes.Size = new System.Drawing.Size(498, 24);
@@ -713,6 +678,7 @@
             this.txtEditarCodigo.Location = new System.Drawing.Point(13, 71);
             this.txtEditarCodigo.Margin = new System.Windows.Forms.Padding(5);
             this.txtEditarCodigo.Name = "txtEditarCodigo";
+            this.txtEditarCodigo.ReadOnly = true;
             this.txtEditarCodigo.Size = new System.Drawing.Size(498, 23);
             this.txtEditarCodigo.TabIndex = 1;
             // 
@@ -758,70 +724,6 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Filtrar feriados:";
             // 
-            // dgvEliminar
-            // 
-            this.dgvEliminar.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dgvEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEliminar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn14});
-            this.dgvEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEliminar.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvEliminar.Location = new System.Drawing.Point(13, 250);
-            this.dgvEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvEliminar.Name = "dgvEliminar";
-            this.dgvEliminar.Size = new System.Drawing.Size(473, 378);
-            this.dgvEliminar.TabIndex = 8;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Identificador";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Motivo";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Día";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "Mes";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Pago Doble";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.HeaderText = "Puesto";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.HeaderText = "Activo";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(13, 204);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(473, 46);
-            this.panel2.TabIndex = 7;
-            // 
             // label9
             // 
             this.label9.Dock = System.Windows.Forms.DockStyle.Top;
@@ -831,12 +733,12 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(473, 34);
             this.label9.TabIndex = 4;
-            this.label9.Text = "Seleccione el feriado a modificar::";
+            this.label9.Text = "Seleccione el feriado a eliminar:";
             // 
             // panelEliminarFiltro
             // 
             this.panelEliminarFiltro.Controls.Add(this.txtEliminarBuscar);
-            this.panelEliminarFiltro.Controls.Add(this.label10);
+            this.panelEliminarFiltro.Controls.Add(this.lblEliminarBusca);
             this.panelEliminarFiltro.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEliminarFiltro.Location = new System.Drawing.Point(13, 86);
             this.panelEliminarFiltro.Margin = new System.Windows.Forms.Padding(4);
@@ -853,17 +755,18 @@
             this.txtEliminarBuscar.Name = "txtEliminarBuscar";
             this.txtEliminarBuscar.Size = new System.Drawing.Size(473, 23);
             this.txtEliminarBuscar.TabIndex = 4;
+            this.txtEliminarBuscar.TextChanged += new System.EventHandler(this.txtEliminarBuscar_TextChanged);
             // 
-            // label10
+            // lblEliminarBusca
             // 
-            this.label10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label10.Location = new System.Drawing.Point(0, 12);
-            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(473, 34);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Digite";
+            this.lblEliminarBusca.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblEliminarBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblEliminarBusca.Location = new System.Drawing.Point(0, 12);
+            this.lblEliminarBusca.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblEliminarBusca.Name = "lblEliminarBusca";
+            this.lblEliminarBusca.Size = new System.Drawing.Size(473, 34);
+            this.lblEliminarBusca.TabIndex = 3;
+            this.lblEliminarBusca.Text = "Digite";
             // 
             // cmbEliminarFeriado
             // 
@@ -871,13 +774,15 @@
             this.cmbEliminarFeriado.FormattingEnabled = true;
             this.cmbEliminarFeriado.Items.AddRange(new object[] {
             "Todos",
-            "Nombre",
-            "Cédula"});
+            "Codigo",
+            "Mes",
+            "Motivo"});
             this.cmbEliminarFeriado.Location = new System.Drawing.Point(13, 62);
             this.cmbEliminarFeriado.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEliminarFeriado.Name = "cmbEliminarFeriado";
             this.cmbEliminarFeriado.Size = new System.Drawing.Size(473, 24);
             this.cmbEliminarFeriado.TabIndex = 2;
+            this.cmbEliminarFeriado.SelectedIndexChanged += new System.EventHandler(this.cmbEliminarFeriado_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -934,6 +839,9 @@
             this.button2.Text = "Eliminar Feriado";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
+            this.button2.MouseHover += new System.EventHandler(this.button2_MouseHover);
             // 
             // chkEliminarActivo
             // 
@@ -966,6 +874,38 @@
             // 
             this.cmbEliminarDia.Dock = System.Windows.Forms.DockStyle.Top;
             this.cmbEliminarDia.FormattingEnabled = true;
+            this.cmbEliminarDia.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
             this.cmbEliminarDia.Location = new System.Drawing.Point(13, 252);
             this.cmbEliminarDia.Name = "cmbEliminarDia";
             this.cmbEliminarDia.Size = new System.Drawing.Size(501, 24);
@@ -987,6 +927,19 @@
             // 
             this.cmbEliminarMes.Dock = System.Windows.Forms.DockStyle.Top;
             this.cmbEliminarMes.FormattingEnabled = true;
+            this.cmbEliminarMes.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
             this.cmbEliminarMes.Location = new System.Drawing.Point(13, 191);
             this.cmbEliminarMes.Name = "cmbEliminarMes";
             this.cmbEliminarMes.Size = new System.Drawing.Size(501, 24);
@@ -1046,6 +999,252 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "Identificador:";
             // 
+            // Identificador
+            // 
+            this.Identificador.DataPropertyName = "Id";
+            this.Identificador.HeaderText = "Código";
+            this.Identificador.Name = "Identificador";
+            // 
+            // Motivo
+            // 
+            this.Motivo.DataPropertyName = "Motivo";
+            this.Motivo.HeaderText = "Motivo";
+            this.Motivo.Name = "Motivo";
+            // 
+            // Dia
+            // 
+            this.Dia.DataPropertyName = "Dia";
+            this.Dia.HeaderText = "Día";
+            this.Dia.Name = "Dia";
+            // 
+            // Mes
+            // 
+            this.Mes.DataPropertyName = "Mes";
+            this.Mes.HeaderText = "Mes";
+            this.Mes.Name = "Mes";
+            // 
+            // PagoDoble
+            // 
+            this.PagoDoble.DataPropertyName = "pagoDoble";
+            this.PagoDoble.HeaderText = "Pago Doble";
+            this.PagoDoble.Name = "PagoDoble";
+            // 
+            // Creador
+            // 
+            this.Creador.DataPropertyName = "getCreador";
+            this.Creador.HeaderText = "Creador";
+            this.Creador.Name = "Creador";
+            // 
+            // FechaCreacion
+            // 
+            this.FechaCreacion.DataPropertyName = "getFechaCreacion";
+            this.FechaCreacion.HeaderText = "Fecha creación:";
+            this.FechaCreacion.Name = "FechaCreacion";
+            // 
+            // Modificador
+            // 
+            this.Modificador.DataPropertyName = "getModificador";
+            this.Modificador.HeaderText = "Modificador";
+            this.Modificador.Name = "Modificador";
+            // 
+            // FechaModificacion
+            // 
+            this.FechaModificacion.DataPropertyName = "getFechaModificacion";
+            this.FechaModificacion.HeaderText = "FechaModificacion";
+            this.FechaModificacion.Name = "FechaModificacion";
+            // 
+            // Activo
+            // 
+            this.Activo.DataPropertyName = "getActivo";
+            this.Activo.HeaderText = "Activo";
+            this.Activo.Name = "Activo";
+            // 
+            // dgvEditar
+            // 
+            this.dgvEditar.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dgvEditar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEditar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17});
+            this.dgvEditar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEditar.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvEditar.Location = new System.Drawing.Point(13, 250);
+            this.dgvEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvEditar.Name = "dgvEditar";
+            this.dgvEditar.Size = new System.Drawing.Size(466, 368);
+            this.dgvEditar.TabIndex = 8;
+            this.dgvEditar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvEditar_MouseClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Motivo";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Motivo";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Dia";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Día";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Mes";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Mes";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "pagoDoble";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Pago Doble";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "getCreador";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Creador";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "getFechaCreacion";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Fecha creación:";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "getModificador";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Modificador";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "getFechaModificacion";
+            this.dataGridViewTextBoxColumn16.HeaderText = "FechaModificacion";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "getActivo";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Activo";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(13, 204);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(466, 46);
+            this.panel3.TabIndex = 7;
+            // 
+            // dgvEliminar
+            // 
+            this.dgvEliminar.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dgvEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEliminar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20});
+            this.dgvEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEliminar.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvEliminar.Location = new System.Drawing.Point(13, 250);
+            this.dgvEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvEliminar.Name = "dgvEliminar";
+            this.dgvEliminar.Size = new System.Drawing.Size(473, 378);
+            this.dgvEliminar.TabIndex = 8;
+            this.dgvEliminar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvEliminar_MouseClick);
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Motivo";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Motivo";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Dia";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Día";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Mes";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Mes";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "pagoDoble";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Pago Doble";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "getCreador";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Creador";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "getFechaCreacion";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Fecha creación:";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "getModificador";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Modificador";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "getFechaModificacion";
+            this.dataGridViewTextBoxColumn19.HeaderText = "FechaModificacion";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "getActivo";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Activo";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(13, 204);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(473, 46);
+            this.panel2.TabIndex = 7;
+            // 
             // PanelFeriado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1064,18 +1263,18 @@
             this.groupBox1.PerformLayout();
             this.tabEditHoliday.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEditar)).EndInit();
             this.panelFiltro.ResumeLayout(false);
             this.panelFiltro.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabDeleteHoliday.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEliminar)).EndInit();
             this.panelEliminarFiltro.ResumeLayout(false);
             this.panelEliminarFiltro.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEditar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEliminar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1092,13 +1291,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabPage tabEditHoliday;
         private System.Windows.Forms.TabPage tabDeleteHoliday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Identificador;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Motivo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Mes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PagoDoble;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Puesto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Activo;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.CheckBox ckbActivo;
         private System.Windows.Forms.ComboBox cmbInsertarDia;
@@ -1106,15 +1298,6 @@
         private System.Windows.Forms.ComboBox cmbInsertarMes;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dgvEditar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panelFiltro;
         private System.Windows.Forms.TextBox txtBuscarEditar;
@@ -1134,19 +1317,10 @@
         private System.Windows.Forms.TextBox txtEditarCodigo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.DataGridView dgvEliminar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panelEliminarFiltro;
         private System.Windows.Forms.TextBox txtEliminarBuscar;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblEliminarBusca;
         private System.Windows.Forms.ComboBox cmbEliminarFeriado;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox6;
@@ -1162,5 +1336,39 @@
         private System.Windows.Forms.TextBox txtEliminarId;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.CheckBox ckbPago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Identificador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Motivo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PagoDoble;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Creador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaCreacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Modificador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaModificacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Activo;
+        private System.Windows.Forms.DataGridView dgvEditar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView dgvEliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.Panel panel2;
     }
 }

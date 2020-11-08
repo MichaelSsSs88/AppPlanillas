@@ -12,6 +12,7 @@ namespace ENT
         private int id { get; set; }
         private int dia { get; set; }
         private int mes { get; set; }
+        private Boolean PagoDoble { get; set; }
 
         private string motivo { get; set; }
         private DateTime fechaCreacion { get; set; }
@@ -20,12 +21,13 @@ namespace ENT
         private string modificadoPor { get; set; }
         private Boolean activo { get; set; }
         public List<Dia_feriadoENT> feriados { get; set; }
-        public Dia_feriadoENT(int pId, int dia, int mes, string pMotivo, DateTime pFechaCreacion, string pCreadoPor, DateTime pFechaModificacion, string pModificadoPor, Boolean pActivo)
+        public Dia_feriadoENT(int pId, int dia, int mes, string pMotivo, Boolean pPagoDoble, DateTime pFechaCreacion, string pCreadoPor, DateTime pFechaModificacion, string pModificadoPor, Boolean pActivo)
         {
             this.id = pId;
             this.dia = dia;
             this.mes = mes;
             this.motivo = pMotivo;
+            this.PagoDoble = pPagoDoble;
             this.fechaCreacion = pFechaCreacion;
             this.creadoPor = pCreadoPor;
             this.fechaModificacion = pFechaModificacion;
@@ -68,6 +70,14 @@ namespace ENT
             get
             {
                 return this.motivo;
+            }
+        }
+
+        public Boolean pagoDoble
+        {
+            get
+            {
+                return this.PagoDoble;
             }
         }
 
