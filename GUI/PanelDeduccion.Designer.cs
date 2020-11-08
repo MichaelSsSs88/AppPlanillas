@@ -98,16 +98,16 @@
             this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.lblSistema = new System.Windows.Forms.Label();
             this.txtDescripcionInsertar = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cmbAplicacion = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.tabDeleteDeducción.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -847,9 +847,9 @@
             this.groupBox1.Controls.Add(this.checkBox4);
             this.groupBox1.Controls.Add(this.comboBox5);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.cmbAplicacion);
             this.groupBox1.Controls.Add(this.lblSistema);
             this.groupBox1.Controls.Add(this.txtDescripcionInsertar);
             this.groupBox1.Controls.Add(this.lblDescripcion);
@@ -863,84 +863,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Completar datos de la deducción:";
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(13, 309);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.button4.Size = new System.Drawing.Size(484, 102);
-            this.button4.TabIndex = 55;
-            this.button4.Text = "Editar Empleado";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Checked = true;
-            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.checkBox4.Location = new System.Drawing.Point(13, 276);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.checkBox4.Size = new System.Drawing.Size(484, 33);
-            this.checkBox4.TabIndex = 54;
-            this.checkBox4.Text = "Activo";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(13, 252);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(484, 24);
-            this.comboBox5.TabIndex = 33;
-            // 
-            // label3
-            // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(13, 215);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label3.Size = new System.Drawing.Size(484, 37);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Seleccione el sistema:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 191);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(484, 24);
-            this.comboBox1.TabIndex = 19;
-            // 
-            // label5
-            // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label5.Location = new System.Drawing.Point(13, 154);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label5.Name = "label5";
-            this.label5.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label5.Size = new System.Drawing.Size(484, 37);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Seleccione el porcentaje:";
             // 
             // lblSistema
             // 
@@ -975,14 +897,94 @@
             this.lblDescripcion.TabIndex = 0;
             this.lblDescripcion.Text = "Ingrese la descripción";
             // 
-            // textBox4
+            // cmbAplicacion
             // 
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox4.Location = new System.Drawing.Point(13, 131);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(484, 23);
-            this.textBox4.TabIndex = 17;
+            this.cmbAplicacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmbAplicacion.FormattingEnabled = true;
+            this.cmbAplicacion.Items.AddRange(new object[] {
+            "Porcentaje",
+            "Monto"});
+            this.cmbAplicacion.Location = new System.Drawing.Point(13, 131);
+            this.cmbAplicacion.Name = "cmbAplicacion";
+            this.cmbAplicacion.Size = new System.Drawing.Size(484, 24);
+            this.cmbAplicacion.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label5.Location = new System.Drawing.Point(13, 155);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.Name = "label5";
+            this.label5.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label5.Size = new System.Drawing.Size(484, 37);
+            this.label5.TabIndex = 56;
+            this.label5.Text = "Seleccione el:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox1.Location = new System.Drawing.Point(13, 192);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(484, 23);
+            this.textBox1.TabIndex = 57;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label3.Location = new System.Drawing.Point(13, 215);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label3.Size = new System.Drawing.Size(484, 37);
+            this.label3.TabIndex = 62;
+            this.label3.Text = "Seleccione el ID del empleado:";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(13, 252);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(484, 24);
+            this.comboBox5.TabIndex = 63;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Checked = true;
+            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.checkBox4.Location = new System.Drawing.Point(13, 276);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.checkBox4.Size = new System.Drawing.Size(484, 33);
+            this.checkBox4.TabIndex = 64;
+            this.checkBox4.Text = "Activo";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button4.Location = new System.Drawing.Point(13, 309);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.button4.Size = new System.Drawing.Size(484, 102);
+            this.button4.TabIndex = 65;
+            this.button4.Text = "Editar Empleado";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // PanelDeduccion
             // 
@@ -1087,15 +1089,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Activo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblSistema;
+        private System.Windows.Forms.TextBox txtDescripcionInsertar;
+        private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblSistema;
-        private System.Windows.Forms.TextBox txtDescripcionInsertar;
-        private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ComboBox cmbAplicacion;
     }
 }
