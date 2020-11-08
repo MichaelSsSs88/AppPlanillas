@@ -1,15 +1,18 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppPlanillas.DAL
+namespace ENT
 {
     class Dia_feriadoENT
     {
         private int id { get; set; }
-        private DateTime fecha { get; set; }
+        private int dia { get; set; }
+        private int mes { get; set; }
+
         private string motivo { get; set; }
         private DateTime fechaCreacion { get; set; }
         private string creadoPor { get; set; }
@@ -17,10 +20,11 @@ namespace AppPlanillas.DAL
         private string modificadoPor { get; set; }
         private Boolean activo { get; set; }
         public List<Dia_feriadoENT> feriados { get; set; }
-        public Dia_feriadoENT(int pId, DateTime pFecha, string pMotivo, DateTime pFechaCreacion, string pCreadoPor, DateTime pFechaModificacion, string pModificadoPor, Boolean pActivo)
+        public Dia_feriadoENT(int pId, int dia, int mes, string pMotivo, DateTime pFechaCreacion, string pCreadoPor, DateTime pFechaModificacion, string pModificadoPor, Boolean pActivo)
         {
             this.id = pId;
-            this.fecha = pFecha;
+            this.dia = dia;
+            this.mes = mes;
             this.motivo = pMotivo;
             this.fechaCreacion = pFechaCreacion;
             this.creadoPor = pCreadoPor;
@@ -43,11 +47,19 @@ namespace AppPlanillas.DAL
             }
         }
 
-        public DateTime Fecha
+        public int Dia
         {
             get
             {
-                return this.fecha;
+                return this.dia;
+            }
+        }
+
+        public int Mes
+        {
+            get
+            {
+                return this.mes;
             }
         }
 

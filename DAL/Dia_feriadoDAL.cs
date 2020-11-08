@@ -5,8 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using ENT;
 
-namespace AppPlanillas.DAL
+namespace DAL
 {
     class Dia_feriadoDAL
     {
@@ -19,7 +20,7 @@ namespace AppPlanillas.DAL
                     DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("select * from dia_feriado");
                     foreach (DataRow fila in dsetClientes.Tables[0].Rows)
                     {
-                        Dia_feriadoENT feriado = new Dia_feriadoENT(Int32.Parse(fila["id"].ToString()), DateTime.Parse(fila["fecha"].ToString()), fila["motivo"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
+                        Dia_feriadoENT feriado = new Dia_feriadoENT(Int32.Parse(fila["id"].ToString()), Int32.Parse(fila["dia"].ToString()), Int32.Parse(fila["mes"].ToString()), fila["motivo"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
                         ListaFeriados.Add(feriado);
                     }
                 }
@@ -28,14 +29,14 @@ namespace AppPlanillas.DAL
                     throw e;
                 }
             }
-            else if (pFiltro == "Id")
+            else if (pFiltro == "Codigo")
             {
                 try
                 {
                     DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("select * from dia_feriado where id = " + int.Parse(pTexto));
                     foreach (DataRow fila in dsetClientes.Tables[0].Rows)
                     {
-                        Dia_feriadoENT feriado = new Dia_feriadoENT(Int32.Parse(fila["id"].ToString()), DateTime.Parse(fila["fecha"].ToString()), fila["motivo"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
+                        Dia_feriadoENT feriado = new Dia_feriadoENT(Int32.Parse(fila["id"].ToString()), Int32.Parse(fila["dia"].ToString()), Int32.Parse(fila["mes"].ToString()), fila["motivo"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
                         ListaFeriados.Add(feriado);
                     }
                 }
@@ -51,7 +52,7 @@ namespace AppPlanillas.DAL
                     DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("select * from dia_feriado where id = " + DateTime.Parse(pTexto));
                     foreach (DataRow fila in dsetClientes.Tables[0].Rows)
                     {
-                        Dia_feriadoENT feriado = new Dia_feriadoENT(Int32.Parse(fila["id"].ToString()), DateTime.Parse(fila["fecha"].ToString()), fila["motivo"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
+                        Dia_feriadoENT feriado = new Dia_feriadoENT(Int32.Parse(fila["id"].ToString()), Int32.Parse(fila["dia"].ToString()), Int32.Parse(fila["mes"].ToString()), fila["motivo"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
                         ListaFeriados.Add(feriado);
                     }
                 }
@@ -67,7 +68,7 @@ namespace AppPlanillas.DAL
                     DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("select * from dia_feriado where id = " + pTexto);
                     foreach (DataRow fila in dsetClientes.Tables[0].Rows)
                     {
-                        Dia_feriadoENT feriado = new Dia_feriadoENT(Int32.Parse(fila["id"].ToString()), DateTime.Parse(fila["fecha"].ToString()), fila["motivo"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
+                        Dia_feriadoENT feriado = new Dia_feriadoENT(Int32.Parse(fila["id"].ToString()), Int32.Parse(fila["dia"].ToString()), Int32.Parse(fila["mes"].ToString()), fila["motivo"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
                         ListaFeriados.Add(feriado);
                     }
                 }
@@ -85,10 +86,12 @@ namespace AppPlanillas.DAL
             {
                 Parametro parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
-                string sentenciaSQL = "INSERT INTO deduccion (fecha, motivo, fecha_creacion, creado_por, fecha_modificacion, modificado_por, activo)" +
-                                      "VALUES (@fecha, @motivo, @fecha_creacion, @creado_por, @fecha_modificacion, @modificado_por, @activo)";
-                parametros.AgregarParametro("@fecha", NpgsqlTypes.NpgsqlDbType.Date, pFeriado.Fecha);
+                string sentenciaSQL = "INSERT INTO dia_feriado (motivo, dia, mes, fecha_creacion, creado_por, fecha_modificacion, modificado_por, activo)" +
+                                      "VALUES (@motivo, @dia, @mes @fecha_creacion, @creado_por, @fecha_modificacion, @modificado_por, @activo)";
+               
                 parametros.AgregarParametro("@motivo", NpgsqlTypes.NpgsqlDbType.Varchar, pFeriado.Motivo);
+                parametros.AgregarParametro("@dia", NpgsqlTypes.NpgsqlDbType.Integer, pFeriado.Dia);
+                parametros.AgregarParametro("@mes", NpgsqlTypes.NpgsqlDbType.Integer, pFeriado.Mes);
                 parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pFeriado.getFechaCreacion);
                 parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pFeriado.getCreador);
                 parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pFeriado.getFechaModificacion);
@@ -108,8 +111,9 @@ namespace AppPlanillas.DAL
             {
                 Parametro parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
-                string sentenciaSQL = "UPDATE dia_feriado SET fecha =@fecha, motivo =@motivo WHERE id " + pFeriado.Id;
-                parametros.AgregarParametro("@fecha", NpgsqlTypes.NpgsqlDbType.Date, pFeriado.Fecha);
+                string sentenciaSQL = "UPDATE dia_feriado SET dia =@dia, mes=@mes, motivo =@motivo WHERE id " + pFeriado.Id;
+                parametros.AgregarParametro("@dia", NpgsqlTypes.NpgsqlDbType.Date, pFeriado.Dia);
+                parametros.AgregarParametro("@mes", NpgsqlTypes.NpgsqlDbType.Date, pFeriado.Mes);
                 parametros.AgregarParametro("@motivo", NpgsqlTypes.NpgsqlDbType.Varchar, pFeriado.Motivo);
                 
 

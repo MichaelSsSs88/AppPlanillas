@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ENT;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace AppPlanillas.GUI
     {
         private List<System.Windows.Forms.TabPage> objColPages = null;
         private bool[] arrBoolPagesVisible;
+        Dia_feriadoENT Dia_FeriadoENT;
         public PanelFeriado(int pestaña)
         {
             InitializeComponent();
@@ -21,6 +23,10 @@ namespace AppPlanillas.GUI
             this.HideTab(1);
             this.HideTab(2);
             this.ShowTab(pestaña);
+            if (pestaña == 1)
+            {
+               
+            }
         }
 
         private void InitControl()
@@ -73,5 +79,74 @@ namespace AppPlanillas.GUI
                 if (arrBoolPagesVisible[intIndex])
                     this.tabFeriado.TabPages.Add(objColPages[intIndex]);
         }
+
+       /* private void CargarTabla(int busqueda, int pestaña)
+        {
+            if (this.cmbEditarFeriado.SelectedIndex < 0)
+            {
+                this.panelFiltro.Visible = false;
+            }
+            if (this.cmbEliminarFeriado.SelectedIndex < 0)
+            {
+                this.panelEliminarFiltro.Visible = false;
+            }
+
+            this.Dia_FeriadoENT = new Dia_feriadoENT("Todos", "");
+            Dia_FeriadoDAL horarioDAL = new HorarioDAL();
+            if (busqueda == 1)
+            {
+
+                this.HorarioENT.horarios = horarioDAL.ObtenerHorarios(-1, "");
+
+                if (pestaña == 0)
+                    this.dataGridView1.DataSource = this.HorarioENT.horarios;
+
+                if (pestaña == 1)
+                    this.dgvEditar.DataSource = this.HorarioENT.horarios;
+                if (pestaña == 2)
+                    this.dgvEliminar.DataSource = this.HorarioENT.horarios;
+            }
+            if (busqueda == 2)
+            {
+                try
+                {
+
+                    if (pestaña == 1)
+                    {
+                        this.HorarioENT.horarios = horarioDAL.ObtenerHorarios(Int32.Parse(this.txtDatoABuscar.Text), "");
+                        this.dgvEditar.DataSource = this.HorarioENT.horarios;
+                    }
+
+                    if (pestaña == 2)
+                    {
+                        this.HorarioENT.horarios = horarioDAL.ObtenerHorarios(Int32.Parse(this.txtBuscarEliminar.Text), "");
+                        this.dgvEliminar.DataSource = this.HorarioENT.horarios;
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("EL identificador debe de ser numerico", "Datos Erroneos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            if (busqueda == 3)
+            {
+
+                if (pestaña == 1)
+                {
+                    this.HorarioENT.horarios = horarioDAL.ObtenerHorarios(-1, this.txtDatoABuscar.Text);
+                    this.dgvEditar.DataSource = this.HorarioENT.horarios;
+                }
+
+                if (pestaña == 2)
+                {
+                    this.HorarioENT.horarios = horarioDAL.ObtenerHorarios(-1, this.txtBuscarEliminar.Text);
+                    this.dgvEliminar.DataSource = this.HorarioENT.horarios;
+                }
+
+            }
+        }*/
     }
 }
