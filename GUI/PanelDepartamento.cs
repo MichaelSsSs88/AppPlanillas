@@ -112,7 +112,7 @@ namespace AppPlanillas.GUI
             { 
                 DepartamentoDAL actualizarDepartamento = new DepartamentoDAL();
                 this.nuevoDepartamento = new DepartamentoENT(Int32.Parse(this.txtCodigoDepartamentoActualizar.Text), this.txtNombreDepartamentoActualizar.Text, DateTime.Now.Date, "Jean Ca", DateTime.Now.Date, "Jean Ca", this.cbxActivoActualizar.Checked);
-                actualizarDepartamento.ActualizarDepartamento(false, this.nuevoDepartamento);
+                actualizarDepartamento.ActualizarDepartamento(this.nuevoDepartamento);
                 this.nuevoDepartamento = new DepartamentoENT();
                 this.grdActualizar.DataSource = this.nuevoDepartamento.departamentos;
                 this.txtCodigoDepartamentoActualizar.Text = "";
@@ -166,6 +166,8 @@ namespace AppPlanillas.GUI
                     MessageBox.Show("Error al cargar los datos de departamentos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            this.txtCodigoDepartamentoActualizar.Text = "";
+            this.txtNombreDepartamentoActualizar.Text = "";
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
@@ -174,17 +176,22 @@ namespace AppPlanillas.GUI
             {
                 this.pnlFiltroActualizar.Visible = false;
                 this.grdActualizar.DataSource = this.nuevoDepartamento.departamentos;
+                this.txtBuscarActualizar.Text = "";
             }
             if (this.cmbTipoBusquedaActualizar.SelectedIndex == 1)
             {
                 lblValorABuscar.Text = "Digite el código del departamento";
                 this.pnlFiltroActualizar.Visible = true;
+                this.txtBuscarActualizar.Text = "";
             }
             if (this.cmbTipoBusquedaActualizar.SelectedIndex == 2)
             {
                 lblValorABuscar.Text = "Digite el nombre del departamento";
                 this.pnlFiltroActualizar.Visible = true;
+                this.txtBuscarActualizar.Text = "";
             }
+            this.txtCodigoDepartamentoActualizar.Text = "";
+            this.txtNombreDepartamentoActualizar.Text = "";
         }
 
         private void dataGridView2_Click(object sender, EventArgs e)
@@ -200,13 +207,18 @@ namespace AppPlanillas.GUI
             if ((this.txtCodigoEliminar.Text != "") && (this.txtDescripcionEliminar.Text != ""))
             {
                 DepartamentoDAL eliminarDepartamento = new DepartamentoDAL();
-                this.nuevoDepartamento = new DepartamentoENT(Int32.Parse(this.txtCodigoEliminar.Text), this.txtDescripcionEliminar.Text, DateTime.Now.Date, "Jean Ca", DateTime.Now.Date, "Jean Ca", false);
-                eliminarDepartamento.ActualizarDepartamento(true, this.nuevoDepartamento);
-                this.nuevoDepartamento = new DepartamentoENT();
-                this.grdEliminar.DataSource = this.nuevoDepartamento.departamentos;
-                this.txtCodigoEliminar.Text = "";
-                this.txtDescripcionEliminar.Text = "";
-                MessageBox.Show("¡Se ha eliminado correctamente el departamento!", "Actualización de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (eliminarDepartamento.EliminarDepartamento(Int32.Parse(this.txtCodigoEliminar.Text)) == 0)
+                {
+                    this.nuevoDepartamento = new DepartamentoENT();
+                    this.grdEliminar.DataSource = this.nuevoDepartamento.departamentos;
+                    this.txtCodigoEliminar.Text = "";
+                    this.txtDescripcionEliminar.Text = "";
+                    MessageBox.Show("¡Se ha eliminado correctamente el departamento!", "Actualización de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("¡Ha ocurrido un error al eliminar el departamento, intentelo de nuevo o contacte al administrador del sistema!", "Eliminar departamento", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
@@ -220,17 +232,22 @@ namespace AppPlanillas.GUI
             {
                 this.pnlFiltroEliminar.Visible = false;
                 this.grdEliminar.DataSource = this.nuevoDepartamento.departamentos;
+                this.txtBuscarEliminar.Text = "";
             }
             if (this.cmbTipoBusquedaEliminar.SelectedIndex == 1)
             {
                 this.lblDigiteEliminar.Text = "Digite el código del departamento";
                 this.pnlFiltroEliminar.Visible = true;
+                this.txtBuscarEliminar.Text = "";
             }
             if (this.cmbTipoBusquedaEliminar.SelectedIndex == 2)
             {
                 this.lblDigiteEliminar.Text = "Digite el nombre del departamento";
                 this.pnlFiltroEliminar.Visible = true;
+                this.txtBuscarEliminar.Text = "";
             }
+            this.txtCodigoEliminar.Text = "";
+            this.txtDescripcionEliminar.Text = "";
         }
 
         private void txtBuscarEliminar_KeyDown(object sender, KeyEventArgs e)
@@ -259,6 +276,8 @@ namespace AppPlanillas.GUI
                     MessageBox.Show("Error al cargar los datos de departamentos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            this.txtCodigoEliminar.Text = "";
+            this.txtDescripcionEliminar.Text = "";
         }
 
         private void grdEliminar_Click(object sender, EventArgs e)
