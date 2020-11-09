@@ -19,11 +19,12 @@ namespace AppPlanillas.DAL
             {
                 Parametro parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
-                string sentenciaSQL = "INSERT INTO deduccion (nombre, porcentaje, sistema, fecha_creacion, creado_por, fecha_modificacion, modificado_por, activo)" +
-                                                              "VALUES (@nombre, @porcentaje, @sistema, @fecha_creacion, @creado_por, @fecha_modificacion, @modificado_por, @activo)";
-                parametros.AgregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getNombre);
-                parametros.AgregarParametro("@porcentaje", NpgsqlTypes.NpgsqlDbType.Double, pDeduccion.getPorcentaje);
+                string sentenciaSQL = "INSERT INTO deduccion (nombre, sistema, valor, id_empleado, fecha_creacion, creado_por, fecha_modificacion, modificado_por, activo)" +
+                                                              "VALUES (@nombre, @sistema, @valor, @id_empleado, @fecha_creacion, @creado_por, @fecha_modificacion, @modificado_por, @activo)";
+                parametros.AgregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getDescripcion);
                 parametros.AgregarParametro("@sistema", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getSistema);
+                parametros.AgregarParametro("@valor", NpgsqlTypes.NpgsqlDbType.Double, pDeduccion.getValor);
+                parametros.AgregarParametro("@id_empleado", NpgsqlTypes.NpgsqlDbType.Integer, pDeduccion.getIdEmpleado);
                 parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDeduccion.getFechaCreacion);
                 parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getCreador);
                 parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDeduccion.getFechaModificacion);
@@ -37,6 +38,51 @@ namespace AppPlanillas.DAL
             }
         }
 
+        public int ActualizarDeduccion(DeduccionENT pDeduccion)
+        {
+            int numero = 0;
+            try
+            {
+                Parametro parametros;
+                string sentenciaSQL = "";
+                parametros = new Parametro();
+                AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
+                sentenciaSQL = "UPDATE deduccion SET nombre = @nombre, sistema = @sistema, valor = @valor, id_empleado = @id_empleado, fecha_creacion = @fecha_creacion, creado_por = @creado_por, fecha_modificacion = @fecha_modificacion, modificado_por = @modificado_por, activo = @activo WHERE id = '" + pDeduccion.getId + "'";
+                parametros.AgregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getDescripcion);
+                parametros.AgregarParametro("@sistema", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getSistema);
+                parametros.AgregarParametro("@valor", NpgsqlTypes.NpgsqlDbType.Double, pDeduccion.getValor);
+                parametros.AgregarParametro("@id_empleado", NpgsqlTypes.NpgsqlDbType.Integer, pDeduccion.getIdEmpleado);
+                parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDeduccion.getFechaCreacion);
+                parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getCreador);
+                parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDeduccion.getFechaModificacion);
+                parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getModificador);
+                parametros.AgregarParametro("@activo", NpgsqlTypes.NpgsqlDbType.Boolean, pDeduccion.getActivo);
+                conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());
+            }
+            catch (Exception e)
+            {
+                numero = 1;
+                throw e;
+            }
+            return numero;
+        }
+
+        public int EliminarDeduccion(int pId)
+        {
+            int numero = 0;
+            try
+            {
+                AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
+                string sentenciaSQL = "DELETE FROM deduccion WHERE id = '" + pId + "'";
+                conexion.EjecutarSQL(sentenciaSQL);
+            }
+            catch
+            {
+                numero = 1;
+            }
+            return numero;
+        }
+
         public List<DeduccionENT> ObtenerDeducciones (int id, String descripcion)
         {
             List<DeduccionENT> deducciones = new List<DeduccionENT>();
@@ -47,7 +93,7 @@ namespace AppPlanillas.DAL
                     DataSet dsetDeducciones = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("SELECT * FROM deduccion");
                     foreach (DataRow fila in dsetDeducciones.Tables[0].Rows)
                     {
-                        DeduccionENT deduccion = new DeduccionENT((int)fila["id"], fila["nombre"].ToString(), (double)fila["porcentaje"], fila["sistema"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
+                        DeduccionENT deduccion = new DeduccionENT((int)fila["id"], fila["nombre"].ToString(), fila["sistema"].ToString(), (double)fila["valor"], (int)fila["id_empleado"], (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
                         deducciones.Add(deduccion);
                     }
                 }
@@ -60,10 +106,10 @@ namespace AppPlanillas.DAL
             {
                 try
                 {
-                    DataSet dsetDeducciones = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("SELECT * FROM deduccion where id=" + id);
+                    DataSet dsetDeducciones = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("SELECT * FROM deduccion where id = " + id);
                     foreach (DataRow fila in dsetDeducciones.Tables[0].Rows)
                     {
-                        DeduccionENT deduccion = new DeduccionENT((int)fila["id"], fila["nombre"].ToString(), (double)fila["porcentaje"], fila["sistema"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
+                        DeduccionENT deduccion = new DeduccionENT((int)fila["id"], fila["nombre"].ToString(), fila["sistema"].ToString(), (double)fila["valor"], (int)fila["id_empleado"], (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
                         deducciones.Add(deduccion);
                     }
                 }
@@ -80,7 +126,7 @@ namespace AppPlanillas.DAL
                     DataSet dsetDeducciones = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("SELECT * FROM deduccion where nombre = " + descripcion);
                     foreach (DataRow fila in dsetDeducciones.Tables[0].Rows)
                     {
-                        DeduccionENT deduccion = new DeduccionENT((int)fila["id"], fila["nombre"].ToString(), (double)fila["porcentaje"], fila["sistema"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
+                        DeduccionENT deduccion = new DeduccionENT((int)fila["id"], fila["nombre"].ToString(), fila["sistema"].ToString(), (double)fila["valor"], (int)fila["id_empleado"], (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
                         deducciones.Add(deduccion);
                     }
                 }

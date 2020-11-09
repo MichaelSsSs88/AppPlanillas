@@ -10,9 +10,10 @@ namespace AppPlanillas.ENT
     class DeduccionENT
     {
         private int id { get; set; }
-        private string nombre { get; set; }
-        private double porcentaje { get; set; }
+        private string descripcion { get; set; }
         private string sistema { get; set; }
+        private double valor { get; set; }
+        private int idEmpleado { get; set; }
         private DateTime fechaCreacion { get; set; }
         private string creadoPor { get; set; }
         private DateTime fechaModificacion { get; set; }
@@ -26,12 +27,13 @@ namespace AppPlanillas.ENT
             this.deducciones = new DeduccionDAL().ObtenerDeducciones(-1, "");
         }
 
-        public DeduccionENT (int pId, string pNombre, double pPorcentaje, string pSistema, DateTime pFechaCreacion, string pCreadoPor, DateTime pFechaModificacion, string pModificadoPor, Boolean pActivo)
+        public DeduccionENT (int pId, string pDescripcion, string pSistema, double pValor, int pIdEmpleado, DateTime pFechaCreacion, string pCreadoPor, DateTime pFechaModificacion, string pModificadoPor, Boolean pActivo)
         {
             this.id = pId;
-            this.nombre = pNombre;
-            this.porcentaje = pPorcentaje;
+            this.descripcion = pDescripcion;
             this.sistema = pSistema;
+            this.valor = pValor;
+            this.idEmpleado = pIdEmpleado;
             this.fechaCreacion = pFechaCreacion;
             this.creadoPor = pCreadoPor;
             this.fechaModificacion = pFechaModificacion;
@@ -47,19 +49,19 @@ namespace AppPlanillas.ENT
             }
         }
 
-        public string getNombre
+        public string getDescripcion
         {
             get
             {
-                return this.nombre;
+                return this.descripcion;
             }
         }
 
-        public double getPorcentaje
+        public double getValor
         {
             get
             {
-                return this.porcentaje;
+                return this.valor;
             }
         }
 
@@ -68,6 +70,14 @@ namespace AppPlanillas.ENT
             get
             {
                 return this.sistema;
+            }
+        }
+
+        public int getIdEmpleado
+        {
+            get
+            {
+                return this.idEmpleado;
             }
         }
 

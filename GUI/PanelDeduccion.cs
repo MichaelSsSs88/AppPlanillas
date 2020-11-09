@@ -73,5 +73,10 @@ namespace AppPlanillas.GUI
                 if (arrBoolPagesVisible[intIndex])
                     this.tabDeduccion.TabPages.Add(objColPages[intIndex]);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
