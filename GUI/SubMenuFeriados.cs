@@ -74,6 +74,27 @@ namespace AppPlanillas.GUI
 
             }
 
+            if (numeroSubMenu == 6)
+            {
+                this.btnInsertar.Text = "Insertar Puesto";
+                this.btnEditar.Text = "Editar Puesto";
+                this.btnEliminar.Text = "Eliminar Puesto";
+                this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertMedium.png");
+                this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editMedium.png");
+                this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteMedium.png");
+
+            }
+            if (numeroSubMenu == 10)
+            {
+                this.btnInsertar.Text = "Insertar Usuario";
+                this.btnEditar.Text = "Editar Usuario";
+                this.btnEliminar.Text = "Eliminar Usuario";
+                this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertMedium.png");
+                this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editMedium.png");
+                this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteMedium.png");
+
+            }
+
         }
 
         private void btnInsertar_MouseHover(object sender, EventArgs e)
@@ -98,6 +119,14 @@ namespace AppPlanillas.GUI
             {
                 this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertHolidayBig.png");
             }
+            if (this.subMenu == 6)
+            {
+                this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertBig.png");
+            }
+            if (this.subMenu == 10)
+            {
+                this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertBig.png");
+            }
         }
 
         private void btnInsertar_Click(object sender, EventArgs e)
@@ -121,6 +150,14 @@ namespace AppPlanillas.GUI
             if (this.subMenu == 5)
             {
                 this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertHolidaySmall.png");
+            }
+            if (this.subMenu == 5)
+            {
+                this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertSmall.png");
+            }
+            if (this.subMenu == 10)
+            {
+                this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertSmall.png");
             }
             this.boton = 1;
 
@@ -149,7 +186,14 @@ namespace AppPlanillas.GUI
             {
                 this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertHolidayMedium.png");
             }
-
+            if (this.subMenu == 6)
+            {
+                this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertMedium.png");
+            }
+            if (this.subMenu == 10)
+            {
+                this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertMedium.png");
+            }
 
         }
 
@@ -174,6 +218,14 @@ namespace AppPlanillas.GUI
             if (this.subMenu == 5)
             {
                 this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editHolidaySmall.png");
+            }
+            if (this.subMenu == 6)
+            {
+                this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editSmall.png");
+            }
+            if (this.subMenu == 10)
+            {
+                this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editSmall.png");
             }
             this.boton = 2;
 
@@ -202,6 +254,14 @@ namespace AppPlanillas.GUI
             {
                 this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editHolidayBig.png");
             }
+            if (this.subMenu == 6)
+            {
+                this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editBig.png");
+            }
+            if (this.subMenu == 10)
+            {
+                this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editBig.png");
+            }
         }
 
         private void btnEditarEmpleado_MouseLeave(object sender, EventArgs e)
@@ -226,6 +286,14 @@ namespace AppPlanillas.GUI
             {
                 this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editHolidayMedium.png");
             }
+            if (this.subMenu == 5)
+            {
+                this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editMedium.png");
+            }
+            if (this.subMenu == 10)
+            {
+                this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editBig.png");
+            }
         }
 
         private void btnEliminarEmpleado_Click(object sender, EventArgs e)
@@ -240,6 +308,10 @@ namespace AppPlanillas.GUI
                 this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteSpendSmall.png");
             if (this.subMenu == 5)
                 this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteHolidaySmall.png");
+            if (this.subMenu == 6)
+                this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteSmall.png");
+            if (this.subMenu == 10)
+                this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteSmall.png");
             this.boton = 3;
 
             this.BotonPulsado();
@@ -257,6 +329,10 @@ namespace AppPlanillas.GUI
                 this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteSpendBig.png");
             if (this.subMenu == 5)
                 this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteHolidayBig.png");
+            if (this.subMenu == 6)
+                this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteBig.png");
+            if (this.subMenu == 10)
+                this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteBig.png");
         }
 
         private void btnEliminarEmpleado_MouseLeave(object sender, EventArgs e)
@@ -271,6 +347,10 @@ namespace AppPlanillas.GUI
                 this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteSpendMedium.png");
             if (this.subMenu == 5)
                 this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteHolidayMedium.png");
+            if (this.subMenu == 6)
+                this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteMedium.png");
+            if (this.subMenu == 10)
+                this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteMedium.png");
         }
 
         protected virtual void BotonPulsado()

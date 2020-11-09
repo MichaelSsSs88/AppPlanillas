@@ -1,4 +1,6 @@
-﻿using ProyectoIIIC;
+﻿using DAL;
+using ENT;
+using ProyectoIIIC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

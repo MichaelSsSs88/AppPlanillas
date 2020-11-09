@@ -45,12 +45,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.panelMantenimiento = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnHorario = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnEmpleado = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -82,8 +84,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.SubMenu = new System.Windows.Forms.Panel();
             this.panelMenuHorizontal = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             this.panelSeguridad.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -138,6 +138,7 @@
             this.button3.Text = "Usuarios";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel8
             // 
@@ -296,6 +297,21 @@
             this.panelMantenimiento.Size = new System.Drawing.Size(190, 300);
             this.panelMantenimiento.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(60, 250);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 50);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Puestos";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnHorario
             // 
             this.btnHorario.Dock = System.Windows.Forms.DockStyle.Top;
@@ -384,6 +400,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(60, 300);
             this.panel3.TabIndex = 0;
+            // 
+            // label11
+            // 
+            this.label11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label11.Image = ((System.Drawing.Image)(resources.GetObject("label11.Image")));
+            this.label11.Location = new System.Drawing.Point(0, 250);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 50);
+            this.label11.TabIndex = 7;
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label13
             // 
@@ -707,29 +733,6 @@
             this.panelMenuHorizontal.Size = new System.Drawing.Size(840, 90);
             this.panelMenuHorizontal.TabIndex = 9;
             this.panelMenuHorizontal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenuHorizontal_MouseDown);
-            // 
-            // label11
-            // 
-            this.label11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label11.Image = ((System.Drawing.Image)(resources.GetObject("label11.Image")));
-            this.label11.Location = new System.Drawing.Point(0, 250);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 50);
-            this.label11.TabIndex = 7;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(60, 250);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 50);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Puestos";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

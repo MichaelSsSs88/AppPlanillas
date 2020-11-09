@@ -367,12 +367,39 @@ namespace AppPlanillas
                
                 this.OpenChildFormContenedor(new PanelHorario(entrada.boton - 1));
             }
+            if ((entrada.subMenu == 6))
+            {
+
+                this.OpenChildFormContenedor(new PanelPuestos(entrada.boton - 1));
+            }
+            if ((entrada.subMenu == 10))
+            {
+
+                this.OpenChildFormContenedor(new PanelUsuario(entrada.boton - 1));
+            }
         }
 
         private void label10_Click(object sender, EventArgs e)
         {
             //this.CLoseChildFormContenedor();
             this.btnSeguridad_Click(sender, e);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.CLoseChildFormContenedor();
+            this.OpenChildForm(new SubMenuFeriados(10, this));
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.CLoseChildFormContenedor();
+            this.OpenChildForm(new SubMenuFeriados(6, this));
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            this.button1_Click(sender, e);
         }
     }
 

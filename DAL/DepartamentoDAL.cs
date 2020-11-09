@@ -84,15 +84,15 @@ namespace AppPlanillas.DAL
             string consultaSQL = "SELECT * FROM departamento";
             if (pId > -1)
             {
-                consultaSQL += " WHERE (id = " + pId + ")";
+                consultaSQL += " WHERE cast(id AS TEXT) like '" + pId.ToString() + "%'";
                 if (pDescripcion != "")
                 {
-                    consultaSQL += " AND (nombre = " + pDescripcion + ")";
+                    consultaSQL += " AND nombre  like '" + pDescripcion + "%'";
                 }
             }
             else if (pDescripcion != "")
             {
-                consultaSQL += " WHERE (id = " + pId + ")";
+                consultaSQL += " WHERE nombre  like '" + pDescripcion + "%'";
             }
             List<DepartamentoENT> departamentos = new List<DepartamentoENT>();
             try

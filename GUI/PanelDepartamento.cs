@@ -286,6 +286,5 @@ namespace AppPlanillas.GUI
             this.txtCodigoEliminar.Text = this.grdEliminar.Rows[fila].Cells[0].Value.ToString();
             this.txtDescripcionEliminar.Text = this.grdEliminar.Rows[fila].Cells[1].Value.ToString();
         }
-
     }
 }

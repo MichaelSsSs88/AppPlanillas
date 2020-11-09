@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PanelUsuario));
-            this.tabDepartamentos = new System.Windows.Forms.TabControl();
+            this.tabUsuarios = new System.Windows.Forms.TabControl();
             this.tabInsertUser = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -42,6 +42,12 @@
             this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -51,28 +57,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabEditUser = new System.Windows.Forms.TabPage();
-            this.tabDeleteUsuario = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,6 +72,22 @@
             this.lblValorABuscar = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tabDeleteUsuario = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -116,36 +116,36 @@
             this.label21 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.tabDepartamentos.SuspendLayout();
+            this.tabUsuarios.SuspendLayout();
             this.tabInsertUser.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabEditUser.SuspendLayout();
-            this.tabDeleteUsuario.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panelFiltro.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tabDeleteUsuario.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabDepartamentos
+            // tabUsuarios
             // 
-            this.tabDepartamentos.Controls.Add(this.tabInsertUser);
-            this.tabDepartamentos.Controls.Add(this.tabEditUser);
-            this.tabDepartamentos.Controls.Add(this.tabDeleteUsuario);
-            this.tabDepartamentos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tabDepartamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tabDepartamentos.Location = new System.Drawing.Point(0, 0);
-            this.tabDepartamentos.Margin = new System.Windows.Forms.Padding(4);
-            this.tabDepartamentos.Name = "tabDepartamentos";
-            this.tabDepartamentos.SelectedIndex = 0;
-            this.tabDepartamentos.Size = new System.Drawing.Size(1034, 668);
-            this.tabDepartamentos.TabIndex = 2;
+            this.tabUsuarios.Controls.Add(this.tabInsertUser);
+            this.tabUsuarios.Controls.Add(this.tabEditUser);
+            this.tabUsuarios.Controls.Add(this.tabDeleteUsuario);
+            this.tabUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tabUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tabUsuarios.Location = new System.Drawing.Point(0, 0);
+            this.tabUsuarios.Margin = new System.Windows.Forms.Padding(4);
+            this.tabUsuarios.Name = "tabUsuarios";
+            this.tabUsuarios.SelectedIndex = 0;
+            this.tabUsuarios.Size = new System.Drawing.Size(1034, 668);
+            this.tabUsuarios.TabIndex = 2;
             // 
             // tabInsertUser
             // 
@@ -264,6 +264,82 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Completar datos del usuario";
             // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button4.Location = new System.Drawing.Point(10, 381);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.button4.Size = new System.Drawing.Size(491, 83);
+            this.button4.TabIndex = 40;
+            this.button4.Text = "Editar Empleado";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.checkBox1.Location = new System.Drawing.Point(10, 350);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.checkBox1.Size = new System.Drawing.Size(491, 31);
+            this.checkBox1.TabIndex = 39;
+            this.checkBox1.Text = "Activo";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(10, 326);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(491, 24);
+            this.comboBox1.TabIndex = 36;
+            // 
+            // label7
+            // 
+            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label7.Location = new System.Drawing.Point(10, 296);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.label7.Size = new System.Drawing.Size(491, 30);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Seleccione el tipo de usuario:";
+            // 
+            // textBox19
+            // 
+            this.textBox19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox19.Location = new System.Drawing.Point(10, 273);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(491, 23);
+            this.textBox19.TabIndex = 32;
+            // 
+            // label27
+            // 
+            this.label27.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label27.Location = new System.Drawing.Point(10, 243);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.label27.Size = new System.Drawing.Size(491, 30);
+            this.label27.TabIndex = 31;
+            this.label27.Text = "Confirme la contraseña:";
+            // 
             // textBox3
             // 
             this.textBox3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -361,93 +437,140 @@
             this.tabEditUser.Text = "Editar Usuario";
             this.tabEditUser.UseVisualStyleBackColor = true;
             // 
-            // tabDeleteUsuario
+            // groupBox3
             // 
-            this.tabDeleteUsuario.Controls.Add(this.groupBox5);
-            this.tabDeleteUsuario.Controls.Add(this.groupBox6);
-            this.tabDeleteUsuario.Location = new System.Drawing.Point(4, 25);
-            this.tabDeleteUsuario.Margin = new System.Windows.Forms.Padding(4);
-            this.tabDeleteUsuario.Name = "tabDeleteUsuario";
-            this.tabDeleteUsuario.Size = new System.Drawing.Size(1026, 639);
-            this.tabDeleteUsuario.TabIndex = 2;
-            this.tabDeleteUsuario.Text = "Eliminar Usuario";
-            this.tabDeleteUsuario.UseVisualStyleBackColor = true;
+            this.groupBox3.Controls.Add(this.dataGridView2);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.panelFiltro);
+            this.groupBox3.Controls.Add(this.comboBox3);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(4, 4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(10);
+            this.groupBox3.Size = new System.Drawing.Size(550, 631);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Filtrar empleados:";
             // 
-            // button4
+            // dataGridView2
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(10, 381);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.button4.Size = new System.Drawing.Size(491, 83);
-            this.button4.TabIndex = 40;
-            this.button4.Text = "Editar Empleado";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.ActivoEditar});
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.GridColor = System.Drawing.SystemColors.Control;
+            this.dataGridView2.Location = new System.Drawing.Point(10, 174);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(530, 447);
+            this.dataGridView2.TabIndex = 7;
             // 
-            // checkBox1
+            // dataGridViewTextBoxColumn1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.checkBox1.Location = new System.Drawing.Point(10, 350);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.checkBox1.Size = new System.Drawing.Size(491, 31);
-            this.checkBox1.TabIndex = 39;
-            this.checkBox1.Text = "Activo";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Cédula";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // comboBox1
+            // dataGridViewTextBoxColumn2
             // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(10, 326);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(491, 24);
-            this.comboBox1.TabIndex = 36;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // label7
+            // dataGridViewTextBoxColumn3
             // 
-            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(10, 296);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.label7.Size = new System.Drawing.Size(491, 30);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "Seleccione el tipo de usuario:";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Primera pellido";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // textBox19
+            // dataGridViewTextBoxColumn4
             // 
-            this.textBox19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox19.Location = new System.Drawing.Point(10, 273);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(491, 23);
-            this.textBox19.TabIndex = 32;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Segundo Apellido";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // label27
+            // dataGridViewTextBoxColumn5
             // 
-            this.label27.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label27.Location = new System.Drawing.Point(10, 243);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label27.Name = "label27";
-            this.label27.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.label27.Size = new System.Drawing.Size(491, 30);
-            this.label27.TabIndex = 31;
-            this.label27.Text = "Confirme la contraseña:";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Fecha Nacimiento";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Puesto";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // ActivoEditar
+            // 
+            this.ActivoEditar.HeaderText = "Activo";
+            this.ActivoEditar.Name = "ActivoEditar";
+            // 
+            // label14
+            // 
+            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label14.Location = new System.Drawing.Point(10, 146);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(530, 28);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Seleccione el empleado a modificar::";
+            // 
+            // panelFiltro
+            // 
+            this.panelFiltro.Controls.Add(this.textBox9);
+            this.panelFiltro.Controls.Add(this.lblValorABuscar);
+            this.panelFiltro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelFiltro.Location = new System.Drawing.Point(10, 78);
+            this.panelFiltro.Name = "panelFiltro";
+            this.panelFiltro.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.panelFiltro.Size = new System.Drawing.Size(530, 68);
+            this.panelFiltro.TabIndex = 3;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox9.Location = new System.Drawing.Point(0, 38);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(530, 23);
+            this.textBox9.TabIndex = 4;
+            // 
+            // lblValorABuscar
+            // 
+            this.lblValorABuscar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblValorABuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblValorABuscar.Location = new System.Drawing.Point(0, 10);
+            this.lblValorABuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblValorABuscar.Name = "lblValorABuscar";
+            this.lblValorABuscar.Size = new System.Drawing.Size(530, 28);
+            this.lblValorABuscar.TabIndex = 3;
+            this.lblValorABuscar.Text = "Digite :";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Todos",
+            "Nombre",
+            "Cédula"});
+            this.comboBox3.Location = new System.Drawing.Point(10, 54);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(530, 24);
+            this.comboBox3.TabIndex = 2;
+            // 
+            // label13
+            // 
+            this.label13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label13.Location = new System.Drawing.Point(10, 26);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(530, 28);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Seleccione el tipo de busqueda:";
             // 
             // groupBox2
             // 
@@ -636,140 +759,17 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Cédula:";
             // 
-            // groupBox3
+            // tabDeleteUsuario
             // 
-            this.groupBox3.Controls.Add(this.dataGridView2);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.panelFiltro);
-            this.groupBox3.Controls.Add(this.comboBox3);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(4, 4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(10);
-            this.groupBox3.Size = new System.Drawing.Size(550, 631);
-            this.groupBox3.TabIndex = 5;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Filtrar empleados:";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.ActivoEditar});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView2.Location = new System.Drawing.Point(10, 174);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(530, 447);
-            this.dataGridView2.TabIndex = 7;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Cédula";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Primera pellido";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Segundo Apellido";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Fecha Nacimiento";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Puesto";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // ActivoEditar
-            // 
-            this.ActivoEditar.HeaderText = "Activo";
-            this.ActivoEditar.Name = "ActivoEditar";
-            // 
-            // label14
-            // 
-            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label14.Location = new System.Drawing.Point(10, 146);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(530, 28);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Seleccione el empleado a modificar::";
-            // 
-            // panelFiltro
-            // 
-            this.panelFiltro.Controls.Add(this.textBox9);
-            this.panelFiltro.Controls.Add(this.lblValorABuscar);
-            this.panelFiltro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFiltro.Location = new System.Drawing.Point(10, 78);
-            this.panelFiltro.Name = "panelFiltro";
-            this.panelFiltro.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.panelFiltro.Size = new System.Drawing.Size(530, 68);
-            this.panelFiltro.TabIndex = 3;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox9.Location = new System.Drawing.Point(0, 38);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(530, 23);
-            this.textBox9.TabIndex = 4;
-            // 
-            // lblValorABuscar
-            // 
-            this.lblValorABuscar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblValorABuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblValorABuscar.Location = new System.Drawing.Point(0, 10);
-            this.lblValorABuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblValorABuscar.Name = "lblValorABuscar";
-            this.lblValorABuscar.Size = new System.Drawing.Size(530, 28);
-            this.lblValorABuscar.TabIndex = 3;
-            this.lblValorABuscar.Text = "Digite :";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Todos",
-            "Nombre",
-            "Cédula"});
-            this.comboBox3.Location = new System.Drawing.Point(10, 54);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(530, 24);
-            this.comboBox3.TabIndex = 2;
-            // 
-            // label13
-            // 
-            this.label13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label13.Location = new System.Drawing.Point(10, 26);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(530, 28);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Seleccione el tipo de busqueda:";
+            this.tabDeleteUsuario.Controls.Add(this.groupBox5);
+            this.tabDeleteUsuario.Controls.Add(this.groupBox6);
+            this.tabDeleteUsuario.Location = new System.Drawing.Point(4, 25);
+            this.tabDeleteUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.tabDeleteUsuario.Name = "tabDeleteUsuario";
+            this.tabDeleteUsuario.Size = new System.Drawing.Size(1026, 639);
+            this.tabDeleteUsuario.TabIndex = 2;
+            this.tabDeleteUsuario.Text = "Eliminar Usuario";
+            this.tabDeleteUsuario.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -1075,23 +1075,23 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 669);
-            this.Controls.Add(this.tabDepartamentos);
+            this.Controls.Add(this.tabUsuarios);
             this.Name = "PanelUsuario";
             this.Text = "PanelUsuario";
-            this.tabDepartamentos.ResumeLayout(false);
+            this.tabUsuarios.ResumeLayout(false);
             this.tabInsertUser.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabEditUser.ResumeLayout(false);
-            this.tabDeleteUsuario.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panelFiltro.ResumeLayout(false);
             this.panelFiltro.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.tabDeleteUsuario.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -1104,7 +1104,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabDepartamentos;
+        private System.Windows.Forms.TabControl tabUsuarios;
         private System.Windows.Forms.TabPage tabInsertUser;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView1;
