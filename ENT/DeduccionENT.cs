@@ -20,7 +20,7 @@ namespace AppPlanillas.ENT
         private string modificadoPor { get; set; }
         private Boolean activo { get; set; }
 
-        private List<DeduccionENT> deducciones { get; }
+        public List<DeduccionENT> deducciones { get; }
 
         public DeduccionENT () 
         {

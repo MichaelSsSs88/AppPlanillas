@@ -24,7 +24,14 @@ namespace AppPlanillas.DAL
                 parametros.AgregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getDescripcion);
                 parametros.AgregarParametro("@sistema", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getSistema);
                 parametros.AgregarParametro("@valor", NpgsqlTypes.NpgsqlDbType.Double, pDeduccion.getValor);
-                parametros.AgregarParametro("@id_empleado", NpgsqlTypes.NpgsqlDbType.Integer, pDeduccion.getIdEmpleado);
+                if (pDeduccion.getIdEmpleado == 0) 
+                {
+                    parametros.AgregarParametro("@id_empleado", NpgsqlTypes.NpgsqlDbType.Integer, null);
+                }
+                else
+                {
+                    parametros.AgregarParametro("@id_empleado", NpgsqlTypes.NpgsqlDbType.Integer, pDeduccion.getIdEmpleado);
+                }
                 parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDeduccion.getFechaCreacion);
                 parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getCreador);
                 parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDeduccion.getFechaModificacion);
@@ -93,8 +100,16 @@ namespace AppPlanillas.DAL
                     DataSet dsetDeducciones = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("SELECT * FROM deduccion");
                     foreach (DataRow fila in dsetDeducciones.Tables[0].Rows)
                     {
-                        DeduccionENT deduccion = new DeduccionENT((int)fila["id"], fila["nombre"].ToString(), fila["sistema"].ToString(), (double)fila["valor"], (int)fila["id_empleado"], (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
-                        deducciones.Add(deduccion);
+                        if (fila["id_empleado"].ToString() == "")
+                        {
+                            DeduccionENT deduccion = new DeduccionENT((int)fila["id"], fila["nombre"].ToString(), fila["sistema"].ToString(), (double)fila["valor"], 0, (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
+                            deducciones.Add(deduccion);
+                        }
+                        else
+                        {
+                            DeduccionENT deduccion = new DeduccionENT((int)fila["id"], fila["nombre"].ToString(), fila["sistema"].ToString(), (double)fila["valor"], (int)fila["id_empleado"], (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
+                            deducciones.Add(deduccion);
+                        }
                     }
                 }
                 catch (Exception e)
@@ -109,8 +124,16 @@ namespace AppPlanillas.DAL
                     DataSet dsetDeducciones = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("SELECT * FROM deduccion where id = " + id);
                     foreach (DataRow fila in dsetDeducciones.Tables[0].Rows)
                     {
-                        DeduccionENT deduccion = new DeduccionENT((int)fila["id"], fila["nombre"].ToString(), fila["sistema"].ToString(), (double)fila["valor"], (int)fila["id_empleado"], (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
-                        deducciones.Add(deduccion);
+                        if (fila["id_empleado"].ToString() == "")
+                        {
+                            DeduccionENT deduccion = new DeduccionENT((int)fila["id"], fila["nombre"].ToString(), fila["sistema"].ToString(), (double)fila["valor"], 0, (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
+                            deducciones.Add(deduccion);
+                        }
+                        else
+                        {
+                            DeduccionENT deduccion = new DeduccionENT((int)fila["id"], fila["nombre"].ToString(), fila["sistema"].ToString(), (double)fila["valor"], (int)fila["id_empleado"], (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
+                            deducciones.Add(deduccion);
+                        }
                     }
                 }
                 catch (Exception e)
