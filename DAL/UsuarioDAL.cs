@@ -33,7 +33,7 @@ namespace AppPlanillas.DAL
             {
                 try
                 {
-                    DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("select * from usuario where nombre = " + pTexto);
+                    DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("select * from usuario where nombre like '" + pTexto +"%'");
                     foreach (DataRow fila in dsetClientes.Tables[0].Rows)
                     {
                         UsuarioENT usuario = new UsuarioENT(Int32.Parse(fila["id"].ToString()), fila["nombre"].ToString(), fila["correo"].ToString(), fila["tipo"].ToString(), fila["contraseña"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
@@ -49,7 +49,7 @@ namespace AppPlanillas.DAL
             {
                 try
                 {
-                    DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("select * from usuario where correo = " + pTexto);
+                    DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("select * from usuario where correo like '" + pTexto + "%'");
                     foreach (DataRow fila in dsetClientes.Tables[0].Rows)
                     {
                         UsuarioENT usuario = new UsuarioENT(Int32.Parse(fila["id"].ToString()), fila["nombre"].ToString(), fila["correo"].ToString(), fila["tipo"].ToString(), fila["contraseña"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
@@ -65,7 +65,7 @@ namespace AppPlanillas.DAL
             {
                 try
                 {
-                    DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("select * from usuario where tipo = " + pTexto);
+                    DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("select * from usuario where tipo like'" + pTexto+"%'");
                     foreach (DataRow fila in dsetClientes.Tables[0].Rows)
                     {
                         UsuarioENT usuario = new UsuarioENT(Int32.Parse(fila["id"].ToString()), fila["nombre"].ToString(), fila["correo"].ToString(), fila["tipo"].ToString(), fila["contraseña"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), (bool)fila["activo"]);
@@ -86,8 +86,8 @@ namespace AppPlanillas.DAL
             {
                 Parametro parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
-                string sentenciaSQL = "INSERT INTO deduccion (nombre, correo, tipo, contraseña, fecha_creacion, creado_por, fecha_modificacion, modificado_por, activo)" +
-                                      "VALUES (@nombre, @correo, @tipo, MD5( @contraseña ), @fecha_creacion, @creado_por, @fecha_modificacion, @modificado_por, @activo)";
+                string sentenciaSQL = "INSERT INTO usuario (nombre, correo, tipo, contraseña, fecha_creacion, creado_por, fecha_modificacion, modificado_por, activo)" +
+                                      "VALUES (@nombre, @correo, @tipo, MD5(' + @contraseña +'), @fecha_creacion, @creado_por, @fecha_modificacion, @modificado_por, @activo)";
                 parametros.AgregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Nombre);
                 parametros.AgregarParametro("@correo", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Correo);
                 parametros.AgregarParametro("@tipo", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Tipo);
@@ -114,11 +114,14 @@ namespace AppPlanillas.DAL
             {
                 Parametro parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
-                string sentenciaSQL = "UPDATE usuario SET nombre =@nombre, correo =@correo, tipo =@tipo, contraseña =MD5(@contraseña) WHERE id " + pUsuario.Id;
+                string sentenciaSQL = "UPDATE usuario SET nombre =@nombre, correo =@correo, tipo =@tipo, contraseña = MD5(' + @contraseña +'), fecha_modificacion =@fecha_modificacion, modificado_por =@modificado_por, activo=@activo  WHERE id= " + pUsuario.Id;
                 parametros.AgregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Nombre);
                 parametros.AgregarParametro("@correo", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Correo);
                 parametros.AgregarParametro("@tipo", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Tipo);
                 parametros.AgregarParametro("@contraseña", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Contrasena);
+                parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pUsuario.getFechaModificacion);
+                parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.getModificador);
+                parametros.AgregarParametro("@activo", NpgsqlTypes.NpgsqlDbType.Boolean, pUsuario.getActivo);
 
                 conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());
             }
@@ -128,14 +131,14 @@ namespace AppPlanillas.DAL
             }
         }
 
-        public void EliminarUsuario(UsuarioENT pUsuario)
+        public void EliminarUsuario(/*UsuarioENT*/int pUsuario)
         {
             try
             {
                 Parametro parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
                 string sentenciaSQL = "DELETE FROM usuario WHERE id = @id";
-                parametros.AgregarParametro("@id", NpgsqlTypes.NpgsqlDbType.Integer, pUsuario.Id);
+                parametros.AgregarParametro("@id", NpgsqlTypes.NpgsqlDbType.Integer, pUsuario);
 
 
                 conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());

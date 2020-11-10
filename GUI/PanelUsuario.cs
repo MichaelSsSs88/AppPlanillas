@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppPlanillas.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,7 @@ namespace AppPlanillas.GUI
             this.HideTab(1);
             this.HideTab(2);
             this.ShowTab(pestaña);
+            this.CargarTabla(pestaña, "Todos","");
         }
 
         private void InitControl()
@@ -38,6 +40,34 @@ namespace AppPlanillas.GUI
                 }
                 this.tabInsertUser.Parent = null;
                 this.tabEditUser.Parent = null;
+            }
+
+        }
+
+        private void CargarTabla(int pestaña, string filtro, string dato)
+        {
+            if (this.cmbEditarUsuario.SelectedIndex < 0)
+            {
+                this.panelFiltro.Visible = false;
+                this.LimpiarEditar();
+            }
+            if (this.cmbEliminarUsuario.SelectedIndex < 0)
+            {
+                this.panelFiltroEliminar.Visible = false;
+                this.LimpiarEliminar();
+            }
+
+            if (pestaña == 0)
+            {
+                this.dgvInsertar.DataSource = new UsuarioDAL().ObtenerUsuarios(filtro, dato);
+            }
+            if (pestaña == 1)
+            {
+                this.dgvEditar.DataSource = new UsuarioDAL().ObtenerUsuarios(filtro, dato);
+            }
+            if (pestaña == 2)
+            {
+                this.dgvEliminar.DataSource = new UsuarioDAL().ObtenerUsuarios(filtro, dato);
             }
 
         }
@@ -72,6 +102,178 @@ namespace AppPlanillas.GUI
             for (int intIndex = 0; intIndex < objColPages.Count; intIndex++)
                 if (arrBoolPagesVisible[intIndex])
                     this.tabUsuarios.TabPages.Add(objColPages[intIndex]);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new UsuarioDAL().AgregarUsuario(new UsuarioENT(Int32.Parse(this.txtInsertarCedula.Text), this.txtInsertarNombre.Text, this.txtIngresarCorreo.Text, this.cmbInsertarUsuario.SelectedItem.ToString(), this.txtIngresarContraseña.Text, DateTime.Now, "Pablo", DateTime.Now, "Pablo", this.ckbInsertarUsuario.Checked));
+                this.CargarTabla(0, "Todos", "");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("¡Ha ocurrido un error al insertar, correo dublicado: " + ex.Message + "!", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
+        private void LimpiarEditar()
+        {
+            this.txtEditarCedula.Text = "";
+            this.txtEditarNombre.Text = "";
+            this.txtEditarCorreo.Text = "";
+            this.txtEditarContraseña.Text = "";
+            this.txtConfirmarContraseña.Text = "";
+            this.cmbEditarUser.SelectedIndex = -1;
+            this.ckbInsertarUsuario.Checked = false;
+          
+        }
+
+        private void LimpiarEliminar()
+        {
+            this.txtEliminarCedula.Text = "";
+            this.txtEliminarNombre.Text = "";
+            this.txtEliminarCorreo.Text = "";
+            this.txtEliminarContraseña.Text = "";
+            this.cmbEliminarUser.SelectedIndex = -1;
+            this.ckbEliminarActivo.Checked = false;
+
+        }
+
+
+        private void cmbEditarUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.LimpiarEditar();
+            if (this.cmbEditarUsuario.SelectedIndex == 0)
+            {
+                this.CargarTabla(1, "Todos","");
+                this.panelFiltro.Visible = false;
+            }
+            if (this.cmbEditarUsuario.SelectedIndex == 1)
+            {
+                this.panelFiltro.Visible = true;
+                this.lblValorABuscar.Text = "Digite el nombre del usuario: ";
+            }
+            if (this.cmbEditarUsuario.SelectedIndex == 2)
+            {
+                this.panelFiltro.Visible = true;
+                this.lblValorABuscar.Text = "Digite el correo del usuario: ";
+            }
+            if (this.cmbEditarUsuario.SelectedIndex == 3)
+            {
+                this.panelFiltro.Visible = true;
+                this.lblValorABuscar.Text = "Digite el tipo de usuario: ";
+            }
+
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEditarBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            this.LimpiarEditar();
+            if (this.txtEditarBusqueda.Text == "")
+            {
+                this.CargarTabla(1, "Todos", "");
+            }
+            else
+            {
+                this.CargarTabla(1, this.cmbEditarUsuario.SelectedItem.ToString(), this.txtEditarBusqueda.Text);
+            }
+        }
+
+        private void dgvEditar_MouseClick(object sender, MouseEventArgs e)
+        {
+            int fila = this.dgvEditar.CurrentRow.Index;
+            this.txtEditarCedula.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn1"].Value.ToString();
+            this.txtEditarNombre.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn2"].Value.ToString();
+            this.txtEditarCorreo.Text= this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn3"].Value.ToString();
+            this.txtEditarContraseña.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn4"].Value.ToString();
+            this.txtConfirmarContraseña.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn4"].Value.ToString();
+            this.cmbEditarUser.SelectedItem= this.dgvEditar.Rows[fila].Cells["Tipo"].Value.ToString();
+            this.ckbEditarActivo.Checked = Boolean.Parse(this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn16"].Value.ToString());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new UsuarioDAL().ActualizarUsuario(new UsuarioENT(Int32.Parse(this.txtEditarCedula.Text), this.txtEditarNombre.Text, this.txtEditarCorreo.Text, this.cmbEditarUser.SelectedItem.ToString(), this.txtEditarContraseña.Text, DateTime.Now, "Pablo", DateTime.Now, "Marcos", this.ckbEditarActivo.Checked));
+                this.CargarTabla(1, "Todos", "");
+                MessageBox.Show("El usuario fue actualizado correctamente", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.cmbEditarUsuario.SelectedIndex = -1;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("¡Ha ocurrido un error al actulizar, correo dublicado: " + ex.Message + "!", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        
+        }
+
+        private void cmbEliminarUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.LimpiarEliminar();
+            if (this.cmbEliminarUsuario.SelectedIndex == 0)
+            {
+                this.CargarTabla(1, "Todos", "");
+                this.panelFiltroEliminar.Visible = false;
+            }
+            if (this.cmbEliminarUsuario.SelectedIndex == 1)
+            {
+                this.panelFiltroEliminar.Visible = true;
+                this.lblBuscador.Text = "Digite el nombre del usuario: ";
+            }
+            if (this.cmbEliminarUsuario.SelectedIndex == 2)
+            {
+                this.panelFiltroEliminar.Visible = true;
+                this.lblBuscador.Text = "Digite el correo del usuario: ";
+            }
+            if (this.cmbEliminarUsuario.SelectedIndex == 3)
+            {
+                this.panelFiltroEliminar.Visible = true;
+                this.lblBuscador.Text = "Digite el tipo de usuario: ";
+            }
+
+        }
+
+        private void txtEliminarBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            this.LimpiarEditar();
+            if (this.txtEditarBusqueda.Text == "")
+            {
+                this.CargarTabla(2, "Todos", "");
+            }
+            else
+            {
+                this.CargarTabla(2, this.cmbEliminarUsuario.SelectedItem.ToString(), this.txtEliminarBusqueda.Text);
+            }
+
+        }
+
+        private void dgvEliminar_MouseClick(object sender, MouseEventArgs e)
+        {
+            int fila = this.dgvEliminar.CurrentRow.Index;
+            this.txtEliminarCedula.Text = this.dgvEliminar.Rows[fila].Cells["dataGridViewTextBoxColumn7"].Value.ToString();
+            this.txtEliminarNombre.Text = this.dgvEliminar.Rows[fila].Cells["dataGridViewTextBoxColumn8"].Value.ToString();
+            this.txtEliminarCorreo.Text = this.dgvEliminar.Rows[fila].Cells["dataGridViewTextBoxColumn9"].Value.ToString();
+            this.txtEliminarContraseña.Text = this.dgvEliminar.Rows[fila].Cells["dataGridViewTextBoxColumn10"].Value.ToString();
+           // this.txtConfirmarContraseña.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn4"].Value.ToString();
+            this.cmbEliminarUser.SelectedItem = this.dgvEliminar.Rows[fila].Cells["TipoEliminar"].Value.ToString();
+            this.ckbEliminarActivo.Checked = Boolean.Parse(this.dgvEliminar.Rows[fila].Cells["dataGridViewTextBoxColumn19"].Value.ToString());
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new UsuarioDAL().EliminarUsuario(Int32.Parse(this.txtEliminarCedula.Text));
+            this.txtEliminarBusqueda.Text = "";
+            this.cmbEliminarUsuario.SelectedIndex = -1;
+            MessageBox.Show("El usuario fue eliminado correctamente", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.LimpiarEliminar();
+            this.CargarTabla(2, "Todos", "");
         }
     }
 }

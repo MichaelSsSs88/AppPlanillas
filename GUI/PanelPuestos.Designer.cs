@@ -45,6 +45,10 @@
             this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.ckbActivo = new System.Windows.Forms.CheckBox();
+            this.txtInsertarDepartamento = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.txtInsertarDescripcion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tabEditJob = new System.Windows.Forms.TabPage();
@@ -111,10 +115,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txtEliminarId = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.txtInsertarDepartamento = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.ckbActivo = new System.Windows.Forms.CheckBox();
             this.tabFeriado.SuspendLayout();
             this.tabInsertJob.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -282,7 +282,66 @@
             this.groupBox1.Size = new System.Drawing.Size(510, 633);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Completar datos del feriado:";
+            this.groupBox1.Text = "Completar datos del puesto:";
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button4.Location = new System.Drawing.Point(13, 174);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.button4.Size = new System.Drawing.Size(484, 102);
+            this.button4.TabIndex = 67;
+            this.button4.Text = "Insertar Puesto";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // ckbActivo
+            // 
+            this.ckbActivo.AutoSize = true;
+            this.ckbActivo.Checked = true;
+            this.ckbActivo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckbActivo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ckbActivo.Location = new System.Drawing.Point(13, 141);
+            this.ckbActivo.Margin = new System.Windows.Forms.Padding(4);
+            this.ckbActivo.Name = "ckbActivo";
+            this.ckbActivo.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.ckbActivo.Size = new System.Drawing.Size(484, 33);
+            this.ckbActivo.TabIndex = 66;
+            this.ckbActivo.Text = "Activo";
+            this.ckbActivo.UseVisualStyleBackColor = true;
+            // 
+            // txtInsertarDepartamento
+            // 
+            this.txtInsertarDepartamento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtInsertarDepartamento.Location = new System.Drawing.Point(13, 118);
+            this.txtInsertarDepartamento.Name = "txtInsertarDepartamento";
+            this.txtInsertarDepartamento.ReadOnly = true;
+            this.txtInsertarDepartamento.Size = new System.Drawing.Size(484, 23);
+            this.txtInsertarDepartamento.TabIndex = 19;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(13, 88);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Padding = new System.Windows.Forms.Padding(0, 6, 6, 0);
+            this.linkLabel1.Size = new System.Drawing.Size(484, 30);
+            this.linkLabel1.TabIndex = 18;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Seleccionar departamento:";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // txtInsertarDescripcion
             // 
@@ -1090,65 +1149,6 @@
             this.label17.Size = new System.Drawing.Size(501, 43);
             this.label17.TabIndex = 0;
             this.label17.Text = "Identificador:";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(13, 88);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Padding = new System.Windows.Forms.Padding(0, 6, 6, 0);
-            this.linkLabel1.Size = new System.Drawing.Size(484, 30);
-            this.linkLabel1.TabIndex = 18;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Seleccionar departamento:";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // txtInsertarDepartamento
-            // 
-            this.txtInsertarDepartamento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtInsertarDepartamento.Location = new System.Drawing.Point(13, 118);
-            this.txtInsertarDepartamento.Name = "txtInsertarDepartamento";
-            this.txtInsertarDepartamento.ReadOnly = true;
-            this.txtInsertarDepartamento.Size = new System.Drawing.Size(484, 23);
-            this.txtInsertarDepartamento.TabIndex = 19;
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(13, 174);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.button4.Size = new System.Drawing.Size(484, 102);
-            this.button4.TabIndex = 67;
-            this.button4.Text = "Insertar Feriado";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // ckbActivo
-            // 
-            this.ckbActivo.AutoSize = true;
-            this.ckbActivo.Checked = true;
-            this.ckbActivo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckbActivo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ckbActivo.Location = new System.Drawing.Point(13, 141);
-            this.ckbActivo.Margin = new System.Windows.Forms.Padding(4);
-            this.ckbActivo.Name = "ckbActivo";
-            this.ckbActivo.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.ckbActivo.Size = new System.Drawing.Size(484, 33);
-            this.ckbActivo.TabIndex = 66;
-            this.ckbActivo.Text = "Activo";
-            this.ckbActivo.UseVisualStyleBackColor = true;
             // 
             // PanelPuestos
             // 
