@@ -173,6 +173,7 @@ namespace AppPlanillas.GUI
             this.txtIdEditar.Text = "";
             this.txtDescripcionEditar.Text = "";
             this.txtValorEditar.Text = "";
+            this.txtIdEmpleadoEditar.Text = "";
             this.cmbSistemaEditar.SelectedIndex = -1;
             this.cbxActivoEditar.Checked = true;
         }
@@ -189,6 +190,14 @@ namespace AppPlanillas.GUI
             else
             {
                 this.cmbSistemaEditar.SelectedIndex = 1;
+            }
+            if ((int)this.grdEditar.Rows[fila].Cells[4].Value == 0)
+            {
+                this.txtIdEmpleadoEditar.Text = "";
+            }
+            else
+            {
+                this.txtIdEmpleadoEditar.Text = this.grdEditar.Rows[fila].Cells[4].Value.ToString();
             }
             this.txtValorEditar.Text = this.grdEditar.Rows[fila].Cells[2].Value.ToString();
             this.cbxActivoEditar.Checked = (bool)this.grdEditar.Rows[fila].Cells[9].Value;
@@ -241,6 +250,149 @@ namespace AppPlanillas.GUI
             this.txtValorEditar.Text = "";
             this.cmbSistemaEditar.SelectedIndex = -1;
             this.cbxActivoEditar.Checked = true;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click_1(object sender, EventArgs e)
+        {
+            if ((this.txtIdEditar.Text != "") && (this.txtDescripcionEditar.Text != "") && (this.txtValorEditar.Text != "") && (this.cmbSistemaEditar.SelectedIndex >= 0) && (this.cmbSistemaEditar.Text != ""))
+            {
+                DeduccionDAL actualizarDeduccion = new DeduccionDAL();
+                if (this.txtIdEmpleadoEditar.Text == "")
+                {
+                    this.nuevaDeduccion = new DeduccionENT(Int32.Parse(this.txtIdEditar.Text), this.txtDescripcionEditar.Text, this.cmbSistemaEditar.Text, Double.Parse(this.txtValorEditar.Text), 0, DateTime.Now.Date, "Jean Ca", DateTime.Now.Date, "Jean Ca", this.cbxActivoEditar.Checked);
+                }
+                else
+                {
+                    this.nuevaDeduccion = new DeduccionENT(Int32.Parse(this.txtIdEditar.Text), this.txtDescripcionEditar.Text, this.cmbSistemaEditar.Text, Double.Parse(this.txtValorEditar.Text), Int32.Parse(this.txtIdEmpleadoEditar.Text), DateTime.Now.Date, "Jean Ca", DateTime.Now.Date, "Jean Ca", this.cbxActivoEditar.Checked);
+                }
+                actualizarDeduccion.ActualizarDeduccion(this.nuevaDeduccion);
+                this.nuevaDeduccion = new DeduccionENT();
+                this.grdEditar.DataSource = this.nuevaDeduccion.deducciones;
+                this.LimpiarEditar();
+                MessageBox.Show("¡Se modificado correctamente la deducción!", "Actualización de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("¡Debe seleccionar un departamento para editar!", "Actualización de registro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void cmbBusquedaEliminar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (this.cmbBusquedaEliminar.SelectedIndex)
+            {
+                case 0:
+                    this.panelFiltroEliminar.Visible = false;
+                    this.LimpiarEliminar();
+                    break;
+                case 1:
+                    this.lblValorABuscarEliminar.Text = "Digite el código de la deducción:";
+                    this.LimpiarEliminar();
+                    this.panelFiltroEliminar.Visible = true;
+
+                    break;
+                case 2:
+                    this.lblValorABuscarEliminar.Text = "Digite la descripción de la deducción:";
+                    this.LimpiarEliminar();
+                    this.panelFiltroEliminar.Visible = true;
+                    break;
+            }
+        }
+
+        private void LimpiarEliminar()
+        {
+            this.txtValorABuscarEliminar.Text = "";
+            this.txtIdEliminar.Text = "";
+            this.txtDescripcionEliminar.Text = "";
+            this.txtValorEliminar.Text = "";
+            this.txtIdEmpleadoEliminar.Text = "";
+            this.cmbSistemaEliminar.SelectedIndex = -1;
+        }
+
+        private void txtValorABuscarEliminar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                try
+                {
+                    switch (this.cmbBusquedaEliminar.Text)
+                    {
+                        case "Todos":
+                            this.grdEliminar.DataSource = this.nuevaDeduccion.deducciones;
+                            break;
+                        case "Código":
+                            this.grdEliminar.DataSource = new DeduccionDAL().ObtenerDeducciones(Int32.Parse(this.txtValorABuscarEliminar.Text), "");
+                            break;
+                        case "Descripción":
+                            this.grdEliminar.DataSource = new DeduccionDAL().ObtenerDeducciones(-1, this.txtValorABuscarEliminar.Text);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Error al cargar los datos de departamentos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            };
+            this.txtIdEliminar.Text = "";
+            this.txtDescripcionEliminar.Text = "";
+            this.txtValorEliminar.Text = "";
+            this.txtIdEmpleadoEliminar.Text = "";
+            this.cmbSistemaEliminar.SelectedIndex = -1;
+        }
+
+        private void grdEliminar_Click(object sender, EventArgs e)
+        {
+            int fila = this.grdEliminar.CurrentRow.Index;
+            this.txtIdEliminar.Text = this.grdEliminar.Rows[fila].Cells[0].Value.ToString();
+            this.txtDescripcionEliminar.Text = this.grdEliminar.Rows[fila].Cells[1].Value.ToString();
+            if (this.grdEliminar.Rows[fila].Cells[3].Value.ToString() == "Porcentaje")
+            {
+                this.cmbSistemaEliminar.SelectedIndex = 0;
+            }
+            else
+            {
+                this.cmbSistemaEliminar.SelectedIndex = 1;
+            }
+            if ((int)this.grdEliminar.Rows[fila].Cells[4].Value == 0)
+            {
+                this.txtIdEmpleadoEliminar.Text = "";
+            }
+            else
+            {
+                this.txtIdEmpleadoEliminar.Text = this.grdEliminar.Rows[fila].Cells[4].Value.ToString();
+            }
+            this.txtValorEliminar.Text = this.grdEliminar.Rows[fila].Cells[2].Value.ToString();
+            this.cbxActivoEliminar.Checked = (bool)this.grdEliminar.Rows[fila].Cells[9].Value;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if ((this.txtIdEliminar.Text != "") && (this.txtDescripcionEliminar.Text != "") && (this.txtValorEliminar.Text != ""))
+            {
+                DeduccionDAL eliminarDeduccion = new DeduccionDAL();
+                if (eliminarDeduccion.EliminarDeduccion(Int32.Parse(this.txtIdEliminar.Text)) == 0)
+                {
+                    this.nuevaDeduccion = new DeduccionENT();
+                    this.grdEliminar.DataSource = this.nuevaDeduccion.deducciones;
+                    this.LimpiarEliminar();
+                    MessageBox.Show("¡Se ha eliminado correctamente la deducción!", "Actualización de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("¡Ha ocurrido un error al eliminar la deducción, intentelo de nuevo o contacte al administrador del sistema!", "Eliminar deducción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("¡Debe seleccionar una deducción para eliminar!", "Actualización de registro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

@@ -50,10 +50,6 @@
             this.cmbBusquedaEliminar = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.cbxActivoEliminar = new System.Windows.Forms.CheckBox();
-            this.cmbSistemaEliminar = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.txtValorEliminar = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtDescripcionEliminar = new System.Windows.Forms.TextBox();
@@ -81,10 +77,6 @@
             this.cmbBusquedaEditar = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.cbxActivoEditar = new System.Windows.Forms.CheckBox();
-            this.cmbSistemaEditar = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtValorEditar = new System.Windows.Forms.TextBox();
             this.lblValorEditar = new System.Windows.Forms.Label();
             this.txtDescripcionEditar = new System.Windows.Forms.TextBox();
@@ -95,6 +87,16 @@
             this.tabInsertDeducción = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.grdInsertar = new System.Windows.Forms.DataGridView();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSistema = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCreador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colModificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFechaModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -107,16 +109,18 @@
             this.lblSistema = new System.Windows.Forms.Label();
             this.txtDescripcionInsertar = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSistema = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colIdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCreador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colModificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFechaModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtIdEmpleadoEditar = new System.Windows.Forms.TextBox();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.cbxActivoEditar = new System.Windows.Forms.CheckBox();
+            this.cmbSistemaEditar = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtIdEmpleadoEliminar = new System.Windows.Forms.TextBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.cbxActivoEliminar = new System.Windows.Forms.CheckBox();
+            this.cmbSistemaEliminar = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabDeleteDeducción.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEliminar)).BeginInit();
@@ -162,7 +166,7 @@
             this.groupBox5.Size = new System.Drawing.Size(500, 601);
             this.groupBox5.TabIndex = 9;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Filtrar feriados:";
+            this.groupBox5.Text = "Filtrar deducciones:";
             // 
             // grdEliminar
             // 
@@ -186,6 +190,7 @@
             this.grdEliminar.Name = "grdEliminar";
             this.grdEliminar.Size = new System.Drawing.Size(474, 343);
             this.grdEliminar.TabIndex = 8;
+            this.grdEliminar.Click += new System.EventHandler(this.grdEliminar_Click);
             // 
             // colIdEliminar
             // 
@@ -297,6 +302,7 @@
             this.txtValorABuscarEliminar.Name = "txtValorABuscarEliminar";
             this.txtValorABuscarEliminar.Size = new System.Drawing.Size(474, 23);
             this.txtValorABuscarEliminar.TabIndex = 4;
+            this.txtValorABuscarEliminar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtValorABuscarEliminar_KeyDown);
             // 
             // lblValorABuscarEliminar
             // 
@@ -315,13 +321,14 @@
             this.cmbBusquedaEliminar.FormattingEnabled = true;
             this.cmbBusquedaEliminar.Items.AddRange(new object[] {
             "Todos",
-            "ID",
+            "Código",
             "Descripción"});
             this.cmbBusquedaEliminar.Location = new System.Drawing.Point(13, 58);
             this.cmbBusquedaEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.cmbBusquedaEliminar.Name = "cmbBusquedaEliminar";
             this.cmbBusquedaEliminar.Size = new System.Drawing.Size(474, 24);
             this.cmbBusquedaEliminar.TabIndex = 2;
+            this.cmbBusquedaEliminar.SelectedIndexChanged += new System.EventHandler(this.cmbBusquedaEliminar_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -340,6 +347,8 @@
             this.groupBox6.Controls.Add(this.cbxActivoEliminar);
             this.groupBox6.Controls.Add(this.cmbSistemaEliminar);
             this.groupBox6.Controls.Add(this.label12);
+            this.groupBox6.Controls.Add(this.txtIdEmpleadoEliminar);
+            this.groupBox6.Controls.Add(this.label4);
             this.groupBox6.Controls.Add(this.txtValorEliminar);
             this.groupBox6.Controls.Add(this.label15);
             this.groupBox6.Controls.Add(this.txtDescripcionEliminar);
@@ -356,68 +365,6 @@
             this.groupBox6.TabIndex = 8;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Verificar datos de la deducción:";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(13, 295);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.btnEliminar.Size = new System.Drawing.Size(484, 102);
-            this.btnEliminar.TabIndex = 59;
-            this.btnEliminar.Text = "Eliminar Deducción";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // cbxActivoEliminar
-            // 
-            this.cbxActivoEliminar.AutoSize = true;
-            this.cbxActivoEliminar.Checked = true;
-            this.cbxActivoEliminar.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxActivoEliminar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbxActivoEliminar.Enabled = false;
-            this.cbxActivoEliminar.Location = new System.Drawing.Point(13, 262);
-            this.cbxActivoEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxActivoEliminar.Name = "cbxActivoEliminar";
-            this.cbxActivoEliminar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.cbxActivoEliminar.Size = new System.Drawing.Size(484, 33);
-            this.cbxActivoEliminar.TabIndex = 58;
-            this.cbxActivoEliminar.Text = "Activo";
-            this.cbxActivoEliminar.UseVisualStyleBackColor = true;
-            // 
-            // cmbSistemaEliminar
-            // 
-            this.cmbSistemaEliminar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmbSistemaEliminar.Enabled = false;
-            this.cmbSistemaEliminar.FormattingEnabled = true;
-            this.cmbSistemaEliminar.Items.AddRange(new object[] {
-            "Porcentaje",
-            "Monto"});
-            this.cmbSistemaEliminar.Location = new System.Drawing.Point(13, 238);
-            this.cmbSistemaEliminar.Name = "cmbSistemaEliminar";
-            this.cmbSistemaEliminar.Size = new System.Drawing.Size(484, 24);
-            this.cmbSistemaEliminar.TabIndex = 57;
-            // 
-            // label12
-            // 
-            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label12.Location = new System.Drawing.Point(13, 201);
-            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label12.Name = "label12";
-            this.label12.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label12.Size = new System.Drawing.Size(484, 37);
-            this.label12.TabIndex = 56;
-            this.label12.Text = "Sistema:";
             // 
             // txtValorEliminar
             // 
@@ -693,6 +640,8 @@
             this.groupBox2.Controls.Add(this.cbxActivoEditar);
             this.groupBox2.Controls.Add(this.cmbSistemaEditar);
             this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.txtIdEmpleadoEditar);
+            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.txtValorEditar);
             this.groupBox2.Controls.Add(this.lblValorEditar);
             this.groupBox2.Controls.Add(this.txtDescripcionEditar);
@@ -709,67 +658,6 @@
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Completar datos de la deducción:";
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditar.Location = new System.Drawing.Point(13, 308);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.btnEditar.Size = new System.Drawing.Size(484, 102);
-            this.btnEditar.TabIndex = 59;
-            this.btnEditar.Text = "Editar Descripción";
-            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEditar.UseVisualStyleBackColor = true;
-            // 
-            // cbxActivoEditar
-            // 
-            this.cbxActivoEditar.AutoSize = true;
-            this.cbxActivoEditar.Checked = true;
-            this.cbxActivoEditar.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxActivoEditar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbxActivoEditar.Location = new System.Drawing.Point(13, 275);
-            this.cbxActivoEditar.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxActivoEditar.Name = "cbxActivoEditar";
-            this.cbxActivoEditar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.cbxActivoEditar.Size = new System.Drawing.Size(484, 33);
-            this.cbxActivoEditar.TabIndex = 58;
-            this.cbxActivoEditar.Text = "Activo";
-            this.cbxActivoEditar.UseVisualStyleBackColor = true;
-            // 
-            // cmbSistemaEditar
-            // 
-            this.cmbSistemaEditar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmbSistemaEditar.FormattingEnabled = true;
-            this.cmbSistemaEditar.Items.AddRange(new object[] {
-            "Porcentaje",
-            "Monto"});
-            this.cmbSistemaEditar.Location = new System.Drawing.Point(13, 251);
-            this.cmbSistemaEditar.Name = "cmbSistemaEditar";
-            this.cmbSistemaEditar.Size = new System.Drawing.Size(484, 24);
-            this.cmbSistemaEditar.TabIndex = 57;
-            this.cmbSistemaEditar.SelectedIndexChanged += new System.EventHandler(this.cmbSistemaEditar_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(13, 214);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label2.Size = new System.Drawing.Size(484, 37);
-            this.label2.TabIndex = 56;
-            this.label2.Text = "Seleccione el sistema:";
             // 
             // txtValorEditar
             // 
@@ -898,6 +786,76 @@
             this.grdInsertar.Name = "grdInsertar";
             this.grdInsertar.Size = new System.Drawing.Size(464, 505);
             this.grdInsertar.TabIndex = 6;
+            // 
+            // colId
+            // 
+            this.colId.DataPropertyName = "getId";
+            this.colId.HeaderText = "ID";
+            this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
+            // 
+            // colDescripcion
+            // 
+            this.colDescripcion.DataPropertyName = "getDescripcion";
+            this.colDescripcion.HeaderText = "Descripción";
+            this.colDescripcion.Name = "colDescripcion";
+            this.colDescripcion.ReadOnly = true;
+            // 
+            // colSistema
+            // 
+            this.colSistema.DataPropertyName = "getSistema";
+            this.colSistema.HeaderText = "Sistema";
+            this.colSistema.Name = "colSistema";
+            this.colSistema.ReadOnly = true;
+            // 
+            // colValor
+            // 
+            this.colValor.DataPropertyName = "getValor";
+            this.colValor.HeaderText = "Valor";
+            this.colValor.Name = "colValor";
+            this.colValor.ReadOnly = true;
+            // 
+            // colIdEmpleado
+            // 
+            this.colIdEmpleado.DataPropertyName = "getIdEmpleado";
+            this.colIdEmpleado.HeaderText = "ID Empleado";
+            this.colIdEmpleado.Name = "colIdEmpleado";
+            this.colIdEmpleado.ReadOnly = true;
+            // 
+            // colCreador
+            // 
+            this.colCreador.DataPropertyName = "getCreador";
+            this.colCreador.HeaderText = "Creador";
+            this.colCreador.Name = "colCreador";
+            this.colCreador.ReadOnly = true;
+            // 
+            // colFechaCreacion
+            // 
+            this.colFechaCreacion.DataPropertyName = "getFechaCreacion";
+            this.colFechaCreacion.HeaderText = "Fecha creación";
+            this.colFechaCreacion.Name = "colFechaCreacion";
+            this.colFechaCreacion.ReadOnly = true;
+            // 
+            // colModificador
+            // 
+            this.colModificador.DataPropertyName = "getModificador";
+            this.colModificador.HeaderText = "Modificador";
+            this.colModificador.Name = "colModificador";
+            this.colModificador.ReadOnly = true;
+            // 
+            // colFechaModificacion
+            // 
+            this.colFechaModificacion.DataPropertyName = "getFechaModificacion";
+            this.colFechaModificacion.HeaderText = "Fecha modificación";
+            this.colFechaModificacion.Name = "colFechaModificacion";
+            this.colFechaModificacion.ReadOnly = true;
+            // 
+            // colActivo
+            // 
+            this.colActivo.DataPropertyName = "getActivo";
+            this.colActivo.HeaderText = "Activo";
+            this.colActivo.Name = "colActivo";
+            this.colActivo.ReadOnly = true;
             // 
             // panel1
             // 
@@ -1055,75 +1013,167 @@
             this.lblDescripcion.TabIndex = 0;
             this.lblDescripcion.Text = "Ingrese la descripción";
             // 
-            // colId
+            // label1
             // 
-            this.colId.DataPropertyName = "getId";
-            this.colId.HeaderText = "ID";
-            this.colId.Name = "colId";
-            this.colId.ReadOnly = true;
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Location = new System.Drawing.Point(13, 214);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 17);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "ID Empleado";
             // 
-            // colDescripcion
+            // txtIdEmpleadoEditar
             // 
-            this.colDescripcion.DataPropertyName = "getDescripcion";
-            this.colDescripcion.HeaderText = "Descripción";
-            this.colDescripcion.Name = "colDescripcion";
-            this.colDescripcion.ReadOnly = true;
+            this.txtIdEmpleadoEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtIdEmpleadoEditar.Location = new System.Drawing.Point(13, 231);
+            this.txtIdEmpleadoEditar.Name = "txtIdEmpleadoEditar";
+            this.txtIdEmpleadoEditar.Size = new System.Drawing.Size(484, 23);
+            this.txtIdEmpleadoEditar.TabIndex = 21;
             // 
-            // colSistema
+            // btnEditar
             // 
-            this.colSistema.DataPropertyName = "getSistema";
-            this.colSistema.HeaderText = "Sistema";
-            this.colSistema.Name = "colSistema";
-            this.colSistema.ReadOnly = true;
+            this.btnEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditar.Location = new System.Drawing.Point(13, 348);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.btnEditar.Size = new System.Drawing.Size(484, 102);
+            this.btnEditar.TabIndex = 63;
+            this.btnEditar.Text = "Editar Descripción";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
-            // colValor
+            // cbxActivoEditar
             // 
-            this.colValor.DataPropertyName = "getValor";
-            this.colValor.HeaderText = "Valor";
-            this.colValor.Name = "colValor";
-            this.colValor.ReadOnly = true;
+            this.cbxActivoEditar.AutoSize = true;
+            this.cbxActivoEditar.Checked = true;
+            this.cbxActivoEditar.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxActivoEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbxActivoEditar.Location = new System.Drawing.Point(13, 315);
+            this.cbxActivoEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxActivoEditar.Name = "cbxActivoEditar";
+            this.cbxActivoEditar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.cbxActivoEditar.Size = new System.Drawing.Size(484, 33);
+            this.cbxActivoEditar.TabIndex = 62;
+            this.cbxActivoEditar.Text = "Activo";
+            this.cbxActivoEditar.UseVisualStyleBackColor = true;
             // 
-            // colIdEmpleado
+            // cmbSistemaEditar
             // 
-            this.colIdEmpleado.DataPropertyName = "getIdEmpleado";
-            this.colIdEmpleado.HeaderText = "ID Empleado";
-            this.colIdEmpleado.Name = "colIdEmpleado";
-            this.colIdEmpleado.ReadOnly = true;
+            this.cmbSistemaEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmbSistemaEditar.FormattingEnabled = true;
+            this.cmbSistemaEditar.Items.AddRange(new object[] {
+            "Porcentaje",
+            "Monto"});
+            this.cmbSistemaEditar.Location = new System.Drawing.Point(13, 291);
+            this.cmbSistemaEditar.Name = "cmbSistemaEditar";
+            this.cmbSistemaEditar.Size = new System.Drawing.Size(484, 24);
+            this.cmbSistemaEditar.TabIndex = 61;
             // 
-            // colCreador
+            // label2
             // 
-            this.colCreador.DataPropertyName = "getCreador";
-            this.colCreador.HeaderText = "Creador";
-            this.colCreador.Name = "colCreador";
-            this.colCreador.ReadOnly = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(13, 254);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label2.Size = new System.Drawing.Size(484, 37);
+            this.label2.TabIndex = 60;
+            this.label2.Text = "Seleccione el sistema:";
             // 
-            // colFechaCreacion
+            // label4
             // 
-            this.colFechaCreacion.DataPropertyName = "getFechaCreacion";
-            this.colFechaCreacion.HeaderText = "Fecha creación";
-            this.colFechaCreacion.Name = "colFechaCreacion";
-            this.colFechaCreacion.ReadOnly = true;
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Location = new System.Drawing.Point(13, 201);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 17);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "ID Empleado";
             // 
-            // colModificador
+            // txtIdEmpleadoEliminar
             // 
-            this.colModificador.DataPropertyName = "getModificador";
-            this.colModificador.HeaderText = "Modificador";
-            this.colModificador.Name = "colModificador";
-            this.colModificador.ReadOnly = true;
+            this.txtIdEmpleadoEliminar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtIdEmpleadoEliminar.Location = new System.Drawing.Point(13, 218);
+            this.txtIdEmpleadoEliminar.Name = "txtIdEmpleadoEliminar";
+            this.txtIdEmpleadoEliminar.ReadOnly = true;
+            this.txtIdEmpleadoEliminar.Size = new System.Drawing.Size(484, 23);
+            this.txtIdEmpleadoEliminar.TabIndex = 21;
             // 
-            // colFechaModificacion
+            // btnEliminar
             // 
-            this.colFechaModificacion.DataPropertyName = "getFechaModificacion";
-            this.colFechaModificacion.HeaderText = "Fecha modificación";
-            this.colFechaModificacion.Name = "colFechaModificacion";
-            this.colFechaModificacion.ReadOnly = true;
+            this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEliminar.Location = new System.Drawing.Point(13, 335);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.btnEliminar.Size = new System.Drawing.Size(484, 102);
+            this.btnEliminar.TabIndex = 63;
+            this.btnEliminar.Text = "Eliminar Deducción";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // colActivo
+            // cbxActivoEliminar
             // 
-            this.colActivo.DataPropertyName = "getActivo";
-            this.colActivo.HeaderText = "Activo";
-            this.colActivo.Name = "colActivo";
-            this.colActivo.ReadOnly = true;
+            this.cbxActivoEliminar.AutoSize = true;
+            this.cbxActivoEliminar.Checked = true;
+            this.cbxActivoEliminar.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxActivoEliminar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbxActivoEliminar.Enabled = false;
+            this.cbxActivoEliminar.Location = new System.Drawing.Point(13, 302);
+            this.cbxActivoEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxActivoEliminar.Name = "cbxActivoEliminar";
+            this.cbxActivoEliminar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.cbxActivoEliminar.Size = new System.Drawing.Size(484, 33);
+            this.cbxActivoEliminar.TabIndex = 62;
+            this.cbxActivoEliminar.Text = "Activo";
+            this.cbxActivoEliminar.UseVisualStyleBackColor = true;
+            // 
+            // cmbSistemaEliminar
+            // 
+            this.cmbSistemaEliminar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmbSistemaEliminar.Enabled = false;
+            this.cmbSistemaEliminar.FormattingEnabled = true;
+            this.cmbSistemaEliminar.Items.AddRange(new object[] {
+            "Porcentaje",
+            "Monto"});
+            this.cmbSistemaEliminar.Location = new System.Drawing.Point(13, 278);
+            this.cmbSistemaEliminar.Name = "cmbSistemaEliminar";
+            this.cmbSistemaEliminar.Size = new System.Drawing.Size(484, 24);
+            this.cmbSistemaEliminar.TabIndex = 61;
+            // 
+            // label12
+            // 
+            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label12.Location = new System.Drawing.Point(13, 241);
+            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label12.Name = "label12";
+            this.label12.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label12.Size = new System.Drawing.Size(484, 37);
+            this.label12.TabIndex = 60;
+            this.label12.Text = "Sistema:";
             // 
             // PanelDeduccion
             // 
@@ -1216,16 +1266,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colModificadorEditar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaModificacionEditar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colActivoEditar;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.CheckBox cbxActivoEditar;
-        private System.Windows.Forms.ComboBox cmbSistemaEditar;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtValorEditar;
         private System.Windows.Forms.Label lblValorEditar;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.CheckBox cbxActivoEliminar;
-        private System.Windows.Forms.ComboBox cmbSistemaEliminar;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtValorEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescripcionEliminar;
@@ -1247,5 +1289,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colModificador;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaModificacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn colActivo;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.CheckBox cbxActivoEditar;
+        private System.Windows.Forms.ComboBox cmbSistemaEditar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtIdEmpleadoEditar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.CheckBox cbxActivoEliminar;
+        private System.Windows.Forms.ComboBox cmbSistemaEliminar;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtIdEmpleadoEliminar;
     }
 }
