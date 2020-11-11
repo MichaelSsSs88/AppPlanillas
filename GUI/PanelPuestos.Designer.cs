@@ -72,17 +72,7 @@
             this.cmbEditarFeriado = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.ckbEditarActivo = new System.Windows.Forms.CheckBox();
-            this.ckbEditarPago = new System.Windows.Forms.CheckBox();
-            this.cmbEditarDia = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbEditarMes = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtEditarMotivo = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtEditarCodigo = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.tabDeleteJob = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dgvEliminar = new System.Windows.Forms.DataGridView();
@@ -115,6 +105,13 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txtEliminarId = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabFeriado.SuspendLayout();
             this.tabInsertJob.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -171,7 +168,7 @@
             this.groupBox4.Size = new System.Drawing.Size(506, 633);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Feriados ingresados";
+            this.groupBox4.Text = "Puestos ingresados";
             // 
             // dgvInsertar
             // 
@@ -393,7 +390,7 @@
             this.groupBox3.Size = new System.Drawing.Size(492, 633);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Filtrar feriados:";
+            this.groupBox3.Text = "Filtrar Puestos:";
             // 
             // dgvEditar
             // 
@@ -559,14 +556,11 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.ckbEditarActivo);
-            this.groupBox2.Controls.Add(this.ckbEditarPago);
-            this.groupBox2.Controls.Add(this.cmbEditarDia);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.cmbEditarMes);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.txtEditarMotivo);
-            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.linkLabel2);
+            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.txtEditarCodigo);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -578,163 +572,7 @@
             this.groupBox2.Size = new System.Drawing.Size(524, 633);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Completar datos del feriado";
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(13, 340);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.button1.Size = new System.Drawing.Size(498, 102);
-            this.button1.TabIndex = 55;
-            this.button1.Text = "Editar Feriado";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // ckbEditarActivo
-            // 
-            this.ckbEditarActivo.AutoSize = true;
-            this.ckbEditarActivo.Checked = true;
-            this.ckbEditarActivo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckbEditarActivo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ckbEditarActivo.Location = new System.Drawing.Point(13, 307);
-            this.ckbEditarActivo.Margin = new System.Windows.Forms.Padding(4);
-            this.ckbEditarActivo.Name = "ckbEditarActivo";
-            this.ckbEditarActivo.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.ckbEditarActivo.Size = new System.Drawing.Size(498, 33);
-            this.ckbEditarActivo.TabIndex = 54;
-            this.ckbEditarActivo.Text = "Activo";
-            this.ckbEditarActivo.UseVisualStyleBackColor = true;
-            // 
-            // ckbEditarPago
-            // 
-            this.ckbEditarPago.AutoSize = true;
-            this.ckbEditarPago.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ckbEditarPago.Location = new System.Drawing.Point(13, 276);
-            this.ckbEditarPago.Name = "ckbEditarPago";
-            this.ckbEditarPago.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.ckbEditarPago.Size = new System.Drawing.Size(498, 31);
-            this.ckbEditarPago.TabIndex = 34;
-            this.ckbEditarPago.Text = "Pago doble";
-            this.ckbEditarPago.UseVisualStyleBackColor = true;
-            // 
-            // cmbEditarDia
-            // 
-            this.cmbEditarDia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmbEditarDia.FormattingEnabled = true;
-            this.cmbEditarDia.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.cmbEditarDia.Location = new System.Drawing.Point(13, 252);
-            this.cmbEditarDia.Name = "cmbEditarDia";
-            this.cmbEditarDia.Size = new System.Drawing.Size(498, 24);
-            this.cmbEditarDia.TabIndex = 33;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(13, 215);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label2.Size = new System.Drawing.Size(498, 37);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Seleccione el día:";
-            // 
-            // cmbEditarMes
-            // 
-            this.cmbEditarMes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmbEditarMes.FormattingEnabled = true;
-            this.cmbEditarMes.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.cmbEditarMes.Location = new System.Drawing.Point(13, 191);
-            this.cmbEditarMes.Name = "cmbEditarMes";
-            this.cmbEditarMes.Size = new System.Drawing.Size(498, 24);
-            this.cmbEditarMes.TabIndex = 19;
-            // 
-            // label6
-            // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(13, 154);
-            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label6.Size = new System.Drawing.Size(498, 37);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Seleccione el mes:";
-            // 
-            // txtEditarMotivo
-            // 
-            this.txtEditarMotivo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEditarMotivo.Location = new System.Drawing.Point(13, 131);
-            this.txtEditarMotivo.Margin = new System.Windows.Forms.Padding(5);
-            this.txtEditarMotivo.Name = "txtEditarMotivo";
-            this.txtEditarMotivo.Size = new System.Drawing.Size(498, 23);
-            this.txtEditarMotivo.TabIndex = 17;
-            // 
-            // label7
-            // 
-            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(13, 94);
-            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label7.Size = new System.Drawing.Size(498, 37);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Ingrese el motivo:";
+            this.groupBox2.Text = "Completar datos del puesto";
             // 
             // txtEditarCodigo
             // 
@@ -745,18 +583,6 @@
             this.txtEditarCodigo.ReadOnly = true;
             this.txtEditarCodigo.Size = new System.Drawing.Size(498, 23);
             this.txtEditarCodigo.TabIndex = 1;
-            // 
-            // label8
-            // 
-            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label8.Location = new System.Drawing.Point(13, 28);
-            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label8.Name = "label8";
-            this.label8.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.label8.Size = new System.Drawing.Size(498, 43);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Código:";
             // 
             // tabDeleteJob
             // 
@@ -786,7 +612,7 @@
             this.groupBox5.Size = new System.Drawing.Size(499, 643);
             this.groupBox5.TabIndex = 7;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Filtrar feriados:";
+            this.groupBox5.Text = "Filtrar Puestos:";
             // 
             // dgvEliminar
             // 
@@ -971,7 +797,7 @@
             this.groupBox6.Size = new System.Drawing.Size(527, 643);
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Verificar feriado a eliminar";
+            this.groupBox6.Text = "Verificar puesto a eliminar";
             // 
             // button2
             // 
@@ -1150,6 +976,96 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "Identificador:";
             // 
+            // label8
+            // 
+            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label8.Location = new System.Drawing.Point(13, 28);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label8.Name = "label8";
+            this.label8.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.label8.Size = new System.Drawing.Size(498, 43);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Código:";
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(13, 240);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.button1.Size = new System.Drawing.Size(498, 102);
+            this.button1.TabIndex = 73;
+            this.button1.Text = "Insertar Puesto";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.checkBox1.Location = new System.Drawing.Point(13, 207);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.checkBox1.Size = new System.Drawing.Size(498, 33);
+            this.checkBox1.TabIndex = 72;
+            this.checkBox1.Text = "Activo";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox1.Location = new System.Drawing.Point(13, 184);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(498, 23);
+            this.textBox1.TabIndex = 71;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.linkLabel2.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel2.Location = new System.Drawing.Point(13, 154);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Padding = new System.Windows.Forms.Padding(0, 6, 6, 0);
+            this.linkLabel2.Size = new System.Drawing.Size(498, 30);
+            this.linkLabel2.TabIndex = 70;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Seleccionar departamento:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox2.Location = new System.Drawing.Point(13, 131);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(5);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(498, 23);
+            this.textBox2.TabIndex = 69;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Location = new System.Drawing.Point(13, 94);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label1.Size = new System.Drawing.Size(498, 37);
+            this.label1.TabIndex = 68;
+            this.label1.Text = "Ingrese la descripción:";
+            // 
             // PanelPuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1223,17 +1139,7 @@
         private System.Windows.Forms.ComboBox cmbEditarFeriado;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox ckbEditarActivo;
-        private System.Windows.Forms.CheckBox ckbEditarPago;
-        private System.Windows.Forms.ComboBox cmbEditarDia;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbEditarMes;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtEditarMotivo;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtEditarCodigo;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TabPage tabDeleteJob;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.DataGridView dgvEliminar;
@@ -1270,5 +1176,12 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.CheckBox ckbActivo;
         private System.Windows.Forms.TextBox txtInsertarDepartamento;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
     }
 }

@@ -1,8 +1,12 @@
-﻿using System;
+﻿using AppPlanillas.GUI;
+using ProyectoIIIC;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,9 +25,51 @@ namespace GUI
             this.HideTab(1);
             this.HideTab(2);
             this.ShowTab(pestaña);
+            this.dgvInsertar.DataSource = new EmpleadoDAL().ObtenerEmpleados();
+            this.CargarTabla(pestaña,"","");
             if (this.comboBox3.SelectedIndex < 0)
             {
                 this.panelFiltro.Visible = false;
+            }
+        }
+
+        private void CargarTabla(int pestaña, string filtro, string dato)
+        {
+           /* if (this.cmbEditarUsuario.SelectedIndex < 0)
+            {
+                this.panelFiltro.Visible = false;
+                this.LimpiarEditar();
+            }
+            if (this.cmbEliminarUsuario.SelectedIndex < 0)
+            {
+                this.panelFiltroEliminar.Visible = false;
+                this.LimpiarEliminar();
+            }*/
+
+            if (pestaña == 0)
+            {
+                this.dgvInsertar.DataSource = new EmpleadoDAL().ObtenerEmpleados(); //new UsuarioDAL().ObtenerUsuarios(filtro, dato);
+            }
+            if (pestaña == 1)
+            {
+                this.dgvEditar.DataSource = new EmpleadoDAL().ObtenerEmpleados();//new UsuarioDAL().ObtenerUsuarios(filtro, dato);
+            }
+            if (pestaña == 2)
+            {
+                this.dgvEliminar.DataSource = new EmpleadoDAL().ObtenerEmpleados();//new UsuarioDAL().ObtenerUsuarios(filtro, dato);
+            }
+
+        }
+
+        public void Clic(object emisor, int pestaña, int panel)
+        {
+            if (panel == 1)
+            {
+                PanelBusqueda entrada = (PanelBusqueda)emisor;
+                if (pestaña == 1)
+                {
+                    this.txtInsetarPuesto.Text = entrada.idDepartamento.ToString();
+                }
             }
         }
         private void InitControl()
@@ -148,6 +194,38 @@ namespace GUI
         private void PanelEmpleados_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "jpeg|*.jpg|bmp|*.bmp|all files|*.*";
+            DialogResult res = openFileDialog1.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                picImg.Image = Image.FromFile(openFileDialog1.FileName);
+            }
+        }
+
+        private byte[] conv_photo()
+        {
+            byte[] photo_aray = null;
+            if (picImg.Image != null)
+            {
+                MemoryStream ms = new MemoryStream();
+                picImg.Image.Save(ms, ImageFormat.Jpeg);
+                photo_aray = new byte[ms.Length];
+                ms.Position = 0;
+                ms.Read(photo_aray, 0, photo_aray.Length);
+                //cmd.Parameters.AddWithValue("@photo", photo_aray);
+            }
+            return photo_aray;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new EmpleadoDAL().AgregarDepartamento(new EmpleadoENT(Int32.Parse(this.txtInsertarCedula.Text), this.txtInsertarNombre.Text, this.txtInsertarApellido1.Text, this.txtInsertarApellido2.Text, dtpInsertarNacimiento.Value, Int32.Parse(this.txtInsetarPuesto.Text), this.conv_photo(), Double.Parse(this.txtInsertarSalarioHora.Text), DateTime.Now, "Pedro", DateTime.Now, "Pedro", this.ckbInsertarActivo.Checked));
+            this.CargarTabla(0, "", "");
         }
     }
 
