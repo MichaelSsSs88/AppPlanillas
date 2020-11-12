@@ -66,6 +66,7 @@
     <Compile Include="ENT\Dia_feriadoENT.cs" />
     <Compile Include="ENT\EmpleadoENT.cs" />
     <Compile Include="ENT\HorarioENT.cs" />
+    <Compile Include="ENT\PuestoENT.cs" />
     <Compile Include="ENT\UsuarioENT.cs" />
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
@@ -398,6 +399,8 @@
     <Content Include="INI.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Mono.Security.dll" />
+    <Content Include="Npgsql.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
