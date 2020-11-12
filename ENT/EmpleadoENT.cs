@@ -47,7 +47,7 @@ namespace ProyectoIIIC
         public EmpleadoENT()
         {
             EmpleadoDAL empleado = new EmpleadoDAL();
-            empleados = empleado.ObtenerEmpleados();
+            empleados = empleado.ObtenerEmpleados("Todos","");
         }
 
         public int Id

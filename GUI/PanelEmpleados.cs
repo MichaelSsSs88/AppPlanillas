@@ -25,9 +25,9 @@ namespace GUI
             this.HideTab(1);
             this.HideTab(2);
             this.ShowTab(pestaña);
-            this.dgvInsertar.DataSource = new EmpleadoDAL().ObtenerEmpleados();
-            this.CargarTabla(pestaña,"","");
-            if (this.comboBox3.SelectedIndex < 0)
+            this.dgvInsertar.DataSource = new EmpleadoDAL().ObtenerEmpleados("Todos","");
+            this.CargarTabla(pestaña,"Todos","");
+            if (this.cmbEditarBusqueda.SelectedIndex < 0)
             {
                 this.panelFiltro.Visible = false;
             }
@@ -48,15 +48,16 @@ namespace GUI
 
             if (pestaña == 0)
             {
-                this.dgvInsertar.DataSource = new EmpleadoDAL().ObtenerEmpleados(); //new UsuarioDAL().ObtenerUsuarios(filtro, dato);
+                Console.WriteLine("***************************");
+                this.dgvInsertar.DataSource = new EmpleadoDAL().ObtenerEmpleados(filtro, dato); //new UsuarioDAL().ObtenerUsuarios(filtro, dato);
             }
             if (pestaña == 1)
             {
-                this.dgvEditar.DataSource = new EmpleadoDAL().ObtenerEmpleados();//new UsuarioDAL().ObtenerUsuarios(filtro, dato);
+                this.dgvEditar.DataSource = new EmpleadoDAL().ObtenerEmpleados(filtro, dato);//new UsuarioDAL().ObtenerUsuarios(filtro, dato);
             }
             if (pestaña == 2)
             {
-                this.dgvEliminar.DataSource = new EmpleadoDAL().ObtenerEmpleados();//new UsuarioDAL().ObtenerUsuarios(filtro, dato);
+                this.dgvEliminar.DataSource = new EmpleadoDAL().ObtenerEmpleados(filtro, dato);//new UsuarioDAL().ObtenerUsuarios(filtro, dato);
             }
 
         }
@@ -147,25 +148,54 @@ namespace GUI
         {
 
         }
+        private void LimpiarEditar()
+        {
+            this.txtEditarCedula.Text = "";
+            this.txtEditarNombre.Text = "";
+            this.txtEditarApellido1.Text = "";
+            this.txtEditarApellido2.Text = "";
+            this.dtpEditarFechaNacimiento.Value = DateTime.Today;
+            this.txtEditarPuesto.Text = "";
+            this.txtEditarSalarioHora.Text = "";
+            this.picEditarImg.Image = null;
+            this.ckbEditarActivo.Checked = false;
+
+        }
+
+        private void LimpiarEliminar()
+        {
+            this.txtEliminarCedula.Text = "";
+            this.txtEliminarNombre.Text = "";
+            this.txtEliminarApellido1.Text = "";
+            this.txtEliminarApellido2.Text = "";
+            this.dtpEliminarNacimiento.Value = DateTime.Today;
+            this.txtEliminarPuesto.Text = "";
+            this.txtEliminarSalarioHora.Text = "";
+            this.picEliminarImg.Image = null;
+            this.ckbEliminarActivo.Checked = false;
+
+        }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*if (this.comboBox3.SelectedIndex >= 0)
+            this.LimpiarEditar();
+            if (this.cmbEditarBusqueda.SelectedIndex >= 0)
             {
                 this.panelFiltro.Visible = true;
-            }*/
-            if (this.comboBox3.SelectedIndex >= 0)
-            {
-                this.panelFiltro.Visible = true;
-                if (this.comboBox3.SelectedIndex == 1)
+                if (this.cmbEditarBusqueda.SelectedIndex == 1)
                 {
-                    this.lblValorABuscar.Text = "Digiten el numero de cédula: ";
+                    this.lblValorABuscar.Text = "Digite el numero de cédula: ";
                 }
                 else
                 {
-                    this.lblValorABuscar.Text = "Digite el nombre: ";
+                    this.lblValorABuscar.Text = "Digite el nombre completo: ";
                 }
 
+            }
+            else
+            {
+                this.panelFiltro.Visible = false;
+               
             }
         }
 
@@ -222,10 +252,207 @@ namespace GUI
             return photo_aray;
         }
 
+        private byte[] conv_photo_edit()
+        {
+            byte[] photo_aray = null;
+            if (picEditarImg.Image != null)
+            {
+                MemoryStream ms = new MemoryStream();
+                picEditarImg.Image.Save(ms, ImageFormat.Jpeg);
+                photo_aray = new byte[ms.Length];
+                ms.Position = 0;
+                ms.Read(photo_aray, 0, photo_aray.Length);
+                //cmd.Parameters.AddWithValue("@photo", photo_aray);
+            }
+            return photo_aray;
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
-            new EmpleadoDAL().AgregarDepartamento(new EmpleadoENT(Int32.Parse(this.txtInsertarCedula.Text), this.txtInsertarNombre.Text, this.txtInsertarApellido1.Text, this.txtInsertarApellido2.Text, dtpInsertarNacimiento.Value, Int32.Parse(this.txtInsetarPuesto.Text), this.conv_photo(), Double.Parse(this.txtInsertarSalarioHora.Text), DateTime.Now, "Pedro", DateTime.Now, "Pedro", this.ckbInsertarActivo.Checked));
-            this.CargarTabla(0, "", "");
+            new EmpleadoDAL().AgregarEmpleado(new EmpleadoENT(Int32.Parse(this.txtInsertarCedula.Text), this.txtInsertarNombre.Text, this.txtInsertarApellido1.Text, this.txtInsertarApellido2.Text, dtpInsertarNacimiento.Value, Int32.Parse(this.txtInsetarPuesto.Text), this.conv_photo(), Double.Parse(this.txtInsertarSalarioHora.Text), DateTime.Now, "Pedro", DateTime.Now, "Pedro", this.ckbInsertarActivo.Checked));
+            MessageBox.Show("El empleado fue ingresado correctamente", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.CargarTabla(0, "Todos", "");
+        }
+
+        private void dgvEditar_MouseClick(object sender, MouseEventArgs e)
+        {
+                int fila = this.dgvEditar.CurrentRow.Index;
+                this.txtEditarCedula.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn1"].Value.ToString();
+                this.txtEditarNombre.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn2"].Value.ToString();
+                this.txtEditarApellido1.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn3"].Value.ToString();
+                this.txtEditarApellido2.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn4"].Value.ToString();
+                this.dtpEditarFechaNacimiento.Value = DateTime.Parse(this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn5"].Value.ToString()).Date;
+                this.txtEditarPuesto.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn6"].Value.ToString();
+                this.txtEditarSalarioHora.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn13"].Value.ToString();
+                this.picEditarImg.Image = (Image)this.dgvEditar.Rows[fila].Cells["dataGridViewImageColumn1"].Value;
+
+                
+                this.ckbEditarActivo.Checked = Boolean.Parse(this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn19"].Value.ToString());
+            
+        }
+
+        private void tabDepartamentos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void txtInsetarPuesto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtInsertarSalario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtInsertarSalarioHora_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void picImg_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ckbInsertarActivo_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregarFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "jpeg|*.jpg|bmp|*.bmp|all files|*.*";
+            DialogResult res = openFileDialog1.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                picEditarImg.Image = Image.FromFile(openFileDialog1.FileName);
+            }
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+            this.LimpiarEditar();
+            if (this.txtEditarBusqueda.Text == "")
+            {
+                this.CargarTabla(1, "Todos", "");
+            }
+            else
+            {
+                this.CargarTabla(1, this.cmbEditarBusqueda.SelectedItem.ToString(), this.txtEditarBusqueda.Text);
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            new EmpleadoDAL().EditarEmpleado(new EmpleadoENT(Int32.Parse(this.txtEditarCedula.Text), this.txtEditarNombre.Text, this.txtEditarApellido1.Text, this.txtEditarApellido2.Text, dtpEditarFechaNacimiento.Value, Int32.Parse(this.txtEditarPuesto.Text), this.conv_photo_edit(), Double.Parse(this.txtEditarSalarioHora.Text), DateTime.Now, "", DateTime.Now, "Marlon", this.ckbEditarActivo.Checked));
+            MessageBox.Show("El empleado fue actualizado correctamente", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.CargarTabla(1, "Todos", "");
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.LimpiarEditar();
+            this.txtEliminarBusqueda.Text = "";
+            if (this.cmbEliminarBusqueda.SelectedIndex >= 0)
+            {
+                this.panelEliminarFiltrar.Visible = true;
+                if (this.cmbEliminarBusqueda.SelectedIndex == 1)
+                {
+                    this.lblBuscar.Text = "Digite el numero de cédula: ";
+                }
+                else
+                {
+                    this.lblBuscar.Text = "Digite el nombre completo: ";
+                }
+
+            }
+            else
+            {
+                this.panelEliminarFiltrar.Visible = false;
+
+            }
+        }
+
+        private void txtEliminarBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            this.LimpiarEliminar();
+            if (this.txtEliminarBusqueda.Text == "")
+            {
+                this.CargarTabla(2, "Todos", "");
+            }
+            else
+            {
+                this.CargarTabla(2, this.cmbEliminarBusqueda.SelectedItem.ToString(), this.txtEliminarBusqueda.Text);
+            }
+        }
+
+        private void dgvEliminar_DoubleClick(object sender, EventArgs e)
+        {
+            int fila = this.dgvEliminar.CurrentRow.Index;
+            this.txtEliminarCedula.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn7"].Value.ToString();
+            this.txtEliminarNombre.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn8"].Value.ToString();
+            this.txtEliminarApellido1.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn9"].Value.ToString();
+            this.txtEliminarApellido2.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn10"].Value.ToString();
+            this.dtpEliminarNacimiento.Value = DateTime.Parse(this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn11"].Value.ToString()).Date;
+            this.txtEliminarPuesto.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn12"].Value.ToString();
+            this.txtEliminarSalarioHora.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn20"].Value.ToString();
+            this.picEliminarImg.Image = (Image)this.dgvEditar.Rows[fila].Cells["dataGridViewImageColumn2"].Value;
+
+
+            this.ckbEditarActivo.Checked = Boolean.Parse(this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn26"].Value.ToString());
+
+        }
+
+        private void dgvEliminar_MouseClick(object sender, MouseEventArgs e)
+        {
+            int fila = this.dgvEliminar.CurrentRow.Index;
+            this.txtEliminarCedula.Text = this.dgvEliminar.Rows[fila].Cells["dataGridViewTextBoxColumn7"].Value.ToString();
+            this.txtEliminarNombre.Text = this.dgvEliminar.Rows[fila].Cells["dataGridViewTextBoxColumn8"].Value.ToString();
+            this.txtEliminarApellido1.Text = this.dgvEliminar.Rows[fila].Cells["dataGridViewTextBoxColumn9"].Value.ToString();
+            this.txtEliminarApellido2.Text = this.dgvEliminar.Rows[fila].Cells["dataGridViewTextBoxColumn10"].Value.ToString();
+            this.dtpEliminarNacimiento.Value = DateTime.Parse(this.dgvEliminar.Rows[fila].Cells["dataGridViewTextBoxColumn11"].Value.ToString()).Date;
+            this.txtEliminarPuesto.Text = this.dgvEliminar.Rows[fila].Cells["dataGridViewTextBoxColumn12"].Value.ToString();
+            this.txtEliminarSalarioHora.Text = this.dgvEliminar.Rows[fila].Cells["dataGridViewTextBoxColumn20"].Value.ToString();
+            this.picEliminarImg.Image = (Image)this.dgvEliminar.Rows[fila].Cells["dataGridViewImageColumn2"].Value;
+
+
+            this.ckbEliminarActivo.Checked = Boolean.Parse(this.dgvEliminar.Rows[fila].Cells["dataGridViewTextBoxColumn26"].Value.ToString());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (this.txtEliminarCedula.Text != "")
+            {
+                try
+                {
+                    new EmpleadoDAL().EliminarEmpleado(Int32.Parse(this.txtEliminarCedula.Text));
+                    MessageBox.Show("El empleado fue eliminado correctamente", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.CargarTabla(2, "Todos", "");
+
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("El empleado no se puede eliminar", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("No existe empleado para eliminar", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 
