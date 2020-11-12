@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppPlanillas.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,14 +26,30 @@ namespace AppPlanillas.GUI
         private void btnIngresar_MouseClick(object sender, MouseEventArgs e)
         {
             this.btnIngresar.Image = new Bitmap(Application.StartupPath + @"\IMG\startSmall.png");
-            Form1 form1 = new Form1();
-            form1.ShowDialog();
+            UsuarioENT usuario = new LoginDAL().IniciarSesion(this.textBox1.Text, this.textBox2.Text);
+            if (usuario.Correo == "" && usuario.Contrasena == "")
+            {
+                MessageBox.Show("Correo o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            }
+            else {
+                MessageBox.Show("Bienvenido(a).", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Form1 form1 = new Form1();
+               form1.ShowDialog();
+                this.textBox1.Text = "Usuario";
+                this.textBox2.Text = "Contraseña";
+            }
         }
 
      
         private void btnIngresar_MouseLeave(object sender, EventArgs e)
         {
             this.btnIngresar.Image = new Bitmap(Application.StartupPath + @"\IMG\startMedium.png");
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+           // UsuarioENT = new LoginDAL().IniciarSesion();
         }
     }
 }

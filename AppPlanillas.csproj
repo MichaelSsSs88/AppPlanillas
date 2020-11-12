@@ -59,7 +59,9 @@
     <Compile Include="DAL\EmpleadoDAL.cs" />
     <Compile Include="DAL\GenerarCSV.cs" />
     <Compile Include="DAL\HorarioDAL.cs" />
+    <Compile Include="DAL\LoginDAL.cs" />
     <Compile Include="DAL\Parametro.cs" />
+    <Compile Include="DAL\PuestoDAL.cs" />
     <Compile Include="DAL\UsuarioDAL.cs" />
     <Compile Include="ENT\DeduccionENT.cs" />
     <Compile Include="ENT\DepartamentoENT.cs" />
