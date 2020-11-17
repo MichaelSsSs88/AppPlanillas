@@ -1,5 +1,7 @@
 ﻿using AppPlanillas.DAL;
 using AppPlanillas.ENT;
+using GUI;
+using ProyectoIIIC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,16 +21,34 @@ namespace AppPlanillas.GUI
         private bool[] arrBoolPagesVisible;
         private int pestaña;
         public int idDepartamento { get; set; }
+        public int idPuesto { get; set; }
+
+        public int idEmpleado { get; set; }
+
         public PanelPuestos oyente = null;
-        
-        public PanelBusqueda(int pestaña, PanelPuestos listen)
+        public PanelEmpleados oyenteEmpleados = null;
+        public PanelDeduccion oyentepanelDeduccion = null;
+
+        public PanelBusqueda(int pestaña, PanelPuestos listen, PanelEmpleados listenEmpleado, PanelDeduccion listenDeduccion)
         {
             InitializeComponent();
             this.cmbTipoBusquedaActualizar.SelectedIndex = 0;
+            this.cmbBusquedaPuestos.SelectedIndex = 0;
             this.pnlFiltroActualizar.Visible = false;
-            this.oyente = listen;
+            this.HideTab(0);
+            this.HideTab(1);
+            this.HideTab(2);
+            this.ShowTab(pestaña-1);
+
+            if(listen!=null)
+                    this.oyente = listen;
+            if (listenEmpleado != null)
+                this.oyenteEmpleados = listenEmpleado;
+            if (listenDeduccion != null)
+                this.oyentepanelDeduccion = listenDeduccion;
+
             this.pestaña = pestaña;
-            this.CargaTabla(pestaña);
+            this.CargaTabla(pestaña,"Todos","");
         }
         private void LimpiarEditar()
         {
@@ -88,11 +108,19 @@ namespace AppPlanillas.GUI
                     this.tabDepartamentos.TabPages.Add(objColPages[intIndex]);
         }
 
-        private void CargaTabla(int pestaña)
+        private void CargaTabla(int pestaña, string pFiltro, string pBusqueda)
         {
             if (pestaña == 1)
             {
-                this.grdActualizar.DataSource = new DepartamentoDAL().ObtenerDepartamentos(-1, "");
+                this.grdActualizar.DataSource = new DepartamentoDAL().ObtenerDepartamentos("-1", "");
+            }
+            if (pestaña == 2)
+            {
+                this.dgvInsertar.DataSource = new PuestoDAL().ObtenerPuestos(pFiltro,pBusqueda);
+            }
+            if (pestaña == 3)
+            {
+                this.dgvEditar.DataSource = new EmpleadoDAL().ObtenerEmpleados(pFiltro, pBusqueda);
             }
         }
         
@@ -104,7 +132,7 @@ namespace AppPlanillas.GUI
             if (this.cmbTipoBusquedaActualizar.SelectedIndex == 0)
             {
                 this.pnlFiltroActualizar.Visible = false;
-                this.grdActualizar.DataSource = new DepartamentoDAL().ObtenerDepartamentos(-1, "");
+                this.grdActualizar.DataSource = new DepartamentoDAL().ObtenerDepartamentos("-1", "");
                 this.txtBuscarActualizar.Text = "";
             }
             if (this.cmbTipoBusquedaActualizar.SelectedIndex == 1)
@@ -130,7 +158,7 @@ namespace AppPlanillas.GUI
             {
                 if (this.txtBuscarActualizar.Text == "")
                 {
-                    this.grdActualizar.DataSource = new DepartamentoDAL().ObtenerDepartamentos(-1, "");
+                    this.grdActualizar.DataSource = new DepartamentoDAL().ObtenerDepartamentos("-1", "");
                 }
                 else
                 {
@@ -140,10 +168,10 @@ namespace AppPlanillas.GUI
                             this.grdActualizar.DataSource = this.nuevoDepartamento.departamentos;
                             break;
                         case "Codigo":
-                            this.grdActualizar.DataSource = new DepartamentoDAL().ObtenerDepartamentos(Int32.Parse(this.txtBuscarActualizar.Text), "");
+                            this.grdActualizar.DataSource = new DepartamentoDAL().ObtenerDepartamentos(this.txtBuscarActualizar.Text, "");
                             break;
                         case "Descripción":
-                            this.grdActualizar.DataSource = new DepartamentoDAL().ObtenerDepartamentos(-1, this.txtBuscarActualizar.Text);
+                            this.grdActualizar.DataSource = new DepartamentoDAL().ObtenerDepartamentos("-1", this.txtBuscarActualizar.Text);
                             break;
                         default:
                             break;
@@ -181,6 +209,163 @@ namespace AppPlanillas.GUI
         {
             if (oyente != null)
                 oyente.Clic(this,this.pestaña,1);
+            if(oyenteEmpleados!=null)
+                oyenteEmpleados.Clic(this, this.pestaña, 1);
+            if (oyentepanelDeduccion != null)
+                oyentepanelDeduccion.Clic(this, this.pestaña, 1);
+        }
+
+        private void LimpiarEditarPuestos()
+        {
+            this.txtEditarCodigo.Text = "";
+            this.txtEditarDescripcion.Text = "";
+            this.ckbEditarActivo.Checked = true;
+        }
+        private void cmbBusquedaPuestos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.LimpiarEditarPuestos();
+            if (this.cmbBusquedaPuestos.SelectedIndex > 0)
+            {
+                this.panelFiltro.Visible = true;
+                if (this.cmbBusquedaPuestos.SelectedIndex == 1)
+                {
+                    this.lblPuestoABuscar.Text = "Digite el codigo: ";
+                }
+                else if (this.cmbBusquedaPuestos.SelectedIndex == 2)
+                {
+                    this.lblPuestoABuscar.Text = "Digite la descripcion: ";
+                }
+                else
+                {
+                    this.lblPuestoABuscar.Text = "Digite el código del departamento: ";
+                }
+
+            }
+            else
+            {
+                this.CargaTabla(2, "Todos", "");
+                this.panelFiltro.Visible = false;
+
+            }
+        }
+
+        private void txtBuscarEditar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscarPuestos_TextChanged(object sender, EventArgs e)
+        {
+            this.LimpiarEditar();
+            if (this.cmbBusquedaPuestos.Text == "")
+            {
+                this.CargaTabla(2, "Todos", "");
+            }
+            else
+            {
+                this.CargaTabla(2, this.cmbBusquedaPuestos.SelectedItem.ToString(), this.txtBuscarPuestos.Text);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (this.txtCodigoPuesto.Text != "")
+                this.idPuesto = Int32.Parse(this.txtCodigoPuesto.Text);
+            else
+            {
+                MessageBox.Show("Debe de seleccionar un puesto valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            this.BotonPulsado();
+            this.Close();
+
+        }
+
+        private void dgvInsertar_MouseClick(object sender, MouseEventArgs e)
+        {
+            int fila = this.dgvInsertar.CurrentRow.Index;
+            this.txtCodigoPuesto.Text = this.dgvInsertar.Rows[fila].Cells["Id"].Value.ToString();
+            this.txtInsertarDescripcion.Text = this.dgvInsertar.Rows[fila].Cells["Descripcion"].Value.ToString();
+            this.txtInsertarDepartamento.Text = this.dgvInsertar.Rows[fila].Cells["Id_departamento"].Value.ToString();
+            this.ckbActivo.Checked = Boolean.Parse(this.dgvInsertar.Rows[fila].Cells["Activo"].Value.ToString());
+
+        }
+
+        private void LimpiarEditarEmpleado()
+        {
+            this.txtEditarCedula.Text = "";
+            this.txtEditarNombre.Text = "";
+            this.txtEditarApellido1.Text = "";
+            this.txtEditarApellido2.Text = "";
+            this.dtpEditarFechaNacimiento.Value = DateTime.Today;
+            this.txtEditarPuesto.Text = "";
+            this.txtEditarSalarioHora.Text = "";
+            this.picEditarImg.Image = null;
+            this.ckbEditarActivo.Checked = false;
+
+        }
+
+        private void cmbEditarBusqueda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.LimpiarEditarEmpleado();
+            if (this.cmbEditarBusqueda.SelectedIndex >= 0)
+            {
+                this.panelFiltro.Visible = true;
+                if (this.cmbEditarBusqueda.SelectedIndex == 1)
+                {
+                    this.lblValorABuscar.Text = "Digite el numero de cédula: ";
+                }
+                else
+                {
+                    this.lblValorABuscar.Text = "Digite el nombre completo: ";
+                }
+
+            }
+            else
+            {
+                this.panelFiltro.Visible = false;
+
+            }
+        }
+
+        private void txtEditarBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            this.LimpiarEditar();
+            if (this.txtEditarBusqueda.Text == "")
+            {
+                this.CargaTabla(3, "Todos", "");
+            }
+            else
+            {
+                this.CargaTabla(3, this.cmbEditarBusqueda.SelectedItem.ToString(), this.txtEditarBusqueda.Text);
+            }
+        }
+
+        private void dgvEditar_MouseClick(object sender, MouseEventArgs e)
+        {
+            int fila = this.dgvEditar.CurrentRow.Index;
+            this.txtEditarCedula.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn1"].Value.ToString();
+            this.txtEditarNombre.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn2"].Value.ToString();
+            this.txtEditarApellido1.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn3"].Value.ToString();
+            this.txtEditarApellido2.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn4"].Value.ToString();
+            this.dtpEditarFechaNacimiento.Value = DateTime.Parse(this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn5"].Value.ToString()).Date;
+            this.txtEditarPuesto.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn6"].Value.ToString();
+            this.txtEditarSalarioHora.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn13"].Value.ToString();
+            this.picEditarImg.Image = (Image)this.dgvEditar.Rows[fila].Cells["dataGridViewImageColumn1"].Value;
+
+
+            this.ckbEditarActivo.Checked = Boolean.Parse(this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn19"].Value.ToString());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (this.txtEditarCedula.Text != "")
+                this.idEmpleado = Int32.Parse(this.txtEditarCedula.Text);
+            else
+            {
+                MessageBox.Show("Debe de seleccionar un empleado valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            this.BotonPulsado();
+            this.Close();
         }
     }
 }

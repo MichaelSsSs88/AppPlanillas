@@ -54,7 +54,7 @@ namespace AppPlanillas.DAL
                 string sentenciaSQL = "";
                 parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
-                sentenciaSQL = "UPDATE deduccion SET nombre = @nombre, sistema = @sistema, valor = @valor, id_empleado = @id_empleado, fecha_creacion = @fecha_creacion, creado_por = @creado_por, fecha_modificacion = @fecha_modificacion, modificado_por = @modificado_por, activo = @activo WHERE id = '" + pDeduccion.getId + "'";
+                sentenciaSQL = "UPDATE deduccion SET nombre = @nombre, sistema = @sistema, valor = @valor, id_empleado = @id_empleado, fecha_modificacion = @fecha_modificacion, modificado_por = @modificado_por, activo = @activo WHERE id = '" + pDeduccion.getId + "'";
                 parametros.AgregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getDescripcion);
                 parametros.AgregarParametro("@sistema", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getSistema);
                 parametros.AgregarParametro("@valor", NpgsqlTypes.NpgsqlDbType.Double, pDeduccion.getValor);
@@ -66,8 +66,8 @@ namespace AppPlanillas.DAL
                 {
                     parametros.AgregarParametro("@id_empleado", NpgsqlTypes.NpgsqlDbType.Integer, pDeduccion.getIdEmpleado);
                 }
-                parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDeduccion.getFechaCreacion);
-                parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getCreador);
+               // parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDeduccion.getFechaCreacion);
+                //parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getCreador);
                 parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pDeduccion.getFechaModificacion);
                 parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pDeduccion.getModificador);
                 parametros.AgregarParametro("@activo", NpgsqlTypes.NpgsqlDbType.Boolean, pDeduccion.getActivo);

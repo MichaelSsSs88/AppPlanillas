@@ -152,10 +152,10 @@ namespace AppPlanillas.GUI
                             this.grdActualizar.DataSource = this.nuevoDepartamento.departamentos;
                             break;
                         case "Codigo":
-                            this.grdActualizar.DataSource = new DepartamentoDAL().ObtenerDepartamentos(Int32.Parse(this.txtBuscarActualizar.Text), "");
+                            this.grdActualizar.DataSource = new DepartamentoDAL().ObtenerDepartamentos(this.txtBuscarActualizar.Text, "");
                             break;
                         case "Descripción":
-                            this.grdActualizar.DataSource = new DepartamentoDAL().ObtenerDepartamentos(-1, this.txtBuscarActualizar.Text);
+                            this.grdActualizar.DataSource = new DepartamentoDAL().ObtenerDepartamentos("-1", this.txtBuscarActualizar.Text);
                             break;
                         default:
                             break;
@@ -204,7 +204,7 @@ namespace AppPlanillas.GUI
 
         private void btnEliminarDepartamento_Click(object sender, EventArgs e)
         {
-            if ((this.txtCodigoEliminar.Text != "") && (this.txtDescripcionEliminar.Text != ""))
+            if ((this.txtCodigoEliminar.Text != ""))
             {
                 DepartamentoDAL eliminarDepartamento = new DepartamentoDAL();
                 if (eliminarDepartamento.EliminarDepartamento(Int32.Parse(this.txtCodigoEliminar.Text)) == 0)
@@ -250,22 +250,30 @@ namespace AppPlanillas.GUI
             this.txtDescripcionEliminar.Text = "";
         }
 
-        private void txtBuscarEliminar_KeyDown(object sender, KeyEventArgs e)
+       
+
+        private void grdEliminar_Click(object sender, EventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
+            int fila = this.grdEliminar.CurrentRow.Index;
+            this.txtCodigoEliminar.Text = this.grdEliminar.Rows[fila].Cells[0].Value.ToString();
+            this.txtDescripcionEliminar.Text = this.grdEliminar.Rows[fila].Cells[1].Value.ToString();
+        }
+
+        private void txtBuscarActualizar_TextChanged(object sender, EventArgs e)
+        {
+            
                 try
                 {
-                    switch (this.cmbTipoBusquedaEliminar.Text)
+                    switch (this.cmbTipoBusquedaActualizar.Text)
                     {
                         case "Todos":
-                            this.grdEliminar.DataSource = this.nuevoDepartamento.departamentos;
+                            this.grdActualizar.DataSource = this.nuevoDepartamento.departamentos;
                             break;
                         case "Codigo":
-                            this.grdEliminar.DataSource = new DepartamentoDAL().ObtenerDepartamentos(Int32.Parse(this.txtBuscarEliminar.Text), "");
+                            this.grdActualizar.DataSource = new DepartamentoDAL().ObtenerDepartamentos(this.txtBuscarActualizar.Text, "");
                             break;
                         case "Descripción":
-                            this.grdEliminar.DataSource = new DepartamentoDAL().ObtenerDepartamentos(-1, this.txtBuscarEliminar.Text);
+                            this.grdActualizar.DataSource = new DepartamentoDAL().ObtenerDepartamentos("-1", this.txtBuscarActualizar.Text);
                             break;
                         default:
                             break;
@@ -275,16 +283,33 @@ namespace AppPlanillas.GUI
                 {
                     MessageBox.Show("Error al cargar los datos de departamentos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            this.txtCodigoEliminar.Text = "";
-            this.txtDescripcionEliminar.Text = "";
+
+            
         }
 
-        private void grdEliminar_Click(object sender, EventArgs e)
+        private void txtBuscarEliminar_TextChanged(object sender, EventArgs e)
         {
-            int fila = this.grdEliminar.CurrentRow.Index;
-            this.txtCodigoEliminar.Text = this.grdEliminar.Rows[fila].Cells[0].Value.ToString();
-            this.txtDescripcionEliminar.Text = this.grdEliminar.Rows[fila].Cells[1].Value.ToString();
+            try
+            {
+                switch (this.cmbTipoBusquedaEliminar.Text)
+                {
+                    case "Todos":
+                        this.grdEliminar.DataSource = this.nuevoDepartamento.departamentos;
+                        break;
+                    case "Codigo":
+                        this.grdEliminar.DataSource = new DepartamentoDAL().ObtenerDepartamentos(this.txtBuscarEliminar.Text, "");
+                        break;
+                    case "Descripción":
+                        this.grdEliminar.DataSource = new DepartamentoDAL().ObtenerDepartamentos("-1", this.txtBuscarEliminar.Text);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error al cargar los datos de departamentos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

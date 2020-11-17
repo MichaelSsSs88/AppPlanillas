@@ -50,6 +50,12 @@
             this.cmbBusquedaEliminar = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.cbxActivoEliminar = new System.Windows.Forms.CheckBox();
+            this.cmbSistemaEliminar = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtIdEmpleadoEliminar = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtValorEliminar = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtDescripcionEliminar = new System.Windows.Forms.TextBox();
@@ -77,8 +83,8 @@
             this.cmbBusquedaEditar = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtValorEditar = new System.Windows.Forms.TextBox();
-            this.lblValorEditar = new System.Windows.Forms.Label();
+            this.cmbSistemaEditar = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtDescripcionEditar = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtIdEditar = new System.Windows.Forms.TextBox();
@@ -99,28 +105,22 @@
             this.colActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.cbxActivoInsertar = new System.Windows.Forms.CheckBox();
-            this.cmbEmpleadoInsertar = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtPorcentajeMontoInsertar = new System.Windows.Forms.TextBox();
             this.lblValorInsertar = new System.Windows.Forms.Label();
             this.cmbSistemaAplicacionInsertar = new System.Windows.Forms.ComboBox();
             this.lblSistema = new System.Windows.Forms.Label();
             this.txtDescripcionInsertar = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtIdEmpleadoEditar = new System.Windows.Forms.TextBox();
-            this.btnEditar = new System.Windows.Forms.Button();
+            this.txtValorEditar = new System.Windows.Forms.TextBox();
+            this.lblValorEditar = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.txtEmpleadoInsertar = new System.Windows.Forms.TextBox();
+            this.cbxActivoInsertar = new System.Windows.Forms.CheckBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.cbxActivoEditar = new System.Windows.Forms.CheckBox();
-            this.cmbSistemaEditar = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtIdEmpleadoEliminar = new System.Windows.Forms.TextBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.cbxActivoEliminar = new System.Windows.Forms.CheckBox();
-            this.cmbSistemaEliminar = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.txtIdEmpleadoEditar = new System.Windows.Forms.TextBox();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabDeleteDeducción.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEliminar)).BeginInit();
@@ -365,6 +365,89 @@
             this.groupBox6.TabIndex = 8;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Verificar datos de la deducción:";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEliminar.Location = new System.Drawing.Point(13, 335);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.btnEliminar.Size = new System.Drawing.Size(484, 102);
+            this.btnEliminar.TabIndex = 63;
+            this.btnEliminar.Text = "Eliminar Deducción";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // cbxActivoEliminar
+            // 
+            this.cbxActivoEliminar.AutoSize = true;
+            this.cbxActivoEliminar.Checked = true;
+            this.cbxActivoEliminar.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxActivoEliminar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbxActivoEliminar.Enabled = false;
+            this.cbxActivoEliminar.Location = new System.Drawing.Point(13, 302);
+            this.cbxActivoEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxActivoEliminar.Name = "cbxActivoEliminar";
+            this.cbxActivoEliminar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.cbxActivoEliminar.Size = new System.Drawing.Size(484, 33);
+            this.cbxActivoEliminar.TabIndex = 62;
+            this.cbxActivoEliminar.Text = "Activo";
+            this.cbxActivoEliminar.UseVisualStyleBackColor = true;
+            // 
+            // cmbSistemaEliminar
+            // 
+            this.cmbSistemaEliminar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmbSistemaEliminar.Enabled = false;
+            this.cmbSistemaEliminar.FormattingEnabled = true;
+            this.cmbSistemaEliminar.Items.AddRange(new object[] {
+            "Porcentaje",
+            "Monto"});
+            this.cmbSistemaEliminar.Location = new System.Drawing.Point(13, 278);
+            this.cmbSistemaEliminar.Name = "cmbSistemaEliminar";
+            this.cmbSistemaEliminar.Size = new System.Drawing.Size(484, 24);
+            this.cmbSistemaEliminar.TabIndex = 61;
+            // 
+            // label12
+            // 
+            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label12.Location = new System.Drawing.Point(13, 241);
+            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label12.Name = "label12";
+            this.label12.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label12.Size = new System.Drawing.Size(484, 37);
+            this.label12.TabIndex = 60;
+            this.label12.Text = "Sistema:";
+            // 
+            // txtIdEmpleadoEliminar
+            // 
+            this.txtIdEmpleadoEliminar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtIdEmpleadoEliminar.Location = new System.Drawing.Point(13, 218);
+            this.txtIdEmpleadoEliminar.Name = "txtIdEmpleadoEliminar";
+            this.txtIdEmpleadoEliminar.ReadOnly = true;
+            this.txtIdEmpleadoEliminar.Size = new System.Drawing.Size(484, 23);
+            this.txtIdEmpleadoEliminar.TabIndex = 21;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Location = new System.Drawing.Point(13, 201);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 17);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "ID Empleado";
             // 
             // txtValorEliminar
             // 
@@ -636,14 +719,14 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnEditar);
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.cbxActivoEditar);
-            this.groupBox2.Controls.Add(this.cmbSistemaEditar);
-            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.txtIdEmpleadoEditar);
-            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.linkLabel2);
             this.groupBox2.Controls.Add(this.txtValorEditar);
             this.groupBox2.Controls.Add(this.lblValorEditar);
+            this.groupBox2.Controls.Add(this.cmbSistemaEditar);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.txtDescripcionEditar);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txtIdEditar);
@@ -659,25 +742,29 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Completar datos de la deducción:";
             // 
-            // txtValorEditar
+            // cmbSistemaEditar
             // 
-            this.txtValorEditar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtValorEditar.Location = new System.Drawing.Point(13, 191);
-            this.txtValorEditar.Name = "txtValorEditar";
-            this.txtValorEditar.Size = new System.Drawing.Size(484, 23);
-            this.txtValorEditar.TabIndex = 19;
+            this.cmbSistemaEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmbSistemaEditar.FormattingEnabled = true;
+            this.cmbSistemaEditar.Items.AddRange(new object[] {
+            "Porcentaje",
+            "Monto"});
+            this.cmbSistemaEditar.Location = new System.Drawing.Point(13, 191);
+            this.cmbSistemaEditar.Name = "cmbSistemaEditar";
+            this.cmbSistemaEditar.Size = new System.Drawing.Size(484, 24);
+            this.cmbSistemaEditar.TabIndex = 61;
             // 
-            // lblValorEditar
+            // label2
             // 
-            this.lblValorEditar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblValorEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblValorEditar.Location = new System.Drawing.Point(13, 154);
-            this.lblValorEditar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblValorEditar.Name = "lblValorEditar";
-            this.lblValorEditar.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.lblValorEditar.Size = new System.Drawing.Size(484, 37);
-            this.lblValorEditar.TabIndex = 18;
-            this.lblValorEditar.Text = "Seleccione el:";
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(13, 154);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label2.Size = new System.Drawing.Size(484, 37);
+            this.label2.TabIndex = 60;
+            this.label2.Text = "Seleccione el sistema:";
             // 
             // txtDescripcionEditar
             // 
@@ -870,8 +957,8 @@
             // 
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.cbxActivoInsertar);
-            this.groupBox1.Controls.Add(this.cmbEmpleadoInsertar);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtEmpleadoInsertar);
+            this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Controls.Add(this.txtPorcentajeMontoInsertar);
             this.groupBox1.Controls.Add(this.lblValorInsertar);
             this.groupBox1.Controls.Add(this.cmbSistemaAplicacionInsertar);
@@ -888,64 +975,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Completar datos de la deducción:";
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(13, 309);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.button4.Size = new System.Drawing.Size(484, 102);
-            this.button4.TabIndex = 65;
-            this.button4.Text = "Ingresar";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // cbxActivoInsertar
-            // 
-            this.cbxActivoInsertar.AutoSize = true;
-            this.cbxActivoInsertar.Checked = true;
-            this.cbxActivoInsertar.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxActivoInsertar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbxActivoInsertar.Location = new System.Drawing.Point(13, 276);
-            this.cbxActivoInsertar.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxActivoInsertar.Name = "cbxActivoInsertar";
-            this.cbxActivoInsertar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.cbxActivoInsertar.Size = new System.Drawing.Size(484, 33);
-            this.cbxActivoInsertar.TabIndex = 64;
-            this.cbxActivoInsertar.Text = "Activo";
-            this.cbxActivoInsertar.UseVisualStyleBackColor = true;
-            // 
-            // cmbEmpleadoInsertar
-            // 
-            this.cmbEmpleadoInsertar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmbEmpleadoInsertar.FormattingEnabled = true;
-            this.cmbEmpleadoInsertar.Location = new System.Drawing.Point(13, 252);
-            this.cmbEmpleadoInsertar.Name = "cmbEmpleadoInsertar";
-            this.cmbEmpleadoInsertar.Size = new System.Drawing.Size(484, 24);
-            this.cmbEmpleadoInsertar.TabIndex = 63;
-            // 
-            // label3
-            // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(13, 215);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label3.Size = new System.Drawing.Size(484, 37);
-            this.label3.TabIndex = 62;
-            this.label3.Text = "Seleccione el ID del empleado:";
             // 
             // txtPorcentajeMontoInsertar
             // 
@@ -1013,45 +1042,84 @@
             this.lblDescripcion.TabIndex = 0;
             this.lblDescripcion.Text = "Ingrese la descripción";
             // 
-            // label1
+            // txtValorEditar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Location = new System.Drawing.Point(13, 214);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 17);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "ID Empleado";
+            this.txtValorEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtValorEditar.Location = new System.Drawing.Point(13, 252);
+            this.txtValorEditar.Name = "txtValorEditar";
+            this.txtValorEditar.Size = new System.Drawing.Size(484, 23);
+            this.txtValorEditar.TabIndex = 63;
             // 
-            // txtIdEmpleadoEditar
+            // lblValorEditar
             // 
-            this.txtIdEmpleadoEditar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtIdEmpleadoEditar.Location = new System.Drawing.Point(13, 231);
-            this.txtIdEmpleadoEditar.Name = "txtIdEmpleadoEditar";
-            this.txtIdEmpleadoEditar.Size = new System.Drawing.Size(484, 23);
-            this.txtIdEmpleadoEditar.TabIndex = 21;
+            this.lblValorEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblValorEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblValorEditar.Location = new System.Drawing.Point(13, 215);
+            this.lblValorEditar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblValorEditar.Name = "lblValorEditar";
+            this.lblValorEditar.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.lblValorEditar.Size = new System.Drawing.Size(484, 37);
+            this.lblValorEditar.TabIndex = 62;
+            this.lblValorEditar.Text = "Seleccione el:";
             // 
-            // btnEditar
+            // linkLabel1
             // 
-            this.btnEditar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditar.Location = new System.Drawing.Point(13, 348);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.btnEditar.Size = new System.Drawing.Size(484, 102);
-            this.btnEditar.TabIndex = 63;
-            this.btnEditar.Text = "Editar Descripción";
-            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
+            this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(13, 215);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.linkLabel1.Size = new System.Drawing.Size(484, 30);
+            this.linkLabel1.TabIndex = 58;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Seleccione el empleado:";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // txtEmpleadoInsertar
+            // 
+            this.txtEmpleadoInsertar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEmpleadoInsertar.Location = new System.Drawing.Point(13, 245);
+            this.txtEmpleadoInsertar.Name = "txtEmpleadoInsertar";
+            this.txtEmpleadoInsertar.ReadOnly = true;
+            this.txtEmpleadoInsertar.Size = new System.Drawing.Size(484, 23);
+            this.txtEmpleadoInsertar.TabIndex = 59;
+            // 
+            // cbxActivoInsertar
+            // 
+            this.cbxActivoInsertar.AutoSize = true;
+            this.cbxActivoInsertar.Checked = true;
+            this.cbxActivoInsertar.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxActivoInsertar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbxActivoInsertar.Location = new System.Drawing.Point(13, 268);
+            this.cbxActivoInsertar.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxActivoInsertar.Name = "cbxActivoInsertar";
+            this.cbxActivoInsertar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.cbxActivoInsertar.Size = new System.Drawing.Size(484, 33);
+            this.cbxActivoInsertar.TabIndex = 68;
+            this.cbxActivoInsertar.Text = "Activo";
+            this.cbxActivoInsertar.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button4.Location = new System.Drawing.Point(13, 301);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.button4.Size = new System.Drawing.Size(484, 102);
+            this.button4.TabIndex = 69;
+            this.button4.Text = "Ingresar";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // cbxActivoEditar
             // 
@@ -1059,121 +1127,58 @@
             this.cbxActivoEditar.Checked = true;
             this.cbxActivoEditar.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbxActivoEditar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbxActivoEditar.Location = new System.Drawing.Point(13, 315);
+            this.cbxActivoEditar.Location = new System.Drawing.Point(13, 328);
             this.cbxActivoEditar.Margin = new System.Windows.Forms.Padding(4);
             this.cbxActivoEditar.Name = "cbxActivoEditar";
             this.cbxActivoEditar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
             this.cbxActivoEditar.Size = new System.Drawing.Size(484, 33);
-            this.cbxActivoEditar.TabIndex = 62;
+            this.cbxActivoEditar.TabIndex = 72;
             this.cbxActivoEditar.Text = "Activo";
             this.cbxActivoEditar.UseVisualStyleBackColor = true;
             // 
-            // cmbSistemaEditar
+            // txtIdEmpleadoEditar
             // 
-            this.cmbSistemaEditar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmbSistemaEditar.FormattingEnabled = true;
-            this.cmbSistemaEditar.Items.AddRange(new object[] {
-            "Porcentaje",
-            "Monto"});
-            this.cmbSistemaEditar.Location = new System.Drawing.Point(13, 291);
-            this.cmbSistemaEditar.Name = "cmbSistemaEditar";
-            this.cmbSistemaEditar.Size = new System.Drawing.Size(484, 24);
-            this.cmbSistemaEditar.TabIndex = 61;
+            this.txtIdEmpleadoEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtIdEmpleadoEditar.Location = new System.Drawing.Point(13, 305);
+            this.txtIdEmpleadoEditar.Name = "txtIdEmpleadoEditar";
+            this.txtIdEmpleadoEditar.ReadOnly = true;
+            this.txtIdEmpleadoEditar.Size = new System.Drawing.Size(484, 23);
+            this.txtIdEmpleadoEditar.TabIndex = 71;
             // 
-            // label2
+            // linkLabel2
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(13, 254);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label2.Size = new System.Drawing.Size(484, 37);
-            this.label2.TabIndex = 60;
-            this.label2.Text = "Seleccione el sistema:";
+            this.linkLabel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.linkLabel2.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel2.Location = new System.Drawing.Point(13, 275);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.linkLabel2.Size = new System.Drawing.Size(484, 30);
+            this.linkLabel2.TabIndex = 70;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Seleccione el empleado:";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // label4
+            // button1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Location = new System.Drawing.Point(13, 201);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 17);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "ID Empleado";
-            // 
-            // txtIdEmpleadoEliminar
-            // 
-            this.txtIdEmpleadoEliminar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtIdEmpleadoEliminar.Location = new System.Drawing.Point(13, 218);
-            this.txtIdEmpleadoEliminar.Name = "txtIdEmpleadoEliminar";
-            this.txtIdEmpleadoEliminar.ReadOnly = true;
-            this.txtIdEmpleadoEliminar.Size = new System.Drawing.Size(484, 23);
-            this.txtIdEmpleadoEliminar.TabIndex = 21;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(13, 335);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.btnEliminar.Size = new System.Drawing.Size(484, 102);
-            this.btnEliminar.TabIndex = 63;
-            this.btnEliminar.Text = "Eliminar Deducción";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // cbxActivoEliminar
-            // 
-            this.cbxActivoEliminar.AutoSize = true;
-            this.cbxActivoEliminar.Checked = true;
-            this.cbxActivoEliminar.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxActivoEliminar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbxActivoEliminar.Enabled = false;
-            this.cbxActivoEliminar.Location = new System.Drawing.Point(13, 302);
-            this.cbxActivoEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxActivoEliminar.Name = "cbxActivoEliminar";
-            this.cbxActivoEliminar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.cbxActivoEliminar.Size = new System.Drawing.Size(484, 33);
-            this.cbxActivoEliminar.TabIndex = 62;
-            this.cbxActivoEliminar.Text = "Activo";
-            this.cbxActivoEliminar.UseVisualStyleBackColor = true;
-            // 
-            // cmbSistemaEliminar
-            // 
-            this.cmbSistemaEliminar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmbSistemaEliminar.Enabled = false;
-            this.cmbSistemaEliminar.FormattingEnabled = true;
-            this.cmbSistemaEliminar.Items.AddRange(new object[] {
-            "Porcentaje",
-            "Monto"});
-            this.cmbSistemaEliminar.Location = new System.Drawing.Point(13, 278);
-            this.cmbSistemaEliminar.Name = "cmbSistemaEliminar";
-            this.cmbSistemaEliminar.Size = new System.Drawing.Size(484, 24);
-            this.cmbSistemaEliminar.TabIndex = 61;
-            // 
-            // label12
-            // 
-            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label12.Location = new System.Drawing.Point(13, 241);
-            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label12.Name = "label12";
-            this.label12.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label12.Size = new System.Drawing.Size(484, 37);
-            this.label12.TabIndex = 60;
-            this.label12.Text = "Sistema:";
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(13, 477);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.button1.Size = new System.Drawing.Size(484, 102);
+            this.button1.TabIndex = 78;
+            this.button1.Text = "Editar Deducción";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
             // PanelDeduccion
             // 
@@ -1249,10 +1254,6 @@
         private System.Windows.Forms.Label lblSistema;
         private System.Windows.Forms.TextBox txtDescripcionInsertar;
         private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.CheckBox cbxActivoInsertar;
-        private System.Windows.Forms.ComboBox cmbEmpleadoInsertar;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPorcentajeMontoInsertar;
         private System.Windows.Forms.Label lblValorInsertar;
         private System.Windows.Forms.ComboBox cmbSistemaAplicacionInsertar;
@@ -1266,8 +1267,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colModificadorEditar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaModificacionEditar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colActivoEditar;
-        private System.Windows.Forms.TextBox txtValorEditar;
-        private System.Windows.Forms.Label lblValorEditar;
         private System.Windows.Forms.TextBox txtValorEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescripcionEliminar;
@@ -1289,17 +1288,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colModificador;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaModificacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn colActivo;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.CheckBox cbxActivoEditar;
         private System.Windows.Forms.ComboBox cmbSistemaEditar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtIdEmpleadoEditar;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.CheckBox cbxActivoEliminar;
         private System.Windows.Forms.ComboBox cmbSistemaEliminar;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtIdEmpleadoEliminar;
+        private System.Windows.Forms.CheckBox cbxActivoEditar;
+        private System.Windows.Forms.TextBox txtIdEmpleadoEditar;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.TextBox txtValorEditar;
+        private System.Windows.Forms.Label lblValorEditar;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.CheckBox cbxActivoInsertar;
+        private System.Windows.Forms.TextBox txtEmpleadoInsertar;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button button1;
     }
 }

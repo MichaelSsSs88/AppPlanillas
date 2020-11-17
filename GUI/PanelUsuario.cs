@@ -269,12 +269,20 @@ namespace AppPlanillas.GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new UsuarioDAL().EliminarUsuario(Int32.Parse(this.txtEliminarCedula.Text));
-            this.txtEliminarBusqueda.Text = "";
-            this.cmbEliminarUsuario.SelectedIndex = -1;
-            MessageBox.Show("El usuario fue eliminado correctamente", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.LimpiarEliminar();
-            this.CargarTabla(2, "Todos", "");
+            if (this.txtEliminarCedula.Text != "")
+            {
+                new UsuarioDAL().EliminarUsuario(Int32.Parse(this.txtEliminarCedula.Text));
+                this.txtEliminarBusqueda.Text = "";
+                this.cmbEliminarUsuario.SelectedIndex = -1;
+                MessageBox.Show("El usuario fue eliminado correctamente", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.LimpiarEliminar();
+                this.CargarTabla(2, "Todos", "");
+            }
+            else
+            {
+                MessageBox.Show("Debe de seleccionar el usuario a eliminar", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }

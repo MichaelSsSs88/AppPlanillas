@@ -1,4 +1,5 @@
-﻿using DAL;
+﻿using AppPlanillas.ENT;
+using DAL;
 using ENT;
 using ProyectoIIIC;
 using System;
@@ -18,10 +19,11 @@ namespace AppPlanillas.GUI
         private List<System.Windows.Forms.TabPage> objColPages = null;
         private bool[] arrBoolPagesVisible;
         HorarioENT HorarioENT;
-        public PanelHorario(int pestaña)
+        UsuarioENT UsuarioENT;
+        public PanelHorario(int pestaña, UsuarioENT UsuarioEN)
         {
-            
-           
+
+            this.UsuarioENT = UsuarioEN;
             InitializeComponent();
             // this.dataGridView1.DataSource = this.HorarioENT.horarios;
             
@@ -165,7 +167,7 @@ namespace AppPlanillas.GUI
            
             if (this.dtpHoraEntrada.Value.ToString() != "" && this.dtpHoraSalida.Value.ToString() != "" && this.cmbDia.SelectedItem != null && this.txtDescripcion.Text != "" && Int32.Parse(this.txtHorasOrdinarias.Text) > 0)
             { 
-                this.HorarioENT = new HorarioENT(-1, this.dtpHoraEntrada.Value, this.dtpHoraSalida.Value, this.cmbDia.SelectedItem.ToString(), this.txtDescripcion.Text, Int32.Parse(this.txtHorasOrdinarias.Text), DateTime.Now.Date, "Pablo", DateTime.Now.Date, "Pablo", this.ckbActivo.Checked);
+                this.HorarioENT = new HorarioENT(-1, this.dtpHoraEntrada.Value, this.dtpHoraSalida.Value, this.cmbDia.SelectedItem.ToString(), this.txtDescripcion.Text, Int32.Parse(this.txtHorasOrdinarias.Text), DateTime.Now.Date, this.UsuarioENT.Nombre, DateTime.Now.Date, this.UsuarioENT.Nombre, this.ckbActivo.Checked);
                 HorarioDAL horarioDAL = new HorarioDAL();
                 horarioDAL.AgregarHorario(this.HorarioENT);
                 MessageBox.Show("El horario fue creado correctamente", "Horarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -340,7 +342,7 @@ namespace AppPlanillas.GUI
         {
             if (this.dtpEditarEntrada.Value.ToString() != "" && this.dtpEditarSalida.Value.ToString() != "" && this.cmbEditarDia.SelectedItem != null && this.txtEditarDescripcion.Text != "" && Int32.Parse(this.txtEditarHoras.Text) > 0)
             {
-                this.HorarioENT = new HorarioENT(Int32.Parse(this.txtEditarId.Text), this.dtpEditarEntrada.Value, this.dtpEditarSalida.Value, this.cmbEditarDia.SelectedItem.ToString(), this.txtEditarDescripcion.Text, Int32.Parse(this.txtEditarHoras.Text), DateTime.Now.Date, "Pablo", DateTime.Now.Date, "Carlos", this.chbEditarActivo.Checked);
+                this.HorarioENT = new HorarioENT(Int32.Parse(this.txtEditarId.Text), this.dtpEditarEntrada.Value, this.dtpEditarSalida.Value, this.cmbEditarDia.SelectedItem.ToString(), this.txtEditarDescripcion.Text, Int32.Parse(this.txtEditarHoras.Text), DateTime.Now.Date, "", DateTime.Now.Date, this.UsuarioENT.Nombre, this.chbEditarActivo.Checked);
                 HorarioDAL horarioDAL = new HorarioDAL();
                 horarioDAL.ActualizarHorario(this.HorarioENT);
                 this.txtDatoABuscar.Text = "";

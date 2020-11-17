@@ -33,70 +33,6 @@
             this.tabInsertEmployed = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgvInsertar = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtpInsertarNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtInsertarApellido2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtInsertarApellido1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtInsertarNombre = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtInsertarCedula = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tabEditEmployed = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.panelFiltro = new System.Windows.Forms.Panel();
-            this.txtEditarBusqueda = new System.Windows.Forms.TextBox();
-            this.lblValorABuscar = new System.Windows.Forms.Label();
-            this.cmbEditarBusqueda = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dtpEditarFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtEditarApellido2 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtEditarApellido1 = new System.Windows.Forms.TextBox();
-            this.label = new System.Windows.Forms.Label();
-            this.txtEditarNombre = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtEditarCedula = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.tabDeleteEmployed = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panelEliminarFiltrar = new System.Windows.Forms.Panel();
-            this.txtEliminarBusqueda = new System.Windows.Forms.TextBox();
-            this.lblBuscar = new System.Windows.Forms.Label();
-            this.cmbEliminarBusqueda = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.txtEliminarSalarioHora = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.txtEliminarPuesto = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.dtpEliminarNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txtEliminarApellido2 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtEliminarApellido1 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtEliminarNombre = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.txtEliminarCedula = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.txtInsetarPuesto = new System.Windows.Forms.TextBox();
-            this.ckbInsertarActivo = new System.Windows.Forms.CheckBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.picImg = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtInsertarSalarioHora = new System.Windows.Forms.TextBox();
-            this.txtInsertarSalario = new System.Windows.Forms.Label();
             this.Cédula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Primerapellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -111,6 +47,29 @@
             this.Modificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ckbInsertarActivo = new System.Windows.Forms.CheckBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.picImg = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtInsertarSalarioHora = new System.Windows.Forms.TextBox();
+            this.txtInsertarSalario = new System.Windows.Forms.Label();
+            this.txtInsetarPuesto = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.dtpInsertarNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtInsertarApellido2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtInsertarApellido1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtInsertarNombre = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtInsertarCedula = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabEditEmployed = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvEditar = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -127,6 +86,34 @@
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panelFiltro = new System.Windows.Forms.Panel();
+            this.txtEditarBusqueda = new System.Windows.Forms.TextBox();
+            this.lblValorABuscar = new System.Windows.Forms.Label();
+            this.cmbEditarBusqueda = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ckbEditarActivo = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregarFoto = new System.Windows.Forms.Button();
+            this.picEditarImg = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtEditarSalarioHora = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtEditarPuesto = new System.Windows.Forms.TextBox();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.dtpEditarFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtEditarApellido2 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtEditarApellido1 = new System.Windows.Forms.TextBox();
+            this.label = new System.Windows.Forms.Label();
+            this.txtEditarNombre = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtEditarCedula = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tabDeleteEmployed = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dgvEliminar = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -143,35 +130,48 @@
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.ckbEditarActivo = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnAgregarFoto = new System.Windows.Forms.Button();
-            this.picEditarImg = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.txtEditarSalarioHora = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtEditarPuesto = new System.Windows.Forms.TextBox();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.picEliminarImg = new System.Windows.Forms.PictureBox();
-            this.ckbEliminarActivo = new System.Windows.Forms.CheckBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panelEliminarFiltrar = new System.Windows.Forms.Panel();
+            this.txtEliminarBusqueda = new System.Windows.Forms.TextBox();
+            this.lblBuscar = new System.Windows.Forms.Label();
+            this.cmbEliminarBusqueda = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.ckbEliminarActivo = new System.Windows.Forms.CheckBox();
+            this.picEliminarImg = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtEliminarSalarioHora = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txtEliminarPuesto = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.dtpEliminarNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtEliminarApellido2 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtEliminarApellido1 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtEliminarNombre = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtEliminarCedula = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.tabDepartamentos.SuspendLayout();
             this.tabInsertEmployed.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg)).BeginInit();
             this.tabEditEmployed.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEditar)).BeginInit();
             this.panelFiltro.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEditarImg)).BeginInit();
             this.tabDeleteEmployed.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEliminar)).BeginInit();
             this.panelEliminarFiltrar.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEditar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEliminar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEditarImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEliminarImg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -244,6 +244,97 @@
             this.dgvInsertar.Size = new System.Drawing.Size(487, 558);
             this.dgvInsertar.TabIndex = 6;
             // 
+            // Cédula
+            // 
+            this.Cédula.DataPropertyName = "Id";
+            this.Cédula.HeaderText = "Cédula";
+            this.Cédula.Name = "Cédula";
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Primerapellido
+            // 
+            this.Primerapellido.DataPropertyName = "Apellido_Uno";
+            this.Primerapellido.HeaderText = "Primera pellido";
+            this.Primerapellido.Name = "Primerapellido";
+            // 
+            // SegundoApellido
+            // 
+            this.SegundoApellido.DataPropertyName = "Apellido_Dos";
+            this.SegundoApellido.HeaderText = "Segundo Apellido";
+            this.SegundoApellido.Name = "SegundoApellido";
+            // 
+            // FechaNacimiento
+            // 
+            this.FechaNacimiento.DataPropertyName = "fechaNacimiento";
+            this.FechaNacimiento.HeaderText = "Fecha Nacimiento";
+            this.FechaNacimiento.Name = "FechaNacimiento";
+            // 
+            // Puesto
+            // 
+            this.Puesto.DataPropertyName = "Id_Puesto";
+            this.Puesto.HeaderText = "Puesto";
+            this.Puesto.Name = "Puesto";
+            // 
+            // Salario
+            // 
+            this.Salario.DataPropertyName = "Salario_Hora";
+            this.Salario.HeaderText = "Salario por Hora";
+            this.Salario.Name = "Salario";
+            // 
+            // Foto
+            // 
+            this.Foto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Foto.DataPropertyName = "getImagen";
+            this.Foto.FillWeight = 250F;
+            this.Foto.HeaderText = "Foto";
+            this.Foto.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Foto.Name = "Foto";
+            this.Foto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Foto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Foto.Width = 250;
+            // 
+            // FotoBynary
+            // 
+            this.FotoBynary.DataPropertyName = "Imagen";
+            this.FotoBynary.HeaderText = "FotoBynary";
+            this.FotoBynary.Name = "FotoBynary";
+            this.FotoBynary.Visible = false;
+            // 
+            // Creador
+            // 
+            this.Creador.DataPropertyName = "getCreador";
+            this.Creador.HeaderText = "Creador";
+            this.Creador.Name = "Creador";
+            // 
+            // FechaCreacion
+            // 
+            this.FechaCreacion.DataPropertyName = "getFechaCreacion";
+            this.FechaCreacion.HeaderText = "Fecha de Creacion";
+            this.FechaCreacion.Name = "FechaCreacion";
+            // 
+            // Modificador
+            // 
+            this.Modificador.DataPropertyName = "getModificador";
+            this.Modificador.HeaderText = "Modificador";
+            this.Modificador.Name = "Modificador";
+            // 
+            // FechaModificacion
+            // 
+            this.FechaModificacion.DataPropertyName = "getFechaModificacion";
+            this.FechaModificacion.HeaderText = "Fecha de Modificacion";
+            this.FechaModificacion.Name = "FechaModificacion";
+            // 
+            // Activo
+            // 
+            this.Activo.DataPropertyName = "getActivo";
+            this.Activo.HeaderText = "Activo";
+            this.Activo.Name = "Activo";
+            // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -283,6 +374,130 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Completar datos del empleado";
+            // 
+            // ckbInsertarActivo
+            // 
+            this.ckbInsertarActivo.AutoSize = true;
+            this.ckbInsertarActivo.Checked = true;
+            this.ckbInsertarActivo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckbInsertarActivo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ckbInsertarActivo.Location = new System.Drawing.Point(10, 500);
+            this.ckbInsertarActivo.Name = "ckbInsertarActivo";
+            this.ckbInsertarActivo.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.ckbInsertarActivo.Size = new System.Drawing.Size(198, 31);
+            this.ckbInsertarActivo.TabIndex = 54;
+            this.ckbInsertarActivo.Text = "Activo";
+            this.ckbInsertarActivo.UseVisualStyleBackColor = true;
+            this.ckbInsertarActivo.CheckedChanged += new System.EventHandler(this.ckbInsertarActivo_CheckedChanged);
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button4.Location = new System.Drawing.Point(10, 531);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.button4.Size = new System.Drawing.Size(198, 90);
+            this.button4.TabIndex = 53;
+            this.button4.Text = "Editar Empleado";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button3.Location = new System.Drawing.Point(10, 412);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.button3.Size = new System.Drawing.Size(198, 90);
+            this.button3.TabIndex = 52;
+            this.button3.Text = "Agregar Foto";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // picImg
+            // 
+            this.picImg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picImg.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picImg.Location = new System.Drawing.Point(208, 412);
+            this.picImg.Name = "picImg";
+            this.picImg.Size = new System.Drawing.Size(293, 209);
+            this.picImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImg.TabIndex = 51;
+            this.picImg.TabStop = false;
+            this.picImg.Click += new System.EventHandler(this.picImg_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(10, 402);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(491, 10);
+            this.panel3.TabIndex = 50;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // txtInsertarSalarioHora
+            // 
+            this.txtInsertarSalarioHora.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtInsertarSalarioHora.Location = new System.Drawing.Point(10, 379);
+            this.txtInsertarSalarioHora.Margin = new System.Windows.Forms.Padding(4);
+            this.txtInsertarSalarioHora.Name = "txtInsertarSalarioHora";
+            this.txtInsertarSalarioHora.Size = new System.Drawing.Size(491, 23);
+            this.txtInsertarSalarioHora.TabIndex = 49;
+            this.txtInsertarSalarioHora.TextChanged += new System.EventHandler(this.txtInsertarSalarioHora_TextChanged);
+            // 
+            // txtInsertarSalario
+            // 
+            this.txtInsertarSalario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtInsertarSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtInsertarSalario.Location = new System.Drawing.Point(10, 349);
+            this.txtInsertarSalario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtInsertarSalario.Name = "txtInsertarSalario";
+            this.txtInsertarSalario.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.txtInsertarSalario.Size = new System.Drawing.Size(491, 30);
+            this.txtInsertarSalario.TabIndex = 48;
+            this.txtInsertarSalario.Text = "Ingrese el salario por hora:";
+            this.txtInsertarSalario.Click += new System.EventHandler(this.txtInsertarSalario_Click);
+            // 
+            // txtInsetarPuesto
+            // 
+            this.txtInsetarPuesto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtInsetarPuesto.Location = new System.Drawing.Point(10, 326);
+            this.txtInsetarPuesto.Name = "txtInsetarPuesto";
+            this.txtInsetarPuesto.ReadOnly = true;
+            this.txtInsetarPuesto.Size = new System.Drawing.Size(491, 23);
+            this.txtInsetarPuesto.TabIndex = 25;
+            this.txtInsetarPuesto.TextChanged += new System.EventHandler(this.txtInsetarPuesto_TextChanged);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(10, 296);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.linkLabel1.Size = new System.Drawing.Size(491, 30);
+            this.linkLabel1.TabIndex = 24;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Seleccione el puesto a desempeñar";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // dtpInsertarNacimiento
             // 
@@ -420,6 +635,134 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Filtrar empleados:";
             // 
+            // dgvEditar
+            // 
+            this.dgvEditar.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dgvEditar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEditar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewImageColumn1,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19});
+            this.dgvEditar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEditar.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvEditar.Location = new System.Drawing.Point(10, 211);
+            this.dgvEditar.MultiSelect = false;
+            this.dgvEditar.Name = "dgvEditar";
+            this.dgvEditar.RowTemplate.Height = 200;
+            this.dgvEditar.Size = new System.Drawing.Size(489, 410);
+            this.dgvEditar.TabIndex = 8;
+            this.dgvEditar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvEditar_MouseClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Cédula";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Apellido_Uno";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Primera pellido";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Apellido_Dos";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Segundo Apellido";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "fechaNacimiento";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Fecha Nacimiento";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Id_Puesto";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Puesto";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Salario_Hora";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Salario por Hora";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn1.DataPropertyName = "getImagen";
+            this.dataGridViewImageColumn1.FillWeight = 250F;
+            this.dataGridViewImageColumn1.HeaderText = "Foto";
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn1.Width = 250;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Imagen";
+            this.dataGridViewTextBoxColumn14.HeaderText = "FotoBynary";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "getCreador";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Creador";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "getFechaCreacion";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Fecha de Creacion";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "getModificador";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Modificador";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "getFechaModificacion";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Fecha de Modificacion";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "getActivo";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Activo";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(10, 174);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(489, 37);
+            this.panel6.TabIndex = 7;
+            // 
             // label14
             // 
             this.label14.Dock = System.Windows.Forms.DockStyle.Top;
@@ -519,6 +862,124 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Completar datos del empleado";
+            // 
+            // ckbEditarActivo
+            // 
+            this.ckbEditarActivo.AutoSize = true;
+            this.ckbEditarActivo.Checked = true;
+            this.ckbEditarActivo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckbEditarActivo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ckbEditarActivo.Location = new System.Drawing.Point(10, 506);
+            this.ckbEditarActivo.Name = "ckbEditarActivo";
+            this.ckbEditarActivo.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.ckbEditarActivo.Size = new System.Drawing.Size(196, 31);
+            this.ckbEditarActivo.TabIndex = 63;
+            this.ckbEditarActivo.Text = "Activo";
+            this.ckbEditarActivo.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(10, 537);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.button1.Size = new System.Drawing.Size(196, 90);
+            this.button1.TabIndex = 62;
+            this.button1.Text = "Editar Empleado";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnAgregarFoto
+            // 
+            this.btnAgregarFoto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAgregarFoto.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAgregarFoto.FlatAppearance.BorderSize = 0;
+            this.btnAgregarFoto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAgregarFoto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAgregarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnAgregarFoto.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarFoto.Image")));
+            this.btnAgregarFoto.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAgregarFoto.Location = new System.Drawing.Point(10, 405);
+            this.btnAgregarFoto.Name = "btnAgregarFoto";
+            this.btnAgregarFoto.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.btnAgregarFoto.Size = new System.Drawing.Size(196, 90);
+            this.btnAgregarFoto.TabIndex = 61;
+            this.btnAgregarFoto.Text = "Agregar Foto";
+            this.btnAgregarFoto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAgregarFoto.UseVisualStyleBackColor = true;
+            this.btnAgregarFoto.Click += new System.EventHandler(this.btnAgregarFoto_Click);
+            // 
+            // picEditarImg
+            // 
+            this.picEditarImg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picEditarImg.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picEditarImg.Location = new System.Drawing.Point(206, 405);
+            this.picEditarImg.Name = "picEditarImg";
+            this.picEditarImg.Size = new System.Drawing.Size(293, 222);
+            this.picEditarImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picEditarImg.TabIndex = 60;
+            this.picEditarImg.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(10, 395);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(489, 10);
+            this.panel4.TabIndex = 59;
+            // 
+            // txtEditarSalarioHora
+            // 
+            this.txtEditarSalarioHora.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEditarSalarioHora.Location = new System.Drawing.Point(10, 372);
+            this.txtEditarSalarioHora.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEditarSalarioHora.Name = "txtEditarSalarioHora";
+            this.txtEditarSalarioHora.Size = new System.Drawing.Size(489, 23);
+            this.txtEditarSalarioHora.TabIndex = 58;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(10, 342);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.label2.Size = new System.Drawing.Size(489, 30);
+            this.label2.TabIndex = 57;
+            this.label2.Text = "Ingrese el salario por hora:";
+            // 
+            // txtEditarPuesto
+            // 
+            this.txtEditarPuesto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEditarPuesto.Location = new System.Drawing.Point(10, 319);
+            this.txtEditarPuesto.Name = "txtEditarPuesto";
+            this.txtEditarPuesto.ReadOnly = true;
+            this.txtEditarPuesto.Size = new System.Drawing.Size(489, 23);
+            this.txtEditarPuesto.TabIndex = 56;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.linkLabel2.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel2.Location = new System.Drawing.Point(10, 289);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.linkLabel2.Size = new System.Drawing.Size(489, 30);
+            this.linkLabel2.TabIndex = 55;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Seleccione el puesto a desempeñar";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // dtpEditarFechaNacimiento
             // 
@@ -654,6 +1115,134 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Filtrar empleados:";
             // 
+            // dgvEliminar
+            // 
+            this.dgvEliminar.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dgvEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEliminar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewImageColumn2,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26});
+            this.dgvEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEliminar.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvEliminar.Location = new System.Drawing.Point(10, 213);
+            this.dgvEliminar.MultiSelect = false;
+            this.dgvEliminar.Name = "dgvEliminar";
+            this.dgvEliminar.RowTemplate.Height = 200;
+            this.dgvEliminar.Size = new System.Drawing.Size(497, 416);
+            this.dgvEliminar.TabIndex = 8;
+            this.dgvEliminar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvEliminar_MouseClick);
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Cédula";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Apellido_Uno";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Primera pellido";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Apellido_Dos";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Segundo Apellido";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "fechaNacimiento";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Fecha Nacimiento";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Id_Puesto";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Puesto";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "Salario_Hora";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Salario por Hora";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn2.DataPropertyName = "getImagen";
+            this.dataGridViewImageColumn2.FillWeight = 250F;
+            this.dataGridViewImageColumn2.HeaderText = "Foto";
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn2.Width = 250;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "Imagen";
+            this.dataGridViewTextBoxColumn21.HeaderText = "FotoBynary";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "getCreador";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Creador";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "getFechaCreacion";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Fecha de Creacion";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "getModificador";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Modificador";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "getFechaModificacion";
+            this.dataGridViewTextBoxColumn25.HeaderText = "Fecha de Modificacion";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "getActivo";
+            this.dataGridViewTextBoxColumn26.HeaderText = "Activo";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            // 
+            // panel7
+            // 
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(10, 176);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(497, 37);
+            this.panel7.TabIndex = 7;
+            // 
             // label15
             // 
             this.label15.Dock = System.Windows.Forms.DockStyle.Top;
@@ -752,6 +1341,52 @@
             this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Verificar empleado a eliminar:";
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(10, 545);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.button2.Size = new System.Drawing.Size(196, 90);
+            this.button2.TabIndex = 63;
+            this.button2.Text = "Eliminar Empleado";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // ckbEliminarActivo
+            // 
+            this.ckbEliminarActivo.AutoSize = true;
+            this.ckbEliminarActivo.Checked = true;
+            this.ckbEliminarActivo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckbEliminarActivo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ckbEliminarActivo.Location = new System.Drawing.Point(10, 405);
+            this.ckbEliminarActivo.Name = "ckbEliminarActivo";
+            this.ckbEliminarActivo.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.ckbEliminarActivo.Size = new System.Drawing.Size(196, 31);
+            this.ckbEliminarActivo.TabIndex = 62;
+            this.ckbEliminarActivo.Text = "Activo";
+            this.ckbEliminarActivo.UseVisualStyleBackColor = true;
+            // 
+            // picEliminarImg
+            // 
+            this.picEliminarImg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picEliminarImg.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picEliminarImg.Location = new System.Drawing.Point(206, 405);
+            this.picEliminarImg.Name = "picEliminarImg";
+            this.picEliminarImg.Size = new System.Drawing.Size(293, 230);
+            this.picEliminarImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picEliminarImg.TabIndex = 61;
+            this.picEliminarImg.TabStop = false;
             // 
             // panel5
             // 
@@ -905,638 +1540,6 @@
             this.label23.TabIndex = 0;
             this.label23.Text = "Cédula:";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(10, 296);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.linkLabel1.Size = new System.Drawing.Size(491, 30);
-            this.linkLabel1.TabIndex = 24;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Seleccione el puesto a desempeñar";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // txtInsetarPuesto
-            // 
-            this.txtInsetarPuesto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtInsetarPuesto.Location = new System.Drawing.Point(10, 326);
-            this.txtInsetarPuesto.Name = "txtInsetarPuesto";
-            this.txtInsetarPuesto.Size = new System.Drawing.Size(491, 23);
-            this.txtInsetarPuesto.TabIndex = 25;
-            this.txtInsetarPuesto.TextChanged += new System.EventHandler(this.txtInsetarPuesto_TextChanged);
-            // 
-            // ckbInsertarActivo
-            // 
-            this.ckbInsertarActivo.AutoSize = true;
-            this.ckbInsertarActivo.Checked = true;
-            this.ckbInsertarActivo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckbInsertarActivo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ckbInsertarActivo.Location = new System.Drawing.Point(10, 500);
-            this.ckbInsertarActivo.Name = "ckbInsertarActivo";
-            this.ckbInsertarActivo.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.ckbInsertarActivo.Size = new System.Drawing.Size(198, 31);
-            this.ckbInsertarActivo.TabIndex = 54;
-            this.ckbInsertarActivo.Text = "Activo";
-            this.ckbInsertarActivo.UseVisualStyleBackColor = true;
-            this.ckbInsertarActivo.CheckedChanged += new System.EventHandler(this.ckbInsertarActivo_CheckedChanged);
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(10, 531);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.button4.Size = new System.Drawing.Size(198, 90);
-            this.button4.TabIndex = 53;
-            this.button4.Text = "Editar Empleado";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(10, 412);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.button3.Size = new System.Drawing.Size(198, 90);
-            this.button3.TabIndex = 52;
-            this.button3.Text = "Agregar Foto";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // picImg
-            // 
-            this.picImg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picImg.Dock = System.Windows.Forms.DockStyle.Right;
-            this.picImg.Location = new System.Drawing.Point(208, 412);
-            this.picImg.Name = "picImg";
-            this.picImg.Size = new System.Drawing.Size(293, 209);
-            this.picImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picImg.TabIndex = 51;
-            this.picImg.TabStop = false;
-            this.picImg.Click += new System.EventHandler(this.picImg_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(10, 402);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(491, 10);
-            this.panel3.TabIndex = 50;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // txtInsertarSalarioHora
-            // 
-            this.txtInsertarSalarioHora.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtInsertarSalarioHora.Location = new System.Drawing.Point(10, 379);
-            this.txtInsertarSalarioHora.Margin = new System.Windows.Forms.Padding(4);
-            this.txtInsertarSalarioHora.Name = "txtInsertarSalarioHora";
-            this.txtInsertarSalarioHora.Size = new System.Drawing.Size(491, 23);
-            this.txtInsertarSalarioHora.TabIndex = 49;
-            this.txtInsertarSalarioHora.TextChanged += new System.EventHandler(this.txtInsertarSalarioHora_TextChanged);
-            // 
-            // txtInsertarSalario
-            // 
-            this.txtInsertarSalario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtInsertarSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtInsertarSalario.Location = new System.Drawing.Point(10, 349);
-            this.txtInsertarSalario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.txtInsertarSalario.Name = "txtInsertarSalario";
-            this.txtInsertarSalario.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.txtInsertarSalario.Size = new System.Drawing.Size(491, 30);
-            this.txtInsertarSalario.TabIndex = 48;
-            this.txtInsertarSalario.Text = "Ingrese el salario por hora:";
-            this.txtInsertarSalario.Click += new System.EventHandler(this.txtInsertarSalario_Click);
-            // 
-            // Cédula
-            // 
-            this.Cédula.DataPropertyName = "Id";
-            this.Cédula.HeaderText = "Cédula";
-            this.Cédula.Name = "Cédula";
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Primerapellido
-            // 
-            this.Primerapellido.DataPropertyName = "Apellido_Uno";
-            this.Primerapellido.HeaderText = "Primera pellido";
-            this.Primerapellido.Name = "Primerapellido";
-            // 
-            // SegundoApellido
-            // 
-            this.SegundoApellido.DataPropertyName = "Apellido_Dos";
-            this.SegundoApellido.HeaderText = "Segundo Apellido";
-            this.SegundoApellido.Name = "SegundoApellido";
-            // 
-            // FechaNacimiento
-            // 
-            this.FechaNacimiento.DataPropertyName = "fechaNacimiento";
-            this.FechaNacimiento.HeaderText = "Fecha Nacimiento";
-            this.FechaNacimiento.Name = "FechaNacimiento";
-            // 
-            // Puesto
-            // 
-            this.Puesto.DataPropertyName = "Id_Puesto";
-            this.Puesto.HeaderText = "Puesto";
-            this.Puesto.Name = "Puesto";
-            // 
-            // Salario
-            // 
-            this.Salario.DataPropertyName = "Salario_Hora";
-            this.Salario.HeaderText = "Salario por Hora";
-            this.Salario.Name = "Salario";
-            // 
-            // Foto
-            // 
-            this.Foto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Foto.DataPropertyName = "getImagen";
-            this.Foto.FillWeight = 250F;
-            this.Foto.HeaderText = "Foto";
-            this.Foto.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.Foto.Name = "Foto";
-            this.Foto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Foto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Foto.Width = 250;
-            // 
-            // FotoBynary
-            // 
-            this.FotoBynary.DataPropertyName = "Imagen";
-            this.FotoBynary.HeaderText = "FotoBynary";
-            this.FotoBynary.Name = "FotoBynary";
-            this.FotoBynary.Visible = false;
-            // 
-            // Creador
-            // 
-            this.Creador.DataPropertyName = "getCreador";
-            this.Creador.HeaderText = "Creador";
-            this.Creador.Name = "Creador";
-            // 
-            // FechaCreacion
-            // 
-            this.FechaCreacion.DataPropertyName = "getFechaCreacion";
-            this.FechaCreacion.HeaderText = "Fecha de Creacion";
-            this.FechaCreacion.Name = "FechaCreacion";
-            // 
-            // Modificador
-            // 
-            this.Modificador.DataPropertyName = "getModificador";
-            this.Modificador.HeaderText = "Modificador";
-            this.Modificador.Name = "Modificador";
-            // 
-            // FechaModificacion
-            // 
-            this.FechaModificacion.DataPropertyName = "getFechaModificacion";
-            this.FechaModificacion.HeaderText = "Fecha de Modificacion";
-            this.FechaModificacion.Name = "FechaModificacion";
-            // 
-            // Activo
-            // 
-            this.Activo.DataPropertyName = "getActivo";
-            this.Activo.HeaderText = "Activo";
-            this.Activo.Name = "Activo";
-            // 
-            // dgvEditar
-            // 
-            this.dgvEditar.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dgvEditar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEditar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewImageColumn1,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19});
-            this.dgvEditar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEditar.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvEditar.Location = new System.Drawing.Point(10, 211);
-            this.dgvEditar.MultiSelect = false;
-            this.dgvEditar.Name = "dgvEditar";
-            this.dgvEditar.RowTemplate.Height = 200;
-            this.dgvEditar.Size = new System.Drawing.Size(489, 410);
-            this.dgvEditar.TabIndex = 8;
-            this.dgvEditar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvEditar_MouseClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Cédula";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Apellido_Uno";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Primera pellido";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Apellido_Dos";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Segundo Apellido";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "fechaNacimiento";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Fecha Nacimiento";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Id_Puesto";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Puesto";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Salario_Hora";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Salario por Hora";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn1.DataPropertyName = "getImagen";
-            this.dataGridViewImageColumn1.FillWeight = 250F;
-            this.dataGridViewImageColumn1.HeaderText = "Foto";
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewImageColumn1.Width = 250;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "Imagen";
-            this.dataGridViewTextBoxColumn14.HeaderText = "FotoBynary";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "getCreador";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Creador";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "getFechaCreacion";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Fecha de Creacion";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "getModificador";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Modificador";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "getFechaModificacion";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Fecha de Modificacion";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "getActivo";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Activo";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
-            // panel6
-            // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(10, 174);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(489, 37);
-            this.panel6.TabIndex = 7;
-            // 
-            // dgvEliminar
-            // 
-            this.dgvEliminar.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dgvEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEliminar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn20,
-            this.dataGridViewImageColumn2,
-            this.dataGridViewTextBoxColumn21,
-            this.dataGridViewTextBoxColumn22,
-            this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn24,
-            this.dataGridViewTextBoxColumn25,
-            this.dataGridViewTextBoxColumn26});
-            this.dgvEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEliminar.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvEliminar.Location = new System.Drawing.Point(10, 213);
-            this.dgvEliminar.MultiSelect = false;
-            this.dgvEliminar.Name = "dgvEliminar";
-            this.dgvEliminar.RowTemplate.Height = 200;
-            this.dgvEliminar.Size = new System.Drawing.Size(497, 416);
-            this.dgvEliminar.TabIndex = 8;
-            this.dgvEliminar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvEliminar_MouseClick);
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Cédula";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Apellido_Uno";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Primera pellido";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Apellido_Dos";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Segundo Apellido";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "fechaNacimiento";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Fecha Nacimiento";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Id_Puesto";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Puesto";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "Salario_Hora";
-            this.dataGridViewTextBoxColumn20.HeaderText = "Salario por Hora";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn2.DataPropertyName = "getImagen";
-            this.dataGridViewImageColumn2.FillWeight = 250F;
-            this.dataGridViewImageColumn2.HeaderText = "Foto";
-            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewImageColumn2.Width = 250;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "Imagen";
-            this.dataGridViewTextBoxColumn21.HeaderText = "FotoBynary";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "getCreador";
-            this.dataGridViewTextBoxColumn22.HeaderText = "Creador";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "getFechaCreacion";
-            this.dataGridViewTextBoxColumn23.HeaderText = "Fecha de Creacion";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "getModificador";
-            this.dataGridViewTextBoxColumn24.HeaderText = "Modificador";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "getFechaModificacion";
-            this.dataGridViewTextBoxColumn25.HeaderText = "Fecha de Modificacion";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "getActivo";
-            this.dataGridViewTextBoxColumn26.HeaderText = "Activo";
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            // 
-            // panel7
-            // 
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(10, 176);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(497, 37);
-            this.panel7.TabIndex = 7;
-            // 
-            // ckbEditarActivo
-            // 
-            this.ckbEditarActivo.AutoSize = true;
-            this.ckbEditarActivo.Checked = true;
-            this.ckbEditarActivo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckbEditarActivo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ckbEditarActivo.Location = new System.Drawing.Point(10, 506);
-            this.ckbEditarActivo.Name = "ckbEditarActivo";
-            this.ckbEditarActivo.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.ckbEditarActivo.Size = new System.Drawing.Size(196, 31);
-            this.ckbEditarActivo.TabIndex = 63;
-            this.ckbEditarActivo.Text = "Activo";
-            this.ckbEditarActivo.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(10, 537);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.button1.Size = new System.Drawing.Size(196, 90);
-            this.button1.TabIndex = 62;
-            this.button1.Text = "Editar Empleado";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // btnAgregarFoto
-            // 
-            this.btnAgregarFoto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAgregarFoto.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAgregarFoto.FlatAppearance.BorderSize = 0;
-            this.btnAgregarFoto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnAgregarFoto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnAgregarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnAgregarFoto.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarFoto.Image")));
-            this.btnAgregarFoto.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAgregarFoto.Location = new System.Drawing.Point(10, 405);
-            this.btnAgregarFoto.Name = "btnAgregarFoto";
-            this.btnAgregarFoto.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.btnAgregarFoto.Size = new System.Drawing.Size(196, 90);
-            this.btnAgregarFoto.TabIndex = 61;
-            this.btnAgregarFoto.Text = "Agregar Foto";
-            this.btnAgregarFoto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAgregarFoto.UseVisualStyleBackColor = true;
-            this.btnAgregarFoto.Click += new System.EventHandler(this.btnAgregarFoto_Click);
-            // 
-            // picEditarImg
-            // 
-            this.picEditarImg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picEditarImg.Dock = System.Windows.Forms.DockStyle.Right;
-            this.picEditarImg.Location = new System.Drawing.Point(206, 405);
-            this.picEditarImg.Name = "picEditarImg";
-            this.picEditarImg.Size = new System.Drawing.Size(293, 222);
-            this.picEditarImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picEditarImg.TabIndex = 60;
-            this.picEditarImg.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(10, 395);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(489, 10);
-            this.panel4.TabIndex = 59;
-            // 
-            // txtEditarSalarioHora
-            // 
-            this.txtEditarSalarioHora.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEditarSalarioHora.Location = new System.Drawing.Point(10, 372);
-            this.txtEditarSalarioHora.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEditarSalarioHora.Name = "txtEditarSalarioHora";
-            this.txtEditarSalarioHora.Size = new System.Drawing.Size(489, 23);
-            this.txtEditarSalarioHora.TabIndex = 58;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(10, 342);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.label2.Size = new System.Drawing.Size(489, 30);
-            this.label2.TabIndex = 57;
-            this.label2.Text = "Ingrese el salario por hora:";
-            // 
-            // txtEditarPuesto
-            // 
-            this.txtEditarPuesto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEditarPuesto.Location = new System.Drawing.Point(10, 319);
-            this.txtEditarPuesto.Name = "txtEditarPuesto";
-            this.txtEditarPuesto.Size = new System.Drawing.Size(489, 23);
-            this.txtEditarPuesto.TabIndex = 56;
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.linkLabel2.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel2.Location = new System.Drawing.Point(10, 289);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.linkLabel2.Size = new System.Drawing.Size(489, 30);
-            this.linkLabel2.TabIndex = 55;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Seleccione el puesto a desempeñar";
-            // 
-            // picEliminarImg
-            // 
-            this.picEliminarImg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picEliminarImg.Dock = System.Windows.Forms.DockStyle.Right;
-            this.picEliminarImg.Location = new System.Drawing.Point(206, 405);
-            this.picEliminarImg.Name = "picEliminarImg";
-            this.picEliminarImg.Size = new System.Drawing.Size(293, 230);
-            this.picEliminarImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picEliminarImg.TabIndex = 61;
-            this.picEliminarImg.TabStop = false;
-            // 
-            // ckbEliminarActivo
-            // 
-            this.ckbEliminarActivo.AutoSize = true;
-            this.ckbEliminarActivo.Checked = true;
-            this.ckbEliminarActivo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckbEliminarActivo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ckbEliminarActivo.Location = new System.Drawing.Point(10, 405);
-            this.ckbEliminarActivo.Name = "ckbEliminarActivo";
-            this.ckbEliminarActivo.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.ckbEliminarActivo.Size = new System.Drawing.Size(196, 31);
-            this.ckbEliminarActivo.TabIndex = 62;
-            this.ckbEliminarActivo.Text = "Activo";
-            this.ckbEliminarActivo.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(10, 545);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.button2.Size = new System.Drawing.Size(196, 90);
-            this.button2.TabIndex = 63;
-            this.button2.Text = "Eliminar Empleado";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // PanelEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1554,22 +1557,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg)).EndInit();
             this.tabEditEmployed.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEditar)).EndInit();
             this.panelFiltro.ResumeLayout(false);
             this.panelFiltro.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEditarImg)).EndInit();
             this.tabDeleteEmployed.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEliminar)).EndInit();
             this.panelEliminarFiltrar.ResumeLayout(false);
             this.panelEliminarFiltrar.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEditar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEliminar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEditarImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEliminarImg)).EndInit();
             this.ResumeLayout(false);
 

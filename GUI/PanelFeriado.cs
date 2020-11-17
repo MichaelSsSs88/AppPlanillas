@@ -1,4 +1,5 @@
-﻿using DAL;
+﻿using AppPlanillas.ENT;
+using DAL;
 using ENT;
 using System;
 using System.Collections.Generic;
@@ -17,8 +18,10 @@ namespace AppPlanillas.GUI
         private List<System.Windows.Forms.TabPage> objColPages = null;
         private bool[] arrBoolPagesVisible;
         Dia_feriadoENT Dia_FeriadoENT;
-        public PanelFeriado(int pestaña)
+        private UsuarioENT UsuarioENT;
+        public PanelFeriado(int pestaña, UsuarioENT usuario)
         {
+            this.UsuarioENT = usuario;
             InitializeComponent();
             this.HideTab(0);
             this.HideTab(1);
@@ -128,11 +131,33 @@ namespace AppPlanillas.GUI
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Dia_FeriadoENT = new Dia_feriadoENT(-1, Int32.Parse(this.cmbInsertarDia.SelectedItem.ToString()), Int32.Parse(this.cmbInsertarMes.SelectedItem.ToString()), this.txtInsertarMotivo.Text, this.ckbPago.Checked,DateTime.Now,"Marvin", DateTime.Now, "Julio",this.ckbActivo.Checked );
-            Dia_feriadoDAL feriadoDAL = new Dia_feriadoDAL();
-            feriadoDAL.AgregarFeriado(this.Dia_FeriadoENT);
-            this.CargarTabla(0);
-            MessageBox.Show("EL feriado fue agregado exitosamente", "Feriados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (this.txtInsertarMotivo.Text != "")
+            {
+                if (this.cmbInsertarMes.SelectedIndex>-1)
+                {
+                    if (this.cmbInsertarDia.SelectedIndex > -1)
+                    {
+                        this.Dia_FeriadoENT = new Dia_feriadoENT(-1, Int32.Parse(this.cmbInsertarDia.SelectedItem.ToString()), Int32.Parse(this.cmbInsertarMes.SelectedItem.ToString()), this.txtInsertarMotivo.Text, this.ckbPago.Checked, DateTime.Now, this.UsuarioENT.Nombre, DateTime.Now, this.UsuarioENT.Nombre, this.ckbActivo.Checked);
+                        Dia_feriadoDAL feriadoDAL = new Dia_feriadoDAL();
+                        feriadoDAL.AgregarFeriado(this.Dia_FeriadoENT);
+                        this.CargarTabla(0);
+                        MessageBox.Show("EL feriado fue agregado exitosamente", "Feriados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe de seleccionar el dia del feriado", "Feriados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debe de seleccionar el mes del feriado", "Feriados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe de ingresar el motivo del feriado", "Feriados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void cmbEditarFeriado_SelectedIndexChanged(object sender, EventArgs e)
@@ -203,7 +228,7 @@ namespace AppPlanillas.GUI
             this.button1.Image = new Bitmap(Application.StartupPath + @"\IMG\SaveSmall.png");
             if (this.txtEditarMotivo.Text != "" && this.cmbEditarDia.SelectedIndex!=-1 && this.cmbEditarMes.SelectedIndex != -1)
             {
-                this.Dia_FeriadoENT = new Dia_feriadoENT(Int32.Parse(this.txtEditarCodigo.Text), Int32.Parse(this.cmbEditarDia.SelectedItem.ToString()), Int32.Parse(this.cmbEditarMes.SelectedItem.ToString()), this.txtEditarMotivo.Text, this.ckbEditarPago.Checked, DateTime.Now, "", DateTime.Now, "Frank", this.ckbEditarActivo.Checked);
+                this.Dia_FeriadoENT = new Dia_feriadoENT(Int32.Parse(this.txtEditarCodigo.Text), Int32.Parse(this.cmbEditarDia.SelectedItem.ToString()), Int32.Parse(this.cmbEditarMes.SelectedItem.ToString()), this.txtEditarMotivo.Text, this.ckbEditarPago.Checked, DateTime.Now, "", DateTime.Now, this.UsuarioENT.Nombre, this.ckbEditarActivo.Checked);
                 Dia_feriadoDAL feriadoDAL = new Dia_feriadoDAL();
                 feriadoDAL.ActualizarDiaFeriado(this.Dia_FeriadoENT);
                 MessageBox.Show("EL feriado fue editado exitosamente", "Feriados", MessageBoxButtons.OK, MessageBoxIcon.Information);

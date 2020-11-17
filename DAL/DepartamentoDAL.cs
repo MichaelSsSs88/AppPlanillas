@@ -79,10 +79,10 @@ namespace AppPlanillas.DAL
             return numero;
         }
 
-        public List<DepartamentoENT> ObtenerDepartamentos(int pId, string pDescripcion)
+        public List<DepartamentoENT> ObtenerDepartamentos(string pId, string pDescripcion)
         {
             string consultaSQL = "SELECT * FROM departamento";
-            if (pId > -1)
+            if (pId.CompareTo("-1")>0)
             {
                 consultaSQL += " WHERE cast(id AS TEXT) like '" + pId.ToString() + "%'";
                 if (pDescripcion != "")

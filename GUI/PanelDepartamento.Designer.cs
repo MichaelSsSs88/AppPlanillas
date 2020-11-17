@@ -461,6 +461,7 @@
             this.txtBuscarActualizar.Name = "txtBuscarActualizar";
             this.txtBuscarActualizar.Size = new System.Drawing.Size(491, 23);
             this.txtBuscarActualizar.TabIndex = 4;
+            this.txtBuscarActualizar.TextChanged += new System.EventHandler(this.txtBuscarActualizar_TextChanged);
             this.txtBuscarActualizar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox9_KeyDown);
             // 
             // lblValorABuscar
@@ -718,7 +719,7 @@
             this.txtBuscarEliminar.Name = "txtBuscarEliminar";
             this.txtBuscarEliminar.Size = new System.Drawing.Size(497, 23);
             this.txtBuscarEliminar.TabIndex = 4;
-            this.txtBuscarEliminar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarEliminar_KeyDown);
+            this.txtBuscarEliminar.TextChanged += new System.EventHandler(this.txtBuscarEliminar_TextChanged);
             // 
             // lblDigiteEliminar
             // 

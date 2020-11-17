@@ -88,6 +88,12 @@
     <Compile Include="GUI\PanelBusqueda.Designer.cs">
       <DependentUpon>PanelBusqueda.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\PanelContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PanelContraseña.Designer.cs">
+      <DependentUpon>PanelContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\PanelDeduccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PanelBusqueda.resx">
       <DependentUpon>PanelBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PanelContraseña.resx">
+      <DependentUpon>PanelContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PanelDeduccion.resx">
       <DependentUpon>PanelDeduccion.cs</DependentUpon>

@@ -33,7 +33,7 @@ namespace AppPlanillas.GUI
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            PanelBusqueda panelBusqueda = new PanelBusqueda(1, this);
+            PanelBusqueda panelBusqueda = new PanelBusqueda(1, this, null,null);
             panelBusqueda.ShowDialog();
         }
 
@@ -144,6 +144,7 @@ namespace AppPlanillas.GUI
                 if (pestaña == 1)
                 {
                     this.txtInsertarDepartamento.Text=entrada.idDepartamento.ToString();
+                    this.txtEditarDepartamento.Text = entrada.idDepartamento.ToString();
                 }
                 if (pestaña == 2)
                 {
@@ -167,7 +168,7 @@ namespace AppPlanillas.GUI
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            PanelBusqueda panelBusqueda = new PanelBusqueda(2, this);
+            PanelBusqueda panelBusqueda = new PanelBusqueda(1, this, null,null);
             panelBusqueda.ShowDialog();
         }
 

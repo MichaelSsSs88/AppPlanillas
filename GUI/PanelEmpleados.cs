@@ -1,4 +1,5 @@
-﻿using AppPlanillas.GUI;
+﻿using AppPlanillas.ENT;
+using AppPlanillas.GUI;
 using ProyectoIIIC;
 using System;
 using System.Collections.Generic;
@@ -18,8 +19,10 @@ namespace GUI
     {
         private List<System.Windows.Forms.TabPage> objColPages = null;
         private bool[] arrBoolPagesVisible;
-        public PanelEmpleados(int pestaña)
+        private UsuarioENT UsuarioENT;
+        public PanelEmpleados(int pestaña, UsuarioENT usuario)
         {
+            this.UsuarioENT = usuario;
             InitializeComponent();
             this.HideTab(0);
             this.HideTab(1);
@@ -57,9 +60,10 @@ namespace GUI
             if (panel == 1)
             {
                 PanelBusqueda entrada = (PanelBusqueda)emisor;
-                if (pestaña == 1)
+                if (pestaña == 2)
                 {
-                    this.txtInsetarPuesto.Text = entrada.idDepartamento.ToString();
+                    this.txtInsetarPuesto.Text = entrada.idPuesto.ToString();
+                    this.txtEditarPuesto.Text= entrada.idPuesto.ToString();
                 }
             }
         }
@@ -113,6 +117,7 @@ namespace GUI
                 if (arrBoolPagesVisible[intIndex])
                     this.tabDepartamentos.TabPages.Add(objColPages[intIndex]);
         }
+
 
         private void panel10_Paint(object sender, PaintEventArgs e)
         {
@@ -259,9 +264,89 @@ namespace GUI
 
         private void button4_Click(object sender, EventArgs e)
         {
-            new EmpleadoDAL().AgregarEmpleado(new EmpleadoENT(Int32.Parse(this.txtInsertarCedula.Text), this.txtInsertarNombre.Text, this.txtInsertarApellido1.Text, this.txtInsertarApellido2.Text, dtpInsertarNacimiento.Value, Int32.Parse(this.txtInsetarPuesto.Text), this.conv_photo(), Double.Parse(this.txtInsertarSalarioHora.Text), DateTime.Now, "Pedro", DateTime.Now, "Pedro", this.ckbInsertarActivo.Checked));
-            MessageBox.Show("El empleado fue ingresado correctamente", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.CargarTabla(0, "Todos", "");
+            if (this.txtInsertarCedula.Text != "")
+            {
+                if (this.txtInsertarNombre.Text.Trim() != "")
+                {
+                    if (this.txtInsertarApellido1.Text.Trim() != "")
+                    {
+                        if (this.txtInsertarApellido2.Text.Trim() != "")
+                        {
+                            if (dtpInsertarNacimiento.Value.CompareTo(DateTime.Now) < 0)
+                            {
+                                if (this.txtInsetarPuesto.Text.Trim() != "")
+                                {
+                                    if (this.txtInsertarSalarioHora.Text.Trim() != "")
+                                    {
+                                        if (this.picImg.Image != null)
+                                        {
+                                            try
+                                            {
+                                                new EmpleadoDAL().AgregarEmpleado(new EmpleadoENT(Int32.Parse(this.txtInsertarCedula.Text), this.txtInsertarNombre.Text, this.txtInsertarApellido1.Text, this.txtInsertarApellido2.Text, dtpInsertarNacimiento.Value, Int32.Parse(this.txtInsetarPuesto.Text), this.conv_photo(), Double.Parse(this.txtInsertarSalarioHora.Text), DateTime.Now, this.UsuarioENT.Nombre, DateTime.Now, this.UsuarioENT.Nombre, this.ckbInsertarActivo.Checked));
+                                                MessageBox.Show("El empleado fue ingresado correctamente", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                this.CargarTabla(0, "Todos", "");
+                                                //this.CargarTabla(1, "Todos", "");
+
+                                            }
+                                            catch (Exception Ex)
+                                            {
+                                                Console.WriteLine(Ex.Message);
+                                                if(Ex.Message.CompareTo("ERROR: 23505: llave duplicada viola restricción de unicidad «empleado_pkey»") == 0)
+                                                {
+                                                    MessageBox.Show("Ya existe un empleado con esa cédula", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                                }
+                                                else
+                                                {
+                                                    MessageBox.Show("El empleado no se pudo guardar", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                                }
+
+                                            }
+
+
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Debe de insertar la foto del empleado", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Debe de insertar el salario del empleado", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Debe de seleccionar el puesto, del empleado", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("La fecha de nacimiento debe de ser menor de la fecha actual ", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Debe de insertar el segundo apellido del empleado ", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe de insertar el primer apellido del empleado", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Debe de insertar el nombre del empleado ", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe de insertar la cedula del empleado ", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
 
         private void dgvEditar_MouseClick(object sender, MouseEventArgs e)
@@ -288,7 +373,8 @@ namespace GUI
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            PanelBusqueda panelBusqueda = new PanelBusqueda(2, null, this,null);
+            panelBusqueda.ShowDialog();
         }
 
         private void txtInsetarPuesto_TextChanged(object sender, EventArgs e)
@@ -347,9 +433,64 @@ namespace GUI
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            new EmpleadoDAL().EditarEmpleado(new EmpleadoENT(Int32.Parse(this.txtEditarCedula.Text), this.txtEditarNombre.Text, this.txtEditarApellido1.Text, this.txtEditarApellido2.Text, dtpEditarFechaNacimiento.Value, Int32.Parse(this.txtEditarPuesto.Text), this.conv_photo_edit(), Double.Parse(this.txtEditarSalarioHora.Text), DateTime.Now, "", DateTime.Now, "Marlon", this.ckbEditarActivo.Checked));
-            MessageBox.Show("El empleado fue actualizado correctamente", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.CargarTabla(1, "Todos", "");
+            if(this.txtEditarCedula.Text!="")
+            {
+                if (this.txtEditarNombre.Text.Trim() != "")
+                {
+                    if (this.txtEditarApellido1.Text.Trim() != "")
+                    {
+                        if (this.txtEditarApellido2.Text.Trim() != "")
+                        {
+                            if (dtpEditarFechaNacimiento.Value.CompareTo(DateTime.Now) < 0)
+                            {
+                                if (this.txtEditarPuesto.Text.Trim() != "")
+                                {
+                                    if (this.txtEditarSalarioHora.Text.Trim() != "")
+                                    {
+                                        new EmpleadoDAL().EditarEmpleado(new EmpleadoENT(Int32.Parse(this.txtEditarCedula.Text), this.txtEditarNombre.Text, this.txtEditarApellido1.Text, this.txtEditarApellido2.Text, dtpEditarFechaNacimiento.Value, Int32.Parse(this.txtEditarPuesto.Text), this.conv_photo_edit(), Double.Parse(this.txtEditarSalarioHora.Text), DateTime.Now, "", DateTime.Now, this.UsuarioENT.Nombre, this.ckbEditarActivo.Checked));
+                                        MessageBox.Show("El empleado fue actualizado correctamente", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        this.LimpiarEditar();
+                                        this.txtEditarBusqueda.Text = "";
+                                        this.cmbEditarBusqueda.SelectedIndex = 0;
+                                        this.CargarTabla(1, "Todos", "");
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Debe de insertar el salario del empleado", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Debe de seleccionar el puesto, del empleado", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("La fecha de nacimiento debe de ser menor de la fecha actual ", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Debe de insertar el segundo apellido del empleado a modificar ", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe de insertar el primer apellido del empleado a modificar ", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Debe de insertar el nombre del empleado a modificar ", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe de seleccionar el empleado a modificar ", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -443,6 +584,12 @@ namespace GUI
             {
                 MessageBox.Show("No existe empleado para eliminar", "Empleados", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PanelBusqueda panelBusqueda = new PanelBusqueda(2, null, this, null);
+            panelBusqueda.ShowDialog();
         }
     }
 

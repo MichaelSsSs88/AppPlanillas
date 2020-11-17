@@ -24,6 +24,11 @@ namespace AppPlanillas
         {
             this.UsuarioENT = usuarioEnt;
             InitializeComponent();
+            if (this.UsuarioENT.Tipo != "Administrador")
+            {
+                this.lblUsers.Visible = false;
+                this.btnUsers.Visible = false;
+            }
             this.EstadoMenu(1, false);
             this.EstadoMenu(2, false);
             this.EstadoMenu(3, false);
@@ -350,7 +355,7 @@ namespace AppPlanillas
            
             if ((entrada.subMenu == 1))
             {
-                this.OpenChildFormContenedor(new PanelEmpleados(entrada.boton - 1));
+                this.OpenChildFormContenedor(new PanelEmpleados(entrada.boton - 1, this.UsuarioENT));
             }
             if ((entrada.subMenu==2))
             {
@@ -359,16 +364,16 @@ namespace AppPlanillas
 
             if ((entrada.subMenu == 3))
             {
-                this.OpenChildFormContenedor(new PanelFeriado(entrada.boton - 1));
+                this.OpenChildFormContenedor(new PanelFeriado(entrada.boton - 1, this.UsuarioENT));
             }
             if ((entrada.subMenu == 4))
             {
-                this.OpenChildFormContenedor(new PanelDeduccion(entrada.boton - 1));
+                this.OpenChildFormContenedor(new PanelDeduccion(entrada.boton - 1, this.UsuarioENT));
             }
             if ((entrada.subMenu == 5))
             {
                
-                this.OpenChildFormContenedor(new PanelHorario(entrada.boton - 1));
+                this.OpenChildFormContenedor(new PanelHorario(entrada.boton - 1, this.UsuarioENT));
             }
             if ((entrada.subMenu == 6))
             {
@@ -403,6 +408,22 @@ namespace AppPlanillas
         private void label11_Click(object sender, EventArgs e)
         {
             this.button1_Click(sender, e);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.CLoseChildFormContenedor();
+            this.CLoseChildForm();
+            PanelContraseña panelContraseña = new PanelContraseña(this.UsuarioENT);
+            panelContraseña.ShowDialog();
+            this.Close();
+        }
+
+        private void lblUsers_Click(object sender, EventArgs e)
+        {
+            this.CLoseChildFormContenedor();
+            this.CLoseChildForm();
+            this.button3_Click(sender, e);
         }
     }
 

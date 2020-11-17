@@ -17,8 +17,10 @@ namespace AppPlanillas.GUI
         private List<System.Windows.Forms.TabPage> objColPages = null;
         private bool[] arrBoolPagesVisible;
         private DeduccionENT nuevaDeduccion;
-        public PanelDeduccion(int pestaña)
+        private UsuarioENT UsuarioENT;
+        public PanelDeduccion(int pestaña, UsuarioENT pusuarioENT)
         {
+            this.UsuarioENT = pusuarioENT;
             InitializeComponent();
             this.HideTab(0);
             this.HideTab(1);
@@ -97,13 +99,13 @@ namespace AppPlanillas.GUI
                 }
                 else
                 {
-                    if (this.cmbEmpleadoInsertar.SelectedIndex >= 0)
+                    if (this.txtEmpleadoInsertar.Text != "")
                     {
-                        this.nuevaDeduccion = new DeduccionENT(0, this.txtDescripcionInsertar.Text, this.cmbSistemaAplicacionInsertar.Text, Double.Parse(this.txtPorcentajeMontoInsertar.Text), Int32.Parse(this.cmbEmpleadoInsertar.Text), DateTime.Now.Date, "Jean Ca", DateTime.Now.Date, "Jean Ca", this.cbxActivoInsertar.Checked);
+                        this.nuevaDeduccion = new DeduccionENT(0, this.txtDescripcionInsertar.Text, this.cmbSistemaAplicacionInsertar.Text, Double.Parse(this.txtPorcentajeMontoInsertar.Text), Int32.Parse(this.txtEmpleadoInsertar.Text), DateTime.Now.Date, this.UsuarioENT.Nombre, DateTime.Now.Date, this.UsuarioENT.Nombre, this.cbxActivoInsertar.Checked);
                     }
                     else
                     {
-                        this.nuevaDeduccion = new DeduccionENT(0, this.txtDescripcionInsertar.Text, this.cmbSistemaAplicacionInsertar.Text, Double.Parse(this.txtPorcentajeMontoInsertar.Text), 0, DateTime.Now.Date, "Jean Ca", DateTime.Now.Date, "Jean Ca", this.cbxActivoInsertar.Checked);
+                        this.nuevaDeduccion = new DeduccionENT(0, this.txtDescripcionInsertar.Text, this.cmbSistemaAplicacionInsertar.Text, Double.Parse(this.txtPorcentajeMontoInsertar.Text), 0, DateTime.Now.Date, this.UsuarioENT.Nombre, DateTime.Now.Date, this.UsuarioENT.Nombre, this.cbxActivoInsertar.Checked);
                     }
                     try
                     {
@@ -127,7 +129,7 @@ namespace AppPlanillas.GUI
             this.txtDescripcionInsertar.Text = "";
             this.cmbSistemaAplicacionInsertar.SelectedIndex = -1;
             this.txtPorcentajeMontoInsertar.Text = "";
-            this.cmbEmpleadoInsertar.SelectedIndex = -1;
+            this.txtEmpleadoInsertar.Text = "";
         }
 
         private void cmbSistemaAplicacionInsertar_SelectedIndexChanged(object sender, EventArgs e)
@@ -264,11 +266,11 @@ namespace AppPlanillas.GUI
                 DeduccionDAL actualizarDeduccion = new DeduccionDAL();
                 if (this.txtIdEmpleadoEditar.Text == "")
                 {
-                    this.nuevaDeduccion = new DeduccionENT(Int32.Parse(this.txtIdEditar.Text), this.txtDescripcionEditar.Text, this.cmbSistemaEditar.Text, Double.Parse(this.txtValorEditar.Text), 0, DateTime.Now.Date, "Jean Ca", DateTime.Now.Date, "Jean Ca", this.cbxActivoEditar.Checked);
+                    this.nuevaDeduccion = new DeduccionENT(Int32.Parse(this.txtIdEditar.Text), this.txtDescripcionEditar.Text, this.cmbSistemaEditar.Text, Double.Parse(this.txtValorEditar.Text), 0, DateTime.Now.Date, this.UsuarioENT.Nombre, DateTime.Now.Date, this.UsuarioENT.Nombre, this.cbxActivoEditar.Checked);
                 }
                 else
                 {
-                    this.nuevaDeduccion = new DeduccionENT(Int32.Parse(this.txtIdEditar.Text), this.txtDescripcionEditar.Text, this.cmbSistemaEditar.Text, Double.Parse(this.txtValorEditar.Text), Int32.Parse(this.txtIdEmpleadoEditar.Text), DateTime.Now.Date, "Jean Ca", DateTime.Now.Date, "Jean Ca", this.cbxActivoEditar.Checked);
+                    this.nuevaDeduccion = new DeduccionENT(Int32.Parse(this.txtIdEditar.Text), this.txtDescripcionEditar.Text, this.cmbSistemaEditar.Text, Double.Parse(this.txtValorEditar.Text), Int32.Parse(this.txtIdEmpleadoEditar.Text), DateTime.Now.Date, this.UsuarioENT.Nombre, DateTime.Now.Date, this.UsuarioENT.Nombre, this.cbxActivoEditar.Checked);
                 }
                 actualizarDeduccion.ActualizarDeduccion(this.nuevaDeduccion);
                 this.nuevaDeduccion = new DeduccionENT();
@@ -393,6 +395,31 @@ namespace AppPlanillas.GUI
             {
                 MessageBox.Show("¡Debe seleccionar una deducción para eliminar!", "Actualización de registro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        public void Clic(object emisor, int pestaña, int panel)
+        {
+            if (panel == 1)
+            {
+                PanelBusqueda entrada = (PanelBusqueda)emisor;
+                if (pestaña == 3)
+                {
+                    this.txtEmpleadoInsertar.Text = entrada.idEmpleado.ToString();
+                    this.txtIdEmpleadoEditar.Text = entrada.idEmpleado.ToString();
+                }
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PanelBusqueda panelBusqueda = new PanelBusqueda(3, null, null, this);
+            panelBusqueda.ShowDialog();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PanelBusqueda panelBusqueda = new PanelBusqueda(3, null, null, this);
+            panelBusqueda.ShowDialog();
         }
     }
 }
