@@ -17,14 +17,17 @@ namespace AppPlanillas.GUI
         private DepartamentoENT nuevoDepartamento;
         private List<System.Windows.Forms.TabPage> objColPages = null;
         private bool[] arrBoolPagesVisible;
+        private int pestaña;
         public int idDepartamento { get; set; }
         public PanelPuestos oyente = null;
+        
         public PanelBusqueda(int pestaña, PanelPuestos listen)
         {
             InitializeComponent();
             this.cmbTipoBusquedaActualizar.SelectedIndex = 0;
             this.pnlFiltroActualizar.Visible = false;
             this.oyente = listen;
+            this.pestaña = pestaña;
             this.CargaTabla(pestaña);
         }
         private void LimpiarEditar()
@@ -177,7 +180,7 @@ namespace AppPlanillas.GUI
         protected virtual void BotonPulsado()
         {
             if (oyente != null)
-                oyente.Clic(this,1,1);
+                oyente.Clic(this,this.pestaña,1);
         }
     }
 }

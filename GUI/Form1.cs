@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using AppPlanillas.GUI;
 using GUI;
+using AppPlanillas.ENT;
 
 namespace AppPlanillas
 {
@@ -18,14 +19,16 @@ namespace AppPlanillas
     {
         private Form activeForm = null;
         private Form activeFormContenedor = null;
-        public Form1()
+        private UsuarioENT UsuarioENT;
+        public Form1(UsuarioENT usuarioEnt)
         {
+            this.UsuarioENT = usuarioEnt;
             InitializeComponent();
             this.EstadoMenu(1, false);
             this.EstadoMenu(2, false);
             this.EstadoMenu(3, false);
             this.Size= Screen.PrimaryScreen.WorkingArea.Size;
-            Console.WriteLine("Prueba Confirmada");
+            
         }
 
         private void CLoseChildForm()
@@ -370,7 +373,7 @@ namespace AppPlanillas
             if ((entrada.subMenu == 6))
             {
 
-                this.OpenChildFormContenedor(new PanelPuestos(entrada.boton - 1));
+                this.OpenChildFormContenedor(new PanelPuestos(entrada.boton - 1, this.UsuarioENT));
             }
             if ((entrada.subMenu == 10))
             {

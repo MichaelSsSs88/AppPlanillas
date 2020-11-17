@@ -1,4 +1,5 @@
-﻿using DAL;
+﻿using AppPlanillas.ENT;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.Data;

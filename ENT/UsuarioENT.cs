@@ -1,12 +1,13 @@
-﻿using System;
+﻿using AppPlanillas.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppPlanillas.DAL
+namespace AppPlanillas.ENT
 {
-    class UsuarioENT
+    public class UsuarioENT
     {
         private int id { get; set; }
         private string nombre { get; set; }

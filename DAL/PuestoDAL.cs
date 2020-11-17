@@ -30,7 +30,7 @@ namespace AppPlanillas.DAL
                     throw e;
                 }
             }
-            else if (pFiltro == "Id")
+            else if (pFiltro == "Código")
             {
                 try
                 {
@@ -46,7 +46,7 @@ namespace AppPlanillas.DAL
                     throw e;
                 }
             }
-            else if (pFiltro == "Descripcion")
+            else if (pFiltro == "Descripción")
             {
                 try
                 {
@@ -62,7 +62,7 @@ namespace AppPlanillas.DAL
                     throw e;
                 }
             }
-            else if (pFiltro == "Id departamento")
+            else if (pFiltro == "Código Departamento")
             {
                 try
                 {
@@ -207,11 +207,11 @@ namespace AppPlanillas.DAL
             {
                 Parametro parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
-                string sentenciaSQL = "UPDATE puesto SET descripcion =@descripcion, id_departamento=@id_departamento, fecha_creacion =@fecha_creacion, creado_por=@creado_por, fecha_modificacion=@fecha_modificacion,  modificado_por=@modificado_por, activo=@activo WHERE id =" + pPuesto.Id;
+                string sentenciaSQL = "UPDATE puesto SET descripcion =@descripcion, id_departamento=@id_departamento, fecha_modificacion=@fecha_modificacion,  modificado_por=@modificado_por, activo=@activo WHERE id =" + pPuesto.Id;
                 parametros.AgregarParametro("@descripcion", NpgsqlTypes.NpgsqlDbType.Varchar, pPuesto.Descripcion);
                 parametros.AgregarParametro("@id_departamento", NpgsqlTypes.NpgsqlDbType.Integer, pPuesto.Id_departamento);
-                parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pPuesto.Fecha_creacion);
-                parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pPuesto.Creado_por);
+               // parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pPuesto.Fecha_creacion);
+                //parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pPuesto.Creado_por);
                 parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pPuesto.Fecha_modificacion);
                 parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pPuesto.Modificado_por);
                 parametros.AgregarParametro("@activo", NpgsqlTypes.NpgsqlDbType.Boolean, pPuesto.Activo);

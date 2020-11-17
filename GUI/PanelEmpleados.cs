@@ -35,17 +35,7 @@ namespace GUI
 
         private void CargarTabla(int pestaña, string filtro, string dato)
         {
-           /* if (this.cmbEditarUsuario.SelectedIndex < 0)
-            {
-                this.panelFiltro.Visible = false;
-                this.LimpiarEditar();
-            }
-            if (this.cmbEliminarUsuario.SelectedIndex < 0)
-            {
-                this.panelFiltroEliminar.Visible = false;
-                this.LimpiarEliminar();
-            }*/
-
+           
             if (pestaña == 0)
             {
                 Console.WriteLine("***************************");

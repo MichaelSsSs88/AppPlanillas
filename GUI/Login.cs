@@ -1,4 +1,5 @@
 ﻿using AppPlanillas.DAL;
+using AppPlanillas.ENT;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +27,7 @@ namespace AppPlanillas.GUI
         private void btnIngresar_MouseClick(object sender, MouseEventArgs e)
         {
             this.btnIngresar.Image = new Bitmap(Application.StartupPath + @"\IMG\startSmall.png");
-            UsuarioENT usuario = new LoginDAL().IniciarSesion(this.textBox1.Text, this.textBox2.Text);
+           UsuarioENT usuario = new LoginDAL().IniciarSesion(this.textBox1.Text, this.textBox2.Text);
             if (usuario.Correo == "" && usuario.Contrasena == "")
             {
                 MessageBox.Show("Correo o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -34,7 +35,7 @@ namespace AppPlanillas.GUI
             }
             else {
                 MessageBox.Show("Bienvenido(a).", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Form1 form1 = new Form1();
+                Form1 form1 = new Form1(usuario);
                form1.ShowDialog();
                 this.textBox1.Text = "Usuario";
                 this.textBox2.Text = "Contraseña";

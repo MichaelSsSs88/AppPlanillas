@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using AppPlanillas.ENT;
 using DAL;
 
 namespace AppPlanillas.DAL
@@ -84,14 +86,16 @@ namespace AppPlanillas.DAL
         {
             try
             {
+                
                 Parametro parametros = new Parametro();
+               // MD5.Create("asdasdas");
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
                 string sentenciaSQL = "INSERT INTO usuario (nombre, correo, tipo, contraseña, fecha_creacion, creado_por, fecha_modificacion, modificado_por, activo)" +
-                                      "VALUES (@nombre, @correo, @tipo, MD5(' + @contraseña +'), @fecha_creacion, @creado_por, @fecha_modificacion, @modificado_por, @activo)";
+                                      "VALUES (@nombre, @correo, @tipo, MD5('"+pUsuario.Contrasena+"'), @fecha_creacion, @creado_por, @fecha_modificacion, @modificado_por, @activo)";
                 parametros.AgregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Nombre);
                 parametros.AgregarParametro("@correo", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Correo);
                 parametros.AgregarParametro("@tipo", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Tipo);
-                parametros.AgregarParametro("@contraseña", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Contrasena);
+                //parametros.AgregarParametro("@contraseña", NpgsqlTypes.NpgsqlDbType.Varchar, MD5.Create(pUsuario.Contrasena));
                 parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pUsuario.getFechaCreacion);
                 parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.getCreador);
                 parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pUsuario.getFechaModificacion);
@@ -114,11 +118,11 @@ namespace AppPlanillas.DAL
             {
                 Parametro parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
-                string sentenciaSQL = "UPDATE usuario SET nombre =@nombre, correo =@correo, tipo =@tipo, contraseña = MD5(' + @contraseña +'), fecha_modificacion =@fecha_modificacion, modificado_por =@modificado_por, activo=@activo  WHERE id= " + pUsuario.Id;
+                string sentenciaSQL = "UPDATE usuario SET nombre =@nombre, correo =@correo, tipo =@tipo, contraseña =  MD5('" + pUsuario.Contrasena + "'), fecha_modificacion =@fecha_modificacion, modificado_por =@modificado_por, activo=@activo  WHERE id= " + pUsuario.Id;
                 parametros.AgregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Nombre);
                 parametros.AgregarParametro("@correo", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Correo);
                 parametros.AgregarParametro("@tipo", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Tipo);
-                parametros.AgregarParametro("@contraseña", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Contrasena);
+                //parametros.AgregarParametro("@contraseña", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Contrasena);
                 parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pUsuario.getFechaModificacion);
                 parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.getModificador);
                 parametros.AgregarParametro("@activo", NpgsqlTypes.NpgsqlDbType.Boolean, pUsuario.getActivo);

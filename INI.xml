@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="yes"?>
 <Parametros>
     <Conexion>
-        <Usuario>postgres</Usuario>
+        <Usuario>usrprogra3</Usuario>
         <Password>12345</Password>
         <Server>localhost</Server>
-        <DataBase>planilla</DataBase>
+        <DataBase>planillas</DataBase>
         <Schema>public</Schema>
-        <Port>5433</Port>
+        <Port>5432</Port>
     </Conexion>
 </Parametros>
