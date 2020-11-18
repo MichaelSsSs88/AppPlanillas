@@ -118,7 +118,12 @@ namespace AppPlanillas.DAL
             {
                 Parametro parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
-                string sentenciaSQL = "UPDATE usuario SET nombre =@nombre, correo =@correo, tipo =@tipo, contraseña =  MD5('" + pUsuario.Contrasena + "'), fecha_modificacion =@fecha_modificacion, modificado_por =@modificado_por, activo=@activo  WHERE id= " + pUsuario.Id;
+                string sentenciaSQL = "";
+                if (pUsuario.Contrasena=="")
+                    sentenciaSQL = "UPDATE usuario SET nombre =@nombre, correo =@correo, tipo =@tipo, fecha_modificacion =@fecha_modificacion, modificado_por =@modificado_por, activo=@activo  WHERE id= " + pUsuario.Id;
+                else
+                    sentenciaSQL = "UPDATE usuario SET nombre =@nombre, correo =@correo, tipo =@tipo, contraseña =  MD5('" + pUsuario.Contrasena + "'), fecha_modificacion =@fecha_modificacion, modificado_por =@modificado_por, activo=@activo  WHERE id= " + pUsuario.Id;
+
                 parametros.AgregarParametro("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Nombre);
                 parametros.AgregarParametro("@correo", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Correo);
                 parametros.AgregarParametro("@tipo", NpgsqlTypes.NpgsqlDbType.Varchar, pUsuario.Tipo);

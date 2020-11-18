@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,8 +17,10 @@ namespace AppPlanillas.GUI
     {
         private List<System.Windows.Forms.TabPage> objColPages = null;
         private bool[] arrBoolPagesVisible;
-        public PanelUsuario(int pestaña)
+        private UsuarioENT UsuarioENT;
+        public PanelUsuario(int pestaña, UsuarioENT UsuarioENT)
         {
+            this.UsuarioENT = UsuarioENT;
             InitializeComponent();
             this.HideTab(0);
             this.HideTab(1);
@@ -105,16 +108,70 @@ namespace AppPlanillas.GUI
                     this.tabUsuarios.TabPages.Add(objColPages[intIndex]);
         }
 
+        private Boolean email_bien_escrito(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
-            try
+            if (email_bien_escrito(this.txtIngresarCorreo.Text))
             {
-                new UsuarioDAL().AgregarUsuario(new UsuarioENT(Int32.Parse(this.txtInsertarCedula.Text), this.txtInsertarNombre.Text, this.txtIngresarCorreo.Text, this.cmbInsertarUsuario.SelectedItem.ToString(), this.txtIngresarContraseña.Text, DateTime.Now, "Pablo", DateTime.Now, "Pablo", this.ckbInsertarUsuario.Checked));
-                this.CargarTabla(0, "Todos", "");
+                
+                    if (this.txtInsertarNombre.Text.Trim() != "")
+                    {
+                        if (this.cmbInsertarUsuario.SelectedIndex >= 0)
+                        {
+                            if (this.txtIngresarContraseña.Text.Trim() != "" && (this.txtIngresarContraseña.Text == this.txtIngresarContraseña2.Text))
+                            {
+                                try
+                                {
+                                    new UsuarioDAL().AgregarUsuario(new UsuarioENT(-1, this.txtInsertarNombre.Text, this.txtIngresarCorreo.Text, this.cmbInsertarUsuario.SelectedItem.ToString(), this.txtIngresarContraseña.Text, DateTime.Now, this.UsuarioENT.Nombre, DateTime.Now, this.UsuarioENT.Nombre, this.ckbInsertarUsuario.Checked));
+                                    MessageBox.Show("Usuario ingresado correctamente", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.CargarTabla(0, "Todos", "");
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show("¡Ha ocurrido un error al insertar, correo dublicado: " + ex.Message + "!", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Las contraseñas no coinciden", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Debe de seleccionar el tipo de usuario", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe de insertar el nombre completo", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                
+                
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show("¡Ha ocurrido un error al insertar, correo dublicado: " + ex.Message + "!", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("¡Formato del correo invalido", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
@@ -192,25 +249,58 @@ namespace AppPlanillas.GUI
             this.txtEditarCedula.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn1"].Value.ToString();
             this.txtEditarNombre.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn2"].Value.ToString();
             this.txtEditarCorreo.Text= this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn3"].Value.ToString();
-            this.txtEditarContraseña.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn4"].Value.ToString();
-            this.txtConfirmarContraseña.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn4"].Value.ToString();
+           // this.txtEditarContraseña.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn4"].Value.ToString();
+           // this.txtConfirmarContraseña.Text = this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn4"].Value.ToString();
             this.cmbEditarUser.SelectedItem= this.dgvEditar.Rows[fila].Cells["Tipo"].Value.ToString();
             this.ckbEditarActivo.Checked = Boolean.Parse(this.dgvEditar.Rows[fila].Cells["dataGridViewTextBoxColumn16"].Value.ToString());
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            if (email_bien_escrito(this.txtEditarCorreo.Text))
             {
-                new UsuarioDAL().ActualizarUsuario(new UsuarioENT(Int32.Parse(this.txtEditarCedula.Text), this.txtEditarNombre.Text, this.txtEditarCorreo.Text, this.cmbEditarUser.SelectedItem.ToString(), this.txtEditarContraseña.Text, DateTime.Now, "Pablo", DateTime.Now, "Marcos", this.ckbEditarActivo.Checked));
-                this.CargarTabla(1, "Todos", "");
-                MessageBox.Show("El usuario fue actualizado correctamente", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.cmbEditarUsuario.SelectedIndex = -1;
+
+                if (this.txtEditarNombre.Text.Trim() != "")
+                {
+                    if (this.cmbEditarUser.SelectedIndex >= 0)
+                    {
+                        if ((this.txtEditarContraseña.Text == "" && this.txtConfirmarContraseña.Text == "") || (this.txtEditarContraseña.Text == this.txtConfirmarContraseña.Text))
+                        {
+                            try
+                            {
+                                new UsuarioDAL().ActualizarUsuario(new UsuarioENT(Int32.Parse(this.txtEditarCedula.Text), this.txtEditarNombre.Text, this.txtEditarCorreo.Text, this.cmbEditarUser.SelectedItem.ToString(), this.txtEditarContraseña.Text, DateTime.Now, this.UsuarioENT.Nombre, DateTime.Now, this.UsuarioENT.Nombre, this.ckbEditarActivo.Checked));
+                                this.CargarTabla(1, "Todos", "");
+                                MessageBox.Show("El usuario fue actualizado correctamente", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.cmbEditarUsuario.SelectedIndex = -1;
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("¡Ha ocurrido un error al actulizar, correo dublicado: " + ex.Message + "!", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Las contraseñas no coinciden", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe de seleccionar el tipo de usuario", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debe de insertar el nombre completo", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show("¡Ha ocurrido un error al actulizar, correo dublicado: " + ex.Message + "!", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("¡Formato del correo invalido", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         
         }
 

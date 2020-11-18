@@ -32,6 +32,16 @@
             this.tabUsuarios = new System.Windows.Forms.TabControl();
             this.tabInsertUser = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dgvInsertar = new System.Windows.Forms.DataGridView();
+            this.Cédula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Creador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Modificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -46,11 +56,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtInsertarNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtInsertarCedula = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabEditUser = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvEditar = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.panelFiltro = new System.Windows.Forms.Panel();
@@ -75,6 +93,17 @@
             this.label11 = new System.Windows.Forms.Label();
             this.tabDeleteUsuario = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.dgvEliminar = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoEliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panelFiltroEliminar = new System.Windows.Forms.Panel();
@@ -95,40 +124,10 @@
             this.label21 = new System.Windows.Forms.Label();
             this.txtEliminarCedula = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvEliminar = new System.Windows.Forms.DataGridView();
-            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Modificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Creador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cédula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvInsertar = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoEliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabUsuarios.SuspendLayout();
             this.tabInsertUser.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabEditUser.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -137,10 +136,9 @@
             this.groupBox2.SuspendLayout();
             this.tabDeleteUsuario.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEliminar)).BeginInit();
             this.panelFiltroEliminar.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEliminar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).BeginInit();
             this.SuspendLayout();
             // 
             // tabUsuarios
@@ -185,6 +183,82 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Usuarios ingresados";
             // 
+            // dgvInsertar
+            // 
+            this.dgvInsertar.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dgvInsertar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInsertar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cédula,
+            this.Nombre,
+            this.Correo,
+            this.Contraseña,
+            this.Creador,
+            this.FechaCreacion,
+            this.Modificador,
+            this.FechaModificacion,
+            this.Activo});
+            this.dgvInsertar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvInsertar.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvInsertar.Location = new System.Drawing.Point(10, 63);
+            this.dgvInsertar.Name = "dgvInsertar";
+            this.dgvInsertar.Size = new System.Drawing.Size(487, 558);
+            this.dgvInsertar.TabIndex = 6;
+            // 
+            // Cédula
+            // 
+            this.Cédula.DataPropertyName = "Id";
+            this.Cédula.HeaderText = "Cédula";
+            this.Cédula.Name = "Cédula";
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Correo
+            // 
+            this.Correo.DataPropertyName = "Correo";
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            // 
+            // Contraseña
+            // 
+            this.Contraseña.DataPropertyName = "Contraseña";
+            this.Contraseña.HeaderText = "Contraseña";
+            this.Contraseña.Name = "Contraseña";
+            this.Contraseña.Visible = false;
+            // 
+            // Creador
+            // 
+            this.Creador.DataPropertyName = "getCreador";
+            this.Creador.HeaderText = "Creador";
+            this.Creador.Name = "Creador";
+            // 
+            // FechaCreacion
+            // 
+            this.FechaCreacion.DataPropertyName = "getFechaCreacion";
+            this.FechaCreacion.HeaderText = "Fecha de creación";
+            this.FechaCreacion.Name = "FechaCreacion";
+            // 
+            // Modificador
+            // 
+            this.Modificador.DataPropertyName = "getModificador";
+            this.Modificador.HeaderText = "Modificador";
+            this.Modificador.Name = "Modificador";
+            // 
+            // FechaModificacion
+            // 
+            this.FechaModificacion.DataPropertyName = "getFechaModificacion";
+            this.FechaModificacion.HeaderText = "Fecha de modificación";
+            this.FechaModificacion.Name = "FechaModificacion";
+            // 
+            // Activo
+            // 
+            this.Activo.DataPropertyName = "getActivo";
+            this.Activo.HeaderText = "Activo";
+            this.Activo.Name = "Activo";
+            // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -207,8 +281,6 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtInsertarNombre);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtInsertarCedula);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(4, 4);
@@ -231,12 +303,12 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(10, 381);
+            this.button4.Location = new System.Drawing.Point(10, 323);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.button4.Size = new System.Drawing.Size(491, 83);
+            this.button4.Size = new System.Drawing.Size(491, 88);
             this.button4.TabIndex = 40;
-            this.button4.Text = "Editar Empleado";
+            this.button4.Text = "Insertar Usuario";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -247,7 +319,7 @@
             this.ckbInsertarUsuario.Checked = true;
             this.ckbInsertarUsuario.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckbInsertarUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ckbInsertarUsuario.Location = new System.Drawing.Point(10, 350);
+            this.ckbInsertarUsuario.Location = new System.Drawing.Point(10, 292);
             this.ckbInsertarUsuario.Name = "ckbInsertarUsuario";
             this.ckbInsertarUsuario.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.ckbInsertarUsuario.Size = new System.Drawing.Size(491, 31);
@@ -262,7 +334,7 @@
             this.cmbInsertarUsuario.Items.AddRange(new object[] {
             "Usuario",
             "Administrador"});
-            this.cmbInsertarUsuario.Location = new System.Drawing.Point(10, 326);
+            this.cmbInsertarUsuario.Location = new System.Drawing.Point(10, 268);
             this.cmbInsertarUsuario.Name = "cmbInsertarUsuario";
             this.cmbInsertarUsuario.Size = new System.Drawing.Size(491, 24);
             this.cmbInsertarUsuario.TabIndex = 36;
@@ -271,7 +343,7 @@
             // 
             this.label7.Dock = System.Windows.Forms.DockStyle.Top;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(10, 296);
+            this.label7.Location = new System.Drawing.Point(10, 238);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -282,7 +354,7 @@
             // txtIngresarContraseña2
             // 
             this.txtIngresarContraseña2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtIngresarContraseña2.Location = new System.Drawing.Point(10, 273);
+            this.txtIngresarContraseña2.Location = new System.Drawing.Point(10, 215);
             this.txtIngresarContraseña2.Margin = new System.Windows.Forms.Padding(4);
             this.txtIngresarContraseña2.Name = "txtIngresarContraseña2";
             this.txtIngresarContraseña2.Size = new System.Drawing.Size(491, 23);
@@ -292,7 +364,7 @@
             // 
             this.label27.Dock = System.Windows.Forms.DockStyle.Top;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label27.Location = new System.Drawing.Point(10, 243);
+            this.label27.Location = new System.Drawing.Point(10, 185);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
             this.label27.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -303,7 +375,7 @@
             // txtIngresarContraseña
             // 
             this.txtIngresarContraseña.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtIngresarContraseña.Location = new System.Drawing.Point(10, 220);
+            this.txtIngresarContraseña.Location = new System.Drawing.Point(10, 162);
             this.txtIngresarContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtIngresarContraseña.Name = "txtIngresarContraseña";
             this.txtIngresarContraseña.Size = new System.Drawing.Size(491, 23);
@@ -313,7 +385,7 @@
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(10, 190);
+            this.label3.Location = new System.Drawing.Point(10, 132);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -324,7 +396,7 @@
             // txtIngresarCorreo
             // 
             this.txtIngresarCorreo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtIngresarCorreo.Location = new System.Drawing.Point(10, 167);
+            this.txtIngresarCorreo.Location = new System.Drawing.Point(10, 109);
             this.txtIngresarCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtIngresarCorreo.Name = "txtIngresarCorreo";
             this.txtIngresarCorreo.Size = new System.Drawing.Size(491, 23);
@@ -334,7 +406,7 @@
             // 
             this.label5.Dock = System.Windows.Forms.DockStyle.Top;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label5.Location = new System.Drawing.Point(10, 137);
+            this.label5.Location = new System.Drawing.Point(10, 79);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -345,7 +417,7 @@
             // txtInsertarNombre
             // 
             this.txtInsertarNombre.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtInsertarNombre.Location = new System.Drawing.Point(10, 114);
+            this.txtInsertarNombre.Location = new System.Drawing.Point(10, 56);
             this.txtInsertarNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtInsertarNombre.Name = "txtInsertarNombre";
             this.txtInsertarNombre.Size = new System.Drawing.Size(491, 23);
@@ -355,34 +427,13 @@
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(10, 84);
+            this.label4.Location = new System.Drawing.Point(10, 26);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.label4.Size = new System.Drawing.Size(491, 30);
             this.label4.TabIndex = 16;
             this.label4.Text = "Ingrese el nombre:";
-            // 
-            // txtInsertarCedula
-            // 
-            this.txtInsertarCedula.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtInsertarCedula.Location = new System.Drawing.Point(10, 61);
-            this.txtInsertarCedula.Margin = new System.Windows.Forms.Padding(4);
-            this.txtInsertarCedula.Name = "txtInsertarCedula";
-            this.txtInsertarCedula.Size = new System.Drawing.Size(491, 23);
-            this.txtInsertarCedula.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(10, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.label1.Size = new System.Drawing.Size(491, 35);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ingrese la cédula:";
             // 
             // tabEditUser
             // 
@@ -412,7 +463,7 @@
             this.groupBox3.Size = new System.Drawing.Size(550, 631);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Filtrar empleados:";
+            this.groupBox3.Text = "Filtrar usuarios:";
             // 
             // dgvEditar
             // 
@@ -436,6 +487,66 @@
             this.dgvEditar.Size = new System.Drawing.Size(530, 410);
             this.dgvEditar.TabIndex = 8;
             this.dgvEditar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvEditar_MouseClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Cédula";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Correo";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Correo";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Contrasena";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Contraseña";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "getCreador";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Creador";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // Tipo
+            // 
+            this.Tipo.DataPropertyName = "Tipo";
+            this.Tipo.HeaderText = "Tipo";
+            this.Tipo.Name = "Tipo";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "getFechaCreacion";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Fecha de creación";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "getModificador";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Modificador";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "getFechaModificacion";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Fecha de modificación";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "getActivo";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Activo";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
             // panel3
             // 
@@ -554,9 +665,9 @@
             this.button1.Location = new System.Drawing.Point(10, 381);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.button1.Size = new System.Drawing.Size(448, 83);
+            this.button1.Size = new System.Drawing.Size(448, 90);
             this.button1.TabIndex = 40;
-            this.button1.Text = "Editar Empleado";
+            this.button1.Text = "Editar Usuario";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -689,6 +800,7 @@
             this.txtEditarCedula.Location = new System.Drawing.Point(10, 61);
             this.txtEditarCedula.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditarCedula.Name = "txtEditarCedula";
+            this.txtEditarCedula.ReadOnly = true;
             this.txtEditarCedula.Size = new System.Drawing.Size(448, 23);
             this.txtEditarCedula.TabIndex = 1;
             // 
@@ -731,7 +843,90 @@
             this.groupBox5.Size = new System.Drawing.Size(558, 639);
             this.groupBox5.TabIndex = 7;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Filtrar empleados:";
+            this.groupBox5.Text = "Filtrar usuarios:";
+            // 
+            // dgvEliminar
+            // 
+            this.dgvEliminar.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dgvEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEliminar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.TipoEliminar,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19});
+            this.dgvEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEliminar.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvEliminar.Location = new System.Drawing.Point(10, 211);
+            this.dgvEliminar.Name = "dgvEliminar";
+            this.dgvEliminar.Size = new System.Drawing.Size(538, 418);
+            this.dgvEliminar.TabIndex = 9;
+            this.dgvEliminar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvEliminar_MouseClick);
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Cédula";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Correo";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Correo";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Contrasena";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Contraseña";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "getCreador";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Creador";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // TipoEliminar
+            // 
+            this.TipoEliminar.DataPropertyName = "Tipo";
+            this.TipoEliminar.HeaderText = "Tipo";
+            this.TipoEliminar.Name = "TipoEliminar";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "getFechaCreacion";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Fecha de creación";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "getModificador";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Modificador";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "getFechaModificacion";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Fecha de modificación";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "getActivo";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Activo";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
             // 
             // panel4
             // 
@@ -850,7 +1045,7 @@
             this.button2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.button2.Size = new System.Drawing.Size(448, 83);
             this.button2.TabIndex = 40;
-            this.button2.Text = "Editar Empleado";
+            this.button2.Text = "Eliminar Usuario";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -899,6 +1094,7 @@
             this.txtEliminarContraseña.Location = new System.Drawing.Point(10, 220);
             this.txtEliminarContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtEliminarContraseña.Name = "txtEliminarContraseña";
+            this.txtEliminarContraseña.ReadOnly = true;
             this.txtEliminarContraseña.Size = new System.Drawing.Size(448, 23);
             this.txtEliminarContraseña.TabIndex = 21;
             // 
@@ -920,6 +1116,7 @@
             this.txtEliminarCorreo.Location = new System.Drawing.Point(10, 167);
             this.txtEliminarCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEliminarCorreo.Name = "txtEliminarCorreo";
+            this.txtEliminarCorreo.ReadOnly = true;
             this.txtEliminarCorreo.Size = new System.Drawing.Size(448, 23);
             this.txtEliminarCorreo.TabIndex = 19;
             // 
@@ -941,6 +1138,7 @@
             this.txtEliminarNombre.Location = new System.Drawing.Point(10, 114);
             this.txtEliminarNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtEliminarNombre.Name = "txtEliminarNombre";
+            this.txtEliminarNombre.ReadOnly = true;
             this.txtEliminarNombre.Size = new System.Drawing.Size(448, 23);
             this.txtEliminarNombre.TabIndex = 17;
             // 
@@ -962,6 +1160,7 @@
             this.txtEliminarCedula.Location = new System.Drawing.Point(10, 61);
             this.txtEliminarCedula.Margin = new System.Windows.Forms.Padding(4);
             this.txtEliminarCedula.Name = "txtEliminarCedula";
+            this.txtEliminarCedula.ReadOnly = true;
             this.txtEliminarCedula.Size = new System.Drawing.Size(448, 23);
             this.txtEliminarCedula.TabIndex = 1;
             // 
@@ -977,225 +1176,6 @@
             this.label22.TabIndex = 0;
             this.label22.Text = "Cédula:";
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Cédula";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Correo";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Correo";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Contrasena";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Contraseña";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "getCreador";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Creador";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // Tipo
-            // 
-            this.Tipo.DataPropertyName = "Tipo";
-            this.Tipo.HeaderText = "Tipo";
-            this.Tipo.Name = "Tipo";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "getFechaCreacion";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Fecha de creación";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "getModificador";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Modificador";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "getFechaModificacion";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Fecha de modificación";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "getActivo";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Activo";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // dgvEliminar
-            // 
-            this.dgvEliminar.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dgvEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEliminar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.TipoEliminar,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19});
-            this.dgvEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEliminar.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvEliminar.Location = new System.Drawing.Point(10, 211);
-            this.dgvEliminar.Name = "dgvEliminar";
-            this.dgvEliminar.Size = new System.Drawing.Size(538, 418);
-            this.dgvEliminar.TabIndex = 9;
-            this.dgvEliminar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvEliminar_MouseClick);
-            // 
-            // Activo
-            // 
-            this.Activo.DataPropertyName = "getActivo";
-            this.Activo.HeaderText = "Activo";
-            this.Activo.Name = "Activo";
-            // 
-            // FechaModificacion
-            // 
-            this.FechaModificacion.DataPropertyName = "getFechaModificacion";
-            this.FechaModificacion.HeaderText = "Fecha de modificación";
-            this.FechaModificacion.Name = "FechaModificacion";
-            // 
-            // Modificador
-            // 
-            this.Modificador.DataPropertyName = "getModificador";
-            this.Modificador.HeaderText = "Modificador";
-            this.Modificador.Name = "Modificador";
-            // 
-            // FechaCreacion
-            // 
-            this.FechaCreacion.DataPropertyName = "getFechaCreacion";
-            this.FechaCreacion.HeaderText = "Fecha de creación";
-            this.FechaCreacion.Name = "FechaCreacion";
-            // 
-            // Creador
-            // 
-            this.Creador.DataPropertyName = "getCreador";
-            this.Creador.HeaderText = "Creador";
-            this.Creador.Name = "Creador";
-            // 
-            // Contraseña
-            // 
-            this.Contraseña.DataPropertyName = "Contraseña";
-            this.Contraseña.HeaderText = "Contraseña";
-            this.Contraseña.Name = "Contraseña";
-            this.Contraseña.Visible = false;
-            // 
-            // Correo
-            // 
-            this.Correo.DataPropertyName = "Correo";
-            this.Correo.HeaderText = "Correo";
-            this.Correo.Name = "Correo";
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Cédula
-            // 
-            this.Cédula.DataPropertyName = "Id";
-            this.Cédula.HeaderText = "Cédula";
-            this.Cédula.Name = "Cédula";
-            // 
-            // dgvInsertar
-            // 
-            this.dgvInsertar.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dgvInsertar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInsertar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Cédula,
-            this.Nombre,
-            this.Correo,
-            this.Contraseña,
-            this.Creador,
-            this.FechaCreacion,
-            this.Modificador,
-            this.FechaModificacion,
-            this.Activo});
-            this.dgvInsertar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvInsertar.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvInsertar.Location = new System.Drawing.Point(10, 63);
-            this.dgvInsertar.Name = "dgvInsertar";
-            this.dgvInsertar.Size = new System.Drawing.Size(487, 558);
-            this.dgvInsertar.TabIndex = 6;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Cédula";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Correo";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Correo";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Contrasena";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Contraseña";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "getCreador";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Creador";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // TipoEliminar
-            // 
-            this.TipoEliminar.DataPropertyName = "Tipo";
-            this.TipoEliminar.HeaderText = "Tipo";
-            this.TipoEliminar.Name = "TipoEliminar";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "getFechaCreacion";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Fecha de creación";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "getModificador";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Modificador";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "getFechaModificacion";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Fecha de modificación";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "getActivo";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Activo";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
             // PanelUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1207,6 +1187,7 @@
             this.tabUsuarios.ResumeLayout(false);
             this.tabInsertUser.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabEditUser.ResumeLayout(false);
@@ -1218,12 +1199,11 @@
             this.groupBox2.PerformLayout();
             this.tabDeleteUsuario.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEliminar)).EndInit();
             this.panelFiltroEliminar.ResumeLayout(false);
             this.panelFiltroEliminar.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEliminar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1241,8 +1221,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtInsertarNombre;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtInsertarCedula;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabEditUser;
         private System.Windows.Forms.TabPage tabDeleteUsuario;
         private System.Windows.Forms.Button button4;

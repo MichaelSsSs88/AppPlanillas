@@ -18,8 +18,10 @@ namespace AppPlanillas.GUI
         private List<System.Windows.Forms.TabPage> objColPages = null;
         private bool[] arrBoolPagesVisible;
         private DepartamentoENT nuevoDepartamento;
-        public PanelDepartamento(int pestaña)
+        private UsuarioENT UsuarioENT;
+        public PanelDepartamento(int pestaña, UsuarioENT UsuarioENT)
         {
+            this.UsuarioENT = UsuarioENT;
             InitializeComponent();
             this.HideTab(0);
             this.HideTab(1);
@@ -97,7 +99,7 @@ namespace AppPlanillas.GUI
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             this.btnGuardar.Image = new Bitmap(Application.StartupPath + @"\IMG\SaveSmall.png");
-            DepartamentoENT nuevoDepartamento = new DepartamentoENT(-1,this.txtNombreDepartamento.Text,DateTime.Now.Date, "Prueba", DateTime.Now.Date, "Prueba", this.cbxActivoIngresar.Checked);
+            DepartamentoENT nuevoDepartamento = new DepartamentoENT(-1,this.txtNombreDepartamento.Text,DateTime.Now.Date, this.UsuarioENT.Nombre, DateTime.Now.Date, this.UsuarioENT.Nombre, this.cbxActivoIngresar.Checked);
             DepartamentoDAL guardarDepartamento = new DepartamentoDAL();
             guardarDepartamento.AgregarDepartamento(nuevoDepartamento);
             MessageBox.Show("¡Departamento insertado correctamente!", "Nuevo departamento", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -111,7 +113,7 @@ namespace AppPlanillas.GUI
             if ((this.txtCodigoDepartamentoActualizar.Text != "") && (this.txtNombreDepartamentoActualizar.Text!="")) 
             { 
                 DepartamentoDAL actualizarDepartamento = new DepartamentoDAL();
-                this.nuevoDepartamento = new DepartamentoENT(Int32.Parse(this.txtCodigoDepartamentoActualizar.Text), this.txtNombreDepartamentoActualizar.Text, DateTime.Now.Date, "Jean Ca", DateTime.Now.Date, "Jean Ca", this.cbxActivoActualizar.Checked);
+                this.nuevoDepartamento = new DepartamentoENT(Int32.Parse(this.txtCodigoDepartamentoActualizar.Text), this.txtNombreDepartamentoActualizar.Text, DateTime.Now.Date, this.UsuarioENT.Nombre, DateTime.Now.Date, this.UsuarioENT.Nombre, this.cbxActivoActualizar.Checked);
                 actualizarDepartamento.ActualizarDepartamento(this.nuevoDepartamento);
                 this.nuevoDepartamento = new DepartamentoENT();
                 this.grdActualizar.DataSource = this.nuevoDepartamento.departamentos;

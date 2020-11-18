@@ -406,7 +406,7 @@
             this.button4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.button4.Size = new System.Drawing.Size(198, 90);
             this.button4.TabIndex = 53;
-            this.button4.Text = "Editar Empleado";
+            this.button4.Text = "Insertar Empleado";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);

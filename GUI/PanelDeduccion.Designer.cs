@@ -1116,7 +1116,7 @@
             this.button4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
             this.button4.Size = new System.Drawing.Size(484, 102);
             this.button4.TabIndex = 69;
-            this.button4.Text = "Ingresar";
+            this.button4.Text = "Guardar Deducción";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);

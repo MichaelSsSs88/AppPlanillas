@@ -359,7 +359,7 @@ namespace AppPlanillas
             }
             if ((entrada.subMenu==2))
             {
-                this.OpenChildFormContenedor(new PanelDepartamento(entrada.boton-1));
+                this.OpenChildFormContenedor(new PanelDepartamento(entrada.boton-1, this.UsuarioENT));
             }
 
             if ((entrada.subMenu == 3))
@@ -383,7 +383,7 @@ namespace AppPlanillas
             if ((entrada.subMenu == 10))
             {
 
-                this.OpenChildFormContenedor(new PanelUsuario(entrada.boton - 1));
+                this.OpenChildFormContenedor(new PanelUsuario(entrada.boton - 1, this.UsuarioENT));
             }
         }
 

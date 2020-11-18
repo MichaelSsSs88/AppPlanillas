@@ -544,7 +544,7 @@
             this.btnGuardarActualizar.Name = "btnGuardarActualizar";
             this.btnGuardarActualizar.Size = new System.Drawing.Size(489, 83);
             this.btnGuardarActualizar.TabIndex = 36;
-            this.btnGuardarActualizar.Text = "Guardar Departamento";
+            this.btnGuardarActualizar.Text = "Editar Departamento";
             this.btnGuardarActualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardarActualizar.UseVisualStyleBackColor = true;
             this.btnGuardarActualizar.Click += new System.EventHandler(this.btnGuardarEditar_Click);
