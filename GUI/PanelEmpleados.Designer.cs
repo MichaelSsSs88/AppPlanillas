@@ -155,10 +155,12 @@
             this.label22 = new System.Windows.Forms.Label();
             this.txtEliminarCedula = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabDepartamentos.SuspendLayout();
             this.tabInsertEmployed.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).BeginInit();
+            this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImg)).BeginInit();
             this.tabEditEmployed.SuspendLayout();
@@ -337,11 +339,13 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(10, 26);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(487, 37);
             this.panel1.TabIndex = 5;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // groupBox1
             // 
@@ -1540,6 +1544,16 @@
             this.label23.TabIndex = 0;
             this.label23.Text = "Cédula:";
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(393, 8);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // PanelEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1555,6 +1569,7 @@
             this.tabInsertEmployed.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImg)).EndInit();
@@ -1706,5 +1721,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox ckbEliminarActivo;
         private System.Windows.Forms.PictureBox picEliminarImg;
+        private System.Windows.Forms.Button button5;
     }
 }

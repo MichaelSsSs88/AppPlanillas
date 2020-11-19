@@ -1,5 +1,6 @@
 ﻿using AppPlanillas.ENT;
 using AppPlanillas.GUI;
+using DAL;
 using ProyectoIIIC;
 using System;
 using System.Collections.Generic;
@@ -590,6 +591,17 @@ namespace GUI
         {
             PanelBusqueda panelBusqueda = new PanelBusqueda(2, null, this, null);
             panelBusqueda.ShowDialog();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            GenerarCSV generarCSV = new GenerarCSV(this.dgvInsertar);
+            generarCSV.ExportarDatos(this.dgvInsertar);
         }
     }
 
