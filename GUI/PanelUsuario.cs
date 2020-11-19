@@ -1,5 +1,6 @@
 ﻿using AppPlanillas.DAL;
 using AppPlanillas.ENT;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -373,6 +374,12 @@ namespace AppPlanillas.GUI
                 MessageBox.Show("Debe de seleccionar el usuario a eliminar", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            GenerarCSV generarCSV = new GenerarCSV(this.dgvInsertar);
+            generarCSV.ExportarDatos(this.dgvInsertar);
         }
     }
 }

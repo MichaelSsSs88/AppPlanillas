@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppPlanillas.DAL;
 using AppPlanillas.ENT;
+using DAL;
 
 namespace AppPlanillas.GUI
 {
@@ -140,6 +141,8 @@ namespace AppPlanillas.GUI
         private void btnReporte_Click(object sender, EventArgs e)
         {
             this.btnReporte.Image = new Bitmap(Application.StartupPath + @"\IMG\csvSmall.png");
+            GenerarCSV generarCSV = new GenerarCSV(this.grdInsertar);
+            generarCSV.ExportarDatos(this.grdInsertar);
         }
 
         private void textBox9_KeyDown(object sender, KeyEventArgs e)

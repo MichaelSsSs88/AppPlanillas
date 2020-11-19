@@ -130,10 +130,12 @@
             this.label21 = new System.Windows.Forms.Label();
             this.txtEliminarId = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabHorario.SuspendLayout();
             this.tabInsertSchedule.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabEditSchedule.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -208,10 +210,10 @@
             this.Activo});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 74);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 114);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(480, 544);
+            this.dataGridView1.Size = new System.Drawing.Size(480, 504);
             this.dataGridView1.TabIndex = 6;
             // 
             // Identificador
@@ -282,11 +284,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(13, 28);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(480, 46);
+            this.panel1.Size = new System.Drawing.Size(480, 86);
             this.panel1.TabIndex = 5;
             // 
             // groupBox1
@@ -1285,6 +1288,26 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "Código:";
             // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button5.Location = new System.Drawing.Point(400, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(80, 86);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "Generar reporte";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // PanelHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1297,6 +1320,7 @@
             this.tabInsertSchedule.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabEditSchedule.ResumeLayout(false);
@@ -1420,5 +1444,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtEditarDescripcion;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button button5;
     }
 }

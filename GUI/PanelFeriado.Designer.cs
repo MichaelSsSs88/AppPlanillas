@@ -118,10 +118,12 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txtEliminarId = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabFeriado.SuspendLayout();
             this.tabInsertHoliday.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).BeginInit();
+            this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabEditHoliday.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -193,10 +195,10 @@
             this.Activo});
             this.dgvInsertar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInsertar.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvInsertar.Location = new System.Drawing.Point(13, 74);
+            this.dgvInsertar.Location = new System.Drawing.Point(13, 116);
             this.dgvInsertar.Margin = new System.Windows.Forms.Padding(4);
             this.dgvInsertar.Name = "dgvInsertar";
-            this.dgvInsertar.Size = new System.Drawing.Size(480, 544);
+            this.dgvInsertar.Size = new System.Drawing.Size(480, 502);
             this.dgvInsertar.TabIndex = 6;
             // 
             // Identificador
@@ -261,11 +263,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(13, 28);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(480, 46);
+            this.panel1.Size = new System.Drawing.Size(480, 88);
             this.panel1.TabIndex = 5;
             // 
             // groupBox1
@@ -1253,6 +1256,26 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "Identificador:";
             // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button5.Location = new System.Drawing.Point(400, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(80, 88);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "Generar reporte";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // PanelFeriado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1267,6 +1290,7 @@
             this.tabInsertHoliday.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabEditHoliday.ResumeLayout(false);
@@ -1378,5 +1402,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button5;
     }
 }

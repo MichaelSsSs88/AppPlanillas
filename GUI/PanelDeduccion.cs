@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppPlanillas.DAL;
 using AppPlanillas.ENT;
+using DAL;
 
 namespace AppPlanillas.GUI
 {
@@ -420,6 +421,12 @@ namespace AppPlanillas.GUI
         {
             PanelBusqueda panelBusqueda = new PanelBusqueda(3, null, null, this);
             panelBusqueda.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            GenerarCSV generarCSV = new GenerarCSV(this.grdInsertar);
+            generarCSV.ExportarDatos(this.grdInsertar);
         }
     }
 }

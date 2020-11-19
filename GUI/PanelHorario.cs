@@ -485,5 +485,11 @@ namespace AppPlanillas.GUI
                 MessageBox.Show("Debe de existir un horario seleccionado para eliminar", "Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            GenerarCSV generarCSV = new GenerarCSV(this.dataGridView1);
+            generarCSV.ExportarDatos(this.dataGridView1);
+        }
     }
 }

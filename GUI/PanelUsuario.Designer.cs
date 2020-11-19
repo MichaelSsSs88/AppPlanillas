@@ -124,10 +124,12 @@
             this.label21 = new System.Windows.Forms.Label();
             this.txtEliminarCedula = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabUsuarios.SuspendLayout();
             this.tabInsertUser.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).BeginInit();
+            this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabEditUser.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -199,9 +201,9 @@
             this.Activo});
             this.dgvInsertar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInsertar.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvInsertar.Location = new System.Drawing.Point(10, 63);
+            this.dgvInsertar.Location = new System.Drawing.Point(10, 109);
             this.dgvInsertar.Name = "dgvInsertar";
-            this.dgvInsertar.Size = new System.Drawing.Size(487, 558);
+            this.dgvInsertar.Size = new System.Drawing.Size(487, 512);
             this.dgvInsertar.TabIndex = 6;
             // 
             // Cédula
@@ -261,10 +263,11 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(10, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(487, 37);
+            this.panel1.Size = new System.Drawing.Size(487, 83);
             this.panel1.TabIndex = 5;
             // 
             // groupBox1
@@ -1176,6 +1179,26 @@
             this.label22.TabIndex = 0;
             this.label22.Text = "Cédula:";
             // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button5.Location = new System.Drawing.Point(407, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(80, 83);
+            this.button5.TabIndex = 14;
+            this.button5.Text = "Generar reporte";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // PanelUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1188,6 +1211,7 @@
             this.tabInsertUser.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabEditUser.ResumeLayout(false);
@@ -1305,5 +1329,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.Button button5;
     }
 }

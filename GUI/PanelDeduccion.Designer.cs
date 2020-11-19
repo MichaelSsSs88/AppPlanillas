@@ -83,6 +83,12 @@
             this.cmbBusquedaEditar = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cbxActivoEditar = new System.Windows.Forms.CheckBox();
+            this.txtIdEmpleadoEditar = new System.Windows.Forms.TextBox();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.txtValorEditar = new System.Windows.Forms.TextBox();
+            this.lblValorEditar = new System.Windows.Forms.Label();
             this.cmbSistemaEditar = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescripcionEditar = new System.Windows.Forms.TextBox();
@@ -105,22 +111,17 @@
             this.colActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.cbxActivoInsertar = new System.Windows.Forms.CheckBox();
+            this.txtEmpleadoInsertar = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.txtPorcentajeMontoInsertar = new System.Windows.Forms.TextBox();
             this.lblValorInsertar = new System.Windows.Forms.Label();
             this.cmbSistemaAplicacionInsertar = new System.Windows.Forms.ComboBox();
             this.lblSistema = new System.Windows.Forms.Label();
             this.txtDescripcionInsertar = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
-            this.txtValorEditar = new System.Windows.Forms.TextBox();
-            this.lblValorEditar = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.txtEmpleadoInsertar = new System.Windows.Forms.TextBox();
-            this.cbxActivoInsertar = new System.Windows.Forms.CheckBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.cbxActivoEditar = new System.Windows.Forms.CheckBox();
-            this.txtIdEmpleadoEditar = new System.Windows.Forms.TextBox();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabDeleteDeducción.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEliminar)).BeginInit();
@@ -135,6 +136,7 @@
             this.tabInsertDeducción.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdInsertar)).BeginInit();
+            this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -742,6 +744,85 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Completar datos de la deducción:";
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(13, 477);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.button1.Size = new System.Drawing.Size(484, 102);
+            this.button1.TabIndex = 78;
+            this.button1.Text = "Editar Deducción";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnEditar_Click_1);
+            // 
+            // cbxActivoEditar
+            // 
+            this.cbxActivoEditar.AutoSize = true;
+            this.cbxActivoEditar.Checked = true;
+            this.cbxActivoEditar.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxActivoEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbxActivoEditar.Location = new System.Drawing.Point(13, 328);
+            this.cbxActivoEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxActivoEditar.Name = "cbxActivoEditar";
+            this.cbxActivoEditar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.cbxActivoEditar.Size = new System.Drawing.Size(484, 33);
+            this.cbxActivoEditar.TabIndex = 72;
+            this.cbxActivoEditar.Text = "Activo";
+            this.cbxActivoEditar.UseVisualStyleBackColor = true;
+            // 
+            // txtIdEmpleadoEditar
+            // 
+            this.txtIdEmpleadoEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtIdEmpleadoEditar.Location = new System.Drawing.Point(13, 305);
+            this.txtIdEmpleadoEditar.Name = "txtIdEmpleadoEditar";
+            this.txtIdEmpleadoEditar.ReadOnly = true;
+            this.txtIdEmpleadoEditar.Size = new System.Drawing.Size(484, 23);
+            this.txtIdEmpleadoEditar.TabIndex = 71;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.linkLabel2.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel2.Location = new System.Drawing.Point(13, 275);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.linkLabel2.Size = new System.Drawing.Size(484, 30);
+            this.linkLabel2.TabIndex = 70;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Seleccione el empleado:";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // txtValorEditar
+            // 
+            this.txtValorEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtValorEditar.Location = new System.Drawing.Point(13, 252);
+            this.txtValorEditar.Name = "txtValorEditar";
+            this.txtValorEditar.Size = new System.Drawing.Size(484, 23);
+            this.txtValorEditar.TabIndex = 63;
+            // 
+            // lblValorEditar
+            // 
+            this.lblValorEditar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblValorEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblValorEditar.Location = new System.Drawing.Point(13, 215);
+            this.lblValorEditar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblValorEditar.Name = "lblValorEditar";
+            this.lblValorEditar.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.lblValorEditar.Size = new System.Drawing.Size(484, 37);
+            this.lblValorEditar.TabIndex = 62;
+            this.lblValorEditar.Text = "Seleccione el:";
+            // 
             // cmbSistemaEditar
             // 
             this.cmbSistemaEditar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -868,10 +949,10 @@
             this.colActivo});
             this.grdInsertar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdInsertar.GridColor = System.Drawing.SystemColors.Control;
-            this.grdInsertar.Location = new System.Drawing.Point(13, 74);
+            this.grdInsertar.Location = new System.Drawing.Point(13, 112);
             this.grdInsertar.Margin = new System.Windows.Forms.Padding(4);
             this.grdInsertar.Name = "grdInsertar";
-            this.grdInsertar.Size = new System.Drawing.Size(464, 505);
+            this.grdInsertar.Size = new System.Drawing.Size(464, 467);
             this.grdInsertar.TabIndex = 6;
             // 
             // colId
@@ -946,11 +1027,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(13, 28);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(464, 46);
+            this.panel1.Size = new System.Drawing.Size(464, 84);
             this.panel1.TabIndex = 5;
             // 
             // groupBox1
@@ -975,6 +1057,65 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Completar datos de la deducción:";
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button4.Location = new System.Drawing.Point(13, 301);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.button4.Size = new System.Drawing.Size(484, 102);
+            this.button4.TabIndex = 69;
+            this.button4.Text = "Guardar Deducción";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // cbxActivoInsertar
+            // 
+            this.cbxActivoInsertar.AutoSize = true;
+            this.cbxActivoInsertar.Checked = true;
+            this.cbxActivoInsertar.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxActivoInsertar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbxActivoInsertar.Location = new System.Drawing.Point(13, 268);
+            this.cbxActivoInsertar.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxActivoInsertar.Name = "cbxActivoInsertar";
+            this.cbxActivoInsertar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.cbxActivoInsertar.Size = new System.Drawing.Size(484, 33);
+            this.cbxActivoInsertar.TabIndex = 68;
+            this.cbxActivoInsertar.Text = "Activo";
+            this.cbxActivoInsertar.UseVisualStyleBackColor = true;
+            // 
+            // txtEmpleadoInsertar
+            // 
+            this.txtEmpleadoInsertar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEmpleadoInsertar.Location = new System.Drawing.Point(13, 245);
+            this.txtEmpleadoInsertar.Name = "txtEmpleadoInsertar";
+            this.txtEmpleadoInsertar.ReadOnly = true;
+            this.txtEmpleadoInsertar.Size = new System.Drawing.Size(484, 23);
+            this.txtEmpleadoInsertar.TabIndex = 59;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(13, 215);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.linkLabel1.Size = new System.Drawing.Size(484, 30);
+            this.linkLabel1.TabIndex = 58;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Seleccione el empleado:";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // txtPorcentajeMontoInsertar
             // 
@@ -1042,143 +1183,25 @@
             this.lblDescripcion.TabIndex = 0;
             this.lblDescripcion.Text = "Ingrese la descripción";
             // 
-            // txtValorEditar
+            // button5
             // 
-            this.txtValorEditar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtValorEditar.Location = new System.Drawing.Point(13, 252);
-            this.txtValorEditar.Name = "txtValorEditar";
-            this.txtValorEditar.Size = new System.Drawing.Size(484, 23);
-            this.txtValorEditar.TabIndex = 63;
-            // 
-            // lblValorEditar
-            // 
-            this.lblValorEditar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblValorEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblValorEditar.Location = new System.Drawing.Point(13, 215);
-            this.lblValorEditar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblValorEditar.Name = "lblValorEditar";
-            this.lblValorEditar.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.lblValorEditar.Size = new System.Drawing.Size(484, 37);
-            this.lblValorEditar.TabIndex = 62;
-            this.lblValorEditar.Text = "Seleccione el:";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(13, 215);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.linkLabel1.Size = new System.Drawing.Size(484, 30);
-            this.linkLabel1.TabIndex = 58;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Seleccione el empleado:";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // txtEmpleadoInsertar
-            // 
-            this.txtEmpleadoInsertar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEmpleadoInsertar.Location = new System.Drawing.Point(13, 245);
-            this.txtEmpleadoInsertar.Name = "txtEmpleadoInsertar";
-            this.txtEmpleadoInsertar.ReadOnly = true;
-            this.txtEmpleadoInsertar.Size = new System.Drawing.Size(484, 23);
-            this.txtEmpleadoInsertar.TabIndex = 59;
-            // 
-            // cbxActivoInsertar
-            // 
-            this.cbxActivoInsertar.AutoSize = true;
-            this.cbxActivoInsertar.Checked = true;
-            this.cbxActivoInsertar.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxActivoInsertar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbxActivoInsertar.Location = new System.Drawing.Point(13, 268);
-            this.cbxActivoInsertar.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxActivoInsertar.Name = "cbxActivoInsertar";
-            this.cbxActivoInsertar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.cbxActivoInsertar.Size = new System.Drawing.Size(484, 33);
-            this.cbxActivoInsertar.TabIndex = 68;
-            this.cbxActivoInsertar.Text = "Activo";
-            this.cbxActivoInsertar.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(13, 301);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.button4.Size = new System.Drawing.Size(484, 102);
-            this.button4.TabIndex = 69;
-            this.button4.Text = "Guardar Deducción";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // cbxActivoEditar
-            // 
-            this.cbxActivoEditar.AutoSize = true;
-            this.cbxActivoEditar.Checked = true;
-            this.cbxActivoEditar.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxActivoEditar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbxActivoEditar.Location = new System.Drawing.Point(13, 328);
-            this.cbxActivoEditar.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxActivoEditar.Name = "cbxActivoEditar";
-            this.cbxActivoEditar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.cbxActivoEditar.Size = new System.Drawing.Size(484, 33);
-            this.cbxActivoEditar.TabIndex = 72;
-            this.cbxActivoEditar.Text = "Activo";
-            this.cbxActivoEditar.UseVisualStyleBackColor = true;
-            // 
-            // txtIdEmpleadoEditar
-            // 
-            this.txtIdEmpleadoEditar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtIdEmpleadoEditar.Location = new System.Drawing.Point(13, 305);
-            this.txtIdEmpleadoEditar.Name = "txtIdEmpleadoEditar";
-            this.txtIdEmpleadoEditar.ReadOnly = true;
-            this.txtIdEmpleadoEditar.Size = new System.Drawing.Size(484, 23);
-            this.txtIdEmpleadoEditar.TabIndex = 71;
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.linkLabel2.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel2.Location = new System.Drawing.Point(13, 275);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.linkLabel2.Size = new System.Drawing.Size(484, 30);
-            this.linkLabel2.TabIndex = 70;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Seleccione el empleado:";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(13, 477);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.button1.Size = new System.Drawing.Size(484, 102);
-            this.button1.TabIndex = 78;
-            this.button1.Text = "Editar Deducción";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnEditar_Click_1);
+            this.button5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button5.Location = new System.Drawing.Point(384, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(80, 84);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "Generar reporte";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // PanelDeduccion
             // 
@@ -1206,6 +1229,7 @@
             this.tabInsertDeducción.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdInsertar)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -1306,5 +1330,6 @@
         private System.Windows.Forms.TextBox txtEmpleadoInsertar;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button5;
     }
 }

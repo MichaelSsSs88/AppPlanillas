@@ -326,5 +326,11 @@ namespace AppPlanillas.GUI
                 }
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            GenerarCSV generarCSV = new GenerarCSV(this.dgvInsertar);
+            generarCSV.ExportarDatos(this.dgvInsertar);
+        }
     }
 }

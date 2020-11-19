@@ -239,11 +239,11 @@
             this.Activo});
             this.dgvInsertar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInsertar.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvInsertar.Location = new System.Drawing.Point(10, 63);
+            this.dgvInsertar.Location = new System.Drawing.Point(10, 114);
             this.dgvInsertar.MultiSelect = false;
             this.dgvInsertar.Name = "dgvInsertar";
             this.dgvInsertar.RowTemplate.Height = 200;
-            this.dgvInsertar.Size = new System.Drawing.Size(487, 558);
+            this.dgvInsertar.Size = new System.Drawing.Size(487, 507);
             this.dgvInsertar.TabIndex = 6;
             // 
             // Cédula
@@ -343,7 +343,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(10, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(487, 37);
+            this.panel1.Size = new System.Drawing.Size(487, 88);
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -1546,11 +1546,21 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(393, 8);
+            this.button5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button5.Location = new System.Drawing.Point(407, 0);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "button5";
+            this.button5.Size = new System.Drawing.Size(80, 88);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "Generar reporte";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
