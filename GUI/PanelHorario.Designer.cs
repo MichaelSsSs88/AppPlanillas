@@ -45,6 +45,7 @@
             this.FechaDeModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.ckbActivo = new System.Windows.Forms.CheckBox();
@@ -130,7 +131,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.txtEliminarId = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.tabHorario.SuspendLayout();
             this.tabInsertSchedule.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -291,6 +291,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(480, 86);
             this.panel1.TabIndex = 5;
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button5.Location = new System.Drawing.Point(400, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(80, 86);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "Generar reporte";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // groupBox1
             // 
@@ -1251,6 +1271,7 @@
             this.txtEliminarDescripcion.Location = new System.Drawing.Point(13, 131);
             this.txtEliminarDescripcion.Margin = new System.Windows.Forms.Padding(5);
             this.txtEliminarDescripcion.Name = "txtEliminarDescripcion";
+            this.txtEliminarDescripcion.ReadOnly = true;
             this.txtEliminarDescripcion.Size = new System.Drawing.Size(501, 23);
             this.txtEliminarDescripcion.TabIndex = 59;
             // 
@@ -1287,26 +1308,6 @@
             this.label17.Size = new System.Drawing.Size(501, 43);
             this.label17.TabIndex = 0;
             this.label17.Text = "Código:";
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(400, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(80, 86);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "Generar reporte";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // PanelHorario
             // 

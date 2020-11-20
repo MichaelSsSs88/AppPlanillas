@@ -56,6 +56,14 @@
             this.tabFindJob = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvInsertar = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PagoDoble = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Creador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.panelFiltro = new System.Windows.Forms.Panel();
@@ -72,14 +80,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtCodigoPuesto = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id_departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PagoDoble = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Creador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabEditEmployed = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvEditar = new System.Windows.Forms.DataGridView();
@@ -105,6 +105,7 @@
             this.cmbEditarBusqueda = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.picEditarImg = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -122,7 +123,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtEditarCedula = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabEditDepartment.SuspendLayout();
             this.gbxFiltroActualizar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdActualizar)).BeginInit();
@@ -466,6 +466,70 @@
             this.dgvInsertar.TabIndex = 8;
             this.dgvInsertar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvInsertar_MouseClick);
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Código";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.Width = 125;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.MinimumWidth = 6;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Width = 125;
+            // 
+            // Id_departamento
+            // 
+            this.Id_departamento.DataPropertyName = "Id_departamento";
+            this.Id_departamento.HeaderText = "Departamento";
+            this.Id_departamento.MinimumWidth = 6;
+            this.Id_departamento.Name = "Id_departamento";
+            this.Id_departamento.Width = 125;
+            // 
+            // Mes
+            // 
+            this.Mes.DataPropertyName = "Fecha_creacion";
+            this.Mes.HeaderText = "Fecha Creado";
+            this.Mes.MinimumWidth = 6;
+            this.Mes.Name = "Mes";
+            this.Mes.Width = 125;
+            // 
+            // PagoDoble
+            // 
+            this.PagoDoble.DataPropertyName = "Creado_por";
+            this.PagoDoble.HeaderText = "Creador";
+            this.PagoDoble.MinimumWidth = 6;
+            this.PagoDoble.Name = "PagoDoble";
+            this.PagoDoble.Width = 125;
+            // 
+            // Creador
+            // 
+            this.Creador.DataPropertyName = "Fecha_modificacion";
+            this.Creador.HeaderText = "Fecha Modificado";
+            this.Creador.MinimumWidth = 6;
+            this.Creador.Name = "Creador";
+            this.Creador.Width = 125;
+            // 
+            // FechaCreacion
+            // 
+            this.FechaCreacion.DataPropertyName = "Modificado_por";
+            this.FechaCreacion.HeaderText = "Modificador";
+            this.FechaCreacion.MinimumWidth = 6;
+            this.FechaCreacion.Name = "FechaCreacion";
+            this.FechaCreacion.Width = 125;
+            // 
+            // Activo
+            // 
+            this.Activo.DataPropertyName = "Activo";
+            this.Activo.HeaderText = "Activo";
+            this.Activo.MinimumWidth = 6;
+            this.Activo.Name = "Activo";
+            this.Activo.Width = 125;
+            // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -666,70 +730,6 @@
             this.label8.Size = new System.Drawing.Size(498, 43);
             this.label8.TabIndex = 0;
             this.label8.Text = "Código:";
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Código";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.Width = 125;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Width = 125;
-            // 
-            // Id_departamento
-            // 
-            this.Id_departamento.DataPropertyName = "Id_departamento";
-            this.Id_departamento.HeaderText = "Departamento";
-            this.Id_departamento.MinimumWidth = 6;
-            this.Id_departamento.Name = "Id_departamento";
-            this.Id_departamento.Width = 125;
-            // 
-            // Mes
-            // 
-            this.Mes.DataPropertyName = "Fecha_creacion";
-            this.Mes.HeaderText = "Fecha Creado";
-            this.Mes.MinimumWidth = 6;
-            this.Mes.Name = "Mes";
-            this.Mes.Width = 125;
-            // 
-            // PagoDoble
-            // 
-            this.PagoDoble.DataPropertyName = "Creado_por";
-            this.PagoDoble.HeaderText = "Creador";
-            this.PagoDoble.MinimumWidth = 6;
-            this.PagoDoble.Name = "PagoDoble";
-            this.PagoDoble.Width = 125;
-            // 
-            // Creador
-            // 
-            this.Creador.DataPropertyName = "Fecha_modificacion";
-            this.Creador.HeaderText = "Fecha Modificado";
-            this.Creador.MinimumWidth = 6;
-            this.Creador.Name = "Creador";
-            this.Creador.Width = 125;
-            // 
-            // FechaCreacion
-            // 
-            this.FechaCreacion.DataPropertyName = "Modificado_por";
-            this.FechaCreacion.HeaderText = "Modificador";
-            this.FechaCreacion.MinimumWidth = 6;
-            this.FechaCreacion.Name = "FechaCreacion";
-            this.FechaCreacion.Width = 125;
-            // 
-            // Activo
-            // 
-            this.Activo.DataPropertyName = "Activo";
-            this.Activo.HeaderText = "Activo";
-            this.Activo.MinimumWidth = 6;
-            this.Activo.Name = "Activo";
-            this.Activo.Width = 125;
             // 
             // tabEditEmployed
             // 
@@ -987,6 +987,28 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Confirmar datos del empleado";
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(10, 526);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.button1.Size = new System.Drawing.Size(196, 102);
+            this.button1.TabIndex = 77;
+            this.button1.Text = "Seleccionar Puesto";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -1026,6 +1048,7 @@
             this.txtEditarSalarioHora.Location = new System.Drawing.Point(10, 372);
             this.txtEditarSalarioHora.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditarSalarioHora.Name = "txtEditarSalarioHora";
+            this.txtEditarSalarioHora.ReadOnly = true;
             this.txtEditarSalarioHora.Size = new System.Drawing.Size(489, 23);
             this.txtEditarSalarioHora.TabIndex = 58;
             // 
@@ -1092,6 +1115,7 @@
             this.txtEditarApellido2.Location = new System.Drawing.Point(10, 213);
             this.txtEditarApellido2.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditarApellido2.Name = "txtEditarApellido2";
+            this.txtEditarApellido2.ReadOnly = true;
             this.txtEditarApellido2.Size = new System.Drawing.Size(489, 23);
             this.txtEditarApellido2.TabIndex = 21;
             // 
@@ -1113,6 +1137,7 @@
             this.txtEditarApellido1.Location = new System.Drawing.Point(10, 160);
             this.txtEditarApellido1.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditarApellido1.Name = "txtEditarApellido1";
+            this.txtEditarApellido1.ReadOnly = true;
             this.txtEditarApellido1.Size = new System.Drawing.Size(489, 23);
             this.txtEditarApellido1.TabIndex = 19;
             // 
@@ -1134,6 +1159,7 @@
             this.txtEditarNombre.Location = new System.Drawing.Point(10, 107);
             this.txtEditarNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditarNombre.Name = "txtEditarNombre";
+            this.txtEditarNombre.ReadOnly = true;
             this.txtEditarNombre.Size = new System.Drawing.Size(489, 23);
             this.txtEditarNombre.TabIndex = 17;
             // 
@@ -1155,6 +1181,7 @@
             this.txtEditarCedula.Location = new System.Drawing.Point(10, 54);
             this.txtEditarCedula.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditarCedula.Name = "txtEditarCedula";
+            this.txtEditarCedula.ReadOnly = true;
             this.txtEditarCedula.Size = new System.Drawing.Size(489, 23);
             this.txtEditarCedula.TabIndex = 1;
             // 
@@ -1168,28 +1195,6 @@
             this.label15.Size = new System.Drawing.Size(489, 28);
             this.label15.TabIndex = 0;
             this.label15.Text = "Cédula:";
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(10, 526);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.button1.Size = new System.Drawing.Size(196, 102);
-            this.button1.TabIndex = 77;
-            this.button1.Text = "Seleccionar Puesto";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // PanelBusqueda
             // 

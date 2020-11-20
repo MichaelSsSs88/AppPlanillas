@@ -48,6 +48,7 @@
             this.FechaModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ckbInsertarActivo = new System.Windows.Forms.CheckBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -155,7 +156,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.txtEliminarCedula = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.tabDepartamentos.SuspendLayout();
             this.tabInsertEmployed.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -346,6 +346,26 @@
             this.panel1.Size = new System.Drawing.Size(487, 88);
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button5.Location = new System.Drawing.Point(407, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(80, 88);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "Generar reporte";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // groupBox1
             // 
@@ -1406,6 +1426,7 @@
             this.txtEliminarSalarioHora.Location = new System.Drawing.Point(10, 372);
             this.txtEliminarSalarioHora.Margin = new System.Windows.Forms.Padding(4);
             this.txtEliminarSalarioHora.Name = "txtEliminarSalarioHora";
+            this.txtEliminarSalarioHora.ReadOnly = true;
             this.txtEliminarSalarioHora.Size = new System.Drawing.Size(489, 23);
             this.txtEliminarSalarioHora.TabIndex = 32;
             // 
@@ -1426,6 +1447,7 @@
             this.txtEliminarPuesto.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtEliminarPuesto.Location = new System.Drawing.Point(10, 319);
             this.txtEliminarPuesto.Name = "txtEliminarPuesto";
+            this.txtEliminarPuesto.ReadOnly = true;
             this.txtEliminarPuesto.Size = new System.Drawing.Size(489, 23);
             this.txtEliminarPuesto.TabIndex = 25;
             // 
@@ -1467,6 +1489,7 @@
             this.txtEliminarApellido2.Location = new System.Drawing.Point(10, 213);
             this.txtEliminarApellido2.Margin = new System.Windows.Forms.Padding(4);
             this.txtEliminarApellido2.Name = "txtEliminarApellido2";
+            this.txtEliminarApellido2.ReadOnly = true;
             this.txtEliminarApellido2.Size = new System.Drawing.Size(489, 23);
             this.txtEliminarApellido2.TabIndex = 21;
             // 
@@ -1488,6 +1511,7 @@
             this.txtEliminarApellido1.Location = new System.Drawing.Point(10, 160);
             this.txtEliminarApellido1.Margin = new System.Windows.Forms.Padding(4);
             this.txtEliminarApellido1.Name = "txtEliminarApellido1";
+            this.txtEliminarApellido1.ReadOnly = true;
             this.txtEliminarApellido1.Size = new System.Drawing.Size(489, 23);
             this.txtEliminarApellido1.TabIndex = 19;
             // 
@@ -1509,6 +1533,7 @@
             this.txtEliminarNombre.Location = new System.Drawing.Point(10, 107);
             this.txtEliminarNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtEliminarNombre.Name = "txtEliminarNombre";
+            this.txtEliminarNombre.ReadOnly = true;
             this.txtEliminarNombre.Size = new System.Drawing.Size(489, 23);
             this.txtEliminarNombre.TabIndex = 17;
             // 
@@ -1530,6 +1555,7 @@
             this.txtEliminarCedula.Location = new System.Drawing.Point(10, 54);
             this.txtEliminarCedula.Margin = new System.Windows.Forms.Padding(4);
             this.txtEliminarCedula.Name = "txtEliminarCedula";
+            this.txtEliminarCedula.ReadOnly = true;
             this.txtEliminarCedula.Size = new System.Drawing.Size(489, 23);
             this.txtEliminarCedula.TabIndex = 1;
             // 
@@ -1543,26 +1569,6 @@
             this.label23.Size = new System.Drawing.Size(489, 28);
             this.label23.TabIndex = 0;
             this.label23.Text = "Cédula:";
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(407, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(80, 88);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "Generar reporte";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // PanelEmpleados
             // 

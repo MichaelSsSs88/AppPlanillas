@@ -33,14 +33,6 @@
             this.tabInsertJob = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgvInsertar = new System.Windows.Forms.DataGridView();
-            this.Identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Motivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PagoDoble = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Creador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Modificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -104,6 +96,14 @@
             this.txtEliminarCodigo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaCreado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PagoDoble = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaModificado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Modificado_por = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabFeriado.SuspendLayout();
             this.tabInsertJob.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -168,14 +168,14 @@
             this.dgvInsertar.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.dgvInsertar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInsertar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Identificador,
-            this.Motivo,
-            this.Dia,
-            this.Mes,
+            this.Codigo,
+            this.Descripcion,
+            this.Departamento,
+            this.FechaCreado,
             this.PagoDoble,
-            this.Creador,
-            this.FechaCreacion,
-            this.Modificador});
+            this.FechaModificado,
+            this.Modificado_por,
+            this.Activo});
             this.dgvInsertar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInsertar.GridColor = System.Drawing.SystemColors.Control;
             this.dgvInsertar.Location = new System.Drawing.Point(13, 109);
@@ -184,70 +184,6 @@
             this.dgvInsertar.RowHeadersWidth = 51;
             this.dgvInsertar.Size = new System.Drawing.Size(474, 452);
             this.dgvInsertar.TabIndex = 6;
-            // 
-            // Identificador
-            // 
-            this.Identificador.DataPropertyName = "Id";
-            this.Identificador.HeaderText = "Código";
-            this.Identificador.MinimumWidth = 6;
-            this.Identificador.Name = "Identificador";
-            this.Identificador.Width = 125;
-            // 
-            // Motivo
-            // 
-            this.Motivo.DataPropertyName = "Descripcion";
-            this.Motivo.HeaderText = "Descripción";
-            this.Motivo.MinimumWidth = 6;
-            this.Motivo.Name = "Motivo";
-            this.Motivo.Width = 125;
-            // 
-            // Dia
-            // 
-            this.Dia.DataPropertyName = "Id_departamento";
-            this.Dia.HeaderText = "Departamento";
-            this.Dia.MinimumWidth = 6;
-            this.Dia.Name = "Dia";
-            this.Dia.Width = 125;
-            // 
-            // Mes
-            // 
-            this.Mes.DataPropertyName = "Fecha_creacion";
-            this.Mes.HeaderText = "Fecha Creado";
-            this.Mes.MinimumWidth = 6;
-            this.Mes.Name = "Mes";
-            this.Mes.Width = 125;
-            // 
-            // PagoDoble
-            // 
-            this.PagoDoble.DataPropertyName = "Creado_por";
-            this.PagoDoble.HeaderText = "Creador";
-            this.PagoDoble.MinimumWidth = 6;
-            this.PagoDoble.Name = "PagoDoble";
-            this.PagoDoble.Width = 125;
-            // 
-            // Creador
-            // 
-            this.Creador.DataPropertyName = "Fecha_modificacion";
-            this.Creador.HeaderText = "Fecha Modificado";
-            this.Creador.MinimumWidth = 6;
-            this.Creador.Name = "Creador";
-            this.Creador.Width = 125;
-            // 
-            // FechaCreacion
-            // 
-            this.FechaCreacion.DataPropertyName = "Modificado_por";
-            this.FechaCreacion.HeaderText = "Modificador";
-            this.FechaCreacion.MinimumWidth = 6;
-            this.FechaCreacion.Name = "FechaCreacion";
-            this.FechaCreacion.Width = 125;
-            // 
-            // Modificador
-            // 
-            this.Modificador.DataPropertyName = "Activo";
-            this.Modificador.HeaderText = "Activo";
-            this.Modificador.MinimumWidth = 6;
-            this.Modificador.Name = "Modificador";
-            this.Modificador.Width = 125;
             // 
             // panel1
             // 
@@ -1022,6 +958,70 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "Id";
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.MinimumWidth = 6;
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Width = 125;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.MinimumWidth = 6;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Width = 125;
+            // 
+            // Departamento
+            // 
+            this.Departamento.DataPropertyName = "Id_departamento";
+            this.Departamento.HeaderText = "Departamento";
+            this.Departamento.MinimumWidth = 6;
+            this.Departamento.Name = "Departamento";
+            this.Departamento.Width = 125;
+            // 
+            // FechaCreado
+            // 
+            this.FechaCreado.DataPropertyName = "Fecha_creacion";
+            this.FechaCreado.HeaderText = "Fecha Creado";
+            this.FechaCreado.MinimumWidth = 6;
+            this.FechaCreado.Name = "FechaCreado";
+            this.FechaCreado.Width = 125;
+            // 
+            // PagoDoble
+            // 
+            this.PagoDoble.DataPropertyName = "Creado_por";
+            this.PagoDoble.HeaderText = "Creador";
+            this.PagoDoble.MinimumWidth = 6;
+            this.PagoDoble.Name = "PagoDoble";
+            this.PagoDoble.Width = 125;
+            // 
+            // FechaModificado
+            // 
+            this.FechaModificado.DataPropertyName = "Fecha_modificacion";
+            this.FechaModificado.HeaderText = "Fecha Modificado";
+            this.FechaModificado.MinimumWidth = 6;
+            this.FechaModificado.Name = "FechaModificado";
+            this.FechaModificado.Width = 125;
+            // 
+            // Modificado_por
+            // 
+            this.Modificado_por.DataPropertyName = "Modificado_por";
+            this.Modificado_por.HeaderText = "Modificador";
+            this.Modificado_por.MinimumWidth = 6;
+            this.Modificado_por.Name = "Modificado_por";
+            this.Modificado_por.Width = 125;
+            // 
+            // Activo
+            // 
+            this.Activo.DataPropertyName = "Activo";
+            this.Activo.HeaderText = "Activo";
+            this.Activo.MinimumWidth = 6;
+            this.Activo.Name = "Activo";
+            this.Activo.Width = 125;
+            // 
             // PanelPuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1088,14 +1088,6 @@
         private System.Windows.Forms.TextBox txtEditarDescripcion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Identificador;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Motivo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Mes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PagoDoble;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Creador;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaCreacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Modificador;
         private System.Windows.Forms.DataGridView dgvEditar;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -1132,5 +1124,13 @@
         private System.Windows.Forms.TextBox txtEliminarCodigo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Departamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaCreado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PagoDoble;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaModificado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Modificado_por;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Activo;
     }
 }
