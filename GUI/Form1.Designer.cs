@@ -31,8 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.panelSeguridad = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.lblUsers = new System.Windows.Forms.Label();
             this.btnSeguridad = new System.Windows.Forms.Button();
             this.panelProcesos = new System.Windows.Forms.Panel();
@@ -84,8 +86,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.SubMenu = new System.Windows.Forms.Panel();
             this.panelMenuHorizontal = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             this.panelSeguridad.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -129,6 +129,21 @@
             this.panelSeguridad.Size = new System.Drawing.Size(190, 87);
             this.panelSeguridad.TabIndex = 0;
             // 
+            // button10
+            // 
+            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Location = new System.Drawing.Point(60, 40);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(130, 48);
+            this.button10.TabIndex = 5;
+            this.button10.Text = "Contraseña";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // btnUsers
             // 
             this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
@@ -153,6 +168,15 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(60, 87);
             this.panel8.TabIndex = 0;
+            // 
+            // label12
+            // 
+            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label12.Image = ((System.Drawing.Image)(resources.GetObject("label12.Image")));
+            this.label12.Location = new System.Drawing.Point(0, 40);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 48);
+            this.label12.TabIndex = 5;
             // 
             // lblUsers
             // 
@@ -233,6 +257,7 @@
             this.button7.Text = "Control Marcas";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // panel4
             // 
@@ -739,30 +764,6 @@
             this.panelMenuHorizontal.Size = new System.Drawing.Size(840, 90);
             this.panelMenuHorizontal.TabIndex = 9;
             this.panelMenuHorizontal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenuHorizontal_MouseDown);
-            // 
-            // label12
-            // 
-            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label12.Image = ((System.Drawing.Image)(resources.GetObject("label12.Image")));
-            this.label12.Location = new System.Drawing.Point(0, 40);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 48);
-            this.label12.TabIndex = 5;
-            // 
-            // button10
-            // 
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(60, 40);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(130, 48);
-            this.button10.TabIndex = 5;
-            this.button10.Text = "Contraseña";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // Form1
             // 

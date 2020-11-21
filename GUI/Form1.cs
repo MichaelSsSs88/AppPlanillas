@@ -348,8 +348,15 @@ namespace AppPlanillas
         {
             this.btnHorario_Click(sender, e);
         }
-
-        public void Clic(object emisor)
+        public void Clic_2(object emisor)
+        {
+            PanelSubMenuMarcas entrada = (PanelSubMenuMarcas)emisor;
+            if (entrada.submenu == 1)
+            {
+                this.OpenChildFormContenedor(new PanelMarcas());
+            }
+        }
+            public void Clic(object emisor)
         {
             SubMenuFeriados entrada = (SubMenuFeriados)emisor;
            
@@ -424,6 +431,14 @@ namespace AppPlanillas
             this.CLoseChildFormContenedor();
             this.CLoseChildForm();
             this.button3_Click(sender, e);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.CLoseChildFormContenedor();
+            this.CLoseChildForm();
+            this.OpenChildForm(new PanelSubMenuMarcas(this));
+
         }
     }
 

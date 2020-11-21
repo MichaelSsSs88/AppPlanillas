@@ -66,6 +66,7 @@
     <Compile Include="DAL\GenerarCSV.cs" />
     <Compile Include="DAL\HorarioDAL.cs" />
     <Compile Include="DAL\LoginDAL.cs" />
+    <Compile Include="DAL\MarcaDAL.cs" />
     <Compile Include="DAL\Parametro.cs" />
     <Compile Include="DAL\PuestoDAL.cs" />
     <Compile Include="DAL\UsuarioDAL.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="ENT\Dia_feriadoENT.cs" />
     <Compile Include="ENT\EmpleadoENT.cs" />
     <Compile Include="ENT\HorarioENT.cs" />
+    <Compile Include="ENT\MarcaENT.cs" />
     <Compile Include="ENT\PuestoENT.cs" />
     <Compile Include="ENT\UsuarioENT.cs" />
     <Compile Include="GUI\Form1.cs">
@@ -130,11 +132,23 @@
     <Compile Include="GUI\PanelHorario.Designer.cs">
       <DependentUpon>PanelHorario.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\PanelMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PanelMarcas.Designer.cs">
+      <DependentUpon>PanelMarcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\PanelPuestos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\PanelPuestos.Designer.cs">
       <DependentUpon>PanelPuestos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PanelSubMenuMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PanelSubMenuMarcas.Designer.cs">
+      <DependentUpon>PanelSubMenuMarcas.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\PanelUsuario.cs">
       <SubType>Form</SubType>
@@ -190,8 +204,14 @@
     <EmbeddedResource Include="GUI\PanelHorario.resx">
       <DependentUpon>PanelHorario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PanelMarcas.resx">
+      <DependentUpon>PanelMarcas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\PanelPuestos.resx">
       <DependentUpon>PanelPuestos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PanelSubMenuMarcas.resx">
+      <DependentUpon>PanelSubMenuMarcas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PanelUsuario.resx">
       <DependentUpon>PanelUsuario.cs</DependentUpon>
@@ -252,6 +272,15 @@
     <Content Include="IMG\deleteBig.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="IMG\DeleteClockBig.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\DeleteClockMedium.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\DeleteClockSmall.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="IMG\deletedepartamentBig.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -277,6 +306,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="IMG\editBig.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\EditClockBig.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\EditClockMedium.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\EditClockSmall.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="IMG\editdepartamentBig.png">
@@ -324,6 +362,15 @@
     <Content Include="IMG\FindBig.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="IMG\FindClockBig.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\FindClockMedium.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\FindClockSmall.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="IMG\findMedium.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -331,6 +378,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="IMG\insertBig.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\InsertClockBig.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\InsertClockMedium.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IMG\InsertClockSmall.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="IMG\insertdepartamentBig.png">
