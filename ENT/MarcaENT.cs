@@ -20,7 +20,8 @@ namespace ENT
         public DateTime fechaModificacion { get;}
         public string modificadoPor { get;}
         public List<MarcaENT> Marcas { get; set; }
-        public MarcaENT(int idMarca, DateTime marcar_inicio, DateTime marcar_final, string estado, int idEmpleado, byte[] foto_inicio, byte[] foto_final, DateTime fechaCreacion, string creadoPor, DateTime fechaModificacion, string modificadoPor)
+        public int IdUnificacion { get; }
+        public MarcaENT(int idMarca, DateTime marcar_inicio, DateTime marcar_final, string estado, int idEmpleado, byte[] foto_inicio, byte[] foto_final, DateTime fechaCreacion, string creadoPor, DateTime fechaModificacion, string modificadoPor, int idUnificacion)
         {
             this.marcar_inicio = marcar_inicio;
             this.marcar_final = marcar_final;
@@ -33,6 +34,7 @@ namespace ENT
             this.creadoPor = creadoPor;
             this.fechaModificacion = fechaModificacion;
             this.modificadoPor = modificadoPor;
+            this.IdUnificacion = idUnificacion;
         }
 
         public MarcaENT()
