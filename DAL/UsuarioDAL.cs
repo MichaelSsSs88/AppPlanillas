@@ -139,7 +139,7 @@ namespace AppPlanillas.DAL
                 throw e;
             }
         }
-        int z;
+     
         public void EliminarUsuario(/*UsuarioENT*/int pUsuario)
         {
             try
