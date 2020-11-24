@@ -351,10 +351,10 @@ namespace AppPlanillas
         public void Clic_2(object emisor)
         {
             PanelSubMenuMarcas entrada = (PanelSubMenuMarcas)emisor;
-            if (entrada.submenu == 1)
-            {
-                this.OpenChildFormContenedor(new PanelMarcas());
-            }
+            //if (entrada.submenu == 1)
+            //{
+                this.OpenChildFormContenedor(new PanelMarcas(entrada.submenu-1, this.UsuarioENT));
+           // }
         }
             public void Clic(object emisor)
         {

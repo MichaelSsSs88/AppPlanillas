@@ -45,5 +45,17 @@ namespace AppPlanillas.GUI
             this.submenu = 1;
             this.BotonPulsado();
         }
+
+        private void btnInsertar_Click_1(object sender, EventArgs e)
+        {
+            this.submenu = 2;
+            this.BotonPulsado();
+        }
+
+        private void btnEditar_Click_1(object sender, EventArgs e)
+        {
+            this.submenu = 3;
+            this.BotonPulsado();
+        }
     }
 }

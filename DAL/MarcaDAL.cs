@@ -180,9 +180,18 @@ namespace DAL
                 DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL(consulta);
                 foreach (DataRow fila in dsetClientes.Tables[0].Rows)
                 {
-                    //string str = fila["imagen"].ToString();
+                    string str = fila["foto_inicio"].ToString();
+                    MarcaENT marca = null;
+                    if (fila["foto_inicio"].ToString().Length>0 && fila["foto_final"].ToString().Length > 0)
+                        marca = new MarcaENT(Int32.Parse(fila["id"].ToString()), DateTime.Parse(fila["marca_inicio"].ToString()), DateTime.Parse(fila["marca_final"].ToString()), fila["estado"].ToString(), Int32.Parse(fila["id_empleado"].ToString()), (Byte[])fila["foto_inicio"], (Byte[])fila["foto_final"], (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), int.Parse(fila["id_unificacion"].ToString()));
+                    else if (fila["foto_inicio"].ToString().Length>0)
+                        marca = new MarcaENT(Int32.Parse(fila["id"].ToString()), DateTime.Parse(fila["marca_inicio"].ToString()), DateTime.Parse(fila["marca_final"].ToString()), fila["estado"].ToString(), Int32.Parse(fila["id_empleado"].ToString()), (Byte[])fila["foto_inicio"], null, (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), int.Parse(fila["id_unificacion"].ToString()));
+                    else if (fila["foto_final"].ToString().Length > 0)
+                        marca = new MarcaENT(Int32.Parse(fila["id"].ToString()), DateTime.Parse(fila["marca_inicio"].ToString()), DateTime.Parse(fila["marca_final"].ToString()), fila["estado"].ToString(), Int32.Parse(fila["id_empleado"].ToString()), null, (Byte[])fila["foto_final"], (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), int.Parse(fila["id_unificacion"].ToString()));
+                    else
+                        marca = new MarcaENT(Int32.Parse(fila["id"].ToString()), DateTime.Parse(fila["marca_inicio"].ToString()), DateTime.Parse(fila["marca_final"].ToString()), fila["estado"].ToString(), Int32.Parse(fila["id_empleado"].ToString()), null, null, (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), int.Parse(fila["id_unificacion"].ToString()));
+
                     //byte[] imagen = Encoding.ASCII.GetBytes(str);
-                    MarcaENT marca = new MarcaENT(Int32.Parse(fila["id"].ToString()), DateTime.Parse(fila["marca_inicio"].ToString()), DateTime.Parse(fila["marca_final"].ToString()), fila["estado"].ToString(), Int32.Parse(fila["id_empleado"].ToString()), (Byte[])fila["foto_inicio"], (Byte[])fila["foto_final"], (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), int.Parse(fila["id_unificacion"].ToString()));
                     ListaMarcas.Add(marca);
                 }
             }
@@ -231,11 +240,9 @@ namespace DAL
                                       "VALUES(@marca_inicio, @estado, @id_empleado, @foto_inicio, @fecha_creacion, @creado_por, @fecha_modificacion, @modificado_por)";
                
                 parametros.AgregarParametro("@marca_inicio", NpgsqlTypes.NpgsqlDbType.Timestamp, pMarca.marcar_inicio);
-                
                 parametros.AgregarParametro("@estado", NpgsqlTypes.NpgsqlDbType.Varchar, pMarca.estado);
                 parametros.AgregarParametro("@id_empleado", NpgsqlTypes.NpgsqlDbType.Integer, pMarca.IdEmpleado);
                 parametros.AgregarParametro("@foto_inicio", NpgsqlTypes.NpgsqlDbType.Bytea, pMarca.foto_inicio);
-               
                 parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pMarca.fechaCreacion);
                 parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pMarca.creadoPor);
                 parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pMarca.fechaModificacion);
@@ -248,7 +255,34 @@ namespace DAL
             }
         }
 
-        
+        public void AgregarMarcaManual(MarcaENT pMarca)
+        {
+            try
+            {
+                Parametro parametros = new Parametro();
+                AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
+                string sentenciaSQL = "INSERT INTO public.marca(marca_inicio, marca_final, estado, id_empleado, foto_inicio, fecha_creacion, creado_por, fecha_modificacion, modificado_por, id_unificacion)" +
+                                      "VALUES(@marca_inicio, @marca_final, @estado, @id_empleado, @foto_inicio, @fecha_creacion, @creado_por, @fecha_modificacion, @modificado_por, @id_unificacion)";
+
+                parametros.AgregarParametro("@marca_inicio", NpgsqlTypes.NpgsqlDbType.Timestamp, pMarca.marcar_inicio);
+                parametros.AgregarParametro("@marca_final", NpgsqlTypes.NpgsqlDbType.Timestamp, pMarca.marcar_final);
+                parametros.AgregarParametro("@estado", NpgsqlTypes.NpgsqlDbType.Varchar, pMarca.estado);
+                parametros.AgregarParametro("@id_empleado", NpgsqlTypes.NpgsqlDbType.Integer, pMarca.IdEmpleado);
+                parametros.AgregarParametro("@foto_inicio", NpgsqlTypes.NpgsqlDbType.Bytea, pMarca.foto_inicio);
+                parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pMarca.fechaCreacion);
+                parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pMarca.creadoPor);
+                parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pMarca.fechaModificacion);
+                parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pMarca.modificadoPor);
+                parametros.AgregarParametro("@id_unificacion", NpgsqlTypes.NpgsqlDbType.Integer, pMarca.IdUnificacion);
+                conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+
 
         public void EditarMarca(MarcaENT pMarca)
         {
@@ -285,7 +319,7 @@ namespace DAL
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
                 string sentenciaSQL = "UPDATE marca SET marca_final=@marca_final, foto_final=@foto_final, fecha_modificacion=@fecha_modificacion, modificado_por=@modificado_por WHERE id= " + pMarca.idMarca;
 
-                parametros.AgregarParametro("@id", NpgsqlTypes.NpgsqlDbType.Integer, pMarca.idMarca);
+                //parametros.AgregarParametro("@id", NpgsqlTypes.NpgsqlDbType.Integer, pMarca.idMarca);
                 parametros.AgregarParametro("@marca_inicio", NpgsqlTypes.NpgsqlDbType.Timestamp, pMarca.marcar_inicio);
                 parametros.AgregarParametro("@marca_final", NpgsqlTypes.NpgsqlDbType.Timestamp, pMarca.marcar_final);
                 parametros.AgregarParametro("@estado", NpgsqlTypes.NpgsqlDbType.Varchar, pMarca.estado);
