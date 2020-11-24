@@ -7,51 +7,87 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppReloj.DAL
+namespace DAL
 {
     class MarcaDAL
     {
-        public List<MarcaENT> ObtenerMarcas(DateTime fecha_inicio, DateTime fecha_fin, string tipo_marca, int empleado, int departamento, string generado)
+        public List<MarcaENT> ObtenerMarcas(String fecha_inicio, String fecha_fin, string tipo_marca, int empleado, int departamento, string generado)
         {
             List<MarcaENT> ListaMarcas = new List<MarcaENT>();
             // Console.WriteLine(pFiltro + " " + 1);
-            string consulta = "select * from marca ";
+            string consulta = "select marca.* from marca join empleado on marca.id_empleado = empleado.id join puesto on puesto.id = empleado.id_puesto ";
             //"select * from puesto where cast(id AS TEXT) like '" + pTexto + "%'"
-            if (fecha_inicio != null || fecha_fin != null || tipo_marca != "" || empleado > 0 || departamento > 0 || generado != "")
+            if (fecha_inicio != "" || fecha_fin != "" || tipo_marca != "" || empleado > 0 || departamento > 0 || generado != "")
             {
-                consulta += "where ";
-                if (fecha_inicio != null)
+                //consulta += "where ";
+                if (fecha_inicio != "")
                 {
-                    consulta += "marca_inicio = '" + fecha_inicio + "' ";
-                    if (fecha_fin != null)
-                    {
-                        consulta += "and marca_final = '" + fecha_fin + "' ";
-                    }
-                    //PENDIENTE
-                    if (tipo_marca != "")
-                    {
-                        
-                    }
-                    if (empleado > 0)
-                    {
-                        consulta += "and cast(id_empleado AS TEXT) like '" + empleado + "%' ";
-                    }
-                    //PENDIENTE
-                    if (departamento > 0)
-                    {
-                        
-                    }
-                    if (generado != "")
-                    {
-                        consulta += "and estado like '" + generado + "%' ";
-                    }
+                   
+                        if (tipo_marca == "Entrada")
+                        {
+                            consulta += "and marca.marca_inicio >'" + DateTime.Parse(fecha_inicio) + "'";
+                        }
+                        else if (tipo_marca == "Salida")
+                        {
+                        consulta += "and marca.marca_final >'" + DateTime.Parse(fecha_inicio) + "'";
+                        }
+                        else
+                        {
+                        consulta += "and marca.marca_inicio >'" + DateTime.Parse(fecha_inicio) + "'";
                 }
-                if (fecha_fin != null)
-                {
-                    consulta += "marca_final = '" + fecha_fin + "' ";
-                    if (fecha_inicio != null)
+                    
+
+                        
+                    /*if (fecha_fin != "")
                     {
-                        consulta += "and marca_inicio = '" + fecha_inicio + "' ";
+                        consulta += "and marca_final <= '" + DateTime.Parse(fecha_fin) + "' ";
+                    }
+                    //PENDIENTE
+                    if (tipo_marca != "")
+                    {
+                        
+                    }
+                    if (empleado > 0)
+                    {
+                        consulta += "and cast(id_empleado AS TEXT) like '" + empleado + "%' ";
+                    }
+                    //PENDIENTE
+                    if (departamento > 0)
+                    {
+                        
+                    }
+                    if (generado != "")
+                    {
+                        consulta += "and estado like '" + generado + "%' ";
+                    }*/
+                }
+                if (fecha_fin != "")
+                {
+                    if (tipo_marca == "Entrada")
+                    {
+                        /*if (consulta.Length == 26)
+                            consulta += "marca_inicio <= '" + DateTime.Parse(fecha_fin) + "' ";
+                        else*/
+                            consulta += " and marca.marca_inicio <= '" + DateTime.Parse(fecha_fin) + "' ";
+                    }
+                    else if (tipo_marca == "Salida")
+                    {
+                        /*if (consulta.Length == 26)
+                            consulta += "marca_final <= '" + DateTime.Parse(fecha_fin) + "' ";
+                        else*/
+                            consulta += " and marca.marca_final <= '" + DateTime.Parse(fecha_fin) + "' ";
+                    }
+                    else
+                    {
+                        /*if (consulta.Length == 26)
+                            consulta += "marca_final <= '" + DateTime.Parse(fecha_fin) + "' ";
+                        else*/
+                            consulta += " and marca.marca_final <= '" + DateTime.Parse(fecha_fin) + "' ";
+                    }
+                    
+                    /*if (fecha_inicio != "")
+                    {
+                        consulta += "and marca_inicio >'"  + DateTime.Parse(fecha_inicio)+"'";
                     }
                     //PENDIENTE
                     if (tipo_marca != "")
@@ -70,16 +106,17 @@ namespace AppReloj.DAL
                     if (generado != "")
                     {
                         consulta += "and estado like '" + generado + "%' ";
-                    }
+                    }*/
                 }
                 //PENDIENTE
-                if (tipo_marca != "")
+               if (empleado > 0)
                 {
-                    
-                }
-                if (empleado > 0)
-                {
-                    consulta += "cast(id_empleado AS TEXT) like '" + empleado + "%' ";
+                    /*if (consulta.Length == 26)
+                        consulta += "cast(id_empleado AS TEXT) like '" + empleado + "%' ";
+                    else*/
+                        //consulta += " and cast(id_empleado AS TEXT) like '" + empleado + "%' ";
+                        consulta += " and marca.id_empleado= " + empleado;
+                    /*consulta += "cast(id_empleado AS TEXT) like '" + empleado + "%' ";
                     if (fecha_fin != null)
                     {
                         consulta += "and marca_final = '" + fecha_fin + "' ";
@@ -101,17 +138,18 @@ namespace AppReloj.DAL
                     if (generado != "")
                     {
                         consulta += "and estado like '" + generado + "%' ";
-                    }
+                    }*/
                 }
                 //PENDIENTE
                 if (departamento > 0)
                 {
-                    
+                    consulta += " and puesto.id_departamento=" + departamento;
                 }
                 if (generado != "")
                 {
-                    consulta += "estado like '" + generado + "%' ";
-                    if (fecha_fin != null)
+                  //  consulta += "estado like '" + generado + "%' ";
+                    consulta += " and marca.estado = '" + generado.ToLower() + "'"; 
+                    /*if (fecha_fin != "")
                     {
                         consulta += "and marca_final = '" + fecha_fin + "' ";
                     }
@@ -120,7 +158,7 @@ namespace AppReloj.DAL
                     {
 
                     }
-                    if (fecha_inicio != null)
+                    if (fecha_inicio != "")
                     {
                         consulta += "and marca_inicio = '" + fecha_inicio + "' ";
                     }
@@ -132,24 +170,25 @@ namespace AppReloj.DAL
                     if (empleado > 0)
                     {
                         consulta += "and cast(id_empleado AS TEXT) like '" + empleado + "%' ";
-                    }
+                    }*/
                 }
             }
+            Console.WriteLine(consulta);
             try
             {
 
                 DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL(consulta);
                 foreach (DataRow fila in dsetClientes.Tables[0].Rows)
                 {
-                    string str = fila["imagen"].ToString();
-                    byte[] imagen = Encoding.ASCII.GetBytes(str);
+                    //string str = fila["imagen"].ToString();
+                    //byte[] imagen = Encoding.ASCII.GetBytes(str);
                     MarcaENT marca = new MarcaENT(Int32.Parse(fila["id"].ToString()), DateTime.Parse(fila["marca_inicio"].ToString()), DateTime.Parse(fila["marca_final"].ToString()), fila["estado"].ToString(), Int32.Parse(fila["id_empleado"].ToString()), (Byte[])fila["foto_inicio"], (Byte[])fila["foto_final"], (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), int.Parse(fila["id_unificacion"].ToString()));
                     ListaMarcas.Add(marca);
                 }
             }
             catch (Exception e)
             {
-                throw e;
+                    throw e;
             }
 
             

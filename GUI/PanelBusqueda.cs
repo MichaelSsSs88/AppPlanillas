@@ -27,9 +27,9 @@ namespace AppPlanillas.GUI
 
         public PanelPuestos oyente = null;
         public PanelEmpleados oyenteEmpleados = null;
-        public PanelDeduccion oyentepanelDeduccion = null;
+        public Form oyentepanelDeduccion = null;
 
-        public PanelBusqueda(int pestaña, PanelPuestos listen, PanelEmpleados listenEmpleado, PanelDeduccion listenDeduccion)
+        public PanelBusqueda(int pestaña, PanelPuestos listen, PanelEmpleados listenEmpleado, Form listenDeduccion)
         {
             InitializeComponent();
             this.cmbTipoBusquedaActualizar.SelectedIndex = 0;
@@ -212,7 +212,29 @@ namespace AppPlanillas.GUI
             if(oyenteEmpleados!=null)
                 oyenteEmpleados.Clic(this, this.pestaña, 1);
             if (oyentepanelDeduccion != null)
-                oyentepanelDeduccion.Clic(this, this.pestaña, 1);
+            {
+                try
+                {
+                    ((PanelDeduccion)oyentepanelDeduccion).Clic(this, this.pestaña, 1);
+                }
+                catch
+                {
+
+                }
+                try
+                {
+                    ((PanelMarcas)oyentepanelDeduccion).Clic(this, this.pestaña, 1);
+                    
+                }
+                catch
+                {
+
+                }
+                
+
+
+            }
+                
         }
 
         private void LimpiarEditarPuestos()

@@ -123,13 +123,13 @@ namespace DAL
                                 if (IndiceFila==1)
                                 {
                                     ((Image)fila.Cells[columna.Name].Value).Save(Application.StartupPath + @"\IMG\avatar.png", System.Drawing.Imaging.ImageFormat.Png);
-                                    xlWorkSheet.Shapes.AddPicture(Application.StartupPath + @"\IMG\avatar.png", Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 680, 50, 50, 50);
+                                    xlWorkSheet.Shapes.AddPicture(Application.StartupPath + @"\IMG\avatar.png", Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 700, 50, 50, 50);
                                     File.Delete(Application.StartupPath + @"\IMG\avatar.png");
                                 }
                                 else
                                 {
                                     ((Image)fila.Cells[columna.Name].Value).Save(Application.StartupPath + @"\IMG\avatar.png", System.Drawing.Imaging.ImageFormat.Png);
-                                    xlWorkSheet.Shapes.AddPicture(Application.StartupPath + @"\IMG\avatar.png", Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 680, (IndiceFila * 50), 50, 50);
+                                    xlWorkSheet.Shapes.AddPicture(Application.StartupPath + @"\IMG\avatar.png", Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 700, (IndiceFila * 50), 50, 50);
                                     File.Delete(Application.StartupPath + @"\IMG\avatar.png");
 
                                 }
