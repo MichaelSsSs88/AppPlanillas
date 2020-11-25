@@ -56,48 +56,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabDeleteHour = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.dgvEliminar = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panelEliminarFiltrar = new System.Windows.Forms.Panel();
-            this.txtEliminarBusqueda = new System.Windows.Forms.TextBox();
-            this.lblBuscar = new System.Windows.Forms.Label();
-            this.cmbEliminarBusqueda = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.ckbEliminarActivo = new System.Windows.Forms.CheckBox();
-            this.picEliminarImg = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.txtEliminarSalarioHora = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.txtEliminarPuesto = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.dtpEliminarNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txtEliminarApellido2 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtEliminarApellido1 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtEliminarNombre = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.txtEliminarCedula = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -137,11 +95,13 @@
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.cmbEditarTipoMarca = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpEditarFechaFin = new System.Windows.Forms.DateTimePicker();
             this.ckbEditarFechaFin = new System.Windows.Forms.CheckBox();
             this.dtpEditarFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.ckbEditarFecha = new System.Windows.Forms.CheckBox();
-            this.dgvEditar = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvEditarMarca = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -154,12 +114,51 @@
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtEditarCodigo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtpEditarEntrada = new System.Windows.Forms.DateTimePicker();
+            this.txtEditarIdEmpleado = new System.Windows.Forms.TextBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.dtpEditarSalida = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.dgvEliminarMarca = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn7 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbEliminarEstado = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtEliminarDepartamento = new System.Windows.Forms.TextBox();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
+            this.txtEliminarEmpleado = new System.Windows.Forms.TextBox();
+            this.linkLabel6 = new System.Windows.Forms.LinkLabel();
+            this.cmbEliminarTipoMarca = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dtpEliminarFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.ckbEliminarFechaFin = new System.Windows.Forms.CheckBox();
+            this.dtpEliminarFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.ckbEliminarFecha = new System.Windows.Forms.CheckBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.txtEliminarIdEmpleado = new System.Windows.Forms.TextBox();
+            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
+            this.dtpEliminarSalida = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dtpEliminarEntrada = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtEliminarCodigo = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabDepartamentos.SuspendLayout();
             this.tabFindClock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).BeginInit();
@@ -173,13 +172,11 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabDeleteHour.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEliminar)).BeginInit();
-            this.panelEliminarFiltrar.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picEliminarImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEditar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEditarMarca)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEliminarMarca)).BeginInit();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabDepartamentos
@@ -521,7 +518,7 @@
             this.button4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
             this.button4.Size = new System.Drawing.Size(655, 111);
             this.button4.TabIndex = 53;
-            this.button4.Text = "Insertar Empleado";
+            this.button4.Text = "Insertar Marcas";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -541,6 +538,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.dgvEditarMarca);
+            this.groupBox3.Controls.Add(this.panel2);
             this.groupBox3.Controls.Add(this.cmbEditarEstado);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.txtEditarDepartamento);
@@ -549,12 +548,12 @@
             this.groupBox3.Controls.Add(this.linkLabel4);
             this.groupBox3.Controls.Add(this.cmbEditarTipoMarca);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
+            this.groupBox3.Controls.Add(this.dtpEditarFechaFin);
             this.groupBox3.Controls.Add(this.ckbEditarFechaFin);
             this.groupBox3.Controls.Add(this.dtpEditarFechaInicio);
             this.groupBox3.Controls.Add(this.ckbEditarFecha);
-            this.groupBox3.Controls.Add(this.dgvEditar);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox3.Location = new System.Drawing.Point(5, 5);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
@@ -562,15 +561,18 @@
             this.groupBox3.Size = new System.Drawing.Size(682, 783);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Filtrar empleados:";
+            this.groupBox3.Text = "Filtrar marcas:";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.txtEditarIdEmpleado);
             this.groupBox2.Controls.Add(this.linkLabel2);
-            this.groupBox2.Controls.Add(this.checkBox5);
-            this.groupBox2.Controls.Add(this.dateTimePicker3);
-            this.groupBox2.Controls.Add(this.checkBox6);
+            this.groupBox2.Controls.Add(this.dtpEditarSalida);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.dtpEditarEntrada);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.txtEditarCodigo);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -594,490 +596,6 @@
             this.tabDeleteHour.TabIndex = 2;
             this.tabDeleteHour.Text = "Eliminar Marca";
             this.tabDeleteHour.UseVisualStyleBackColor = true;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.dgvEliminar);
-            this.groupBox5.Controls.Add(this.panel7);
-            this.groupBox5.Controls.Add(this.label15);
-            this.groupBox5.Controls.Add(this.panelEliminarFiltrar);
-            this.groupBox5.Controls.Add(this.cmbEliminarBusqueda);
-            this.groupBox5.Controls.Add(this.label17);
-            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox5.Location = new System.Drawing.Point(0, 0);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.groupBox5.Size = new System.Drawing.Size(692, 793);
-            this.groupBox5.TabIndex = 5;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Filtrar empleados:";
-            // 
-            // dgvEliminar
-            // 
-            this.dgvEliminar.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dgvEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEliminar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn20,
-            this.dataGridViewImageColumn2,
-            this.dataGridViewTextBoxColumn21,
-            this.dataGridViewTextBoxColumn22,
-            this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn24,
-            this.dataGridViewTextBoxColumn25,
-            this.dataGridViewTextBoxColumn26});
-            this.dgvEliminar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEliminar.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvEliminar.Location = new System.Drawing.Point(13, 252);
-            this.dgvEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dgvEliminar.MultiSelect = false;
-            this.dgvEliminar.Name = "dgvEliminar";
-            this.dgvEliminar.RowHeadersWidth = 51;
-            this.dgvEliminar.RowTemplate.Height = 200;
-            this.dgvEliminar.Size = new System.Drawing.Size(666, 529);
-            this.dgvEliminar.TabIndex = 8;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Cédula";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Apellido_Uno";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Primera pellido";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Apellido_Dos";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Segundo Apellido";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "fechaNacimiento";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Fecha Nacimiento";
-            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Id_Puesto";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Puesto";
-            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "Salario_Hora";
-            this.dataGridViewTextBoxColumn20.HeaderText = "Salario por Hora";
-            this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.Width = 125;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn2.DataPropertyName = "getImagen";
-            this.dataGridViewImageColumn2.FillWeight = 250F;
-            this.dataGridViewImageColumn2.HeaderText = "Foto";
-            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn2.MinimumWidth = 6;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewImageColumn2.Width = 250;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "Imagen";
-            this.dataGridViewTextBoxColumn21.HeaderText = "FotoBynary";
-            this.dataGridViewTextBoxColumn21.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.Visible = false;
-            this.dataGridViewTextBoxColumn21.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "getCreador";
-            this.dataGridViewTextBoxColumn22.HeaderText = "Creador";
-            this.dataGridViewTextBoxColumn22.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "getFechaCreacion";
-            this.dataGridViewTextBoxColumn23.HeaderText = "Fecha de Creacion";
-            this.dataGridViewTextBoxColumn23.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "getModificador";
-            this.dataGridViewTextBoxColumn24.HeaderText = "Modificador";
-            this.dataGridViewTextBoxColumn24.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "getFechaModificacion";
-            this.dataGridViewTextBoxColumn25.HeaderText = "Fecha de Modificacion";
-            this.dataGridViewTextBoxColumn25.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "getActivo";
-            this.dataGridViewTextBoxColumn26.HeaderText = "Activo";
-            this.dataGridViewTextBoxColumn26.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.Width = 125;
-            // 
-            // panel7
-            // 
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(13, 206);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(666, 46);
-            this.panel7.TabIndex = 7;
-            // 
-            // label15
-            // 
-            this.label15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label15.Location = new System.Drawing.Point(13, 169);
-            this.label15.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label15.Name = "label15";
-            this.label15.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label15.Size = new System.Drawing.Size(666, 37);
-            this.label15.TabIndex = 4;
-            this.label15.Text = "Seleccione el empleado a modificar::";
-            // 
-            // panelEliminarFiltrar
-            // 
-            this.panelEliminarFiltrar.Controls.Add(this.txtEliminarBusqueda);
-            this.panelEliminarFiltrar.Controls.Add(this.lblBuscar);
-            this.panelEliminarFiltrar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEliminarFiltrar.Location = new System.Drawing.Point(13, 85);
-            this.panelEliminarFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panelEliminarFiltrar.Name = "panelEliminarFiltrar";
-            this.panelEliminarFiltrar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.panelEliminarFiltrar.Size = new System.Drawing.Size(666, 84);
-            this.panelEliminarFiltrar.TabIndex = 3;
-            // 
-            // txtEliminarBusqueda
-            // 
-            this.txtEliminarBusqueda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEliminarBusqueda.Location = new System.Drawing.Point(0, 46);
-            this.txtEliminarBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtEliminarBusqueda.Name = "txtEliminarBusqueda";
-            this.txtEliminarBusqueda.Size = new System.Drawing.Size(666, 22);
-            this.txtEliminarBusqueda.TabIndex = 4;
-            // 
-            // lblBuscar
-            // 
-            this.lblBuscar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblBuscar.Location = new System.Drawing.Point(0, 12);
-            this.lblBuscar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(666, 34);
-            this.lblBuscar.TabIndex = 3;
-            this.lblBuscar.Text = "Digite :";
-            // 
-            // cmbEliminarBusqueda
-            // 
-            this.cmbEliminarBusqueda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmbEliminarBusqueda.FormattingEnabled = true;
-            this.cmbEliminarBusqueda.Items.AddRange(new object[] {
-            "Todos",
-            "Cédula",
-            "Nombre Completo"});
-            this.cmbEliminarBusqueda.Location = new System.Drawing.Point(13, 61);
-            this.cmbEliminarBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbEliminarBusqueda.Name = "cmbEliminarBusqueda";
-            this.cmbEliminarBusqueda.Size = new System.Drawing.Size(666, 24);
-            this.cmbEliminarBusqueda.TabIndex = 2;
-            // 
-            // label17
-            // 
-            this.label17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label17.Location = new System.Drawing.Point(13, 27);
-            this.label17.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(666, 34);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Seleccione el tipo de busqueda:";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.button2);
-            this.groupBox6.Controls.Add(this.ckbEliminarActivo);
-            this.groupBox6.Controls.Add(this.picEliminarImg);
-            this.groupBox6.Controls.Add(this.panel5);
-            this.groupBox6.Controls.Add(this.txtEliminarSalarioHora);
-            this.groupBox6.Controls.Add(this.label26);
-            this.groupBox6.Controls.Add(this.txtEliminarPuesto);
-            this.groupBox6.Controls.Add(this.label18);
-            this.groupBox6.Controls.Add(this.dtpEliminarNacimiento);
-            this.groupBox6.Controls.Add(this.label19);
-            this.groupBox6.Controls.Add(this.txtEliminarApellido2);
-            this.groupBox6.Controls.Add(this.label20);
-            this.groupBox6.Controls.Add(this.txtEliminarApellido1);
-            this.groupBox6.Controls.Add(this.label21);
-            this.groupBox6.Controls.Add(this.txtEliminarNombre);
-            this.groupBox6.Controls.Add(this.label22);
-            this.groupBox6.Controls.Add(this.txtEliminarCedula);
-            this.groupBox6.Controls.Add(this.label23);
-            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox6.Location = new System.Drawing.Point(692, 0);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(13, 12, 13, 5);
-            this.groupBox6.Size = new System.Drawing.Size(679, 793);
-            this.groupBox6.TabIndex = 4;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Verificar empleado a eliminar:";
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(13, 677);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.button2.Size = new System.Drawing.Size(264, 111);
-            this.button2.TabIndex = 63;
-            this.button2.Text = "Eliminar Empleado";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // ckbEliminarActivo
-            // 
-            this.ckbEliminarActivo.AutoSize = true;
-            this.ckbEliminarActivo.Checked = true;
-            this.ckbEliminarActivo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckbEliminarActivo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ckbEliminarActivo.Location = new System.Drawing.Point(13, 481);
-            this.ckbEliminarActivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ckbEliminarActivo.Name = "ckbEliminarActivo";
-            this.ckbEliminarActivo.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.ckbEliminarActivo.Size = new System.Drawing.Size(264, 36);
-            this.ckbEliminarActivo.TabIndex = 62;
-            this.ckbEliminarActivo.Text = "Activo";
-            this.ckbEliminarActivo.UseVisualStyleBackColor = true;
-            // 
-            // picEliminarImg
-            // 
-            this.picEliminarImg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picEliminarImg.Dock = System.Windows.Forms.DockStyle.Right;
-            this.picEliminarImg.Location = new System.Drawing.Point(277, 481);
-            this.picEliminarImg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.picEliminarImg.Name = "picEliminarImg";
-            this.picEliminarImg.Size = new System.Drawing.Size(389, 307);
-            this.picEliminarImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picEliminarImg.TabIndex = 61;
-            this.picEliminarImg.TabStop = false;
-            // 
-            // panel5
-            // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(13, 469);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(653, 12);
-            this.panel5.TabIndex = 43;
-            // 
-            // txtEliminarSalarioHora
-            // 
-            this.txtEliminarSalarioHora.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEliminarSalarioHora.Location = new System.Drawing.Point(13, 443);
-            this.txtEliminarSalarioHora.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtEliminarSalarioHora.Name = "txtEliminarSalarioHora";
-            this.txtEliminarSalarioHora.ReadOnly = true;
-            this.txtEliminarSalarioHora.Size = new System.Drawing.Size(653, 26);
-            this.txtEliminarSalarioHora.TabIndex = 32;
-            // 
-            // label26
-            // 
-            this.label26.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label26.Location = new System.Drawing.Point(13, 406);
-            this.label26.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label26.Name = "label26";
-            this.label26.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label26.Size = new System.Drawing.Size(653, 37);
-            this.label26.TabIndex = 31;
-            this.label26.Text = "Salario por hora:";
-            // 
-            // txtEliminarPuesto
-            // 
-            this.txtEliminarPuesto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEliminarPuesto.Location = new System.Drawing.Point(13, 380);
-            this.txtEliminarPuesto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtEliminarPuesto.Name = "txtEliminarPuesto";
-            this.txtEliminarPuesto.ReadOnly = true;
-            this.txtEliminarPuesto.Size = new System.Drawing.Size(653, 26);
-            this.txtEliminarPuesto.TabIndex = 25;
-            // 
-            // label18
-            // 
-            this.label18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label18.Location = new System.Drawing.Point(13, 343);
-            this.label18.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label18.Name = "label18";
-            this.label18.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label18.Size = new System.Drawing.Size(653, 37);
-            this.label18.TabIndex = 24;
-            this.label18.Text = "Puesto:";
-            // 
-            // dtpEliminarNacimiento
-            // 
-            this.dtpEliminarNacimiento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtpEliminarNacimiento.Location = new System.Drawing.Point(13, 317);
-            this.dtpEliminarNacimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dtpEliminarNacimiento.Name = "dtpEliminarNacimiento";
-            this.dtpEliminarNacimiento.Size = new System.Drawing.Size(653, 26);
-            this.dtpEliminarNacimiento.TabIndex = 23;
-            // 
-            // label19
-            // 
-            this.label19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label19.Location = new System.Drawing.Point(13, 280);
-            this.label19.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label19.Name = "label19";
-            this.label19.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label19.Size = new System.Drawing.Size(653, 37);
-            this.label19.TabIndex = 22;
-            this.label19.Text = "Fecha de nacimiento:";
-            // 
-            // txtEliminarApellido2
-            // 
-            this.txtEliminarApellido2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEliminarApellido2.Location = new System.Drawing.Point(13, 254);
-            this.txtEliminarApellido2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtEliminarApellido2.Name = "txtEliminarApellido2";
-            this.txtEliminarApellido2.ReadOnly = true;
-            this.txtEliminarApellido2.Size = new System.Drawing.Size(653, 26);
-            this.txtEliminarApellido2.TabIndex = 21;
-            // 
-            // label20
-            // 
-            this.label20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label20.Location = new System.Drawing.Point(13, 217);
-            this.label20.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label20.Name = "label20";
-            this.label20.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label20.Size = new System.Drawing.Size(653, 37);
-            this.label20.TabIndex = 20;
-            this.label20.Text = "Segundo apellido:";
-            // 
-            // txtEliminarApellido1
-            // 
-            this.txtEliminarApellido1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEliminarApellido1.Location = new System.Drawing.Point(13, 191);
-            this.txtEliminarApellido1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtEliminarApellido1.Name = "txtEliminarApellido1";
-            this.txtEliminarApellido1.ReadOnly = true;
-            this.txtEliminarApellido1.Size = new System.Drawing.Size(653, 26);
-            this.txtEliminarApellido1.TabIndex = 19;
-            // 
-            // label21
-            // 
-            this.label21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label21.Location = new System.Drawing.Point(13, 154);
-            this.label21.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label21.Name = "label21";
-            this.label21.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label21.Size = new System.Drawing.Size(653, 37);
-            this.label21.TabIndex = 18;
-            this.label21.Text = "Primer apellido:";
-            // 
-            // txtEliminarNombre
-            // 
-            this.txtEliminarNombre.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEliminarNombre.Location = new System.Drawing.Point(13, 128);
-            this.txtEliminarNombre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtEliminarNombre.Name = "txtEliminarNombre";
-            this.txtEliminarNombre.ReadOnly = true;
-            this.txtEliminarNombre.Size = new System.Drawing.Size(653, 26);
-            this.txtEliminarNombre.TabIndex = 17;
-            // 
-            // label22
-            // 
-            this.label22.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label22.Location = new System.Drawing.Point(13, 91);
-            this.label22.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label22.Name = "label22";
-            this.label22.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label22.Size = new System.Drawing.Size(653, 37);
-            this.label22.TabIndex = 16;
-            this.label22.Text = "Nombre:";
-            // 
-            // txtEliminarCedula
-            // 
-            this.txtEliminarCedula.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEliminarCedula.Location = new System.Drawing.Point(13, 65);
-            this.txtEliminarCedula.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtEliminarCedula.Name = "txtEliminarCedula";
-            this.txtEliminarCedula.ReadOnly = true;
-            this.txtEliminarCedula.Size = new System.Drawing.Size(653, 26);
-            this.txtEliminarCedula.TabIndex = 1;
-            // 
-            // label23
-            // 
-            this.label23.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label23.Location = new System.Drawing.Point(13, 31);
-            this.label23.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(653, 34);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Cédula:";
             // 
             // dataGridViewTextBoxColumn27
             // 
@@ -1392,31 +910,33 @@
             "Generado",
             "Aplicado",
             "Pagado"});
-            this.cmbEditarEstado.Location = new System.Drawing.Point(13, 361);
+            this.cmbEditarEstado.Location = new System.Drawing.Point(13, 385);
             this.cmbEditarEstado.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEditarEstado.Name = "cmbEditarEstado";
-            this.cmbEditarEstado.Size = new System.Drawing.Size(656, 24);
+            this.cmbEditarEstado.Size = new System.Drawing.Size(656, 28);
             this.cmbEditarEstado.TabIndex = 78;
+            this.cmbEditarEstado.SelectedIndexChanged += new System.EventHandler(this.cmbEditarEstado_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Location = new System.Drawing.Point(13, 324);
+            this.label1.Location = new System.Drawing.Point(13, 348);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
             this.label1.Size = new System.Drawing.Size(656, 37);
             this.label1.TabIndex = 77;
             this.label1.Text = "Seleccione el estado:";
+            this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
             // 
             // txtEditarDepartamento
             // 
             this.txtEditarDepartamento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEditarDepartamento.Location = new System.Drawing.Point(13, 302);
+            this.txtEditarDepartamento.Location = new System.Drawing.Point(13, 322);
             this.txtEditarDepartamento.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditarDepartamento.Name = "txtEditarDepartamento";
             this.txtEditarDepartamento.ReadOnly = true;
-            this.txtEditarDepartamento.Size = new System.Drawing.Size(656, 22);
+            this.txtEditarDepartamento.Size = new System.Drawing.Size(656, 26);
             this.txtEditarDepartamento.TabIndex = 76;
             this.txtEditarDepartamento.Text = "0";
             // 
@@ -1424,7 +944,7 @@
             // 
             this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(13, 265);
+            this.linkLabel1.Location = new System.Drawing.Point(13, 285);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
@@ -1432,23 +952,25 @@
             this.linkLabel1.TabIndex = 75;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Seleccione el departamento:";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // txtEditarEmpleado
             // 
             this.txtEditarEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEditarEmpleado.Location = new System.Drawing.Point(13, 243);
+            this.txtEditarEmpleado.Location = new System.Drawing.Point(13, 259);
             this.txtEditarEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditarEmpleado.Name = "txtEditarEmpleado";
             this.txtEditarEmpleado.ReadOnly = true;
-            this.txtEditarEmpleado.Size = new System.Drawing.Size(656, 22);
+            this.txtEditarEmpleado.Size = new System.Drawing.Size(656, 26);
             this.txtEditarEmpleado.TabIndex = 74;
             this.txtEditarEmpleado.Text = "0";
+            this.txtEditarEmpleado.TextChanged += new System.EventHandler(this.txtEditarEmpleado_TextChanged);
             // 
             // linkLabel4
             // 
             this.linkLabel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.linkLabel4.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel4.Location = new System.Drawing.Point(13, 206);
+            this.linkLabel4.Location = new System.Drawing.Point(13, 222);
             this.linkLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
@@ -1456,6 +978,7 @@
             this.linkLabel4.TabIndex = 73;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "Seleccione el empleado:";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // cmbEditarTipoMarca
             // 
@@ -1465,16 +988,17 @@
             "Ambos",
             "Entrada",
             "Salida"});
-            this.cmbEditarTipoMarca.Location = new System.Drawing.Point(13, 182);
+            this.cmbEditarTipoMarca.Location = new System.Drawing.Point(13, 194);
             this.cmbEditarTipoMarca.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEditarTipoMarca.Name = "cmbEditarTipoMarca";
-            this.cmbEditarTipoMarca.Size = new System.Drawing.Size(656, 24);
+            this.cmbEditarTipoMarca.Size = new System.Drawing.Size(656, 28);
             this.cmbEditarTipoMarca.TabIndex = 72;
+            this.cmbEditarTipoMarca.SelectedIndexChanged += new System.EventHandler(this.cmbEditarTipoMarca_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Location = new System.Drawing.Point(13, 145);
+            this.label3.Location = new System.Drawing.Point(13, 157);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
@@ -1482,43 +1006,46 @@
             this.label3.TabIndex = 71;
             this.label3.Text = "Seleccione el tipo de marca:";
             // 
-            // dateTimePicker1
+            // dtpEditarFechaFin
             // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(13, 123);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(656, 22);
-            this.dateTimePicker1.TabIndex = 70;
+            this.dtpEditarFechaFin.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpEditarFechaFin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpEditarFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEditarFechaFin.Location = new System.Drawing.Point(13, 131);
+            this.dtpEditarFechaFin.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpEditarFechaFin.Name = "dtpEditarFechaFin";
+            this.dtpEditarFechaFin.Size = new System.Drawing.Size(656, 26);
+            this.dtpEditarFechaFin.TabIndex = 70;
+            this.dtpEditarFechaFin.ValueChanged += new System.EventHandler(this.dtpEditarFechaFin_ValueChanged);
             // 
             // ckbEditarFechaFin
             // 
             this.ckbEditarFechaFin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ckbEditarFechaFin.Location = new System.Drawing.Point(13, 86);
+            this.ckbEditarFechaFin.Location = new System.Drawing.Point(13, 94);
             this.ckbEditarFechaFin.Margin = new System.Windows.Forms.Padding(4);
             this.ckbEditarFechaFin.Name = "ckbEditarFechaFin";
             this.ckbEditarFechaFin.Size = new System.Drawing.Size(656, 37);
             this.ckbEditarFechaFin.TabIndex = 69;
             this.ckbEditarFechaFin.Text = "Fecha fin:";
             this.ckbEditarFechaFin.UseVisualStyleBackColor = true;
+            this.ckbEditarFechaFin.CheckedChanged += new System.EventHandler(this.ckbEditarFechaFin_CheckedChanged);
             // 
             // dtpEditarFechaInicio
             // 
             this.dtpEditarFechaInicio.CustomFormat = "dd/MM/yyyy HH:mm";
             this.dtpEditarFechaInicio.Dock = System.Windows.Forms.DockStyle.Top;
             this.dtpEditarFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEditarFechaInicio.Location = new System.Drawing.Point(13, 64);
+            this.dtpEditarFechaInicio.Location = new System.Drawing.Point(13, 68);
             this.dtpEditarFechaInicio.Margin = new System.Windows.Forms.Padding(4);
             this.dtpEditarFechaInicio.Name = "dtpEditarFechaInicio";
-            this.dtpEditarFechaInicio.Size = new System.Drawing.Size(656, 22);
+            this.dtpEditarFechaInicio.Size = new System.Drawing.Size(656, 26);
             this.dtpEditarFechaInicio.TabIndex = 68;
+            this.dtpEditarFechaInicio.ValueChanged += new System.EventHandler(this.dtpEditarFechaInicio_ValueChanged);
             // 
             // ckbEditarFecha
             // 
             this.ckbEditarFecha.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ckbEditarFecha.Location = new System.Drawing.Point(13, 27);
+            this.ckbEditarFecha.Location = new System.Drawing.Point(13, 31);
             this.ckbEditarFecha.Margin = new System.Windows.Forms.Padding(4);
             this.ckbEditarFecha.Name = "ckbEditarFecha";
             this.ckbEditarFecha.Size = new System.Drawing.Size(656, 37);
@@ -1527,11 +1054,41 @@
             this.ckbEditarFecha.UseVisualStyleBackColor = true;
             this.ckbEditarFecha.CheckedChanged += new System.EventHandler(this.ckbEditarFecha_CheckedChanged);
             // 
-            // dgvEditar
+            // button1
             // 
-            this.dgvEditar.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dgvEditar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEditar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(13, 667);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.button1.Size = new System.Drawing.Size(653, 111);
+            this.button1.TabIndex = 62;
+            this.button1.Text = "Editar Marca";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(13, 413);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(656, 30);
+            this.panel2.TabIndex = 79;
+            // 
+            // dgvEditarMarca
+            // 
+            this.dgvEditarMarca.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dgvEditarMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEditarMarca.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -1544,16 +1101,17 @@
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16});
-            this.dgvEditar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEditar.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvEditar.Location = new System.Drawing.Point(13, 27);
-            this.dgvEditar.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvEditar.MultiSelect = false;
-            this.dgvEditar.Name = "dgvEditar";
-            this.dgvEditar.RowHeadersWidth = 51;
-            this.dgvEditar.RowTemplate.Height = 200;
-            this.dgvEditar.Size = new System.Drawing.Size(656, 744);
-            this.dgvEditar.TabIndex = 66;
+            this.dgvEditarMarca.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEditarMarca.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvEditarMarca.Location = new System.Drawing.Point(13, 443);
+            this.dgvEditarMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvEditarMarca.MultiSelect = false;
+            this.dgvEditarMarca.Name = "dgvEditarMarca";
+            this.dgvEditarMarca.RowHeadersWidth = 51;
+            this.dgvEditarMarca.RowTemplate.Height = 200;
+            this.dgvEditarMarca.Size = new System.Drawing.Size(656, 328);
+            this.dgvEditarMarca.TabIndex = 80;
+            this.dgvEditarMarca.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvEditar_MouseClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1659,83 +1217,543 @@
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             this.dataGridViewTextBoxColumn16.Width = 125;
             // 
-            // button1
+            // label2
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(13, 667);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.button1.Size = new System.Drawing.Size(653, 111);
-            this.button1.TabIndex = 62;
-            this.button1.Text = "Editar Empleado";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Location = new System.Drawing.Point(13, 31);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.label2.Size = new System.Drawing.Size(653, 30);
+            this.label2.TabIndex = 63;
+            this.label2.Text = "Código Marca:";
             // 
-            // textBox3
+            // txtEditarCodigo
             // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox3.Location = new System.Drawing.Point(13, 168);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(653, 26);
-            this.textBox3.TabIndex = 74;
-            this.textBox3.Text = "0";
+            this.txtEditarCodigo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEditarCodigo.Location = new System.Drawing.Point(13, 61);
+            this.txtEditarCodigo.Name = "txtEditarCodigo";
+            this.txtEditarCodigo.ReadOnly = true;
+            this.txtEditarCodigo.Size = new System.Drawing.Size(653, 26);
+            this.txtEditarCodigo.TabIndex = 64;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Location = new System.Drawing.Point(13, 87);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.label4.Size = new System.Drawing.Size(653, 30);
+            this.label4.TabIndex = 65;
+            this.label4.Text = "Fecha y hora de entrada:";
+            // 
+            // dtpEditarEntrada
+            // 
+            this.dtpEditarEntrada.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpEditarEntrada.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpEditarEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEditarEntrada.Location = new System.Drawing.Point(13, 117);
+            this.dtpEditarEntrada.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpEditarEntrada.Name = "dtpEditarEntrada";
+            this.dtpEditarEntrada.ShowCheckBox = true;
+            this.dtpEditarEntrada.Size = new System.Drawing.Size(653, 26);
+            this.dtpEditarEntrada.TabIndex = 85;
+            // 
+            // txtEditarIdEmpleado
+            // 
+            this.txtEditarIdEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEditarIdEmpleado.Location = new System.Drawing.Point(13, 236);
+            this.txtEditarIdEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEditarIdEmpleado.Name = "txtEditarIdEmpleado";
+            this.txtEditarIdEmpleado.ReadOnly = true;
+            this.txtEditarIdEmpleado.Size = new System.Drawing.Size(653, 26);
+            this.txtEditarIdEmpleado.TabIndex = 95;
+            this.txtEditarIdEmpleado.Text = "0";
             // 
             // linkLabel2
             // 
             this.linkLabel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.linkLabel2.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel2.Location = new System.Drawing.Point(13, 131);
+            this.linkLabel2.Location = new System.Drawing.Point(13, 199);
             this.linkLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
             this.linkLabel2.Size = new System.Drawing.Size(653, 37);
-            this.linkLabel2.TabIndex = 73;
+            this.linkLabel2.TabIndex = 94;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Seleccione el empleado:";
             // 
-            // checkBox5
+            // dtpEditarSalida
             // 
-            this.checkBox5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.checkBox5.Location = new System.Drawing.Point(13, 94);
-            this.checkBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(653, 37);
-            this.checkBox5.TabIndex = 72;
-            this.checkBox5.Text = "Fecha  y hora de fin:";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.dtpEditarSalida.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpEditarSalida.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpEditarSalida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEditarSalida.Location = new System.Drawing.Point(13, 173);
+            this.dtpEditarSalida.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpEditarSalida.Name = "dtpEditarSalida";
+            this.dtpEditarSalida.ShowCheckBox = true;
+            this.dtpEditarSalida.Size = new System.Drawing.Size(653, 26);
+            this.dtpEditarSalida.TabIndex = 91;
             // 
-            // dateTimePicker3
+            // label5
             // 
-            this.dateTimePicker3.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dateTimePicker3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker3.Location = new System.Drawing.Point(13, 68);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(653, 26);
-            this.dateTimePicker3.TabIndex = 71;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label5.Location = new System.Drawing.Point(13, 143);
+            this.label5.Name = "label5";
+            this.label5.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.label5.Size = new System.Drawing.Size(653, 30);
+            this.label5.TabIndex = 90;
+            this.label5.Text = "Fecha y hora de salida:";
             // 
-            // checkBox6
+            // groupBox5
             // 
-            this.checkBox6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.checkBox6.Location = new System.Drawing.Point(13, 31);
-            this.checkBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(653, 37);
-            this.checkBox6.TabIndex = 70;
-            this.checkBox6.Text = "Fecha y hora de inicio:";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.groupBox5.Controls.Add(this.dgvEliminarMarca);
+            this.groupBox5.Controls.Add(this.panel3);
+            this.groupBox5.Controls.Add(this.cmbEliminarEstado);
+            this.groupBox5.Controls.Add(this.label6);
+            this.groupBox5.Controls.Add(this.txtEliminarDepartamento);
+            this.groupBox5.Controls.Add(this.linkLabel5);
+            this.groupBox5.Controls.Add(this.txtEliminarEmpleado);
+            this.groupBox5.Controls.Add(this.linkLabel6);
+            this.groupBox5.Controls.Add(this.cmbEliminarTipoMarca);
+            this.groupBox5.Controls.Add(this.label8);
+            this.groupBox5.Controls.Add(this.dtpEliminarFechaFin);
+            this.groupBox5.Controls.Add(this.ckbEliminarFechaFin);
+            this.groupBox5.Controls.Add(this.dtpEliminarFechaInicio);
+            this.groupBox5.Controls.Add(this.ckbEliminarFecha);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox5.Location = new System.Drawing.Point(0, 0);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.groupBox5.Size = new System.Drawing.Size(692, 793);
+            this.groupBox5.TabIndex = 5;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Filtrar empleados:";
+            // 
+            // dgvEliminarMarca
+            // 
+            this.dgvEliminarMarca.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dgvEliminarMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEliminarMarca.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewImageColumn2,
+            this.dataGridViewImageColumn7,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20});
+            this.dgvEliminarMarca.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEliminarMarca.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvEliminarMarca.Location = new System.Drawing.Point(13, 415);
+            this.dgvEliminarMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvEliminarMarca.MultiSelect = false;
+            this.dgvEliminarMarca.Name = "dgvEliminarMarca";
+            this.dgvEliminarMarca.RowHeadersWidth = 51;
+            this.dgvEliminarMarca.RowTemplate.Height = 200;
+            this.dgvEliminarMarca.Size = new System.Drawing.Size(666, 366);
+            this.dgvEliminarMarca.TabIndex = 80;
+            this.dgvEliminarMarca.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvEliminar_MouseClick);
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "idMarca";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Código Marca";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "marcar_inicio";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Entrada";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "marcar_final";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Salida";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "estado";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Estado";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "IdEmpleado";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Empleado";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 125;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn2.DataPropertyName = "foto_inicio";
+            this.dataGridViewImageColumn2.FillWeight = 250F;
+            this.dataGridViewImageColumn2.HeaderText = "Foto Entrada";
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn2.Width = 250;
+            // 
+            // dataGridViewImageColumn7
+            // 
+            this.dataGridViewImageColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn7.DataPropertyName = "foto_final";
+            this.dataGridViewImageColumn7.FillWeight = 250F;
+            this.dataGridViewImageColumn7.HeaderText = "Foto Salida";
+            this.dataGridViewImageColumn7.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dataGridViewImageColumn7.MinimumWidth = 6;
+            this.dataGridViewImageColumn7.Name = "dataGridViewImageColumn7";
+            this.dataGridViewImageColumn7.Width = 250;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "creadoPor";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Creador";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "fechaCreacion";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Fecha de Creacion";
+            this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "modificadoPor";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Modificador";
+            this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "fechaModificacion";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Fecha de Modificacion";
+            this.dataGridViewTextBoxColumn19.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "getActivo";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Activo";
+            this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.Width = 125;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(13, 385);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(666, 30);
+            this.panel3.TabIndex = 79;
+            // 
+            // cmbEliminarEstado
+            // 
+            this.cmbEliminarEstado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmbEliminarEstado.FormattingEnabled = true;
+            this.cmbEliminarEstado.Items.AddRange(new object[] {
+            "Generado",
+            "Aplicado",
+            "Pagado"});
+            this.cmbEliminarEstado.Location = new System.Drawing.Point(13, 361);
+            this.cmbEliminarEstado.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbEliminarEstado.Name = "cmbEliminarEstado";
+            this.cmbEliminarEstado.Size = new System.Drawing.Size(666, 24);
+            this.cmbEliminarEstado.TabIndex = 78;
+            this.cmbEliminarEstado.SelectedIndexChanged += new System.EventHandler(this.cmbEliminarEstado_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Location = new System.Drawing.Point(13, 324);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label6.Size = new System.Drawing.Size(666, 37);
+            this.label6.TabIndex = 77;
+            this.label6.Text = "Seleccione el estado:";
+            // 
+            // txtEliminarDepartamento
+            // 
+            this.txtEliminarDepartamento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEliminarDepartamento.Location = new System.Drawing.Point(13, 302);
+            this.txtEliminarDepartamento.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEliminarDepartamento.Name = "txtEliminarDepartamento";
+            this.txtEliminarDepartamento.ReadOnly = true;
+            this.txtEliminarDepartamento.Size = new System.Drawing.Size(666, 22);
+            this.txtEliminarDepartamento.TabIndex = 76;
+            this.txtEliminarDepartamento.Text = "0";
+            // 
+            // linkLabel5
+            // 
+            this.linkLabel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.linkLabel5.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel5.Location = new System.Drawing.Point(13, 265);
+            this.linkLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel5.Name = "linkLabel5";
+            this.linkLabel5.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.linkLabel5.Size = new System.Drawing.Size(666, 37);
+            this.linkLabel5.TabIndex = 75;
+            this.linkLabel5.TabStop = true;
+            this.linkLabel5.Text = "Seleccione el departamento:";
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
+            // 
+            // txtEliminarEmpleado
+            // 
+            this.txtEliminarEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEliminarEmpleado.Location = new System.Drawing.Point(13, 243);
+            this.txtEliminarEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEliminarEmpleado.Name = "txtEliminarEmpleado";
+            this.txtEliminarEmpleado.ReadOnly = true;
+            this.txtEliminarEmpleado.Size = new System.Drawing.Size(666, 22);
+            this.txtEliminarEmpleado.TabIndex = 74;
+            this.txtEliminarEmpleado.Text = "0";
+            this.txtEliminarEmpleado.TextChanged += new System.EventHandler(this.txtEliminarEmpleado_TextChanged);
+            // 
+            // linkLabel6
+            // 
+            this.linkLabel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.linkLabel6.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel6.Location = new System.Drawing.Point(13, 206);
+            this.linkLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel6.Name = "linkLabel6";
+            this.linkLabel6.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.linkLabel6.Size = new System.Drawing.Size(666, 37);
+            this.linkLabel6.TabIndex = 73;
+            this.linkLabel6.TabStop = true;
+            this.linkLabel6.Text = "Seleccione el empleado:";
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
+            // 
+            // cmbEliminarTipoMarca
+            // 
+            this.cmbEliminarTipoMarca.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmbEliminarTipoMarca.FormattingEnabled = true;
+            this.cmbEliminarTipoMarca.Items.AddRange(new object[] {
+            "Ambos",
+            "Entrada",
+            "Salida"});
+            this.cmbEliminarTipoMarca.Location = new System.Drawing.Point(13, 182);
+            this.cmbEliminarTipoMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbEliminarTipoMarca.Name = "cmbEliminarTipoMarca";
+            this.cmbEliminarTipoMarca.Size = new System.Drawing.Size(666, 24);
+            this.cmbEliminarTipoMarca.TabIndex = 72;
+            this.cmbEliminarTipoMarca.SelectedIndexChanged += new System.EventHandler(this.cmbEliminarTipoMarca_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label8.Location = new System.Drawing.Point(13, 145);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label8.Size = new System.Drawing.Size(666, 37);
+            this.label8.TabIndex = 71;
+            this.label8.Text = "Seleccione el tipo de marca:";
+            // 
+            // dtpEliminarFechaFin
+            // 
+            this.dtpEliminarFechaFin.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpEliminarFechaFin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpEliminarFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEliminarFechaFin.Location = new System.Drawing.Point(13, 123);
+            this.dtpEliminarFechaFin.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpEliminarFechaFin.Name = "dtpEliminarFechaFin";
+            this.dtpEliminarFechaFin.Size = new System.Drawing.Size(666, 22);
+            this.dtpEliminarFechaFin.TabIndex = 70;
+            this.dtpEliminarFechaFin.ValueChanged += new System.EventHandler(this.dtpEliminarFechaFin_ValueChanged);
+            // 
+            // ckbEliminarFechaFin
+            // 
+            this.ckbEliminarFechaFin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ckbEliminarFechaFin.Location = new System.Drawing.Point(13, 86);
+            this.ckbEliminarFechaFin.Margin = new System.Windows.Forms.Padding(4);
+            this.ckbEliminarFechaFin.Name = "ckbEliminarFechaFin";
+            this.ckbEliminarFechaFin.Size = new System.Drawing.Size(666, 37);
+            this.ckbEliminarFechaFin.TabIndex = 69;
+            this.ckbEliminarFechaFin.Text = "Fecha fin:";
+            this.ckbEliminarFechaFin.UseVisualStyleBackColor = true;
+            this.ckbEliminarFechaFin.CheckedChanged += new System.EventHandler(this.ckbEliminarFechaFin_CheckedChanged);
+            // 
+            // dtpEliminarFechaInicio
+            // 
+            this.dtpEliminarFechaInicio.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpEliminarFechaInicio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpEliminarFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEliminarFechaInicio.Location = new System.Drawing.Point(13, 64);
+            this.dtpEliminarFechaInicio.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpEliminarFechaInicio.Name = "dtpEliminarFechaInicio";
+            this.dtpEliminarFechaInicio.Size = new System.Drawing.Size(666, 22);
+            this.dtpEliminarFechaInicio.TabIndex = 68;
+            this.dtpEliminarFechaInicio.ValueChanged += new System.EventHandler(this.dtpEliminarFechaInicio_ValueChanged);
+            // 
+            // ckbEliminarFecha
+            // 
+            this.ckbEliminarFecha.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ckbEliminarFecha.Location = new System.Drawing.Point(13, 27);
+            this.ckbEliminarFecha.Margin = new System.Windows.Forms.Padding(4);
+            this.ckbEliminarFecha.Name = "ckbEliminarFecha";
+            this.ckbEliminarFecha.Size = new System.Drawing.Size(666, 37);
+            this.ckbEliminarFecha.TabIndex = 67;
+            this.ckbEliminarFecha.Text = "Fecha inicio:";
+            this.ckbEliminarFecha.UseVisualStyleBackColor = true;
+            this.ckbEliminarFecha.CheckedChanged += new System.EventHandler(this.ckbEliminarFecha_CheckedChanged);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.txtEliminarIdEmpleado);
+            this.groupBox6.Controls.Add(this.linkLabel7);
+            this.groupBox6.Controls.Add(this.dtpEliminarSalida);
+            this.groupBox6.Controls.Add(this.label9);
+            this.groupBox6.Controls.Add(this.dtpEliminarEntrada);
+            this.groupBox6.Controls.Add(this.label11);
+            this.groupBox6.Controls.Add(this.txtEliminarCodigo);
+            this.groupBox6.Controls.Add(this.label12);
+            this.groupBox6.Controls.Add(this.button2);
+            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox6.Location = new System.Drawing.Point(692, 0);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(13, 12, 13, 5);
+            this.groupBox6.Size = new System.Drawing.Size(679, 793);
+            this.groupBox6.TabIndex = 4;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Completar datos del empleado";
+            // 
+            // txtEliminarIdEmpleado
+            // 
+            this.txtEliminarIdEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEliminarIdEmpleado.Location = new System.Drawing.Point(13, 236);
+            this.txtEliminarIdEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEliminarIdEmpleado.Name = "txtEliminarIdEmpleado";
+            this.txtEliminarIdEmpleado.ReadOnly = true;
+            this.txtEliminarIdEmpleado.Size = new System.Drawing.Size(653, 26);
+            this.txtEliminarIdEmpleado.TabIndex = 95;
+            this.txtEliminarIdEmpleado.Text = "0";
+            // 
+            // linkLabel7
+            // 
+            this.linkLabel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.linkLabel7.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel7.Location = new System.Drawing.Point(13, 199);
+            this.linkLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel7.Name = "linkLabel7";
+            this.linkLabel7.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.linkLabel7.Size = new System.Drawing.Size(653, 37);
+            this.linkLabel7.TabIndex = 94;
+            this.linkLabel7.TabStop = true;
+            this.linkLabel7.Text = "Seleccione el empleado:";
+            // 
+            // dtpEliminarSalida
+            // 
+            this.dtpEliminarSalida.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpEliminarSalida.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpEliminarSalida.Enabled = false;
+            this.dtpEliminarSalida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEliminarSalida.Location = new System.Drawing.Point(13, 173);
+            this.dtpEliminarSalida.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpEliminarSalida.Name = "dtpEliminarSalida";
+            this.dtpEliminarSalida.ShowCheckBox = true;
+            this.dtpEliminarSalida.Size = new System.Drawing.Size(653, 26);
+            this.dtpEliminarSalida.TabIndex = 91;
+            // 
+            // label9
+            // 
+            this.label9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label9.Location = new System.Drawing.Point(13, 143);
+            this.label9.Name = "label9";
+            this.label9.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.label9.Size = new System.Drawing.Size(653, 30);
+            this.label9.TabIndex = 90;
+            this.label9.Text = "Fecha y hora de salida:";
+            // 
+            // dtpEliminarEntrada
+            // 
+            this.dtpEliminarEntrada.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpEliminarEntrada.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpEliminarEntrada.Enabled = false;
+            this.dtpEliminarEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEliminarEntrada.Location = new System.Drawing.Point(13, 117);
+            this.dtpEliminarEntrada.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpEliminarEntrada.Name = "dtpEliminarEntrada";
+            this.dtpEliminarEntrada.ShowCheckBox = true;
+            this.dtpEliminarEntrada.Size = new System.Drawing.Size(653, 26);
+            this.dtpEliminarEntrada.TabIndex = 85;
+            // 
+            // label11
+            // 
+            this.label11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label11.Location = new System.Drawing.Point(13, 87);
+            this.label11.Name = "label11";
+            this.label11.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.label11.Size = new System.Drawing.Size(653, 30);
+            this.label11.TabIndex = 65;
+            this.label11.Text = "Fecha y hora de entrada:";
+            // 
+            // txtEliminarCodigo
+            // 
+            this.txtEliminarCodigo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEliminarCodigo.Location = new System.Drawing.Point(13, 61);
+            this.txtEliminarCodigo.Name = "txtEliminarCodigo";
+            this.txtEliminarCodigo.ReadOnly = true;
+            this.txtEliminarCodigo.Size = new System.Drawing.Size(653, 26);
+            this.txtEliminarCodigo.TabIndex = 64;
+            // 
+            // label12
+            // 
+            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label12.Location = new System.Drawing.Point(13, 31);
+            this.label12.Name = "label12";
+            this.label12.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.label12.Size = new System.Drawing.Size(653, 30);
+            this.label12.TabIndex = 63;
+            this.label12.Text = "Código Marca:";
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(13, 677);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.button2.Size = new System.Drawing.Size(653, 111);
+            this.button2.TabIndex = 62;
+            this.button2.Text = "Eliminar Marca";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // PanelMarcas
             // 
@@ -1763,15 +1781,13 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabDeleteHour.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEditarMarca)).EndInit();
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEliminar)).EndInit();
-            this.panelEliminarFiltrar.ResumeLayout(false);
-            this.panelEliminarFiltrar.PerformLayout();
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEliminarMarca)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picEliminarImg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEditar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1789,48 +1805,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TabPage tabDeleteHour;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.DataGridView dgvEliminar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panelEliminarFiltrar;
-        private System.Windows.Forms.TextBox txtEliminarBusqueda;
-        private System.Windows.Forms.Label lblBuscar;
-        private System.Windows.Forms.ComboBox cmbEliminarBusqueda;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.CheckBox ckbEliminarActivo;
-        private System.Windows.Forms.PictureBox picEliminarImg;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox txtEliminarSalarioHora;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox txtEliminarPuesto;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.DateTimePicker dtpEliminarNacimiento;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox txtEliminarApellido2;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox txtEliminarApellido1;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox txtEliminarNombre;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txtEliminarCedula;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TabPage tabFindClock;
         private System.Windows.Forms.Panel panelConsultarMarca;
         private System.Windows.Forms.GroupBox groupBox7;
@@ -1886,11 +1860,12 @@
         private System.Windows.Forms.LinkLabel linkLabel4;
         private System.Windows.Forms.ComboBox cmbEditarTipoMarca;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpEditarFechaFin;
         private System.Windows.Forms.CheckBox ckbEditarFechaFin;
         private System.Windows.Forms.DateTimePicker dtpEditarFechaInicio;
         private System.Windows.Forms.CheckBox ckbEditarFecha;
-        private System.Windows.Forms.DataGridView dgvEditar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvEditarMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -1903,11 +1878,51 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtEditarCodigo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtEditarIdEmpleado;
         private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dtpEditarSalida;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dtpEditarEntrada;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.DataGridView dgvEliminarMarca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox cmbEliminarEstado;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtEliminarDepartamento;
+        private System.Windows.Forms.LinkLabel linkLabel5;
+        private System.Windows.Forms.TextBox txtEliminarEmpleado;
+        private System.Windows.Forms.LinkLabel linkLabel6;
+        private System.Windows.Forms.ComboBox cmbEliminarTipoMarca;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker dtpEliminarFechaFin;
+        private System.Windows.Forms.CheckBox ckbEliminarFechaFin;
+        private System.Windows.Forms.DateTimePicker dtpEliminarFechaInicio;
+        private System.Windows.Forms.CheckBox ckbEliminarFecha;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox txtEliminarIdEmpleado;
+        private System.Windows.Forms.LinkLabel linkLabel7;
+        private System.Windows.Forms.DateTimePicker dtpEliminarSalida;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DateTimePicker dtpEliminarEntrada;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtEliminarCodigo;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button2;
     }
 }

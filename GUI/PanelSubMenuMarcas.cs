@@ -57,5 +57,12 @@ namespace AppPlanillas.GUI
             this.submenu = 3;
             this.BotonPulsado();
         }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+            this.submenu = 4;
+            this.BotonPulsado();
+
+        }
     }
 }
