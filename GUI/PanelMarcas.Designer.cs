@@ -1321,6 +1321,7 @@
             this.groupBox5.Controls.Add(this.dtpEliminarFechaInicio);
             this.groupBox5.Controls.Add(this.ckbEliminarFecha);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox5.Location = new System.Drawing.Point(0, 0);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
@@ -1349,13 +1350,13 @@
             this.dataGridViewTextBoxColumn20});
             this.dgvEliminarMarca.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEliminarMarca.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvEliminarMarca.Location = new System.Drawing.Point(13, 415);
+            this.dgvEliminarMarca.Location = new System.Drawing.Point(13, 443);
             this.dgvEliminarMarca.Margin = new System.Windows.Forms.Padding(4);
             this.dgvEliminarMarca.MultiSelect = false;
             this.dgvEliminarMarca.Name = "dgvEliminarMarca";
             this.dgvEliminarMarca.RowHeadersWidth = 51;
             this.dgvEliminarMarca.RowTemplate.Height = 200;
-            this.dgvEliminarMarca.Size = new System.Drawing.Size(666, 366);
+            this.dgvEliminarMarca.Size = new System.Drawing.Size(666, 338);
             this.dgvEliminarMarca.TabIndex = 80;
             this.dgvEliminarMarca.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvEliminar_MouseClick);
             // 
@@ -1466,7 +1467,7 @@
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(13, 385);
+            this.panel3.Location = new System.Drawing.Point(13, 413);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(666, 30);
             this.panel3.TabIndex = 79;
@@ -1479,17 +1480,17 @@
             "Generado",
             "Aplicado",
             "Pagado"});
-            this.cmbEliminarEstado.Location = new System.Drawing.Point(13, 361);
+            this.cmbEliminarEstado.Location = new System.Drawing.Point(13, 385);
             this.cmbEliminarEstado.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEliminarEstado.Name = "cmbEliminarEstado";
-            this.cmbEliminarEstado.Size = new System.Drawing.Size(666, 24);
+            this.cmbEliminarEstado.Size = new System.Drawing.Size(666, 28);
             this.cmbEliminarEstado.TabIndex = 78;
             this.cmbEliminarEstado.SelectedIndexChanged += new System.EventHandler(this.cmbEliminarEstado_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Location = new System.Drawing.Point(13, 324);
+            this.label6.Location = new System.Drawing.Point(13, 348);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
@@ -1500,11 +1501,11 @@
             // txtEliminarDepartamento
             // 
             this.txtEliminarDepartamento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEliminarDepartamento.Location = new System.Drawing.Point(13, 302);
+            this.txtEliminarDepartamento.Location = new System.Drawing.Point(13, 322);
             this.txtEliminarDepartamento.Margin = new System.Windows.Forms.Padding(4);
             this.txtEliminarDepartamento.Name = "txtEliminarDepartamento";
             this.txtEliminarDepartamento.ReadOnly = true;
-            this.txtEliminarDepartamento.Size = new System.Drawing.Size(666, 22);
+            this.txtEliminarDepartamento.Size = new System.Drawing.Size(666, 26);
             this.txtEliminarDepartamento.TabIndex = 76;
             this.txtEliminarDepartamento.Text = "0";
             // 
@@ -1512,7 +1513,7 @@
             // 
             this.linkLabel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.linkLabel5.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel5.Location = new System.Drawing.Point(13, 265);
+            this.linkLabel5.Location = new System.Drawing.Point(13, 285);
             this.linkLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel5.Name = "linkLabel5";
             this.linkLabel5.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
@@ -1525,11 +1526,11 @@
             // txtEliminarEmpleado
             // 
             this.txtEliminarEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEliminarEmpleado.Location = new System.Drawing.Point(13, 243);
+            this.txtEliminarEmpleado.Location = new System.Drawing.Point(13, 259);
             this.txtEliminarEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.txtEliminarEmpleado.Name = "txtEliminarEmpleado";
             this.txtEliminarEmpleado.ReadOnly = true;
-            this.txtEliminarEmpleado.Size = new System.Drawing.Size(666, 22);
+            this.txtEliminarEmpleado.Size = new System.Drawing.Size(666, 26);
             this.txtEliminarEmpleado.TabIndex = 74;
             this.txtEliminarEmpleado.Text = "0";
             this.txtEliminarEmpleado.TextChanged += new System.EventHandler(this.txtEliminarEmpleado_TextChanged);
@@ -1538,7 +1539,7 @@
             // 
             this.linkLabel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.linkLabel6.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel6.Location = new System.Drawing.Point(13, 206);
+            this.linkLabel6.Location = new System.Drawing.Point(13, 222);
             this.linkLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel6.Name = "linkLabel6";
             this.linkLabel6.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
@@ -1556,17 +1557,17 @@
             "Ambos",
             "Entrada",
             "Salida"});
-            this.cmbEliminarTipoMarca.Location = new System.Drawing.Point(13, 182);
+            this.cmbEliminarTipoMarca.Location = new System.Drawing.Point(13, 194);
             this.cmbEliminarTipoMarca.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEliminarTipoMarca.Name = "cmbEliminarTipoMarca";
-            this.cmbEliminarTipoMarca.Size = new System.Drawing.Size(666, 24);
+            this.cmbEliminarTipoMarca.Size = new System.Drawing.Size(666, 28);
             this.cmbEliminarTipoMarca.TabIndex = 72;
             this.cmbEliminarTipoMarca.SelectedIndexChanged += new System.EventHandler(this.cmbEliminarTipoMarca_SelectedIndexChanged);
             // 
             // label8
             // 
             this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label8.Location = new System.Drawing.Point(13, 145);
+            this.label8.Location = new System.Drawing.Point(13, 157);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
@@ -1579,17 +1580,17 @@
             this.dtpEliminarFechaFin.CustomFormat = "dd/MM/yyyy HH:mm";
             this.dtpEliminarFechaFin.Dock = System.Windows.Forms.DockStyle.Top;
             this.dtpEliminarFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEliminarFechaFin.Location = new System.Drawing.Point(13, 123);
+            this.dtpEliminarFechaFin.Location = new System.Drawing.Point(13, 131);
             this.dtpEliminarFechaFin.Margin = new System.Windows.Forms.Padding(4);
             this.dtpEliminarFechaFin.Name = "dtpEliminarFechaFin";
-            this.dtpEliminarFechaFin.Size = new System.Drawing.Size(666, 22);
+            this.dtpEliminarFechaFin.Size = new System.Drawing.Size(666, 26);
             this.dtpEliminarFechaFin.TabIndex = 70;
             this.dtpEliminarFechaFin.ValueChanged += new System.EventHandler(this.dtpEliminarFechaFin_ValueChanged);
             // 
             // ckbEliminarFechaFin
             // 
             this.ckbEliminarFechaFin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ckbEliminarFechaFin.Location = new System.Drawing.Point(13, 86);
+            this.ckbEliminarFechaFin.Location = new System.Drawing.Point(13, 94);
             this.ckbEliminarFechaFin.Margin = new System.Windows.Forms.Padding(4);
             this.ckbEliminarFechaFin.Name = "ckbEliminarFechaFin";
             this.ckbEliminarFechaFin.Size = new System.Drawing.Size(666, 37);
@@ -1603,17 +1604,17 @@
             this.dtpEliminarFechaInicio.CustomFormat = "dd/MM/yyyy HH:mm";
             this.dtpEliminarFechaInicio.Dock = System.Windows.Forms.DockStyle.Top;
             this.dtpEliminarFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEliminarFechaInicio.Location = new System.Drawing.Point(13, 64);
+            this.dtpEliminarFechaInicio.Location = new System.Drawing.Point(13, 68);
             this.dtpEliminarFechaInicio.Margin = new System.Windows.Forms.Padding(4);
             this.dtpEliminarFechaInicio.Name = "dtpEliminarFechaInicio";
-            this.dtpEliminarFechaInicio.Size = new System.Drawing.Size(666, 22);
+            this.dtpEliminarFechaInicio.Size = new System.Drawing.Size(666, 26);
             this.dtpEliminarFechaInicio.TabIndex = 68;
             this.dtpEliminarFechaInicio.ValueChanged += new System.EventHandler(this.dtpEliminarFechaInicio_ValueChanged);
             // 
             // ckbEliminarFecha
             // 
             this.ckbEliminarFecha.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ckbEliminarFecha.Location = new System.Drawing.Point(13, 27);
+            this.ckbEliminarFecha.Location = new System.Drawing.Point(13, 31);
             this.ckbEliminarFecha.Margin = new System.Windows.Forms.Padding(4);
             this.ckbEliminarFecha.Name = "ckbEliminarFecha";
             this.ckbEliminarFecha.Size = new System.Drawing.Size(666, 37);
