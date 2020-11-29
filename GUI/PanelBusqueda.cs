@@ -230,7 +230,15 @@ namespace AppPlanillas.GUI
                 {
 
                 }
-                
+                try
+                {
+                    ((PanelUnificacion)oyentepanelDeduccion).Clic(this, this.pestaña, 1);
+
+                }
+                catch
+                {
+
+                }
 
 
             }

@@ -122,7 +122,7 @@ namespace AppPlanillas.GUI
             this.txtEliminarDescripcion.Text = "";
             this.txtEliminarDepartamento.Text = "";
             this.ckbEliminarActivo.Checked = false;
-            this.txtEliminarBuscar.Text = "";
+           // this.txtEliminarBuscar.Text = "";
 
         }
 

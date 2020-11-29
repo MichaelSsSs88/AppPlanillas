@@ -150,6 +150,12 @@
     <Compile Include="GUI\PanelSubMenuMarcas.Designer.cs">
       <DependentUpon>PanelSubMenuMarcas.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\PanelUnificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PanelUnificacion.Designer.cs">
+      <DependentUpon>PanelUnificacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\PanelUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PanelSubMenuMarcas.resx">
       <DependentUpon>PanelSubMenuMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PanelUnificacion.resx">
+      <DependentUpon>PanelUnificacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PanelUsuario.resx">
       <DependentUpon>PanelUsuario.cs</DependentUpon>

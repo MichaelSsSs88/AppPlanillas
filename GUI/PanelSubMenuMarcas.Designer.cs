@@ -34,6 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnInsertar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,6 +82,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnEditar);
             this.panel1.Controls.Add(this.btnInsertar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -92,7 +94,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEditar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -101,10 +103,10 @@
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditar.Location = new System.Drawing.Point(292, 0);
+            this.btnEditar.Location = new System.Drawing.Point(333, 0);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(290, 111);
+            this.btnEditar.Size = new System.Drawing.Size(249, 111);
             this.btnEditar.TabIndex = 22;
             this.btnEditar.Text = "Editar Marcas";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -125,12 +127,20 @@
             this.btnInsertar.Location = new System.Drawing.Point(0, 0);
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(292, 111);
+            this.btnInsertar.Size = new System.Drawing.Size(262, 111);
             this.btnInsertar.TabIndex = 21;
             this.btnInsertar.Text = "Insertar Marcas";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnInsertar.UseVisualStyleBackColor = true;
             this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click_1);
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(262, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(71, 111);
+            this.panel2.TabIndex = 23;
             // 
             // PanelSubMenuMarcas
             // 
@@ -156,5 +166,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnInsertar;
+        private System.Windows.Forms.Panel panel2;
     }
 }
