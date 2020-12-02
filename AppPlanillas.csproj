@@ -69,6 +69,7 @@
     <Compile Include="DAL\MarcaDAL.cs" />
     <Compile Include="DAL\Parametro.cs" />
     <Compile Include="DAL\PuestoDAL.cs" />
+    <Compile Include="DAL\UnificacionDAL.cs" />
     <Compile Include="DAL\UsuarioDAL.cs" />
     <Compile Include="ENT\DeduccionENT.cs" />
     <Compile Include="ENT\DepartamentoENT.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="ENT\HorarioENT.cs" />
     <Compile Include="ENT\MarcaENT.cs" />
     <Compile Include="ENT\PuestoENT.cs" />
+    <Compile Include="ENT\UnificacionENT.cs" />
     <Compile Include="ENT\UsuarioENT.cs" />
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>

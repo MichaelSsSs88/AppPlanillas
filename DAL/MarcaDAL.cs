@@ -14,12 +14,10 @@ namespace DAL
         public List<MarcaENT> ObtenerMarcas(String fecha_inicio, String fecha_fin, string tipo_marca, int empleado, int departamento, string generado)
         {
             List<MarcaENT> ListaMarcas = new List<MarcaENT>();
-            // Console.WriteLine(pFiltro + " " + 1);
             string consulta = "select marca.* from marca join empleado on marca.id_empleado = empleado.id join puesto on puesto.id = empleado.id_puesto ";
-            //"select * from puesto where cast(id AS TEXT) like '" + pTexto + "%'"
             if (fecha_inicio != "" || fecha_fin != "" || tipo_marca != "" || empleado > 0 || departamento > 0 || generado != "")
             {
-                //consulta += "where ";
+                
                 if (fecha_inicio != "")
                 {
                    
@@ -34,111 +32,35 @@ namespace DAL
                         else
                         {
                         consulta += "and marca.marca_inicio >'" + DateTime.Parse(fecha_inicio) + "'";
-                }
-                    
-
-                        
-                    /*if (fecha_fin != "")
-                    {
-                        consulta += "and marca_final <= '" + DateTime.Parse(fecha_fin) + "' ";
-                    }
-                    //PENDIENTE
-                    if (tipo_marca != "")
-                    {
-                        
-                    }
-                    if (empleado > 0)
-                    {
-                        consulta += "and cast(id_empleado AS TEXT) like '" + empleado + "%' ";
-                    }
-                    //PENDIENTE
-                    if (departamento > 0)
-                    {
-                        
-                    }
-                    if (generado != "")
-                    {
-                        consulta += "and estado like '" + generado + "%' ";
-                    }*/
+                        }   
+                  
                 }
                 if (fecha_fin != "")
                 {
                     if (tipo_marca == "Entrada")
                     {
-                        /*if (consulta.Length == 26)
-                            consulta += "marca_inicio <= '" + DateTime.Parse(fecha_fin) + "' ";
-                        else*/
+                        
                             consulta += " and marca.marca_inicio <= '" + DateTime.Parse(fecha_fin) + "' ";
                     }
                     else if (tipo_marca == "Salida")
                     {
-                        /*if (consulta.Length == 26)
-                            consulta += "marca_final <= '" + DateTime.Parse(fecha_fin) + "' ";
-                        else*/
+                        
                             consulta += " and marca.marca_final <= '" + DateTime.Parse(fecha_fin) + "' ";
                     }
                     else
                     {
-                        /*if (consulta.Length == 26)
-                            consulta += "marca_final <= '" + DateTime.Parse(fecha_fin) + "' ";
-                        else*/
+                        
                             consulta += " and marca.marca_final <= '" + DateTime.Parse(fecha_fin) + "' ";
                     }
                     
-                    /*if (fecha_inicio != "")
-                    {
-                        consulta += "and marca_inicio >'"  + DateTime.Parse(fecha_inicio)+"'";
-                    }
-                    //PENDIENTE
-                    if (tipo_marca != "")
-                    {
-
-                    }
-                    if (empleado > 0)
-                    {
-                        consulta += "and cast(id_empleado AS TEXT) like '" + empleado + "%' ";
-                    }
-                    //PENDIENTE
-                    if (departamento > 0)
-                    {
-
-                    }
-                    if (generado != "")
-                    {
-                        consulta += "and estado like '" + generado + "%' ";
-                    }*/
+                    
                 }
                 //PENDIENTE
                if (empleado > 0)
                 {
-                    /*if (consulta.Length == 26)
-                        consulta += "cast(id_empleado AS TEXT) like '" + empleado + "%' ";
-                    else*/
-                        //consulta += " and cast(id_empleado AS TEXT) like '" + empleado + "%' ";
+                    
                         consulta += " and marca.id_empleado= " + empleado;
-                    /*consulta += "cast(id_empleado AS TEXT) like '" + empleado + "%' ";
-                    if (fecha_fin != null)
-                    {
-                        consulta += "and marca_final = '" + fecha_fin + "' ";
-                    }
-                    //PENDIENTE
-                    if (tipo_marca != "")
-                    {
-
-                    }
-                    if (fecha_inicio != null)
-                    {
-                        consulta += "and marca_inicio = '" + fecha_inicio + "' ";
-                    }
-                    //PENDIENTE
-                    if (departamento > 0)
-                    {
-
-                    }
-                    if (generado != "")
-                    {
-                        consulta += "and estado like '" + generado + "%' ";
-                    }*/
+                    
                 }
                 //PENDIENTE
                 if (departamento > 0)
@@ -147,30 +69,9 @@ namespace DAL
                 }
                 if (generado != "")
                 {
-                  //  consulta += "estado like '" + generado + "%' ";
+                  
                     consulta += " and marca.estado = '" + generado.ToLower() + "'"; 
-                    /*if (fecha_fin != "")
-                    {
-                        consulta += "and marca_final = '" + fecha_fin + "' ";
-                    }
-                    //PENDIENTE
-                    if (tipo_marca != "")
-                    {
-
-                    }
-                    if (fecha_inicio != "")
-                    {
-                        consulta += "and marca_inicio = '" + fecha_inicio + "' ";
-                    }
-                    //PENDIENTE
-                    if (departamento > 0)
-                    {
-
-                    }
-                    if (empleado > 0)
-                    {
-                        consulta += "and cast(id_empleado AS TEXT) like '" + empleado + "%' ";
-                    }*/
+                   
                 }
             }
            

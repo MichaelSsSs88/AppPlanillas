@@ -127,6 +127,22 @@ namespace ProyectoIIIC
             }
         }
 
+        public Double SalarioEmpleado(int pEmpleado)
+        {
+            double salarioHora = 0;
+            Parametro parametros = new Parametro();
+            AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
+            parametros.AgregarParametro("@id", NpgsqlTypes.NpgsqlDbType.Integer, pEmpleado);
+            string sentenciaSQL = "select salario_hora from empleado where id=@id";
+            
+            DataSet dsetClientes= conexion.EjecutarConsultaSQL(sentenciaSQL, parametros.ObtenerParametros());
+            foreach (DataRow fila in dsetClientes.Tables[0].Rows)
+            {
+                salarioHora = Double.Parse(fila["salario_hora"].ToString());
+            }
+            return salarioHora;
+        }
+
         public void EliminarEmpleado(/*UsuarioENT*/int pEmpleado)
         {
             try
