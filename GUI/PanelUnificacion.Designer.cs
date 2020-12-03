@@ -386,6 +386,7 @@ namespace AppPlanillas.GUI
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(1355, 28);
             this.cmbEstado.TabIndex = 65;
+            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.cmbEstado_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -408,6 +409,7 @@ namespace AppPlanillas.GUI
             this.txtDepartamento.Size = new System.Drawing.Size(1355, 26);
             this.txtDepartamento.TabIndex = 63;
             this.txtDepartamento.Text = "0";
+            this.txtDepartamento.TextChanged += new System.EventHandler(this.txtDepartamento_TextChanged);
             // 
             // linkDepartamento
             // 
@@ -433,6 +435,7 @@ namespace AppPlanillas.GUI
             this.txtEmpleado.Size = new System.Drawing.Size(1355, 26);
             this.txtEmpleado.TabIndex = 61;
             this.txtEmpleado.Text = "0";
+            this.txtEmpleado.TextChanged += new System.EventHandler(this.txtEmpleado_TextChanged);
             // 
             // linkEmpleado
             // 
@@ -458,6 +461,7 @@ namespace AppPlanillas.GUI
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(1355, 26);
             this.dtpFechaFin.TabIndex = 35;
+            this.dtpFechaFin.ValueChanged += new System.EventHandler(this.dtpFechaFin_ValueChanged);
             // 
             // ckbFechaFin
             // 
@@ -469,6 +473,7 @@ namespace AppPlanillas.GUI
             this.ckbFechaFin.TabIndex = 34;
             this.ckbFechaFin.Text = "Fecha fin:";
             this.ckbFechaFin.UseVisualStyleBackColor = true;
+            this.ckbFechaFin.CheckedChanged += new System.EventHandler(this.ckbFechaFin_CheckedChanged);
             // 
             // dtpFechaInicio
             // 
@@ -480,6 +485,7 @@ namespace AppPlanillas.GUI
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(1355, 26);
             this.dtpFechaInicio.TabIndex = 33;
+            this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechaInicio_ValueChanged);
             // 
             // ckbFecha
             // 
@@ -491,6 +497,7 @@ namespace AppPlanillas.GUI
             this.ckbFecha.TabIndex = 32;
             this.ckbFecha.Text = "Fecha inicio:";
             this.ckbFecha.UseVisualStyleBackColor = true;
+            this.ckbFecha.Click += new System.EventHandler(this.ckbFecha_Click);
             // 
             // tabInsertUnificacion
             // 

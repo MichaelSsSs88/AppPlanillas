@@ -1,4 +1,7 @@
-﻿using DAL;
+﻿using AppPlanillas.DAL;
+using AppPlanillas.DLL;
+using AppPlanillas.ENT;
+using DAL;
 using ENT;
 using ProyectoIIIC;
 using System;
@@ -21,6 +24,10 @@ namespace AppPlanillas.GUI
         {
             InitializeComponent();
             this.OrdenaLink(false);
+            this.ckbFecha_Click(null, null);
+            this.ckbFechaFin_CheckedChanged(null, null);
+            this.cmbEstado.SelectedIndex = 0;
+
         }
 
         private void OrdenaLink(Boolean estado)
@@ -118,6 +125,7 @@ namespace AppPlanillas.GUI
             }
             this.dgvInsertar.DataSource = marcas;
 
+            List<DeduccionENT> Deducciones = new DeduccionDAL().ObtenerDeducciones(-1,"");
             List<HorarioENT> Horarios = new HorarioDAL().ObtenerHorarios(-1, "");
             List<Dia_feriadoENT> Feriados = new Dia_feriadoDAL().ObtenerFeriados("Todos", "");
             List<int> cedulas= new List<int>();
@@ -127,10 +135,11 @@ namespace AppPlanillas.GUI
             {
                 cedulas.Add(marca.IdEmpleado);
             }
-             
+
+            this.dgvInsertar.DataSource=new Unificacion().Unificacione(cedulas.Distinct(), this.dtpInsertarFechaEntrada.Value, this.dtpInsertarFechaSalida.Value, marcas, "creador", "modificaa");
             IEnumerable<int> DiferentesEmpleados = cedulas.Distinct();
 
-            foreach(int cedula in DiferentesEmpleados)
+           /* foreach(int cedula in DiferentesEmpleados)
             {
                 double horas = 0;
                 double horas_extras = 0;
@@ -138,6 +147,8 @@ namespace AppPlanillas.GUI
                 double salario_horas = 0;
                 double salario_horas_extras = 0;
                 double salario_horas_feriados = 0;
+                double total_deduccion = 0;
+
                 foreach (MarcaENT marca in marcas)
                 {
                     
@@ -146,8 +157,6 @@ namespace AppPlanillas.GUI
                     {
                         foreach(HorarioENT horario in Horarios)
                         {
-                            
-                            
                             if (this.DiaSemana(marca.marcar_inicio.Value.DayOfWeek).CompareTo(horario.Dia) == 0)
                             {
                                 TimeSpan Horas1 = TimeSpan.Parse(marca.marcar_final.Value.ToString("HH:mm"));
@@ -175,15 +184,45 @@ namespace AppPlanillas.GUI
                                 break;
                             }
                         }
+
                         
                     }
                 }
+
                 double SalarioHora = new EmpleadoDAL().SalarioEmpleado(cedula);
-                unificaciones.Add(new UnificacionENT(1, this.dtpInsertarFechaEntrada.Value, this.dtpInsertarFechaSalida.Value, horas, horas_extras, horas_feriados, (horas * SalarioHora), (horas_extras * (SalarioHora * 1.5)), horas_feriados * SalarioHora, 25000, cedula, "generado", DateTime.Now, "prueba", DateTime.Now, "yoOOOO", 0));
+                foreach (DeduccionENT rebajar in Deducciones)
+                {
+                    if (rebajar.getSistema.CompareTo("Porcentaje")==0)
+                    {
+                        if(rebajar.getIdEmpleado==0)
+                            total_deduccion += ((horas * SalarioHora) + (horas_extras * (SalarioHora * 1.5)) + horas_feriados * SalarioHora)*(rebajar.getValor/100);
+                        else
+                        {
+                            if (rebajar.getIdEmpleado == cedula)
+                            {
+                                total_deduccion += ((horas * SalarioHora) + (horas_extras * (SalarioHora * 1.5)) + horas_feriados * SalarioHora) * (rebajar.getValor/100);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (rebajar.getIdEmpleado == 0)
+                            total_deduccion += rebajar.getValor;
+                        else
+                        {
+                            if (rebajar.getIdEmpleado == cedula)
+                            {
+                                total_deduccion += rebajar.getValor;
+                            }
+                        }
+                    }
+                }
+                
+                unificaciones.Add(new UnificacionENT(1, this.dtpInsertarFechaEntrada.Value, this.dtpInsertarFechaSalida.Value, horas, horas_extras, horas_feriados, (horas * SalarioHora), (horas_extras * (SalarioHora * 1.5)), horas_feriados * SalarioHora, total_deduccion, cedula, "generado", DateTime.Now, "prueba", DateTime.Now, "yoOOOO", 0));
 
-            }
+            }*/
 
-            this.dgvInsertar.DataSource = unificaciones;
+            //this.dgvInsertar.DataSource = unificaciones;
 
 
         }
@@ -206,6 +245,105 @@ namespace AppPlanillas.GUI
                     return "Domingo";
             }
             return "";
+        }
+
+        private void ckbFecha_Click(object sender, EventArgs e)
+        {
+            if (this.ckbFecha.Checked)
+            {
+                this.dtpFechaInicio.Visible = true;
+            }
+            else
+            {
+                this.dtpFechaInicio.Visible = false;
+                if (this.ckbFechaFin.Checked)
+                    this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion("", this.dtpFechaFin.Value.ToString("dd/MM/yyyy"), Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+                else
+                {
+                    if (this.cmbEstado.SelectedItem != null)
+                        this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion("", "", Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+
+                }
+            }
+        }
+
+        private void dtpFechaInicio_ValueChanged(object sender, EventArgs e)
+        {
+            if (this.ckbFechaFin.Checked)
+                this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion(this.dtpFechaInicio.Value.ToString("dd/MM/yyyy"), this.dtpFechaFin.Value.ToString("dd/MM/yyyy"), Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+            else
+                this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion(this.dtpFechaInicio.Value.ToString("dd/MM/yyyy"), "", Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+
+        }
+
+        private void ckbFechaFin_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.ckbFechaFin.Checked)
+            {
+                this.dtpFechaFin.Visible = true;
+            }
+            else
+            {
+                this.dtpFechaFin.Visible = false;
+                if (this.ckbFecha.Checked)
+                    this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion(this.dtpFechaInicio.Value.ToString("dd/MM/yyyy"), "", Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+                else
+                {
+                    if (this.cmbEstado.SelectedItem != null)
+                        this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion("", "", Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+
+                }
+            }
+
+            
+        }
+
+        private void dtpFechaFin_ValueChanged(object sender, EventArgs e)
+        {
+            if (this.ckbFecha.Checked)
+                this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion(this.dtpFechaInicio.Value.ToString("dd/MM/yyyy"), this.dtpFechaFin.Value.ToString("dd/MM/yyyy"), Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+            else
+                this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion("", this.dtpFechaFin.Value.ToString("dd/MM/yyyy"), Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+
+        }
+
+        private void txtEmpleado_TextChanged(object sender, EventArgs e)
+        {
+            if (this.ckbFechaFin.Checked && this.ckbFecha.Checked)
+                this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion(this.dtpFechaInicio.Value.ToString("dd/MM/yyyy"), this.dtpFechaFin.Value.ToString("dd/MM/yyyy"), Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+            else if (this.ckbFecha.Checked)
+                this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion(this.dtpFechaInicio.Value.ToString("dd/MM/yyyy"), "", Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+            else if (this.ckbFechaFin.Checked)
+                this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion("", this.dtpFechaFin.Value.ToString("dd/MM/yyyy"), Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+            else
+                this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion("", "",  Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+
+        }
+
+        private void txtDepartamento_TextChanged(object sender, EventArgs e)
+        {
+            if (this.ckbFechaFin.Checked && this.ckbFecha.Checked)
+                this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion(this.dtpFechaInicio.Value.ToString("dd/MM/yyyy"), this.dtpFechaFin.Value.ToString("dd/MM/yyyy"), Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+            else if (this.ckbFecha.Checked)
+                this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion(this.dtpFechaInicio.Value.ToString("dd/MM/yyyy"), "", Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+            else if (this.ckbFechaFin.Checked)
+                this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion("", this.dtpFechaFin.Value.ToString("dd/MM/yyyy"), Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+            else
+                this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion("", "", Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+
+        }
+
+        private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.ckbFechaFin.Checked && this.ckbFecha.Checked)
+                this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion(this.dtpFechaInicio.Value.ToString("dd/MM/yyyy"), this.dtpFechaFin.Value.ToString("dd/MM/yyyy"), Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+            else if (this.ckbFecha.Checked)
+                this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion(this.dtpFechaInicio.Value.ToString("dd/MM/yyyy"), "", Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+            else if (this.ckbFechaFin.Checked)
+                this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion("", this.dtpFechaFin.Value.ToString("dd/MM/yyyy"), Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+            else
+                this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion("", "", Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
+
         }
     }
 }

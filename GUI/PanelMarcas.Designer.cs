@@ -32,6 +32,18 @@
             this.tabDepartamentos = new System.Windows.Forms.TabControl();
             this.tabFindClock = new System.Windows.Forms.TabPage();
             this.dgvConsultas = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.FotoSalida = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelConsultarMarca = new System.Windows.Forms.Panel();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
@@ -48,26 +60,6 @@
             this.ckbFecha = new System.Windows.Forms.CheckBox();
             this.tabInsertHour = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.tabEditHour = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tabDeleteHour = new System.Windows.Forms.TabPage();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.FotoSalida = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvInsertar = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,26 +73,18 @@
             this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtInsertarEmpleado = new System.Windows.Forms.TextBox();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.dtpInsertarFechaSalida = new System.Windows.Forms.DateTimePicker();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dtpInsertarFechaEntrada = new System.Windows.Forms.DateTimePicker();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.cmbEditarEstado = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtEditarDepartamento = new System.Windows.Forms.TextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.txtEditarEmpleado = new System.Windows.Forms.TextBox();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.cmbEditarTipoMarca = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtpEditarFechaFin = new System.Windows.Forms.DateTimePicker();
-            this.ckbEditarFechaFin = new System.Windows.Forms.CheckBox();
-            this.dtpEditarFechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.ckbEditarFecha = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.tabEditHour = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvEditarMarca = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -114,14 +98,30 @@
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtEditarCodigo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtpEditarEntrada = new System.Windows.Forms.DateTimePicker();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cmbEditarEstado = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtEditarDepartamento = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.txtEditarEmpleado = new System.Windows.Forms.TextBox();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.cmbEditarTipoMarca = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtpEditarFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.ckbEditarFechaFin = new System.Windows.Forms.CheckBox();
+            this.dtpEditarFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.ckbEditarFecha = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtEditarIdEmpleado = new System.Windows.Forms.TextBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.dtpEditarSalida = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
+            this.dtpEditarEntrada = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtEditarCodigo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tabDeleteHour = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dgvEliminarMarca = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -166,14 +166,14 @@
             this.groupBox7.SuspendLayout();
             this.tabInsertHour.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabEditHour.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEditarMarca)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tabDeleteHour.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEditarMarca)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEliminarMarca)).BeginInit();
             this.groupBox6.SuspendLayout();
@@ -187,7 +187,7 @@
             this.tabDepartamentos.Controls.Add(this.tabDeleteHour);
             this.tabDepartamentos.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabDepartamentos.Location = new System.Drawing.Point(0, 0);
-            this.tabDepartamentos.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabDepartamentos.Margin = new System.Windows.Forms.Padding(5);
             this.tabDepartamentos.Name = "tabDepartamentos";
             this.tabDepartamentos.SelectedIndex = 0;
             this.tabDepartamentos.Size = new System.Drawing.Size(1379, 822);
@@ -198,7 +198,7 @@
             this.tabFindClock.Controls.Add(this.dgvConsultas);
             this.tabFindClock.Controls.Add(this.panelConsultarMarca);
             this.tabFindClock.Location = new System.Drawing.Point(4, 25);
-            this.tabFindClock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabFindClock.Margin = new System.Windows.Forms.Padding(4);
             this.tabFindClock.Name = "tabFindClock";
             this.tabFindClock.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabFindClock.Size = new System.Drawing.Size(1371, 793);
@@ -226,376 +226,13 @@
             this.dgvConsultas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvConsultas.GridColor = System.Drawing.SystemColors.Control;
             this.dgvConsultas.Location = new System.Drawing.Point(0, 432);
-            this.dgvConsultas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvConsultas.Margin = new System.Windows.Forms.Padding(4);
             this.dgvConsultas.MultiSelect = false;
             this.dgvConsultas.Name = "dgvConsultas";
             this.dgvConsultas.RowHeadersWidth = 51;
             this.dgvConsultas.RowTemplate.Height = 200;
             this.dgvConsultas.Size = new System.Drawing.Size(1371, 361);
             this.dgvConsultas.TabIndex = 7;
-            // 
-            // panelConsultarMarca
-            // 
-            this.panelConsultarMarca.Controls.Add(this.groupBox7);
-            this.panelConsultarMarca.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelConsultarMarca.Location = new System.Drawing.Point(0, 0);
-            this.panelConsultarMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panelConsultarMarca.Name = "panelConsultarMarca";
-            this.panelConsultarMarca.Size = new System.Drawing.Size(1371, 432);
-            this.panelConsultarMarca.TabIndex = 0;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.cmbEstado);
-            this.groupBox7.Controls.Add(this.label10);
-            this.groupBox7.Controls.Add(this.txtDepartamento);
-            this.groupBox7.Controls.Add(this.linkDepartamento);
-            this.groupBox7.Controls.Add(this.txtEmpleado);
-            this.groupBox7.Controls.Add(this.linkEmpleado);
-            this.groupBox7.Controls.Add(this.cmbTipoMarca);
-            this.groupBox7.Controls.Add(this.label7);
-            this.groupBox7.Controls.Add(this.dtpFechaFin);
-            this.groupBox7.Controls.Add(this.ckbFechaFin);
-            this.groupBox7.Controls.Add(this.dtpFechaInicio);
-            this.groupBox7.Controls.Add(this.ckbFecha);
-            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox7.Location = new System.Drawing.Point(0, 0);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox7.Size = new System.Drawing.Size(1371, 432);
-            this.groupBox7.TabIndex = 0;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Filtro de busqueda:";
-            // 
-            // cmbEstado
-            // 
-            this.cmbEstado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Items.AddRange(new object[] {
-            "Generado",
-            "Aplicado",
-            "Pagado"});
-            this.cmbEstado.Location = new System.Drawing.Point(4, 377);
-            this.cmbEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(1363, 28);
-            this.cmbEstado.TabIndex = 65;
-            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.cmbEstado_SelectedIndexChanged);
-            // 
-            // label10
-            // 
-            this.label10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label10.Location = new System.Drawing.Point(4, 340);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label10.Size = new System.Drawing.Size(1363, 37);
-            this.label10.TabIndex = 64;
-            this.label10.Text = "Seleccione el estado:";
-            // 
-            // txtDepartamento
-            // 
-            this.txtDepartamento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtDepartamento.Location = new System.Drawing.Point(4, 314);
-            this.txtDepartamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtDepartamento.Name = "txtDepartamento";
-            this.txtDepartamento.ReadOnly = true;
-            this.txtDepartamento.Size = new System.Drawing.Size(1363, 26);
-            this.txtDepartamento.TabIndex = 63;
-            this.txtDepartamento.Text = "0";
-            this.txtDepartamento.TextChanged += new System.EventHandler(this.txtDepartamento_TextChanged);
-            // 
-            // linkDepartamento
-            // 
-            this.linkDepartamento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.linkDepartamento.LinkColor = System.Drawing.Color.Black;
-            this.linkDepartamento.Location = new System.Drawing.Point(4, 277);
-            this.linkDepartamento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkDepartamento.Name = "linkDepartamento";
-            this.linkDepartamento.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.linkDepartamento.Size = new System.Drawing.Size(1363, 37);
-            this.linkDepartamento.TabIndex = 62;
-            this.linkDepartamento.TabStop = true;
-            this.linkDepartamento.Text = "Seleccione el departamento:";
-            this.linkDepartamento.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkDepartamento_LinkClicked);
-            // 
-            // txtEmpleado
-            // 
-            this.txtEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEmpleado.Location = new System.Drawing.Point(4, 251);
-            this.txtEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtEmpleado.Name = "txtEmpleado";
-            this.txtEmpleado.ReadOnly = true;
-            this.txtEmpleado.Size = new System.Drawing.Size(1363, 26);
-            this.txtEmpleado.TabIndex = 61;
-            this.txtEmpleado.Text = "0";
-            this.txtEmpleado.TextChanged += new System.EventHandler(this.txtEmpleado_TextChanged);
-            // 
-            // linkEmpleado
-            // 
-            this.linkEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.linkEmpleado.LinkColor = System.Drawing.Color.Black;
-            this.linkEmpleado.Location = new System.Drawing.Point(4, 214);
-            this.linkEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkEmpleado.Name = "linkEmpleado";
-            this.linkEmpleado.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.linkEmpleado.Size = new System.Drawing.Size(1363, 37);
-            this.linkEmpleado.TabIndex = 60;
-            this.linkEmpleado.TabStop = true;
-            this.linkEmpleado.Text = "Seleccione el empleado:";
-            this.linkEmpleado.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkEmpleado_LinkClicked);
-            // 
-            // cmbTipoMarca
-            // 
-            this.cmbTipoMarca.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmbTipoMarca.FormattingEnabled = true;
-            this.cmbTipoMarca.Items.AddRange(new object[] {
-            "Ambos",
-            "Entrada",
-            "Salida"});
-            this.cmbTipoMarca.Location = new System.Drawing.Point(4, 186);
-            this.cmbTipoMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbTipoMarca.Name = "cmbTipoMarca";
-            this.cmbTipoMarca.Size = new System.Drawing.Size(1363, 28);
-            this.cmbTipoMarca.TabIndex = 37;
-            this.cmbTipoMarca.SelectedIndexChanged += new System.EventHandler(this.cmbTipoMarca_SelectedIndexChanged);
-            // 
-            // label7
-            // 
-            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label7.Location = new System.Drawing.Point(4, 149);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label7.Size = new System.Drawing.Size(1363, 37);
-            this.label7.TabIndex = 36;
-            this.label7.Text = "Seleccione el tipo de marca:";
-            // 
-            // dtpFechaFin
-            // 
-            this.dtpFechaFin.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dtpFechaFin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaFin.Location = new System.Drawing.Point(4, 123);
-            this.dtpFechaFin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dtpFechaFin.Name = "dtpFechaFin";
-            this.dtpFechaFin.Size = new System.Drawing.Size(1363, 26);
-            this.dtpFechaFin.TabIndex = 35;
-            this.dtpFechaFin.ValueChanged += new System.EventHandler(this.dtpFechaFin_ValueChanged);
-            // 
-            // ckbFechaFin
-            // 
-            this.ckbFechaFin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ckbFechaFin.Location = new System.Drawing.Point(4, 86);
-            this.ckbFechaFin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ckbFechaFin.Name = "ckbFechaFin";
-            this.ckbFechaFin.Size = new System.Drawing.Size(1363, 37);
-            this.ckbFechaFin.TabIndex = 34;
-            this.ckbFechaFin.Text = "Fecha fin:";
-            this.ckbFechaFin.UseVisualStyleBackColor = true;
-            this.ckbFechaFin.CheckedChanged += new System.EventHandler(this.ckbFechaFin_CheckedChanged);
-            // 
-            // dtpFechaInicio
-            // 
-            this.dtpFechaInicio.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dtpFechaInicio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaInicio.Location = new System.Drawing.Point(4, 60);
-            this.dtpFechaInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dtpFechaInicio.Name = "dtpFechaInicio";
-            this.dtpFechaInicio.Size = new System.Drawing.Size(1363, 26);
-            this.dtpFechaInicio.TabIndex = 33;
-            this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechaInicio_ValueChanged);
-            // 
-            // ckbFecha
-            // 
-            this.ckbFecha.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ckbFecha.Location = new System.Drawing.Point(4, 23);
-            this.ckbFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ckbFecha.Name = "ckbFecha";
-            this.ckbFecha.Size = new System.Drawing.Size(1363, 37);
-            this.ckbFecha.TabIndex = 32;
-            this.ckbFecha.Text = "Fecha inicio:";
-            this.ckbFecha.UseVisualStyleBackColor = true;
-            this.ckbFecha.CheckedChanged += new System.EventHandler(this.ckbFecha_CheckedChanged);
-            this.ckbFecha.Click += new System.EventHandler(this.ckbFecha_Click);
-            // 
-            // tabInsertHour
-            // 
-            this.tabInsertHour.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.tabInsertHour.Controls.Add(this.groupBox4);
-            this.tabInsertHour.Controls.Add(this.groupBox1);
-            this.tabInsertHour.Location = new System.Drawing.Point(4, 25);
-            this.tabInsertHour.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tabInsertHour.Name = "tabInsertHour";
-            this.tabInsertHour.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tabInsertHour.Size = new System.Drawing.Size(1371, 793);
-            this.tabInsertHour.TabIndex = 0;
-            this.tabInsertHour.Text = "Insertar Marca";
-            this.tabInsertHour.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.dgvInsertar);
-            this.groupBox4.Controls.Add(this.panel1);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox4.Location = new System.Drawing.Point(686, 5);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.groupBox4.Size = new System.Drawing.Size(680, 783);
-            this.groupBox4.TabIndex = 2;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Marcas Ingresadas";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(13, 31);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(654, 108);
-            this.panel1.TabIndex = 5;
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(547, 0);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(107, 108);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "Generar reporte";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtInsertarEmpleado);
-            this.groupBox1.Controls.Add(this.linkLabel3);
-            this.groupBox1.Controls.Add(this.dtpInsertarFechaSalida);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.dtpInsertarFechaEntrada);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox1.Location = new System.Drawing.Point(5, 5);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.groupBox1.Size = new System.Drawing.Size(681, 783);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Completar datos de la marca";
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(13, 660);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.button4.Size = new System.Drawing.Size(655, 111);
-            this.button4.TabIndex = 53;
-            this.button4.Text = "Insertar Marcas";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // tabEditHour
-            // 
-            this.tabEditHour.Controls.Add(this.groupBox3);
-            this.tabEditHour.Controls.Add(this.groupBox2);
-            this.tabEditHour.Location = new System.Drawing.Point(4, 25);
-            this.tabEditHour.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tabEditHour.Name = "tabEditHour";
-            this.tabEditHour.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tabEditHour.Size = new System.Drawing.Size(1371, 793);
-            this.tabEditHour.TabIndex = 1;
-            this.tabEditHour.Text = "Editar Marca";
-            this.tabEditHour.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.dgvEditarMarca);
-            this.groupBox3.Controls.Add(this.panel2);
-            this.groupBox3.Controls.Add(this.cmbEditarEstado);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.txtEditarDepartamento);
-            this.groupBox3.Controls.Add(this.linkLabel1);
-            this.groupBox3.Controls.Add(this.txtEditarEmpleado);
-            this.groupBox3.Controls.Add(this.linkLabel4);
-            this.groupBox3.Controls.Add(this.cmbEditarTipoMarca);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.dtpEditarFechaFin);
-            this.groupBox3.Controls.Add(this.ckbEditarFechaFin);
-            this.groupBox3.Controls.Add(this.dtpEditarFechaInicio);
-            this.groupBox3.Controls.Add(this.ckbEditarFecha);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox3.Location = new System.Drawing.Point(5, 5);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.groupBox3.Size = new System.Drawing.Size(682, 783);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Filtrar marcas:";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txtEditarIdEmpleado);
-            this.groupBox2.Controls.Add(this.linkLabel2);
-            this.groupBox2.Controls.Add(this.dtpEditarSalida);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.dtpEditarEntrada);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txtEditarCodigo);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox2.Location = new System.Drawing.Point(687, 5);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(13, 12, 13, 5);
-            this.groupBox2.Size = new System.Drawing.Size(679, 783);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Completar datos del empleado";
-            // 
-            // tabDeleteHour
-            // 
-            this.tabDeleteHour.Controls.Add(this.groupBox5);
-            this.tabDeleteHour.Controls.Add(this.groupBox6);
-            this.tabDeleteHour.Location = new System.Drawing.Point(4, 25);
-            this.tabDeleteHour.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tabDeleteHour.Name = "tabDeleteHour";
-            this.tabDeleteHour.Size = new System.Drawing.Size(1371, 793);
-            this.tabDeleteHour.TabIndex = 2;
-            this.tabDeleteHour.Text = "Eliminar Marca";
-            this.tabDeleteHour.UseVisualStyleBackColor = true;
             // 
             // dataGridViewTextBoxColumn27
             // 
@@ -700,6 +337,222 @@
             this.dataGridViewTextBoxColumn39.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
             this.dataGridViewTextBoxColumn39.Width = 125;
+            // 
+            // panelConsultarMarca
+            // 
+            this.panelConsultarMarca.Controls.Add(this.groupBox7);
+            this.panelConsultarMarca.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelConsultarMarca.Location = new System.Drawing.Point(0, 0);
+            this.panelConsultarMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.panelConsultarMarca.Name = "panelConsultarMarca";
+            this.panelConsultarMarca.Size = new System.Drawing.Size(1371, 432);
+            this.panelConsultarMarca.TabIndex = 0;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.cmbEstado);
+            this.groupBox7.Controls.Add(this.label10);
+            this.groupBox7.Controls.Add(this.txtDepartamento);
+            this.groupBox7.Controls.Add(this.linkDepartamento);
+            this.groupBox7.Controls.Add(this.txtEmpleado);
+            this.groupBox7.Controls.Add(this.linkEmpleado);
+            this.groupBox7.Controls.Add(this.cmbTipoMarca);
+            this.groupBox7.Controls.Add(this.label7);
+            this.groupBox7.Controls.Add(this.dtpFechaFin);
+            this.groupBox7.Controls.Add(this.ckbFechaFin);
+            this.groupBox7.Controls.Add(this.dtpFechaInicio);
+            this.groupBox7.Controls.Add(this.ckbFecha);
+            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox7.Location = new System.Drawing.Point(0, 0);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox7.Size = new System.Drawing.Size(1371, 432);
+            this.groupBox7.TabIndex = 0;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Filtro de busqueda:";
+            // 
+            // cmbEstado
+            // 
+            this.cmbEstado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Generado",
+            "Aplicado",
+            "Pagado"});
+            this.cmbEstado.Location = new System.Drawing.Point(4, 377);
+            this.cmbEstado.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(1363, 28);
+            this.cmbEstado.TabIndex = 65;
+            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.cmbEstado_SelectedIndexChanged);
+            // 
+            // label10
+            // 
+            this.label10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label10.Location = new System.Drawing.Point(4, 340);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label10.Size = new System.Drawing.Size(1363, 37);
+            this.label10.TabIndex = 64;
+            this.label10.Text = "Seleccione el estado:";
+            // 
+            // txtDepartamento
+            // 
+            this.txtDepartamento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtDepartamento.Location = new System.Drawing.Point(4, 314);
+            this.txtDepartamento.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDepartamento.Name = "txtDepartamento";
+            this.txtDepartamento.ReadOnly = true;
+            this.txtDepartamento.Size = new System.Drawing.Size(1363, 26);
+            this.txtDepartamento.TabIndex = 63;
+            this.txtDepartamento.Text = "0";
+            this.txtDepartamento.TextChanged += new System.EventHandler(this.txtDepartamento_TextChanged);
+            // 
+            // linkDepartamento
+            // 
+            this.linkDepartamento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.linkDepartamento.LinkColor = System.Drawing.Color.Black;
+            this.linkDepartamento.Location = new System.Drawing.Point(4, 277);
+            this.linkDepartamento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkDepartamento.Name = "linkDepartamento";
+            this.linkDepartamento.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.linkDepartamento.Size = new System.Drawing.Size(1363, 37);
+            this.linkDepartamento.TabIndex = 62;
+            this.linkDepartamento.TabStop = true;
+            this.linkDepartamento.Text = "Seleccione el departamento:";
+            this.linkDepartamento.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkDepartamento_LinkClicked);
+            // 
+            // txtEmpleado
+            // 
+            this.txtEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEmpleado.Location = new System.Drawing.Point(4, 251);
+            this.txtEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmpleado.Name = "txtEmpleado";
+            this.txtEmpleado.ReadOnly = true;
+            this.txtEmpleado.Size = new System.Drawing.Size(1363, 26);
+            this.txtEmpleado.TabIndex = 61;
+            this.txtEmpleado.Text = "0";
+            this.txtEmpleado.TextChanged += new System.EventHandler(this.txtEmpleado_TextChanged);
+            // 
+            // linkEmpleado
+            // 
+            this.linkEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.linkEmpleado.LinkColor = System.Drawing.Color.Black;
+            this.linkEmpleado.Location = new System.Drawing.Point(4, 214);
+            this.linkEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkEmpleado.Name = "linkEmpleado";
+            this.linkEmpleado.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.linkEmpleado.Size = new System.Drawing.Size(1363, 37);
+            this.linkEmpleado.TabIndex = 60;
+            this.linkEmpleado.TabStop = true;
+            this.linkEmpleado.Text = "Seleccione el empleado:";
+            this.linkEmpleado.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkEmpleado_LinkClicked);
+            // 
+            // cmbTipoMarca
+            // 
+            this.cmbTipoMarca.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmbTipoMarca.FormattingEnabled = true;
+            this.cmbTipoMarca.Items.AddRange(new object[] {
+            "Ambos",
+            "Entrada",
+            "Salida"});
+            this.cmbTipoMarca.Location = new System.Drawing.Point(4, 186);
+            this.cmbTipoMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbTipoMarca.Name = "cmbTipoMarca";
+            this.cmbTipoMarca.Size = new System.Drawing.Size(1363, 28);
+            this.cmbTipoMarca.TabIndex = 37;
+            this.cmbTipoMarca.SelectedIndexChanged += new System.EventHandler(this.cmbTipoMarca_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label7.Location = new System.Drawing.Point(4, 149);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label7.Size = new System.Drawing.Size(1363, 37);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "Seleccione el tipo de marca:";
+            // 
+            // dtpFechaFin
+            // 
+            this.dtpFechaFin.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpFechaFin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaFin.Location = new System.Drawing.Point(4, 123);
+            this.dtpFechaFin.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpFechaFin.Name = "dtpFechaFin";
+            this.dtpFechaFin.Size = new System.Drawing.Size(1363, 26);
+            this.dtpFechaFin.TabIndex = 35;
+            this.dtpFechaFin.ValueChanged += new System.EventHandler(this.dtpFechaFin_ValueChanged);
+            // 
+            // ckbFechaFin
+            // 
+            this.ckbFechaFin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ckbFechaFin.Location = new System.Drawing.Point(4, 86);
+            this.ckbFechaFin.Margin = new System.Windows.Forms.Padding(4);
+            this.ckbFechaFin.Name = "ckbFechaFin";
+            this.ckbFechaFin.Size = new System.Drawing.Size(1363, 37);
+            this.ckbFechaFin.TabIndex = 34;
+            this.ckbFechaFin.Text = "Fecha fin:";
+            this.ckbFechaFin.UseVisualStyleBackColor = true;
+            this.ckbFechaFin.CheckedChanged += new System.EventHandler(this.ckbFechaFin_CheckedChanged);
+            // 
+            // dtpFechaInicio
+            // 
+            this.dtpFechaInicio.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpFechaInicio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaInicio.Location = new System.Drawing.Point(4, 60);
+            this.dtpFechaInicio.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpFechaInicio.Name = "dtpFechaInicio";
+            this.dtpFechaInicio.Size = new System.Drawing.Size(1363, 26);
+            this.dtpFechaInicio.TabIndex = 33;
+            this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechaInicio_ValueChanged);
+            // 
+            // ckbFecha
+            // 
+            this.ckbFecha.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ckbFecha.Location = new System.Drawing.Point(4, 23);
+            this.ckbFecha.Margin = new System.Windows.Forms.Padding(4);
+            this.ckbFecha.Name = "ckbFecha";
+            this.ckbFecha.Size = new System.Drawing.Size(1363, 37);
+            this.ckbFecha.TabIndex = 32;
+            this.ckbFecha.Text = "Fecha inicio:";
+            this.ckbFecha.UseVisualStyleBackColor = true;
+            this.ckbFecha.Click += new System.EventHandler(this.ckbFecha_Click);
+            // 
+            // tabInsertHour
+            // 
+            this.tabInsertHour.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.tabInsertHour.Controls.Add(this.groupBox4);
+            this.tabInsertHour.Controls.Add(this.groupBox1);
+            this.tabInsertHour.Location = new System.Drawing.Point(4, 25);
+            this.tabInsertHour.Margin = new System.Windows.Forms.Padding(5);
+            this.tabInsertHour.Name = "tabInsertHour";
+            this.tabInsertHour.Padding = new System.Windows.Forms.Padding(5);
+            this.tabInsertHour.Size = new System.Drawing.Size(1371, 793);
+            this.tabInsertHour.TabIndex = 0;
+            this.tabInsertHour.Text = "Insertar Marca";
+            this.tabInsertHour.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.dgvInsertar);
+            this.groupBox4.Controls.Add(this.panel1);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox4.Location = new System.Drawing.Point(686, 5);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.groupBox4.Size = new System.Drawing.Size(680, 783);
+            this.groupBox4.TabIndex = 2;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Marcas Ingresadas";
             // 
             // dgvInsertar
             // 
@@ -833,6 +686,56 @@
             this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
             this.dataGridViewTextBoxColumn46.Width = 125;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(13, 31);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(654, 108);
+            this.panel1.TabIndex = 5;
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button5.Location = new System.Drawing.Point(547, 0);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(107, 108);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "Generar reporte";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtInsertarEmpleado);
+            this.groupBox1.Controls.Add(this.linkLabel3);
+            this.groupBox1.Controls.Add(this.dtpInsertarFechaSalida);
+            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.dtpInsertarFechaEntrada);
+            this.groupBox1.Controls.Add(this.checkBox2);
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox1.Location = new System.Drawing.Point(5, 5);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.groupBox1.Size = new System.Drawing.Size(681, 783);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Completar datos de la marca";
+            // 
             // txtInsertarEmpleado
             // 
             this.txtInsertarEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
@@ -901,6 +804,209 @@
             this.checkBox2.TabIndex = 64;
             this.checkBox2.Text = "Fecha y hora de inicio:";
             this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button4.Location = new System.Drawing.Point(13, 660);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.button4.Size = new System.Drawing.Size(655, 111);
+            this.button4.TabIndex = 53;
+            this.button4.Text = "Insertar Marcas";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // tabEditHour
+            // 
+            this.tabEditHour.Controls.Add(this.groupBox3);
+            this.tabEditHour.Controls.Add(this.groupBox2);
+            this.tabEditHour.Location = new System.Drawing.Point(4, 25);
+            this.tabEditHour.Margin = new System.Windows.Forms.Padding(5);
+            this.tabEditHour.Name = "tabEditHour";
+            this.tabEditHour.Padding = new System.Windows.Forms.Padding(5);
+            this.tabEditHour.Size = new System.Drawing.Size(1371, 793);
+            this.tabEditHour.TabIndex = 1;
+            this.tabEditHour.Text = "Editar Marca";
+            this.tabEditHour.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.dgvEditarMarca);
+            this.groupBox3.Controls.Add(this.panel2);
+            this.groupBox3.Controls.Add(this.cmbEditarEstado);
+            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Controls.Add(this.txtEditarDepartamento);
+            this.groupBox3.Controls.Add(this.linkLabel1);
+            this.groupBox3.Controls.Add(this.txtEditarEmpleado);
+            this.groupBox3.Controls.Add(this.linkLabel4);
+            this.groupBox3.Controls.Add(this.cmbEditarTipoMarca);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.dtpEditarFechaFin);
+            this.groupBox3.Controls.Add(this.ckbEditarFechaFin);
+            this.groupBox3.Controls.Add(this.dtpEditarFechaInicio);
+            this.groupBox3.Controls.Add(this.ckbEditarFecha);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox3.Location = new System.Drawing.Point(5, 5);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.groupBox3.Size = new System.Drawing.Size(682, 783);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Filtrar marcas:";
+            // 
+            // dgvEditarMarca
+            // 
+            this.dgvEditarMarca.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dgvEditarMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEditarMarca.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewImageColumn1,
+            this.dataGridViewImageColumn6,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16});
+            this.dgvEditarMarca.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEditarMarca.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvEditarMarca.Location = new System.Drawing.Point(13, 443);
+            this.dgvEditarMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvEditarMarca.MultiSelect = false;
+            this.dgvEditarMarca.Name = "dgvEditarMarca";
+            this.dgvEditarMarca.RowHeadersWidth = 51;
+            this.dgvEditarMarca.RowTemplate.Height = 200;
+            this.dgvEditarMarca.Size = new System.Drawing.Size(656, 328);
+            this.dgvEditarMarca.TabIndex = 80;
+            this.dgvEditarMarca.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvEditar_MouseClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idMarca";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Código Marca";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "marcar_inicio";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Entrada";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "marcar_final";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Salida";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "estado";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Estado";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "IdEmpleado";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Empleado";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn1.DataPropertyName = "foto_inicio";
+            this.dataGridViewImageColumn1.FillWeight = 250F;
+            this.dataGridViewImageColumn1.HeaderText = "Foto Entrada";
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn1.Width = 250;
+            // 
+            // dataGridViewImageColumn6
+            // 
+            this.dataGridViewImageColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn6.DataPropertyName = "foto_final";
+            this.dataGridViewImageColumn6.FillWeight = 250F;
+            this.dataGridViewImageColumn6.HeaderText = "Foto Salida";
+            this.dataGridViewImageColumn6.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dataGridViewImageColumn6.MinimumWidth = 6;
+            this.dataGridViewImageColumn6.Name = "dataGridViewImageColumn6";
+            this.dataGridViewImageColumn6.Width = 250;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "creadoPor";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Creador";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "fechaCreacion";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Fecha de Creacion";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "modificadoPor";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Modificador";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "fechaModificacion";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Fecha de Modificacion";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "getActivo";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Activo";
+            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.Width = 125;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(13, 413);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(656, 30);
+            this.panel2.TabIndex = 79;
             // 
             // cmbEditarEstado
             // 
@@ -1054,209 +1160,27 @@
             this.ckbEditarFecha.UseVisualStyleBackColor = true;
             this.ckbEditarFecha.CheckedChanged += new System.EventHandler(this.ckbEditarFecha_CheckedChanged);
             // 
-            // button1
+            // groupBox2
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(13, 667);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.button1.Size = new System.Drawing.Size(653, 111);
-            this.button1.TabIndex = 62;
-            this.button1.Text = "Editar Marca";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(13, 413);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(656, 30);
-            this.panel2.TabIndex = 79;
-            // 
-            // dgvEditarMarca
-            // 
-            this.dgvEditarMarca.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dgvEditarMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEditarMarca.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewImageColumn1,
-            this.dataGridViewImageColumn6,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16});
-            this.dgvEditarMarca.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEditarMarca.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvEditarMarca.Location = new System.Drawing.Point(13, 443);
-            this.dgvEditarMarca.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvEditarMarca.MultiSelect = false;
-            this.dgvEditarMarca.Name = "dgvEditarMarca";
-            this.dgvEditarMarca.RowHeadersWidth = 51;
-            this.dgvEditarMarca.RowTemplate.Height = 200;
-            this.dgvEditarMarca.Size = new System.Drawing.Size(656, 328);
-            this.dgvEditarMarca.TabIndex = 80;
-            this.dgvEditarMarca.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvEditar_MouseClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "idMarca";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Código Marca";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "marcar_inicio";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Entrada";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "marcar_final";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Salida";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "estado";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Estado";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "IdEmpleado";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Empleado";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn1.DataPropertyName = "foto_inicio";
-            this.dataGridViewImageColumn1.FillWeight = 250F;
-            this.dataGridViewImageColumn1.HeaderText = "Foto Entrada";
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn1.MinimumWidth = 6;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewImageColumn1.Width = 250;
-            // 
-            // dataGridViewImageColumn6
-            // 
-            this.dataGridViewImageColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn6.DataPropertyName = "foto_final";
-            this.dataGridViewImageColumn6.FillWeight = 250F;
-            this.dataGridViewImageColumn6.HeaderText = "Foto Salida";
-            this.dataGridViewImageColumn6.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn6.MinimumWidth = 6;
-            this.dataGridViewImageColumn6.Name = "dataGridViewImageColumn6";
-            this.dataGridViewImageColumn6.Width = 250;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "creadoPor";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Creador";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "fechaCreacion";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Fecha de Creacion";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "modificadoPor";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Modificador";
-            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "fechaModificacion";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Fecha de Modificacion";
-            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "getActivo";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Activo";
-            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.Width = 125;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Location = new System.Drawing.Point(13, 31);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.label2.Size = new System.Drawing.Size(653, 30);
-            this.label2.TabIndex = 63;
-            this.label2.Text = "Código Marca:";
-            // 
-            // txtEditarCodigo
-            // 
-            this.txtEditarCodigo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEditarCodigo.Location = new System.Drawing.Point(13, 61);
-            this.txtEditarCodigo.Name = "txtEditarCodigo";
-            this.txtEditarCodigo.ReadOnly = true;
-            this.txtEditarCodigo.Size = new System.Drawing.Size(653, 26);
-            this.txtEditarCodigo.TabIndex = 64;
-            // 
-            // label4
-            // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Location = new System.Drawing.Point(13, 87);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.label4.Size = new System.Drawing.Size(653, 30);
-            this.label4.TabIndex = 65;
-            this.label4.Text = "Fecha y hora de entrada:";
-            // 
-            // dtpEditarEntrada
-            // 
-            this.dtpEditarEntrada.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dtpEditarEntrada.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtpEditarEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEditarEntrada.Location = new System.Drawing.Point(13, 117);
-            this.dtpEditarEntrada.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpEditarEntrada.Name = "dtpEditarEntrada";
-            this.dtpEditarEntrada.ShowCheckBox = true;
-            this.dtpEditarEntrada.Size = new System.Drawing.Size(653, 26);
-            this.dtpEditarEntrada.TabIndex = 85;
+            this.groupBox2.Controls.Add(this.txtEditarIdEmpleado);
+            this.groupBox2.Controls.Add(this.linkLabel2);
+            this.groupBox2.Controls.Add(this.dtpEditarSalida);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.dtpEditarEntrada);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.txtEditarCodigo);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox2.Location = new System.Drawing.Point(687, 5);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(13, 12, 13, 5);
+            this.groupBox2.Size = new System.Drawing.Size(679, 783);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Completar datos del empleado";
             // 
             // txtEditarIdEmpleado
             // 
@@ -1303,6 +1227,81 @@
             this.label5.Size = new System.Drawing.Size(653, 30);
             this.label5.TabIndex = 90;
             this.label5.Text = "Fecha y hora de salida:";
+            // 
+            // dtpEditarEntrada
+            // 
+            this.dtpEditarEntrada.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpEditarEntrada.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpEditarEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEditarEntrada.Location = new System.Drawing.Point(13, 117);
+            this.dtpEditarEntrada.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpEditarEntrada.Name = "dtpEditarEntrada";
+            this.dtpEditarEntrada.ShowCheckBox = true;
+            this.dtpEditarEntrada.Size = new System.Drawing.Size(653, 26);
+            this.dtpEditarEntrada.TabIndex = 85;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Location = new System.Drawing.Point(13, 87);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.label4.Size = new System.Drawing.Size(653, 30);
+            this.label4.TabIndex = 65;
+            this.label4.Text = "Fecha y hora de entrada:";
+            // 
+            // txtEditarCodigo
+            // 
+            this.txtEditarCodigo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEditarCodigo.Location = new System.Drawing.Point(13, 61);
+            this.txtEditarCodigo.Name = "txtEditarCodigo";
+            this.txtEditarCodigo.ReadOnly = true;
+            this.txtEditarCodigo.Size = new System.Drawing.Size(653, 26);
+            this.txtEditarCodigo.TabIndex = 64;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Location = new System.Drawing.Point(13, 31);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.label2.Size = new System.Drawing.Size(653, 30);
+            this.label2.TabIndex = 63;
+            this.label2.Text = "Código Marca:";
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(13, 667);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.button1.Size = new System.Drawing.Size(653, 111);
+            this.button1.TabIndex = 62;
+            this.button1.Text = "Editar Marca";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tabDeleteHour
+            // 
+            this.tabDeleteHour.Controls.Add(this.groupBox5);
+            this.tabDeleteHour.Controls.Add(this.groupBox6);
+            this.tabDeleteHour.Location = new System.Drawing.Point(4, 25);
+            this.tabDeleteHour.Margin = new System.Windows.Forms.Padding(5);
+            this.tabDeleteHour.Name = "tabDeleteHour";
+            this.tabDeleteHour.Size = new System.Drawing.Size(1371, 793);
+            this.tabDeleteHour.TabIndex = 2;
+            this.tabDeleteHour.Text = "Eliminar Marca";
+            this.tabDeleteHour.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -1762,7 +1761,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1379, 823);
             this.Controls.Add(this.tabDepartamentos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PanelMarcas";
             this.Text = "PanelMarcas";
             this.tabDepartamentos.ResumeLayout(false);
@@ -1773,17 +1772,17 @@
             this.groupBox7.PerformLayout();
             this.tabInsertHour.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabEditHour.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEditarMarca)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabDeleteHour.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEditarMarca)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEliminarMarca)).EndInit();

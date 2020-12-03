@@ -71,6 +71,7 @@
     <Compile Include="DAL\PuestoDAL.cs" />
     <Compile Include="DAL\UnificacionDAL.cs" />
     <Compile Include="DAL\UsuarioDAL.cs" />
+    <Compile Include="DLL\Unificacion.cs" />
     <Compile Include="ENT\DeduccionENT.cs" />
     <Compile Include="ENT\DepartamentoENT.cs" />
     <Compile Include="ENT\Dia_feriadoENT.cs" />
@@ -258,9 +259,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DLL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="IMG\CloseOverOut.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

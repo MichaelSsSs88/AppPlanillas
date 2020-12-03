@@ -242,11 +242,6 @@ namespace AppPlanillas.GUI
                 this.dgvConsultas.DataSource = new MarcaDAL().ObtenerMarcas("", "", this.cmbTipoMarca.SelectedItem.ToString(), Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
 
         }
-
-        private void ckbFecha_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
         public void Clic(object emisor, int pestaña, int panel)
         {
             if (panel == 1)

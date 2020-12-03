@@ -11,16 +11,16 @@ namespace ENT
         public int idMarca { get; }
         public DateTime? marcar_inicio { get;}
         public DateTime? marcar_final { get;}
-        public string estado { get;}
+        public string estado { get; set; }
         public int IdEmpleado { get;}
         public byte[] foto_inicio { get; }
         public byte[] foto_final { get;}
         public DateTime fechaCreacion { get;}
         public string creadoPor { get;}
-        public DateTime fechaModificacion { get;}
-        public string modificadoPor { get;}
+        public DateTime fechaModificacion { get; set; }
+        public string modificadoPor { get; set; }
         public List<MarcaENT> Marcas { get; set; }
-        public int IdUnificacion { get; }
+        public int IdUnificacion { get; set; }
         public MarcaENT(int idMarca, DateTime? marcar_inicio, DateTime? marcar_final, string estado, int idEmpleado, byte[] foto_inicio, byte[] foto_final, DateTime fechaCreacion, string creadoPor, DateTime fechaModificacion, string modificadoPor, int idUnificacion)
         {
             this.marcar_inicio = marcar_inicio;

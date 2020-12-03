@@ -239,9 +239,9 @@ namespace DAL
             {
                 Parametro parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
-                string sentenciaSQL = "UPDATE marca SET marca_final=@marca_final, foto_final=@foto_final, fecha_modificacion=@fecha_modificacion, modificado_por=@modificado_por WHERE id= " + pMarca.idMarca;
+                string sentenciaSQL = "UPDATE marca SET marca_inicio=@marca_inicio,marca_final=@marca_final, estado=@estado, id_empleado=@id_empleado, foto_inicio=@foto_inicio,foto_final=@foto_final, fecha_modificacion=@fecha_modificacion, modificado_por=@modificado_por, id_unificacion=@id_unificacion WHERE id= @id";
 
-                //parametros.AgregarParametro("@id", NpgsqlTypes.NpgsqlDbType.Integer, pMarca.idMarca);
+                parametros.AgregarParametro("@id", NpgsqlTypes.NpgsqlDbType.Integer, pMarca.idMarca);
                 parametros.AgregarParametro("@marca_inicio", NpgsqlTypes.NpgsqlDbType.Timestamp, pMarca.marcar_inicio);
                 parametros.AgregarParametro("@marca_final", NpgsqlTypes.NpgsqlDbType.Timestamp, pMarca.marcar_final);
                 parametros.AgregarParametro("@estado", NpgsqlTypes.NpgsqlDbType.Varchar, pMarca.estado);
@@ -252,6 +252,7 @@ namespace DAL
                 parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pMarca.creadoPor);
                 parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pMarca.fechaModificacion);
                 parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pMarca.modificadoPor);
+                parametros.AgregarParametro("@id_unificacion", NpgsqlTypes.NpgsqlDbType.Integer, pMarca.IdUnificacion);
                 conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());
             }
             catch (Exception e)
