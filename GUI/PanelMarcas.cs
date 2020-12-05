@@ -278,10 +278,20 @@ namespace AppPlanillas.GUI
         {
             TimeSpan diferencia = this.dtpInsertarFechaSalida.Value - this.dtpInsertarFechaEntrada.Value;
 
+            
+
             if(diferencia.TotalMinutes>0)
             {
-                if(this.txtInsertarEmpleado.Text!="0")
-                    new MarcaDAL().AgregarMarcaManual(new MarcaENT(-1, this.dtpInsertarFechaEntrada.Value, this.dtpInsertarFechaSalida.Value, "generado", Int32.Parse(this.txtInsertarEmpleado.Text), null, null, DateTime.Today, this.UsuarioENT.Nombre, DateTime.Today, this.UsuarioENT.Nombre, 0));
+                if (this.txtInsertarEmpleado.Text != "0")
+                {
+                    if (new MarcaDAL().ObtenerMarcas(this.dtpInsertarFechaEntrada.Value.ToString("dd/MM/yyyy"), "", "", Int32.Parse(this.txtInsertarEmpleado.Text), 0, "").Count==0)
+                        new MarcaDAL().AgregarMarcaManual(new MarcaENT(-1, this.dtpInsertarFechaEntrada.Value, this.dtpInsertarFechaSalida.Value, "generado", Int32.Parse(this.txtInsertarEmpleado.Text), null, null, DateTime.Today, this.UsuarioENT.Nombre, DateTime.Today, this.UsuarioENT.Nombre, 0));
+                    else
+                    {
+                        MessageBox.Show("Marca invalida, ya el usuario presenta marcas registradas para esa fecha", "Marcas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
                 else
                     MessageBox.Show("Debe de seleccionar un empledao para asignar la marca", "Marcas", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

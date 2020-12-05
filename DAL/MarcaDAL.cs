@@ -120,11 +120,9 @@ namespace DAL
             List<MarcaENT> ListaMarcas = new List<MarcaENT>();
             try
             {
-                DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("select * from marca where id_empleado=" + pIdEmpleado + " and marca_final is null");
+                DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL("select * from marca where id_empleado=" + pIdEmpleado + " and marca_final is null and estado='generado'");
                 foreach (DataRow fila in dsetClientes.Tables[0].Rows)
                 {
-                    //string str = fila["imagen"].ToString();
-                   // byte[] imagen = Encoding.ASCII.GetBytes(str);
                     MarcaENT marca = new MarcaENT(Int32.Parse(fila["id"].ToString()), (DateTime)(fila["marca_inicio"]), DateTime.Now, fila["estado"].ToString(), Int32.Parse(fila["id_empleado"].ToString()), (Byte[])fila["foto_inicio"], null, (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), int.Parse(fila["id_unificacion"].ToString()));
                     ListaMarcas.Add(marca);
                 }
@@ -191,7 +189,25 @@ namespace DAL
             }
         }
 
-        public void EliminarMarca(int IdMarca)
+
+        public void AnularMarca(int IdMarca)
+        {
+            try
+            {
+                Parametro parametros = new Parametro();
+                AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
+                string sentenciaSQL = "UPDATE marca SET estado='nulo' WHERE id= @IdMarca";
+                parametros.AgregarParametro("@IdMarca", NpgsqlTypes.NpgsqlDbType.Integer, IdMarca);
+                conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());
+            }
+            catch
+            {
+
+            }
+        }
+
+
+                public void EliminarMarca(int IdMarca)
         {
             try
             {

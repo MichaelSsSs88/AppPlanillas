@@ -21,6 +21,11 @@ namespace AppPlanillas.DLL
             List<UnificacionENT> unificaciones = new List<UnificacionENT>();
             foreach (int cedula in DiferentesEmpleados)
             {
+                int IdMarca=new MarcaDAL().ObtenerMarcas(cedula);
+                
+                if (IdMarca != -1)
+                    new MarcaDAL().AnularMarca(IdMarca);
+
                 double horas = 0;
                 double horas_extras = 0;
                 double horas_feriados = 0;
@@ -103,6 +108,12 @@ namespace AppPlanillas.DLL
             }
 
             return new UnificacionDAL().ObtenerUnificacion("", "", 0,0,"") ;
+        }
+
+        private List<MarcaENT> VerificarMarcas(List<MarcaENT> Lista)
+        {
+
+            return Lista;
         }
 
         public void AgregarUnificacion(UnificacionENT punificacionENT, List<MarcaENT> marcas)
