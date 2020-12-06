@@ -284,20 +284,25 @@ namespace AppPlanillas.GUI
             {
                 if (this.txtInsertarEmpleado.Text != "0")
                 {
-                    if (new MarcaDAL().ObtenerMarcas(this.dtpInsertarFechaEntrada.Value.ToString("dd/MM/yyyy"), "", "", Int32.Parse(this.txtInsertarEmpleado.Text), 0, "").Count==0)
-                        new MarcaDAL().AgregarMarcaManual(new MarcaENT(-1, this.dtpInsertarFechaEntrada.Value, this.dtpInsertarFechaSalida.Value, "generado", Int32.Parse(this.txtInsertarEmpleado.Text), null, null, DateTime.Today, this.UsuarioENT.Nombre, DateTime.Today, this.UsuarioENT.Nombre, 0));
+                    if (this.dtpInsertarFechaEntrada.Value.ToString("dd/MM/yyyy").CompareTo(this.dtpInsertarFechaSalida.Value.ToString("dd/MM/yyyy")) == 0)
+                        if (new MarcaDAL().ObtenerMarcas(this.dtpInsertarFechaEntrada.Value.ToString("dd/MM/yyyy"), Int32.Parse(this.txtInsertarEmpleado.Text), "").Count == 0)
+                        {
+                            new MarcaDAL().AgregarMarcaManual(new MarcaENT(-1, this.dtpInsertarFechaEntrada.Value, this.dtpInsertarFechaSalida.Value, "generado", Int32.Parse(this.txtInsertarEmpleado.Text), null, null, DateTime.Today, this.UsuarioENT.Nombre, DateTime.Today, this.UsuarioENT.Nombre, 0));
+                            MessageBox.Show("La marca se agrego correctamente", "Marcas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Marca invalida, ya el usuario presenta marcas registradas para esa fecha", "Marcas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     else
-                    {
-                        MessageBox.Show("Marca invalida, ya el usuario presenta marcas registradas para esa fecha", "Marcas", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-
+                        MessageBox.Show("Las marcas deben de pertenecer al mismo dia", "Marcas", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                     MessageBox.Show("Debe de seleccionar un empledao para asignar la marca", "Marcas", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             else
-                MessageBox.Show("La hora y feha de salida debe de ser mayor a la de entrada", "Marcas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La hora de salida debe de ser mayor a la de entrada", "Marcas", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

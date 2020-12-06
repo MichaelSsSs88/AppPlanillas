@@ -17,7 +17,7 @@ namespace AppPlanillas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-         //Application.Run(new PanelUnificacion());
+        // Application.Run(new PanelUnificacion());
          Application.Run(new Login());
         }
     }

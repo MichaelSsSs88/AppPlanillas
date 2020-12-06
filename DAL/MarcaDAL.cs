@@ -23,11 +23,11 @@ namespace DAL
                    
                         if (tipo_marca == "Entrada")
                         {
-                            consulta += "and marca.marca_inicio >'" + DateTime.Parse(fecha_inicio) + "'";
+                            consulta += "and marca.marca_inicio >='" + DateTime.Parse(fecha_inicio) + "'";
                         }
                         else if (tipo_marca == "Salida")
                         {
-                        consulta += "and marca.marca_final >'" + DateTime.Parse(fecha_inicio) + "'";
+                        consulta += "and marca.marca_final >='" + DateTime.Parse(fecha_inicio) + "'";
                         }
                         else
                         {
@@ -109,8 +109,73 @@ namespace DAL
                     throw e;
             }
 
-            
+            return ListaMarcas;
+        }
 
+        public List<MarcaENT> ObtenerMarcas(String fecha_inicio, int empleado, string generado)
+        {
+            List<MarcaENT> ListaMarcas = new List<MarcaENT>();
+            string consulta = "select marca.* from marca join empleado on marca.id_empleado = empleado.id join puesto on puesto.id = empleado.id_puesto ";
+            if (fecha_inicio != "" || empleado > 0 || generado != "")
+            {
+
+                if (fecha_inicio != "")
+                {
+                    consulta += "and to_char(marca.marca_inicio, 'dd/MM/yyyy') ='" + fecha_inicio + "'";
+
+                }
+
+                //PENDIENTE
+                if (empleado > 0)
+                {
+
+                    consulta += " and marca.id_empleado= " + empleado;
+
+                }
+                //PENDIENTE
+
+                if (generado != "")
+                {
+
+                    consulta += " and marca.estado = '" + generado.ToLower() + "'";
+
+                }
+            }
+
+            try
+            {
+
+                DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL(consulta);
+                foreach (DataRow fila in dsetClientes.Tables[0].Rows)
+                {
+                    string str = fila["foto_inicio"].ToString();
+                    DateTime? entrada = null;
+                    DateTime? salida = null;
+                    if (fila["marca_inicio"].ToString().Length > 0)
+                        entrada = DateTime.Parse(fila["marca_inicio"].ToString());
+                    if (fila["marca_final"].ToString().Length > 0)
+                        salida = DateTime.Parse(fila["marca_final"].ToString());
+
+
+                    MarcaENT marca = null;
+                    if (fila["foto_inicio"].ToString().Length > 0 && fila["foto_final"].ToString().Length > 0)
+                        marca = new MarcaENT(Int32.Parse(fila["id"].ToString()), entrada, salida, fila["estado"].ToString(), Int32.Parse(fila["id_empleado"].ToString()), (Byte[])fila["foto_inicio"], (Byte[])fila["foto_final"], (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), int.Parse(fila["id_unificacion"].ToString()));
+                    else if (fila["foto_inicio"].ToString().Length > 0)
+                        marca = new MarcaENT(Int32.Parse(fila["id"].ToString()), entrada, salida, fila["estado"].ToString(), Int32.Parse(fila["id_empleado"].ToString()), (Byte[])fila["foto_inicio"], null, (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), int.Parse(fila["id_unificacion"].ToString()));
+                    else if (fila["foto_final"].ToString().Length > 0)
+                        marca = new MarcaENT(Int32.Parse(fila["id"].ToString()), entrada, salida, fila["estado"].ToString(), Int32.Parse(fila["id_empleado"].ToString()), null, (Byte[])fila["foto_final"], (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), int.Parse(fila["id_unificacion"].ToString()));
+                    else
+                        marca = new MarcaENT(Int32.Parse(fila["id"].ToString()), entrada, salida, fila["estado"].ToString(), Int32.Parse(fila["id_empleado"].ToString()), null, null, (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), int.Parse(fila["id_unificacion"].ToString()));
+
+                    //byte[] imagen = Encoding.ASCII.GetBytes(str);
+                    Console.WriteLine(marca.idMarca + " " + marca.marcar_inicio.ToString());
+                    ListaMarcas.Add(marca);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
 
             return ListaMarcas;
         }
