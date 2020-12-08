@@ -69,6 +69,18 @@ namespace AppPlanillas.GUI
                     this.txtEmpleado.Text = entrada.idEmpleado.ToString();
                 }
             }
+            if (pestaña == 4)
+            {
+                this.txtEditarUnificacion.Text = entrada.Unificacion.ElementAt(0);
+                this.txtEditarIdEmpleado.Text= entrada.Unificacion.ElementAt(1);
+                this.txtEditarNombre.Text= entrada.Unificacion.ElementAt(2);
+                this.txtEditarInicio.Text = DateTime.Parse(entrada.Unificacion.ElementAt(3)).ToString("dd/MM/yyyy");//.ToString("dd/MM/yyyy");
+                this.txtEditarFin.Text = DateTime.Parse(entrada.Unificacion.ElementAt(4)).ToString("dd/MM/yyyy");
+                this.txtEditarHora.Text= entrada.Unificacion.ElementAt(5);
+                this.txtEditarExtra.Text= entrada.Unificacion.ElementAt(6);
+                this.txtEditarFeriado.Text= entrada.Unificacion.ElementAt(7);
+                this.txtEditarEstado.Text= entrada.Unificacion.ElementAt(8);
+            }
                 
             
         }
@@ -95,19 +107,19 @@ namespace AppPlanillas.GUI
         private void linkBusqueda_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if(this.linkBusqueda.Text== "Seleccione el empleado:")
-                        new PanelBusqueda(3,null,null,this).Visible=true;
+                        new PanelBusqueda(3,null,null,this).ShowDialog();
             else
-                        new PanelBusqueda(1, null, null, this).Visible = true;
+                        new PanelBusqueda(1, null, null, this).ShowDialog();
         }
 
         private void linkEmpleado_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            new PanelBusqueda(3, null, null, this).Visible = true;
+            new PanelBusqueda(3, null, null, this).ShowDialog();
         }
 
         private void linkDepartamento_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            new PanelBusqueda(1, null, null, this).Visible = true;
+            new PanelBusqueda(1, null, null, this).ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -344,6 +356,16 @@ namespace AppPlanillas.GUI
             else
                 this.dgvConsultas.DataSource = new UnificacionDAL().ObtenerUnificacion("", "", Int32.Parse(this.txtEmpleado.Text), Int32.Parse(this.txtDepartamento.Text), this.cmbEstado.SelectedItem.ToString());
 
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new PanelBusqueda(4, null, null, this).ShowDialog();
         }
     }
 }

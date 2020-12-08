@@ -127,6 +127,30 @@ namespace ProyectoIIIC
             }
         }
 
+        public String ObtenerEmpleado(int IdEmpleado)
+        {
+            try
+            {
+                Parametro parametros = new Parametro();
+                AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
+                string sentenciaSQL = "select(nombre || ' ' || apellido_uno || ' ' || apellido_dos) from empleado emp where emp.id=@IdEmpleado;";
+                parametros.AgregarParametro("@IdEmpleado", NpgsqlTypes.NpgsqlDbType.Integer, IdEmpleado);
+                DataSet dsetEmpleado = conexion.EjecutarConsultaSQL(sentenciaSQL, parametros.ObtenerParametros());
+                String nombre = "";
+                foreach (DataRow fila in dsetEmpleado.Tables[0].Rows)
+                {
+                    nombre = fila[0].ToString();
+                    
+                }
+                return nombre;
+            }
+            catch
+            {
+
+            }
+            return "";
+        }
+
         public Double SalarioEmpleado(int pEmpleado)
         {
             double salarioHora = 0;

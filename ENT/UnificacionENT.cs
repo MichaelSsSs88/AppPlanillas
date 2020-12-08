@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoIIIC;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -47,6 +48,14 @@ namespace ENT
             this.fechaModificacion = fechaModificacion;
             this.modificadoPor = modificadoPor;
             this.IdPago = idPago;
+        }
+
+        public String Nombre
+        {
+            get
+            {
+                return new EmpleadoDAL().ObtenerEmpleado(this.idEmpleado);
+            }
         }
     }
 }
