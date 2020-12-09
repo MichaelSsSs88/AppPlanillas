@@ -112,7 +112,56 @@ namespace DAL
             return ListaMarcas;
         }
 
-        public List<MarcaENT> ObtenerMarcas(String fecha_inicio, int empleado, string generado)
+        public List<MarcaENT> ObtenerMarcasUnificadas(int IdUnificacion)
+        {
+            List<MarcaENT> ListaMarcas = new List<MarcaENT>();
+            //string consulta = "select marca.* from marca join empleado on marca.id_empleado = empleado.id join puesto on puesto.id = empleado.id_puesto ";
+            string consulta = "select marca.* from marca join empleado on marca.id_empleado = empleado.id join puesto on puesto.id = empleado.id_puesto  where marca.id_unificacion=@IdUnificacion";
+              Parametro parametros = new Parametro();
+            
+              //AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
+               parametros.AgregarParametro("@IdUnificacion", NpgsqlTypes.NpgsqlDbType.Integer, IdUnificacion);
+               
+            try
+            {
+                DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL(consulta,parametros.ObtenerParametros());
+              
+                foreach (DataRow fila in dsetClientes.Tables[0].Rows)
+                {
+                    string str = fila["foto_inicio"].ToString();
+                    DateTime? entrada = null;
+                    DateTime? salida = null;
+                    if (fila["marca_inicio"].ToString().Length > 0)
+                        entrada = DateTime.Parse(fila["marca_inicio"].ToString());
+                    if (fila["marca_final"].ToString().Length > 0)
+                        salida = DateTime.Parse(fila["marca_final"].ToString());
+
+
+                    MarcaENT marca = null;
+                    if (fila["foto_inicio"].ToString().Length > 0 && fila["foto_final"].ToString().Length > 0)
+                        marca = new MarcaENT(Int32.Parse(fila["id"].ToString()), entrada, salida, fila["estado"].ToString(), Int32.Parse(fila["id_empleado"].ToString()), (Byte[])fila["foto_inicio"], (Byte[])fila["foto_final"], (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), int.Parse(fila["id_unificacion"].ToString()));
+                    else if (fila["foto_inicio"].ToString().Length > 0)
+                        marca = new MarcaENT(Int32.Parse(fila["id"].ToString()), entrada, salida, fila["estado"].ToString(), Int32.Parse(fila["id_empleado"].ToString()), (Byte[])fila["foto_inicio"], null, (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), int.Parse(fila["id_unificacion"].ToString()));
+                    else if (fila["foto_final"].ToString().Length > 0)
+                        marca = new MarcaENT(Int32.Parse(fila["id"].ToString()), entrada, salida, fila["estado"].ToString(), Int32.Parse(fila["id_empleado"].ToString()), null, (Byte[])fila["foto_final"], (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), int.Parse(fila["id_unificacion"].ToString()));
+                    else
+                        marca = new MarcaENT(Int32.Parse(fila["id"].ToString()), entrada, salida, fila["estado"].ToString(), Int32.Parse(fila["id_empleado"].ToString()), null, null, (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), int.Parse(fila["id_unificacion"].ToString()));
+
+                    ListaMarcas.Add(marca);
+                }
+                
+            }
+            catch (Exception Ex)
+            {
+              
+                throw Ex;
+            }
+            
+            return ListaMarcas;
+        }
+
+
+            public List<MarcaENT> ObtenerMarcas(String fecha_inicio, int empleado, string generado)
         {
             List<MarcaENT> ListaMarcas = new List<MarcaENT>();
             string consulta = "select marca.* from marca join empleado on marca.id_empleado = empleado.id join puesto on puesto.id = empleado.id_puesto ";
@@ -168,7 +217,7 @@ namespace DAL
                         marca = new MarcaENT(Int32.Parse(fila["id"].ToString()), entrada, salida, fila["estado"].ToString(), Int32.Parse(fila["id_empleado"].ToString()), null, null, (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), int.Parse(fila["id_unificacion"].ToString()));
 
                     //byte[] imagen = Encoding.ASCII.GetBytes(str);
-                    Console.WriteLine(marca.idMarca + " " + marca.marcar_inicio.ToString());
+                   // Console.WriteLine(marca.idMarca + " " + marca.marcar_inicio.ToString());
                     ListaMarcas.Add(marca);
                 }
             }
@@ -286,7 +335,24 @@ namespace DAL
             }
         }
 
-
+        public void EditarMarcaEstadoUnificacio(int idMarca, string modificador, string estado)
+        {
+            try
+            {
+                Parametro parametros = new Parametro();
+                AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
+                string sentenciaSQL = "UPDATE marca SET estado=@estado,fecha_modificacion=@fecha_modificacion, modificado_por=@modificado_por WHERE id=@idMarca";
+                parametros.AgregarParametro("@idMarca", NpgsqlTypes.NpgsqlDbType.Integer, idMarca);
+                parametros.AgregarParametro("@estado", NpgsqlTypes.NpgsqlDbType.Varchar, estado);
+                parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, DateTime.Now);
+                parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, modificador);
+                conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
         public void EditarMarca(MarcaENT pMarca)
         {
             try

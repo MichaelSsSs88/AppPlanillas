@@ -20,6 +20,8 @@ namespace AppPlanillas.GUI
 {
     public partial class PanelUnificacion : Form
     {
+        int fila = -1;
+        UnificacionENT UnificacionENT = null;
         public PanelUnificacion()
         {
             InitializeComponent();
@@ -71,6 +73,7 @@ namespace AppPlanillas.GUI
             }
             if (pestaña == 4)
             {
+                this.UnificacionENT = new UnificacionENT(Int32.Parse(entrada.Unificacion.ElementAt(0)), DateTime.Parse(entrada.Unificacion.ElementAt(3)), DateTime.Parse(entrada.Unificacion.ElementAt(4)), Double.Parse(entrada.Unificacion.ElementAt(5)), Double.Parse(entrada.Unificacion.ElementAt(6)), Double.Parse(entrada.Unificacion.ElementAt(7)), Double.Parse(entrada.Unificacion.ElementAt(8)), Double.Parse(entrada.Unificacion.ElementAt(9)), Double.Parse(entrada.Unificacion.ElementAt(10)), Double.Parse(entrada.Unificacion.ElementAt(11)), Int32.Parse(entrada.Unificacion.ElementAt(1)), entrada.Unificacion.ElementAt(12), DateTime.Now, "", DateTime.Now, "pedro", Int32.Parse(entrada.Unificacion.ElementAt(13)));
                 this.txtEditarUnificacion.Text = entrada.Unificacion.ElementAt(0);
                 this.txtEditarIdEmpleado.Text= entrada.Unificacion.ElementAt(1);
                 this.txtEditarNombre.Text= entrada.Unificacion.ElementAt(2);
@@ -80,6 +83,8 @@ namespace AppPlanillas.GUI
                 this.txtEditarExtra.Text= entrada.Unificacion.ElementAt(6);
                 this.txtEditarFeriado.Text= entrada.Unificacion.ElementAt(7);
                 this.txtEditarEstado.Text= entrada.Unificacion.ElementAt(8);
+                //this.dgvMarca.DataSource = new MarcaDAL().ObtenerMarcas(DateTime.Parse(entrada.Unificacion.ElementAt(3)).ToString("dd/MM/yyyy"), DateTime.Parse(entrada.Unificacion.ElementAt(4)).ToString("dd/MM/yyyy"), "",Int32.Parse(entrada.Unificacion.ElementAt(1).ToString()),0,"aplicado");
+                this.dgvMarca.DataSource = new MarcaDAL().ObtenerMarcasUnificadas(Int32.Parse(entrada.Unificacion.ElementAt(0)));
             }
                 
             
@@ -366,6 +371,27 @@ namespace AppPlanillas.GUI
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             new PanelBusqueda(4, null, null, this).ShowDialog();
+        }
+
+        private void txtEditarUnificacion_TextChanged(object sender, EventArgs e)
+        {
+           /* int x = Int32.Parse(this.txtEditarUnificacion.Text);
+            
+            List<MarcaENT> ListaMarcas = new MarcaDAL().ObtenerMarcasUnificadas(x);
+            Console.WriteLine(ListaMarcas.Count) ;
+            //Console.WriteLine("Estoy Aqui", ListaMarcas.Count);
+            //this.dgvMarca.DataSource = ListaMarcas;*/
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvMarca_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.fila = this.dgvMarca.CurrentRow.Index;
+            int id= Int32.Parse(this.dgvMarca.Rows[fila].Cells["dataGridViewTextBoxColumn1"].Value.ToString());
         }
     }
 }

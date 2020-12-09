@@ -604,8 +604,14 @@ namespace AppPlanillas.GUI
             this.Unificacion.Add(this.dgvConsultas.Rows[fila].Cells["hora_regular"].Value.ToString());
             this.Unificacion.Add(this.dgvConsultas.Rows[fila].Cells["hora_extra"].Value.ToString());
             this.Unificacion.Add(this.dgvConsultas.Rows[fila].Cells["hora_doble"].Value.ToString());
+            this.Unificacion.Add(this.dgvConsultas.Rows[fila].Cells["total_regular"].Value.ToString());
+            this.Unificacion.Add(this.dgvConsultas.Rows[fila].Cells["total_extra"].Value.ToString());
+            this.Unificacion.Add(this.dgvConsultas.Rows[fila].Cells["total_doble"].Value.ToString());
+            this.Unificacion.Add(this.dgvConsultas.Rows[fila].Cells["total_deduccion"].Value.ToString());
             this.Unificacion.Add(this.dgvConsultas.Rows[fila].Cells["estado"].Value.ToString());
+            this.Unificacion.Add(this.dgvConsultas.Rows[fila].Cells["id_pago"].Value.ToString());
             this.BotonPulsado();
+            this.Close();
 
 
         }

@@ -124,6 +124,8 @@
             this.txtEditarCedula = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dgvConsultas = new System.Windows.Forms.DataGridView();
+            this.label17 = new System.Windows.Forms.Label();
             this.panelConsultarMarca = new System.Windows.Forms.Panel();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
@@ -136,8 +138,6 @@
             this.ckbFechaFin = new System.Windows.Forms.CheckBox();
             this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.ckbFecha = new System.Windows.Forms.CheckBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.dgvConsultas = new System.Windows.Forms.DataGridView();
             this.idUnificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -147,10 +147,11 @@
             this.hora_extra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hora_doble = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total_regular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total_extras = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total_extra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total_doble = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total_deduccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.creadoPor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaCreacionG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modificadoPor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -173,9 +174,9 @@
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEditarImg)).BeginInit();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).BeginInit();
             this.panelConsultarMarca.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).BeginInit();
             this.SuspendLayout();
             // 
             // tabEditDepartment
@@ -183,9 +184,9 @@
             this.tabEditDepartment.Controls.Add(this.gbxFiltroActualizar);
             this.tabEditDepartment.Controls.Add(this.gbxActualizar);
             this.tabEditDepartment.Location = new System.Drawing.Point(4, 29);
-            this.tabEditDepartment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabEditDepartment.Margin = new System.Windows.Forms.Padding(4);
             this.tabEditDepartment.Name = "tabEditDepartment";
-            this.tabEditDepartment.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabEditDepartment.Padding = new System.Windows.Forms.Padding(4);
             this.tabEditDepartment.Size = new System.Drawing.Size(1371, 790);
             this.tabEditDepartment.TabIndex = 1;
             this.tabEditDepartment.Text = "Buscar Departamento";
@@ -200,7 +201,7 @@
             this.gbxFiltroActualizar.Controls.Add(this.lblTipoBusquedaActualizar);
             this.gbxFiltroActualizar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbxFiltroActualizar.Location = new System.Drawing.Point(4, 4);
-            this.gbxFiltroActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxFiltroActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.gbxFiltroActualizar.Name = "gbxFiltroActualizar";
             this.gbxFiltroActualizar.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.gbxFiltroActualizar.Size = new System.Drawing.Size(684, 782);
@@ -223,7 +224,7 @@
             this.grdActualizar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdActualizar.GridColor = System.Drawing.SystemColors.Control;
             this.grdActualizar.Location = new System.Drawing.Point(13, 211);
-            this.grdActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.grdActualizar.MultiSelect = false;
             this.grdActualizar.Name = "grdActualizar";
             this.grdActualizar.ReadOnly = true;
@@ -312,7 +313,7 @@
             this.pnlFiltroActualizar.Controls.Add(this.lblValorABuscar);
             this.pnlFiltroActualizar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlFiltroActualizar.Location = new System.Drawing.Point(13, 93);
-            this.pnlFiltroActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlFiltroActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.pnlFiltroActualizar.Name = "pnlFiltroActualizar";
             this.pnlFiltroActualizar.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
             this.pnlFiltroActualizar.Size = new System.Drawing.Size(658, 84);
@@ -322,7 +323,7 @@
             // 
             this.txtBuscarActualizar.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtBuscarActualizar.Location = new System.Drawing.Point(0, 46);
-            this.txtBuscarActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscarActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscarActualizar.Name = "txtBuscarActualizar";
             this.txtBuscarActualizar.Size = new System.Drawing.Size(658, 26);
             this.txtBuscarActualizar.TabIndex = 4;
@@ -348,7 +349,7 @@
             "Codigo",
             "Descripción"});
             this.cmbTipoBusquedaActualizar.Location = new System.Drawing.Point(13, 65);
-            this.cmbTipoBusquedaActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbTipoBusquedaActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTipoBusquedaActualizar.Name = "cmbTipoBusquedaActualizar";
             this.cmbTipoBusquedaActualizar.Size = new System.Drawing.Size(658, 28);
             this.cmbTipoBusquedaActualizar.TabIndex = 2;
@@ -376,7 +377,7 @@
             this.gbxActualizar.Dock = System.Windows.Forms.DockStyle.Right;
             this.gbxActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.gbxActualizar.Location = new System.Drawing.Point(688, 4);
-            this.gbxActualizar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gbxActualizar.Margin = new System.Windows.Forms.Padding(5);
             this.gbxActualizar.Name = "gbxActualizar";
             this.gbxActualizar.Padding = new System.Windows.Forms.Padding(13, 12, 13, 5);
             this.gbxActualizar.Size = new System.Drawing.Size(679, 782);
@@ -396,7 +397,7 @@
             this.btnGuardarActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarActualizar.Image")));
             this.btnGuardarActualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnGuardarActualizar.Location = new System.Drawing.Point(13, 178);
-            this.btnGuardarActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardarActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardarActualizar.Name = "btnGuardarActualizar";
             this.btnGuardarActualizar.Size = new System.Drawing.Size(653, 102);
             this.btnGuardarActualizar.TabIndex = 38;
@@ -410,7 +411,7 @@
             this.ckbEditarActivo.AutoSize = true;
             this.ckbEditarActivo.Dock = System.Windows.Forms.DockStyle.Top;
             this.ckbEditarActivo.Location = new System.Drawing.Point(13, 154);
-            this.ckbEditarActivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ckbEditarActivo.Margin = new System.Windows.Forms.Padding(4);
             this.ckbEditarActivo.Name = "ckbEditarActivo";
             this.ckbEditarActivo.Size = new System.Drawing.Size(653, 24);
             this.ckbEditarActivo.TabIndex = 37;
@@ -421,7 +422,7 @@
             // 
             this.txtEditarDescripcion.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtEditarDescripcion.Location = new System.Drawing.Point(13, 128);
-            this.txtEditarDescripcion.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtEditarDescripcion.Margin = new System.Windows.Forms.Padding(5);
             this.txtEditarDescripcion.Name = "txtEditarDescripcion";
             this.txtEditarDescripcion.ReadOnly = true;
             this.txtEditarDescripcion.Size = new System.Drawing.Size(653, 26);
@@ -443,7 +444,7 @@
             // 
             this.txtEditarCodigo.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtEditarCodigo.Location = new System.Drawing.Point(13, 65);
-            this.txtEditarCodigo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtEditarCodigo.Margin = new System.Windows.Forms.Padding(5);
             this.txtEditarCodigo.Name = "txtEditarCodigo";
             this.txtEditarCodigo.ReadOnly = true;
             this.txtEditarCodigo.Size = new System.Drawing.Size(653, 26);
@@ -469,7 +470,7 @@
             this.tabDepartamentos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabDepartamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.tabDepartamentos.Location = new System.Drawing.Point(0, 0);
-            this.tabDepartamentos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabDepartamentos.Margin = new System.Windows.Forms.Padding(4);
             this.tabDepartamentos.Name = "tabDepartamentos";
             this.tabDepartamentos.SelectedIndex = 0;
             this.tabDepartamentos.Size = new System.Drawing.Size(1379, 823);
@@ -480,7 +481,7 @@
             this.tabFindJob.Controls.Add(this.groupBox3);
             this.tabFindJob.Controls.Add(this.groupBox2);
             this.tabFindJob.Location = new System.Drawing.Point(4, 29);
-            this.tabFindJob.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabFindJob.Margin = new System.Windows.Forms.Padding(4);
             this.tabFindJob.Name = "tabFindJob";
             this.tabFindJob.Size = new System.Drawing.Size(1371, 790);
             this.tabFindJob.TabIndex = 2;
@@ -497,7 +498,7 @@
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(17, 15, 17, 15);
             this.groupBox3.Size = new System.Drawing.Size(672, 790);
@@ -521,7 +522,7 @@
             this.dgvInsertar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInsertar.GridColor = System.Drawing.SystemColors.Control;
             this.dgvInsertar.Location = new System.Drawing.Point(17, 306);
-            this.dgvInsertar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgvInsertar.Margin = new System.Windows.Forms.Padding(5);
             this.dgvInsertar.Name = "dgvInsertar";
             this.dgvInsertar.RowHeadersWidth = 51;
             this.dgvInsertar.Size = new System.Drawing.Size(638, 469);
@@ -596,7 +597,7 @@
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(17, 249);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(638, 57);
             this.panel3.TabIndex = 7;
@@ -618,7 +619,7 @@
             this.panelFiltro.Controls.Add(this.lblPuestoABuscar);
             this.panelFiltro.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelFiltro.Location = new System.Drawing.Point(17, 104);
-            this.panelFiltro.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panelFiltro.Margin = new System.Windows.Forms.Padding(5);
             this.panelFiltro.Name = "panelFiltro";
             this.panelFiltro.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.panelFiltro.Size = new System.Drawing.Size(638, 103);
@@ -628,7 +629,7 @@
             // 
             this.txtBuscarPuestos.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtBuscarPuestos.Location = new System.Drawing.Point(0, 57);
-            this.txtBuscarPuestos.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtBuscarPuestos.Margin = new System.Windows.Forms.Padding(5);
             this.txtBuscarPuestos.Name = "txtBuscarPuestos";
             this.txtBuscarPuestos.Size = new System.Drawing.Size(638, 26);
             this.txtBuscarPuestos.TabIndex = 4;
@@ -655,7 +656,7 @@
             "Descripción",
             "Código Departamento"});
             this.cmbBusquedaPuestos.Location = new System.Drawing.Point(17, 76);
-            this.cmbBusquedaPuestos.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cmbBusquedaPuestos.Margin = new System.Windows.Forms.Padding(5);
             this.cmbBusquedaPuestos.Name = "cmbBusquedaPuestos";
             this.cmbBusquedaPuestos.Size = new System.Drawing.Size(638, 28);
             this.cmbBusquedaPuestos.TabIndex = 2;
@@ -705,7 +706,7 @@
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button4.Location = new System.Drawing.Point(17, 278);
-            this.button4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button4.Margin = new System.Windows.Forms.Padding(5);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.button4.Size = new System.Drawing.Size(665, 126);
@@ -722,7 +723,7 @@
             this.ckbActivo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckbActivo.Dock = System.Windows.Forms.DockStyle.Top;
             this.ckbActivo.Location = new System.Drawing.Point(17, 239);
-            this.ckbActivo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ckbActivo.Margin = new System.Windows.Forms.Padding(5);
             this.ckbActivo.Name = "ckbActivo";
             this.ckbActivo.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.ckbActivo.Size = new System.Drawing.Size(665, 39);
@@ -734,7 +735,7 @@
             // 
             this.txtInsertarDepartamento.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtInsertarDepartamento.Location = new System.Drawing.Point(17, 213);
-            this.txtInsertarDepartamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtInsertarDepartamento.Margin = new System.Windows.Forms.Padding(4);
             this.txtInsertarDepartamento.Name = "txtInsertarDepartamento";
             this.txtInsertarDepartamento.ReadOnly = true;
             this.txtInsertarDepartamento.Size = new System.Drawing.Size(665, 26);
@@ -800,9 +801,9 @@
             this.tabEditEmployed.Controls.Add(this.groupBox1);
             this.tabEditEmployed.Controls.Add(this.groupBox4);
             this.tabEditEmployed.Location = new System.Drawing.Point(4, 29);
-            this.tabEditEmployed.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabEditEmployed.Margin = new System.Windows.Forms.Padding(5);
             this.tabEditEmployed.Name = "tabEditEmployed";
-            this.tabEditEmployed.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabEditEmployed.Padding = new System.Windows.Forms.Padding(5);
             this.tabEditEmployed.Size = new System.Drawing.Size(1371, 790);
             this.tabEditEmployed.TabIndex = 3;
             this.tabEditEmployed.Text = "Buscar Empleado";
@@ -818,7 +819,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(5, 5);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.groupBox1.Size = new System.Drawing.Size(682, 780);
@@ -848,7 +849,7 @@
             this.dgvEditar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEditar.GridColor = System.Drawing.SystemColors.Control;
             this.dgvEditar.Location = new System.Drawing.Point(13, 257);
-            this.dgvEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvEditar.Margin = new System.Windows.Forms.Padding(4);
             this.dgvEditar.MultiSelect = false;
             this.dgvEditar.Name = "dgvEditar";
             this.dgvEditar.RowHeadersWidth = 51;
@@ -979,7 +980,7 @@
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(13, 211);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(656, 46);
             this.panel6.TabIndex = 7;
@@ -1001,7 +1002,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(13, 93);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
             this.panel1.Size = new System.Drawing.Size(656, 84);
@@ -1011,7 +1012,7 @@
             // 
             this.txtEditarBusqueda.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtEditarBusqueda.Location = new System.Drawing.Point(0, 46);
-            this.txtEditarBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEditarBusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditarBusqueda.Name = "txtEditarBusqueda";
             this.txtEditarBusqueda.Size = new System.Drawing.Size(656, 26);
             this.txtEditarBusqueda.TabIndex = 4;
@@ -1037,7 +1038,7 @@
             "Cédula",
             "Nombre Completo"});
             this.cmbEditarBusqueda.Location = new System.Drawing.Point(13, 65);
-            this.cmbEditarBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEditarBusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEditarBusqueda.Name = "cmbEditarBusqueda";
             this.cmbEditarBusqueda.Size = new System.Drawing.Size(656, 28);
             this.cmbEditarBusqueda.TabIndex = 2;
@@ -1077,7 +1078,7 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox4.Location = new System.Drawing.Point(687, 5);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(13, 12, 13, 5);
             this.groupBox4.Size = new System.Drawing.Size(679, 780);
@@ -1097,7 +1098,7 @@
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.Location = new System.Drawing.Point(13, 649);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
             this.button1.Size = new System.Drawing.Size(264, 126);
@@ -1114,7 +1115,7 @@
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.checkBox1.Location = new System.Drawing.Point(13, 481);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
             this.checkBox1.Size = new System.Drawing.Size(264, 36);
@@ -1127,7 +1128,7 @@
             this.picEditarImg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picEditarImg.Dock = System.Windows.Forms.DockStyle.Right;
             this.picEditarImg.Location = new System.Drawing.Point(277, 481);
-            this.picEditarImg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picEditarImg.Margin = new System.Windows.Forms.Padding(4);
             this.picEditarImg.Name = "picEditarImg";
             this.picEditarImg.Size = new System.Drawing.Size(389, 294);
             this.picEditarImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1138,7 +1139,7 @@
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(13, 469);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(653, 12);
             this.panel4.TabIndex = 59;
@@ -1147,7 +1148,7 @@
             // 
             this.txtEditarSalarioHora.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtEditarSalarioHora.Location = new System.Drawing.Point(13, 443);
-            this.txtEditarSalarioHora.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtEditarSalarioHora.Margin = new System.Windows.Forms.Padding(5);
             this.txtEditarSalarioHora.Name = "txtEditarSalarioHora";
             this.txtEditarSalarioHora.ReadOnly = true;
             this.txtEditarSalarioHora.Size = new System.Drawing.Size(653, 26);
@@ -1169,7 +1170,7 @@
             // 
             this.txtEditarPuesto.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtEditarPuesto.Location = new System.Drawing.Point(13, 380);
-            this.txtEditarPuesto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEditarPuesto.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditarPuesto.Name = "txtEditarPuesto";
             this.txtEditarPuesto.ReadOnly = true;
             this.txtEditarPuesto.Size = new System.Drawing.Size(653, 26);
@@ -1196,7 +1197,7 @@
             this.dtpEditarFechaNacimiento.Dock = System.Windows.Forms.DockStyle.Top;
             this.dtpEditarFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpEditarFechaNacimiento.Location = new System.Drawing.Point(13, 317);
-            this.dtpEditarFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpEditarFechaNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.dtpEditarFechaNacimiento.Name = "dtpEditarFechaNacimiento";
             this.dtpEditarFechaNacimiento.Size = new System.Drawing.Size(653, 26);
             this.dtpEditarFechaNacimiento.TabIndex = 23;
@@ -1217,7 +1218,7 @@
             // 
             this.txtEditarApellido2.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtEditarApellido2.Location = new System.Drawing.Point(13, 254);
-            this.txtEditarApellido2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtEditarApellido2.Margin = new System.Windows.Forms.Padding(5);
             this.txtEditarApellido2.Name = "txtEditarApellido2";
             this.txtEditarApellido2.ReadOnly = true;
             this.txtEditarApellido2.Size = new System.Drawing.Size(653, 26);
@@ -1239,7 +1240,7 @@
             // 
             this.txtEditarApellido1.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtEditarApellido1.Location = new System.Drawing.Point(13, 191);
-            this.txtEditarApellido1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtEditarApellido1.Margin = new System.Windows.Forms.Padding(5);
             this.txtEditarApellido1.Name = "txtEditarApellido1";
             this.txtEditarApellido1.ReadOnly = true;
             this.txtEditarApellido1.Size = new System.Drawing.Size(653, 26);
@@ -1261,7 +1262,7 @@
             // 
             this.txtEditarNombre.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtEditarNombre.Location = new System.Drawing.Point(13, 128);
-            this.txtEditarNombre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtEditarNombre.Margin = new System.Windows.Forms.Padding(5);
             this.txtEditarNombre.Name = "txtEditarNombre";
             this.txtEditarNombre.ReadOnly = true;
             this.txtEditarNombre.Size = new System.Drawing.Size(653, 26);
@@ -1283,7 +1284,7 @@
             // 
             this.txtEditarCedula.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtEditarCedula.Location = new System.Drawing.Point(13, 65);
-            this.txtEditarCedula.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtEditarCedula.Margin = new System.Windows.Forms.Padding(5);
             this.txtEditarCedula.Name = "txtEditarCedula";
             this.txtEditarCedula.ReadOnly = true;
             this.txtEditarCedula.Size = new System.Drawing.Size(653, 26);
@@ -1312,6 +1313,50 @@
             this.tabPage1.TabIndex = 4;
             this.tabPage1.Text = "Buscar Unificación";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dgvConsultas
+            // 
+            this.dgvConsultas.BackgroundColor = System.Drawing.Color.Cornsilk;
+            this.dgvConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idUnificacion,
+            this.IdEmpleado,
+            this.Nombre,
+            this.fecha_inicio,
+            this.fecha_fin,
+            this.hora_regular,
+            this.hora_extra,
+            this.hora_doble,
+            this.total_regular,
+            this.total_extra,
+            this.total_doble,
+            this.total_deduccion,
+            this.estado,
+            this.id_pago,
+            this.creadoPor,
+            this.fechaCreacionG,
+            this.modificadoPor,
+            this.fechaModificacion});
+            this.dgvConsultas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvConsultas.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvConsultas.Location = new System.Drawing.Point(3, 407);
+            this.dgvConsultas.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvConsultas.MultiSelect = false;
+            this.dgvConsultas.Name = "dgvConsultas";
+            this.dgvConsultas.RowHeadersWidth = 51;
+            this.dgvConsultas.RowTemplate.Height = 200;
+            this.dgvConsultas.Size = new System.Drawing.Size(1365, 380);
+            this.dgvConsultas.TabIndex = 13;
+            this.dgvConsultas.Click += new System.EventHandler(this.dgvConsultas_Click);
+            // 
+            // label17
+            // 
+            this.label17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label17.Location = new System.Drawing.Point(3, 375);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(1365, 32);
+            this.label17.TabIndex = 12;
+            this.label17.Text = "Seleccione la unificacion a editar:";
             // 
             // panelConsultarMarca
             // 
@@ -1472,49 +1517,6 @@
             this.ckbFecha.UseVisualStyleBackColor = true;
             this.ckbFecha.CheckedChanged += new System.EventHandler(this.ckbFecha_CheckedChanged);
             // 
-            // label17
-            // 
-            this.label17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label17.Location = new System.Drawing.Point(3, 375);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(1365, 32);
-            this.label17.TabIndex = 12;
-            this.label17.Text = "Seleccione la unificacion a editar:";
-            // 
-            // dgvConsultas
-            // 
-            this.dgvConsultas.BackgroundColor = System.Drawing.Color.Cornsilk;
-            this.dgvConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idUnificacion,
-            this.IdEmpleado,
-            this.Nombre,
-            this.fecha_inicio,
-            this.fecha_fin,
-            this.hora_regular,
-            this.hora_extra,
-            this.hora_doble,
-            this.total_regular,
-            this.total_extras,
-            this.total_doble,
-            this.total_deduccion,
-            this.estado,
-            this.creadoPor,
-            this.fechaCreacionG,
-            this.modificadoPor,
-            this.fechaModificacion});
-            this.dgvConsultas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvConsultas.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvConsultas.Location = new System.Drawing.Point(3, 407);
-            this.dgvConsultas.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvConsultas.MultiSelect = false;
-            this.dgvConsultas.Name = "dgvConsultas";
-            this.dgvConsultas.RowHeadersWidth = 51;
-            this.dgvConsultas.RowTemplate.Height = 200;
-            this.dgvConsultas.Size = new System.Drawing.Size(1365, 380);
-            this.dgvConsultas.TabIndex = 13;
-            this.dgvConsultas.Click += new System.EventHandler(this.dgvConsultas_Click);
-            // 
             // idUnificacion
             // 
             this.idUnificacion.DataPropertyName = "idUnificacion";
@@ -1587,13 +1589,13 @@
             this.total_regular.Name = "total_regular";
             this.total_regular.Width = 125;
             // 
-            // total_extras
+            // total_extra
             // 
-            this.total_extras.DataPropertyName = "total_extra";
-            this.total_extras.HeaderText = "Total Extras";
-            this.total_extras.MinimumWidth = 6;
-            this.total_extras.Name = "total_extras";
-            this.total_extras.Width = 125;
+            this.total_extra.DataPropertyName = "total_extra";
+            this.total_extra.HeaderText = "Total Extras";
+            this.total_extra.MinimumWidth = 6;
+            this.total_extra.Name = "total_extra";
+            this.total_extra.Width = 125;
             // 
             // total_doble
             // 
@@ -1618,6 +1620,14 @@
             this.estado.MinimumWidth = 6;
             this.estado.Name = "estado";
             this.estado.Width = 125;
+            // 
+            // id_pago
+            // 
+            this.id_pago.DataPropertyName = "IdPago";
+            this.id_pago.HeaderText = "Id pago";
+            this.id_pago.MinimumWidth = 6;
+            this.id_pago.Name = "id_pago";
+            this.id_pago.Width = 125;
             // 
             // creadoPor
             // 
@@ -1657,7 +1667,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1379, 823);
             this.Controls.Add(this.tabDepartamentos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PanelBusqueda";
             this.Text = "PanelBusqueda";
             this.tabEditDepartment.ResumeLayout(false);
@@ -1684,10 +1694,10 @@
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEditarImg)).EndInit();
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).EndInit();
             this.panelConsultarMarca.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1812,10 +1822,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn hora_extra;
         private System.Windows.Forms.DataGridViewTextBoxColumn hora_doble;
         private System.Windows.Forms.DataGridViewTextBoxColumn total_regular;
-        private System.Windows.Forms.DataGridViewTextBoxColumn total_extras;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total_extra;
         private System.Windows.Forms.DataGridViewTextBoxColumn total_doble;
         private System.Windows.Forms.DataGridViewTextBoxColumn total_deduccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_pago;
         private System.Windows.Forms.DataGridViewTextBoxColumn creadoPor;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaCreacionG;
         private System.Windows.Forms.DataGridViewTextBoxColumn modificadoPor;

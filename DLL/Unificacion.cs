@@ -154,6 +154,45 @@ namespace AppPlanillas.DLL
             }
         }
 
+        public UnificacionENT EditarUnificacion(UnificacionENT pUnificacionENT, MarcaENT marca)
+        {
+            List<HorarioENT> Horarios = new HorarioDAL().ObtenerHorarios(-1, "");
+            List<Dia_feriadoENT> Feriados = new Dia_feriadoDAL().ObtenerFeriados("Todos", "");
+            int horas = 0;
+            int horas_extras = 0;
+            int horas_feriados=0;
+            foreach (HorarioENT horario in Horarios)
+            {
+                if (this.DiaSemana(marca.marcar_inicio.Value.DayOfWeek).CompareTo(horario.Dia) == 0)
+                {
+                    TimeSpan Horas1 = TimeSpan.Parse(marca.marcar_final.Value.ToString("HH:mm"));
+                    TimeSpan Horas2 = TimeSpan.Parse(marca.marcar_inicio.Value.ToString("HH:mm"));
+                    int Horas = Horas1.Hours - Horas2.Hours;
+                    Console.WriteLine(Horas1 + " " + Horas2 + " Horas: " + Horas);
+                    if (Horas >= horario.Horas_Ordinarias)
+                    {
+                        horas += horario.Horas_Ordinarias;
+                        horas_extras += (Horas - horario.Horas_Ordinarias);
+                    }
+                    else
+                    {
+                        horas += Horas;
+                    }
+
+                    foreach (Dia_feriadoENT feriado in Feriados)
+                    {
+                        if (marca.marcar_inicio.Value.Month == feriado.Mes && marca.marcar_inicio.Value.Day == feriado.Dia)
+                        {
+                            horas_feriados += Horas;
+                        }
+                    }
+
+                    break;
+                }
+            }
+            return pUnificacionENT;
+        }
+
 
             private string DiaSemana(DayOfWeek dow)
         {
