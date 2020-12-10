@@ -177,9 +177,27 @@ namespace AppPlanillas.GUI
             this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtEditarDeduccion = new System.Windows.Forms.TextBox();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.txtEditarDobles = new System.Windows.Forms.TextBox();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.txtEditarExtras = new System.Windows.Forms.TextBox();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.txtEditarSalario = new System.Windows.Forms.TextBox();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
             this.tabUnificaciones.SuspendLayout();
             this.tabFindUnificacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).BeginInit();
@@ -201,6 +219,8 @@ namespace AppPlanillas.GUI
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabUnificaciones
@@ -729,13 +749,15 @@ namespace AppPlanillas.GUI
             this.Unificación.Dock = System.Windows.Forms.DockStyle.Top;
             this.Unificación.Location = new System.Drawing.Point(5, 5);
             this.Unificación.Name = "Unificación";
-            this.Unificación.Size = new System.Drawing.Size(1353, 407);
+            this.Unificación.Size = new System.Drawing.Size(1353, 425);
             this.Unificación.TabIndex = 4;
             this.Unificación.TabStop = false;
             this.Unificación.Text = "Unificaión";
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.txtEditarDeduccion);
+            this.panel6.Controls.Add(this.panel21);
             this.panel6.Controls.Add(this.txtEditarFeriado);
             this.panel6.Controls.Add(this.panel16);
             this.panel6.Controls.Add(this.txtEditarExtra);
@@ -758,164 +780,166 @@ namespace AppPlanillas.GUI
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(248, 22);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(719, 382);
+            this.panel6.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.panel6.Size = new System.Drawing.Size(719, 400);
             this.panel6.TabIndex = 3;
             // 
             // txtEditarFeriado
             // 
             this.txtEditarFeriado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEditarFeriado.Location = new System.Drawing.Point(0, 315);
+            this.txtEditarFeriado.Location = new System.Drawing.Point(10, 315);
             this.txtEditarFeriado.Name = "txtEditarFeriado";
-            this.txtEditarFeriado.Size = new System.Drawing.Size(719, 26);
+            this.txtEditarFeriado.Size = new System.Drawing.Size(699, 26);
             this.txtEditarFeriado.TabIndex = 18;
             // 
             // panel16
             // 
             this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel16.Location = new System.Drawing.Point(0, 306);
+            this.panel16.Location = new System.Drawing.Point(10, 306);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(719, 9);
+            this.panel16.Size = new System.Drawing.Size(699, 9);
             this.panel16.TabIndex = 17;
             // 
             // txtEditarExtra
             // 
             this.txtEditarExtra.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEditarExtra.Location = new System.Drawing.Point(0, 280);
+            this.txtEditarExtra.Location = new System.Drawing.Point(10, 280);
             this.txtEditarExtra.Name = "txtEditarExtra";
-            this.txtEditarExtra.Size = new System.Drawing.Size(719, 26);
+            this.txtEditarExtra.Size = new System.Drawing.Size(699, 26);
             this.txtEditarExtra.TabIndex = 16;
             // 
             // panel15
             // 
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Location = new System.Drawing.Point(0, 271);
+            this.panel15.Location = new System.Drawing.Point(10, 271);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(719, 9);
+            this.panel15.Size = new System.Drawing.Size(699, 9);
             this.panel15.TabIndex = 15;
             // 
             // txtEditarHora
             // 
             this.txtEditarHora.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEditarHora.Location = new System.Drawing.Point(0, 245);
+            this.txtEditarHora.Location = new System.Drawing.Point(10, 245);
             this.txtEditarHora.Name = "txtEditarHora";
-            this.txtEditarHora.Size = new System.Drawing.Size(719, 26);
+            this.txtEditarHora.Size = new System.Drawing.Size(699, 26);
             this.txtEditarHora.TabIndex = 14;
             // 
             // panel14
             // 
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Location = new System.Drawing.Point(0, 236);
+            this.panel14.Location = new System.Drawing.Point(10, 236);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(719, 9);
+            this.panel14.Size = new System.Drawing.Size(699, 9);
             this.panel14.TabIndex = 13;
             // 
             // txtEditarEstado
             // 
             this.txtEditarEstado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEditarEstado.Location = new System.Drawing.Point(0, 210);
+            this.txtEditarEstado.Location = new System.Drawing.Point(10, 210);
             this.txtEditarEstado.Name = "txtEditarEstado";
-            this.txtEditarEstado.Size = new System.Drawing.Size(719, 26);
+            this.txtEditarEstado.Size = new System.Drawing.Size(699, 26);
             this.txtEditarEstado.TabIndex = 12;
             // 
             // panel13
             // 
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 201);
+            this.panel13.Location = new System.Drawing.Point(10, 201);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(719, 9);
+            this.panel13.Size = new System.Drawing.Size(699, 9);
             this.panel13.TabIndex = 11;
             // 
             // txtEditarDepartamento
             // 
             this.txtEditarDepartamento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEditarDepartamento.Location = new System.Drawing.Point(0, 175);
+            this.txtEditarDepartamento.Location = new System.Drawing.Point(10, 175);
             this.txtEditarDepartamento.Name = "txtEditarDepartamento";
-            this.txtEditarDepartamento.Size = new System.Drawing.Size(719, 26);
+            this.txtEditarDepartamento.Size = new System.Drawing.Size(699, 26);
             this.txtEditarDepartamento.TabIndex = 10;
             // 
             // panel12
             // 
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 166);
+            this.panel12.Location = new System.Drawing.Point(10, 166);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(719, 9);
+            this.panel12.Size = new System.Drawing.Size(699, 9);
             this.panel12.TabIndex = 9;
             // 
             // txtEditarNombre
             // 
             this.txtEditarNombre.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEditarNombre.Location = new System.Drawing.Point(0, 140);
+            this.txtEditarNombre.Location = new System.Drawing.Point(10, 140);
             this.txtEditarNombre.Name = "txtEditarNombre";
-            this.txtEditarNombre.Size = new System.Drawing.Size(719, 26);
+            this.txtEditarNombre.Size = new System.Drawing.Size(699, 26);
             this.txtEditarNombre.TabIndex = 8;
             // 
             // panel11
             // 
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(0, 131);
+            this.panel11.Location = new System.Drawing.Point(10, 131);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(719, 9);
+            this.panel11.Size = new System.Drawing.Size(699, 9);
             this.panel11.TabIndex = 7;
             // 
             // txtEditarIdEmpleado
             // 
             this.txtEditarIdEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEditarIdEmpleado.Location = new System.Drawing.Point(0, 105);
+            this.txtEditarIdEmpleado.Location = new System.Drawing.Point(10, 105);
             this.txtEditarIdEmpleado.Name = "txtEditarIdEmpleado";
-            this.txtEditarIdEmpleado.Size = new System.Drawing.Size(719, 26);
+            this.txtEditarIdEmpleado.Size = new System.Drawing.Size(699, 26);
             this.txtEditarIdEmpleado.TabIndex = 6;
             // 
             // panel10
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 96);
+            this.panel10.Location = new System.Drawing.Point(10, 96);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(719, 9);
+            this.panel10.Size = new System.Drawing.Size(699, 9);
             this.panel10.TabIndex = 5;
             // 
             // txtEditarFin
             // 
             this.txtEditarFin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEditarFin.Location = new System.Drawing.Point(0, 70);
+            this.txtEditarFin.Location = new System.Drawing.Point(10, 70);
             this.txtEditarFin.Name = "txtEditarFin";
-            this.txtEditarFin.Size = new System.Drawing.Size(719, 26);
+            this.txtEditarFin.Size = new System.Drawing.Size(699, 26);
             this.txtEditarFin.TabIndex = 4;
             // 
             // panel9
             // 
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 61);
+            this.panel9.Location = new System.Drawing.Point(10, 61);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(719, 9);
+            this.panel9.Size = new System.Drawing.Size(699, 9);
             this.panel9.TabIndex = 3;
             // 
             // txtEditarInicio
             // 
             this.txtEditarInicio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEditarInicio.Location = new System.Drawing.Point(0, 35);
+            this.txtEditarInicio.Location = new System.Drawing.Point(10, 35);
             this.txtEditarInicio.Name = "txtEditarInicio";
-            this.txtEditarInicio.Size = new System.Drawing.Size(719, 26);
+            this.txtEditarInicio.Size = new System.Drawing.Size(699, 26);
             this.txtEditarInicio.TabIndex = 2;
             // 
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 26);
+            this.panel7.Location = new System.Drawing.Point(10, 26);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(719, 9);
+            this.panel7.Size = new System.Drawing.Size(699, 9);
             this.panel7.TabIndex = 1;
             // 
             // txtEditarUnificacion
             // 
             this.txtEditarUnificacion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEditarUnificacion.Location = new System.Drawing.Point(0, 0);
+            this.txtEditarUnificacion.Location = new System.Drawing.Point(10, 0);
             this.txtEditarUnificacion.Name = "txtEditarUnificacion";
-            this.txtEditarUnificacion.Size = new System.Drawing.Size(719, 26);
+            this.txtEditarUnificacion.Size = new System.Drawing.Size(699, 26);
             this.txtEditarUnificacion.TabIndex = 0;
             this.txtEditarUnificacion.TextChanged += new System.EventHandler(this.txtEditarUnificacion_TextChanged);
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.label24);
             this.panel5.Controls.Add(this.label19);
             this.panel5.Controls.Add(this.label18);
             this.panel5.Controls.Add(this.label17);
@@ -929,7 +953,7 @@ namespace AppPlanillas.GUI
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(3, 22);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(245, 382);
+            this.panel5.Size = new System.Drawing.Size(245, 400);
             this.panel5.TabIndex = 2;
             // 
             // label19
@@ -1047,13 +1071,12 @@ namespace AppPlanillas.GUI
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button6);
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.panel17);
+            this.panel4.Controls.Add(this.panel8);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(967, 22);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(383, 382);
+            this.panel4.Size = new System.Drawing.Size(383, 400);
             this.panel4.TabIndex = 1;
             // 
             // tabDeleteUnificacion
@@ -1516,11 +1539,11 @@ namespace AppPlanillas.GUI
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox3.Location = new System.Drawing.Point(5, 412);
+            this.groupBox3.Location = new System.Drawing.Point(5, 430);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.groupBox3.Size = new System.Drawing.Size(1353, 397);
+            this.groupBox3.Size = new System.Drawing.Size(1353, 379);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Control de marcas:";
@@ -1550,7 +1573,7 @@ namespace AppPlanillas.GUI
             this.dgvMarca.Name = "dgvMarca";
             this.dgvMarca.RowHeadersWidth = 51;
             this.dgvMarca.RowTemplate.Height = 200;
-            this.dgvMarca.Size = new System.Drawing.Size(1327, 287);
+            this.dgvMarca.Size = new System.Drawing.Size(1327, 269);
             this.dgvMarca.TabIndex = 87;
             this.dgvMarca.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvMarca_MouseClick);
             // 
@@ -1854,9 +1877,64 @@ namespace AppPlanillas.GUI
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.button6);
+            this.panel8.Controls.Add(this.button3);
+            this.panel8.Controls.Add(this.button1);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(383, 140);
+            this.panel8.TabIndex = 0;
+            // 
+            // button6
+            // 
+            this.button6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button6.Location = new System.Drawing.Point(256, 0);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.button6.Size = new System.Drawing.Size(128, 140);
+            this.button6.TabIndex = 59;
+            this.button6.Text = "Liberacion Marca";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button3.Location = new System.Drawing.Point(128, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.button3.Size = new System.Drawing.Size(128, 140);
+            this.button3.TabIndex = 58;
+            this.button3.Text = "Reversar Unificación";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // button1
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -1869,54 +1947,173 @@ namespace AppPlanillas.GUI
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.button1.Size = new System.Drawing.Size(383, 125);
-            this.button1.TabIndex = 54;
+            this.button1.Size = new System.Drawing.Size(128, 140);
+            this.button1.TabIndex = 57;
             this.button1.Text = "Aprobar Unificación";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button3
+            // panel17
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(0, 125);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.button3.Size = new System.Drawing.Size(383, 125);
-            this.button3.TabIndex = 55;
-            this.button3.Text = "Reversar Unificación";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
+            this.panel17.Controls.Add(this.txtEditarDobles);
+            this.panel17.Controls.Add(this.panel22);
+            this.panel17.Controls.Add(this.label23);
+            this.panel17.Controls.Add(this.panel20);
+            this.panel17.Controls.Add(this.txtEditarExtras);
+            this.panel17.Controls.Add(this.panel19);
+            this.panel17.Controls.Add(this.label22);
+            this.panel17.Controls.Add(this.panel23);
+            this.panel17.Controls.Add(this.txtEditarSalario);
+            this.panel17.Controls.Add(this.panel24);
+            this.panel17.Controls.Add(this.label21);
+            this.panel17.Controls.Add(this.panel18);
+            this.panel17.Controls.Add(this.label20);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel17.Location = new System.Drawing.Point(0, 140);
+            this.panel17.Name = "panel17";
+            this.panel17.Padding = new System.Windows.Forms.Padding(10, 13, 10, 10);
+            this.panel17.Size = new System.Drawing.Size(383, 260);
+            this.panel17.TabIndex = 1;
             // 
-            // button6
+            // label20
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button6.Location = new System.Drawing.Point(0, 250);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.button6.Size = new System.Drawing.Size(383, 125);
-            this.button6.TabIndex = 56;
-            this.button6.Text = "Liberar Marca";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.label20.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label20.Location = new System.Drawing.Point(10, 13);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(363, 25);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Desgloce para pago.";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label24.Location = new System.Drawing.Point(0, 340);
+            this.label24.Name = "label24";
+            this.label24.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
+            this.label24.Size = new System.Drawing.Size(112, 35);
+            this.label24.TabIndex = 12;
+            this.label24.Text = "Deducciones:";
+            // 
+            // txtEditarDeduccion
+            // 
+            this.txtEditarDeduccion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEditarDeduccion.Location = new System.Drawing.Point(10, 350);
+            this.txtEditarDeduccion.Name = "txtEditarDeduccion";
+            this.txtEditarDeduccion.Size = new System.Drawing.Size(699, 26);
+            this.txtEditarDeduccion.TabIndex = 20;
+            // 
+            // panel21
+            // 
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel21.Location = new System.Drawing.Point(10, 341);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(699, 9);
+            this.panel21.TabIndex = 19;
+            // 
+            // panel18
+            // 
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel18.Location = new System.Drawing.Point(10, 38);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(363, 9);
+            this.panel18.TabIndex = 14;
+            // 
+            // txtEditarDobles
+            // 
+            this.txtEditarDobles.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEditarDobles.Location = new System.Drawing.Point(10, 225);
+            this.txtEditarDobles.Name = "txtEditarDobles";
+            this.txtEditarDobles.Size = new System.Drawing.Size(363, 26);
+            this.txtEditarDobles.TabIndex = 42;
+            // 
+            // panel22
+            // 
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel22.Location = new System.Drawing.Point(10, 216);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(363, 9);
+            this.panel22.TabIndex = 41;
+            // 
+            // label23
+            // 
+            this.label23.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label23.Location = new System.Drawing.Point(10, 190);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(363, 26);
+            this.label23.TabIndex = 40;
+            this.label23.Text = "Total horas dobles:";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel20
+            // 
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel20.Location = new System.Drawing.Point(10, 180);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(363, 10);
+            this.panel20.TabIndex = 39;
+            // 
+            // txtEditarExtras
+            // 
+            this.txtEditarExtras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEditarExtras.Location = new System.Drawing.Point(10, 154);
+            this.txtEditarExtras.Name = "txtEditarExtras";
+            this.txtEditarExtras.Size = new System.Drawing.Size(363, 26);
+            this.txtEditarExtras.TabIndex = 38;
+            // 
+            // panel19
+            // 
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel19.Location = new System.Drawing.Point(10, 144);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(363, 10);
+            this.panel19.TabIndex = 37;
+            // 
+            // label22
+            // 
+            this.label22.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label22.Location = new System.Drawing.Point(10, 119);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(363, 25);
+            this.label22.TabIndex = 36;
+            this.label22.Text = "Total horas extras:";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel23
+            // 
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel23.Location = new System.Drawing.Point(10, 110);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(363, 9);
+            this.panel23.TabIndex = 35;
+            // 
+            // txtEditarSalario
+            // 
+            this.txtEditarSalario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEditarSalario.Location = new System.Drawing.Point(10, 84);
+            this.txtEditarSalario.Name = "txtEditarSalario";
+            this.txtEditarSalario.Size = new System.Drawing.Size(363, 26);
+            this.txtEditarSalario.TabIndex = 34;
+            // 
+            // panel24
+            // 
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel24.Location = new System.Drawing.Point(10, 75);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(363, 9);
+            this.panel24.TabIndex = 33;
+            // 
+            // label21
+            // 
+            this.label21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label21.Location = new System.Drawing.Point(10, 47);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(363, 28);
+            this.label21.TabIndex = 32;
+            this.label21.Text = "Total salario base:";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // PanelUnificacion
             // 
@@ -1953,6 +2150,9 @@ namespace AppPlanillas.GUI
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsertar)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2106,8 +2306,26 @@ namespace AppPlanillas.GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox txtEditarDeduccion;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.TextBox txtEditarDobles;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.TextBox txtEditarExtras;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.TextBox txtEditarSalario;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Label label21;
     }
 }

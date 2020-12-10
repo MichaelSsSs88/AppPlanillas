@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ENT
 {
-    class MarcaENT
+    public class MarcaENT
     {
         public int idMarca { get; }
         public DateTime? marcar_inicio { get;}

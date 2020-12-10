@@ -335,17 +335,17 @@ namespace DAL
             }
         }
 
-        public void EditarMarcaEstadoUnificacio(int idMarca, string modificador, string estado)
+        public void EditarMarcaEstadoUnificacio(MarcaENT marcaENT)
         {
             try
             {
                 Parametro parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
                 string sentenciaSQL = "UPDATE marca SET estado=@estado,fecha_modificacion=@fecha_modificacion, modificado_por=@modificado_por WHERE id=@idMarca";
-                parametros.AgregarParametro("@idMarca", NpgsqlTypes.NpgsqlDbType.Integer, idMarca);
-                parametros.AgregarParametro("@estado", NpgsqlTypes.NpgsqlDbType.Varchar, estado);
+                parametros.AgregarParametro("@idMarca", NpgsqlTypes.NpgsqlDbType.Integer, marcaENT.idMarca);
+                parametros.AgregarParametro("@estado", NpgsqlTypes.NpgsqlDbType.Varchar, marcaENT.estado);
                 parametros.AgregarParametro("@fecha_modificacion", NpgsqlTypes.NpgsqlDbType.Timestamp, DateTime.Now);
-                parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, modificador);
+                parametros.AgregarParametro("@modificado_por", NpgsqlTypes.NpgsqlDbType.Varchar, marcaENT.modificadoPor);
                 conexion.EjecutarSQL(sentenciaSQL, parametros.ObtenerParametros());
             }
             catch (Exception e)

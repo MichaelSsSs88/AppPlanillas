@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ENT
 {
 
-    class UnificacionENT
+    public class UnificacionENT
     {
         public int idUnificacion { get; }
         public DateTime fecha_inicio { get; }
@@ -21,11 +21,11 @@ namespace ENT
         public double total_doble { get; }
         public double total_deduccion { get; }
         public int idEmpleado { get; }
-        public string estado { get; }
+        public string estado { get; set; }
         public DateTime fechaCreacion { get; }
         public string creadoPor { get; }
-        public DateTime fechaModificacion { get; }
-        public string modificadoPor { get; }
+        public DateTime fechaModificacion { get; set; }
+        public string modificadoPor { get; set; }
         public List<MarcaENT> Marcas { get; set; }
         public int IdPago { get; }
 

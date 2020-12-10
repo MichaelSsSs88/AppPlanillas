@@ -119,19 +119,20 @@ namespace AppPlanillas.DAL
             {
                 Parametro parametros = new Parametro();
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
-                string sentenciaSQL = "UPDATE unificacion SET  hora_regular=@hora_regular, hora_extra=@hora_extra, hora_doble=@hora_doble, total_regular=@total_regular, total_extra=@total_extra, total_doble=@total_doble,estado=@estado, fecha_modificacion=@fecha_modificacion, modificado_por=@modificado_por,  WHERE id= @id";
+                string sentenciaSQL = "UPDATE unificacion SET  hora_regular=@hora_regular, hora_extra=@hora_extra, hora_doble=@hora_doble, total_regular=@total_regular, total_extra=@total_extra, total_doble=@total_doble,total_deduccion=@total_deduccion,estado=@estado, fecha_modificacion=@fecha_modificacion, modificado_por=@modificado_por, id_pago=@id_pago  WHERE id= @id";
 
                 //parametros.AgregarParametro("@fecha_inicio", NpgsqlTypes.NpgsqlDbType.Timestamp, pUnificacion.fecha_inicio);
                 //arametros.AgregarParametro("@fecha_fin", NpgsqlTypes.NpgsqlDbType.Timestamp, pUnificacion.fecha_fin);
+                parametros.AgregarParametro("@id", NpgsqlTypes.NpgsqlDbType.Integer, pUnificacion.idUnificacion);
                 parametros.AgregarParametro("@hora_regular", NpgsqlTypes.NpgsqlDbType.Double, pUnificacion.hora_regular);
                 parametros.AgregarParametro("@hora_extra", NpgsqlTypes.NpgsqlDbType.Double, pUnificacion.hora_extra);
                 parametros.AgregarParametro("@hora_doble", NpgsqlTypes.NpgsqlDbType.Double, pUnificacion.hora_doble);
                 parametros.AgregarParametro("@total_regular", NpgsqlTypes.NpgsqlDbType.Double, pUnificacion.total_regular);
                 parametros.AgregarParametro("@total_extra", NpgsqlTypes.NpgsqlDbType.Double, pUnificacion.total_extra);
                 parametros.AgregarParametro("@total_doble", NpgsqlTypes.NpgsqlDbType.Double, pUnificacion.total_doble);
-                //parametros.AgregarParametro("@total_deduccion", NpgsqlTypes.NpgsqlDbType.Double, pUnificacion.total_deduccion);
+                parametros.AgregarParametro("@total_deduccion", NpgsqlTypes.NpgsqlDbType.Double, pUnificacion.total_deduccion);
                 //parametros.AgregarParametro("@id_empleado", NpgsqlTypes.NpgsqlDbType.Integer, pUnificacion.idEmpleado);
-                //parametros.AgregarParametro("@id_pago", NpgsqlTypes.NpgsqlDbType.Integer, pUnificacion.IdPago);
+                parametros.AgregarParametro("@id_pago", NpgsqlTypes.NpgsqlDbType.Integer, pUnificacion.IdPago);
                 parametros.AgregarParametro("@estado", NpgsqlTypes.NpgsqlDbType.Varchar, pUnificacion.estado);
                 //parametros.AgregarParametro("@fecha_creacion", NpgsqlTypes.NpgsqlDbType.Timestamp, pUnificacion.fechaCreacion);
                 //parametros.AgregarParametro("@creado_por", NpgsqlTypes.NpgsqlDbType.Varchar, pUnificacion.creadoPor);

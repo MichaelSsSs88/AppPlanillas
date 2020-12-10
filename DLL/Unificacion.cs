@@ -47,7 +47,7 @@ namespace AppPlanillas.DLL
                                 TimeSpan Horas1 = TimeSpan.Parse(marca.marcar_final.Value.ToString("HH:mm"));
                                 TimeSpan Horas2 = TimeSpan.Parse(marca.marcar_inicio.Value.ToString("HH:mm"));
                                 int Horas = Horas1.Hours - Horas2.Hours;
-                                Console.WriteLine(Horas1 + " " + Horas2 + " Horas: " + Horas);
+                                
                                 if (Horas >= horario.Horas_Ordinarias)
                                 {
                                     horas += horario.Horas_Ordinarias;
@@ -75,7 +75,8 @@ namespace AppPlanillas.DLL
                 }
 
                 double SalarioHora = new EmpleadoDAL().SalarioEmpleado(cedula);
-                foreach (DeduccionENT rebajar in Deducciones)
+                total_deduccion = this.ObtenerDeducciones(Deducciones, horas, horas_extras, horas_feriados, SalarioHora, cedula);
+                /*foreach (DeduccionENT rebajar in Deducciones)
                 {
                     if (rebajar.getSistema.CompareTo("Porcentaje") == 0)
                     {
@@ -101,13 +102,46 @@ namespace AppPlanillas.DLL
                             }
                         }
                     }
-                }
+                }*/
 
                 this.AgregarUnificacion(new UnificacionENT(1, fecha_inicio, fecha_fin, horas, horas_extras, horas_feriados, (horas * SalarioHora), (horas_extras * (SalarioHora * 1.5)), horas_feriados * SalarioHora, total_deduccion, cedula, "generado", DateTime.Now, creador, DateTime.Now, modificador, 0), marcas);
 
             }
 
             return new UnificacionDAL().ObtenerUnificacion("", "", 0,0,"") ;
+        }
+
+        private double ObtenerDeducciones(List<DeduccionENT> Deducciones, double horas, double horas_extras, double horas_feriados, double SalarioHora, int cedula)
+        {
+            double total_deduccion = 0;
+            foreach (DeduccionENT rebajar in Deducciones)
+            {
+                if (rebajar.getSistema.CompareTo("Porcentaje") == 0)
+                {
+                    if (rebajar.getIdEmpleado == 0)
+                        total_deduccion += ((horas * SalarioHora) + (horas_extras * (SalarioHora * 1.5)) + (horas_feriados * SalarioHora)) * (rebajar.getValor / 100);
+                    else
+                    {
+                        if (rebajar.getIdEmpleado == cedula)
+                        {
+                            total_deduccion += ((horas * SalarioHora) + (horas_extras * (SalarioHora * 1.5)) +( horas_feriados * SalarioHora)) * (rebajar.getValor / 100);
+                        }
+                    }
+                }
+                else
+                {
+                    if (rebajar.getIdEmpleado == 0)
+                        total_deduccion += rebajar.getValor;
+                    else
+                    {
+                        if (rebajar.getIdEmpleado == cedula)
+                        {
+                            total_deduccion += rebajar.getValor;
+                        }
+                    }
+                }
+            }
+            return total_deduccion;
         }
 
         private List<MarcaENT> VerificarMarcas(List<MarcaENT> Lista)
@@ -156,6 +190,7 @@ namespace AppPlanillas.DLL
 
         public UnificacionENT EditarUnificacion(UnificacionENT pUnificacionENT, MarcaENT marca)
         {
+            List<DeduccionENT> Deducciones = new DeduccionDAL().ObtenerDeducciones(-1, "");
             List<HorarioENT> Horarios = new HorarioDAL().ObtenerHorarios(-1, "");
             List<Dia_feriadoENT> Feriados = new Dia_feriadoDAL().ObtenerFeriados("Todos", "");
             int horas = 0;
@@ -163,6 +198,7 @@ namespace AppPlanillas.DLL
             int horas_feriados=0;
             foreach (HorarioENT horario in Horarios)
             {
+                Console.WriteLine(this.DiaSemana(marca.marcar_inicio.Value.DayOfWeek)+" "+ horario.Dia);
                 if (this.DiaSemana(marca.marcar_inicio.Value.DayOfWeek).CompareTo(horario.Dia) == 0)
                 {
                     TimeSpan Horas1 = TimeSpan.Parse(marca.marcar_final.Value.ToString("HH:mm"));
@@ -190,7 +226,32 @@ namespace AppPlanillas.DLL
                     break;
                 }
             }
-            return pUnificacionENT;
+            marca.modificadoPor = "YYYYY";
+            marca.fechaModificacion = DateTime.Now;
+            marca.estado = "generado";
+            marca.IdUnificacion = 0;
+            double SalarioHora = new EmpleadoDAL().SalarioEmpleado(pUnificacionENT.idEmpleado);
+            double total_deduccion= this.ObtenerDeducciones(Deducciones, pUnificacionENT.hora_regular - horas, pUnificacionENT.hora_extra - horas_extras, pUnificacionENT.hora_doble - horas_feriados, SalarioHora, pUnificacionENT.idEmpleado);
+            UnificacionENT UnificacionENT = new UnificacionENT(pUnificacionENT.idUnificacion, pUnificacionENT.fecha_inicio, pUnificacionENT.fecha_fin, pUnificacionENT.hora_regular - horas, pUnificacionENT.hora_extra - horas_extras, pUnificacionENT.hora_doble - horas_feriados, (pUnificacionENT.hora_regular - horas) * SalarioHora, (pUnificacionENT.hora_extra - horas_extras) * (SalarioHora * 1.5), (pUnificacionENT.hora_doble - horas_feriados) * SalarioHora, total_deduccion, pUnificacionENT.idEmpleado, pUnificacionENT.estado, pUnificacionENT.fechaCreacion, pUnificacionENT.creadoPor, DateTime.Now,"XXXXXXXXXX", pUnificacionENT.IdPago);
+            AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
+            
+            try
+            {
+                
+                conexion.IniciarTransaccion();
+                new MarcaDAL().EditarMarcaDatosCompletos(marca);
+                new UnificacionDAL().EditarUnificacionQuitarMarca(UnificacionENT);
+                conexion.CommitTransaccion();
+                Console.WriteLine(pUnificacionENT.idUnificacion.ToString() + " " + pUnificacionENT.fecha_inicio + " " + pUnificacionENT.fecha_fin + " " + pUnificacionENT.hora_regular + " " + pUnificacionENT.hora_extra + " " + pUnificacionENT.hora_doble + " " + pUnificacionENT.total_regular + " " + pUnificacionENT.total_extra + " " + pUnificacionENT.total_doble + " " + pUnificacionENT.total_deduccion);
+                Console.WriteLine(UnificacionENT.idUnificacion.ToString() + " " + UnificacionENT.fecha_inicio + " " + UnificacionENT.fecha_fin + " " + UnificacionENT.hora_regular + " " + UnificacionENT.hora_extra + " " + UnificacionENT.hora_doble + " " + UnificacionENT.total_regular + " " + UnificacionENT.total_extra + " " + UnificacionENT.total_doble + " " + UnificacionENT.total_deduccion);
+            }
+            catch(Exception ex)
+            {
+                conexion.RollbackTransaccion();
+                throw ex;
+            }
+
+            return UnificacionENT;
         }
 
 
@@ -203,7 +264,7 @@ namespace AppPlanillas.DLL
                 case (DayOfWeek.Tuesday):
                     return "Martes";
                 case (DayOfWeek.Wednesday):
-                    return "Miercoles";
+                    return "Miércoles";
                 case (DayOfWeek.Thursday):
                     return "Jueves";
                 case (DayOfWeek.Friday):
