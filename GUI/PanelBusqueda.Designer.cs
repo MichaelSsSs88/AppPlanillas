@@ -125,19 +125,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvConsultas = new System.Windows.Forms.DataGridView();
-            this.label17 = new System.Windows.Forms.Label();
-            this.panelConsultarMarca = new System.Windows.Forms.Panel();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.cmbEstado = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtDepartamento = new System.Windows.Forms.TextBox();
-            this.linkDepartamento = new System.Windows.Forms.LinkLabel();
-            this.txtEmpleado = new System.Windows.Forms.TextBox();
-            this.linkEmpleado = new System.Windows.Forms.LinkLabel();
-            this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
-            this.ckbFechaFin = new System.Windows.Forms.CheckBox();
-            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.ckbFecha = new System.Windows.Forms.CheckBox();
             this.idUnificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -156,6 +143,19 @@
             this.fechaCreacionG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modificadoPor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panelConsultarMarca = new System.Windows.Forms.Panel();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtDepartamento = new System.Windows.Forms.TextBox();
+            this.linkDepartamento = new System.Windows.Forms.LinkLabel();
+            this.txtEmpleado = new System.Windows.Forms.TextBox();
+            this.linkEmpleado = new System.Windows.Forms.LinkLabel();
+            this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.ckbFechaFin = new System.Windows.Forms.CheckBox();
+            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.ckbFecha = new System.Windows.Forms.CheckBox();
             this.tabEditDepartment.SuspendLayout();
             this.gbxFiltroActualizar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdActualizar)).BeginInit();
@@ -1349,174 +1349,6 @@
             this.dgvConsultas.TabIndex = 13;
             this.dgvConsultas.Click += new System.EventHandler(this.dgvConsultas_Click);
             // 
-            // label17
-            // 
-            this.label17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label17.Location = new System.Drawing.Point(3, 375);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(1365, 32);
-            this.label17.TabIndex = 12;
-            this.label17.Text = "Seleccione la unificacion a editar:";
-            // 
-            // panelConsultarMarca
-            // 
-            this.panelConsultarMarca.Controls.Add(this.groupBox7);
-            this.panelConsultarMarca.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelConsultarMarca.Location = new System.Drawing.Point(3, 3);
-            this.panelConsultarMarca.Margin = new System.Windows.Forms.Padding(4);
-            this.panelConsultarMarca.Name = "panelConsultarMarca";
-            this.panelConsultarMarca.Size = new System.Drawing.Size(1365, 372);
-            this.panelConsultarMarca.TabIndex = 10;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.cmbEstado);
-            this.groupBox7.Controls.Add(this.label16);
-            this.groupBox7.Controls.Add(this.txtDepartamento);
-            this.groupBox7.Controls.Add(this.linkDepartamento);
-            this.groupBox7.Controls.Add(this.txtEmpleado);
-            this.groupBox7.Controls.Add(this.linkEmpleado);
-            this.groupBox7.Controls.Add(this.dtpFechaFin);
-            this.groupBox7.Controls.Add(this.ckbFechaFin);
-            this.groupBox7.Controls.Add(this.dtpFechaInicio);
-            this.groupBox7.Controls.Add(this.ckbFecha);
-            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox7.Location = new System.Drawing.Point(0, 0);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox7.Size = new System.Drawing.Size(1365, 372);
-            this.groupBox7.TabIndex = 0;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Filtro de busqueda:";
-            // 
-            // cmbEstado
-            // 
-            this.cmbEstado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Items.AddRange(new object[] {
-            "Generado",
-            "Aplicado",
-            "Pagado"});
-            this.cmbEstado.Location = new System.Drawing.Point(4, 312);
-            this.cmbEstado.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(1357, 28);
-            this.cmbEstado.TabIndex = 65;
-            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.cmbEstado_SelectedIndexChanged_1);
-            // 
-            // label16
-            // 
-            this.label16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label16.Location = new System.Drawing.Point(4, 275);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.label16.Size = new System.Drawing.Size(1357, 37);
-            this.label16.TabIndex = 64;
-            this.label16.Text = "Seleccione el estado:";
-            // 
-            // txtDepartamento
-            // 
-            this.txtDepartamento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtDepartamento.Location = new System.Drawing.Point(4, 249);
-            this.txtDepartamento.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDepartamento.Name = "txtDepartamento";
-            this.txtDepartamento.ReadOnly = true;
-            this.txtDepartamento.Size = new System.Drawing.Size(1357, 26);
-            this.txtDepartamento.TabIndex = 63;
-            this.txtDepartamento.Text = "0";
-            this.txtDepartamento.TextChanged += new System.EventHandler(this.txtDepartamento_TextChanged_1);
-            // 
-            // linkDepartamento
-            // 
-            this.linkDepartamento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.linkDepartamento.LinkColor = System.Drawing.Color.Black;
-            this.linkDepartamento.Location = new System.Drawing.Point(4, 212);
-            this.linkDepartamento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkDepartamento.Name = "linkDepartamento";
-            this.linkDepartamento.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.linkDepartamento.Size = new System.Drawing.Size(1357, 37);
-            this.linkDepartamento.TabIndex = 62;
-            this.linkDepartamento.TabStop = true;
-            this.linkDepartamento.Text = "Seleccione el departamento:";
-            this.linkDepartamento.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkDepartamento_LinkClicked_1);
-            // 
-            // txtEmpleado
-            // 
-            this.txtEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtEmpleado.Location = new System.Drawing.Point(4, 186);
-            this.txtEmpleado.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmpleado.Name = "txtEmpleado";
-            this.txtEmpleado.ReadOnly = true;
-            this.txtEmpleado.Size = new System.Drawing.Size(1357, 26);
-            this.txtEmpleado.TabIndex = 61;
-            this.txtEmpleado.Text = "0";
-            this.txtEmpleado.TextChanged += new System.EventHandler(this.txtEmpleado_TextChanged_1);
-            // 
-            // linkEmpleado
-            // 
-            this.linkEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.linkEmpleado.LinkColor = System.Drawing.Color.Black;
-            this.linkEmpleado.Location = new System.Drawing.Point(4, 149);
-            this.linkEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkEmpleado.Name = "linkEmpleado";
-            this.linkEmpleado.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.linkEmpleado.Size = new System.Drawing.Size(1357, 37);
-            this.linkEmpleado.TabIndex = 60;
-            this.linkEmpleado.TabStop = true;
-            this.linkEmpleado.Text = "Seleccione el empleado:";
-            this.linkEmpleado.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkEmpleado_LinkClicked_1);
-            // 
-            // dtpFechaFin
-            // 
-            this.dtpFechaFin.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dtpFechaFin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaFin.Location = new System.Drawing.Point(4, 123);
-            this.dtpFechaFin.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpFechaFin.Name = "dtpFechaFin";
-            this.dtpFechaFin.Size = new System.Drawing.Size(1357, 26);
-            this.dtpFechaFin.TabIndex = 35;
-            this.dtpFechaFin.ValueChanged += new System.EventHandler(this.dtpFechaFin_ValueChanged_1);
-            // 
-            // ckbFechaFin
-            // 
-            this.ckbFechaFin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ckbFechaFin.Location = new System.Drawing.Point(4, 86);
-            this.ckbFechaFin.Margin = new System.Windows.Forms.Padding(4);
-            this.ckbFechaFin.Name = "ckbFechaFin";
-            this.ckbFechaFin.Size = new System.Drawing.Size(1357, 37);
-            this.ckbFechaFin.TabIndex = 34;
-            this.ckbFechaFin.Text = "Fecha fin:";
-            this.ckbFechaFin.UseVisualStyleBackColor = true;
-            this.ckbFechaFin.CheckedChanged += new System.EventHandler(this.ckbFechaFin_CheckedChanged_1);
-            // 
-            // dtpFechaInicio
-            // 
-            this.dtpFechaInicio.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dtpFechaInicio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaInicio.Location = new System.Drawing.Point(4, 60);
-            this.dtpFechaInicio.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpFechaInicio.Name = "dtpFechaInicio";
-            this.dtpFechaInicio.Size = new System.Drawing.Size(1357, 26);
-            this.dtpFechaInicio.TabIndex = 33;
-            this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechaInicio_ValueChanged_1);
-            // 
-            // ckbFecha
-            // 
-            this.ckbFecha.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ckbFecha.Location = new System.Drawing.Point(4, 23);
-            this.ckbFecha.Margin = new System.Windows.Forms.Padding(4);
-            this.ckbFecha.Name = "ckbFecha";
-            this.ckbFecha.Size = new System.Drawing.Size(1357, 37);
-            this.ckbFecha.TabIndex = 32;
-            this.ckbFecha.Text = "Fecha inicio:";
-            this.ckbFecha.UseVisualStyleBackColor = true;
-            this.ckbFecha.CheckedChanged += new System.EventHandler(this.ckbFecha_CheckedChanged);
-            // 
             // idUnificacion
             // 
             this.idUnificacion.DataPropertyName = "idUnificacion";
@@ -1660,6 +1492,174 @@
             this.fechaModificacion.MinimumWidth = 6;
             this.fechaModificacion.Name = "fechaModificacion";
             this.fechaModificacion.Width = 125;
+            // 
+            // label17
+            // 
+            this.label17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label17.Location = new System.Drawing.Point(3, 375);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(1365, 32);
+            this.label17.TabIndex = 12;
+            this.label17.Text = "Seleccione la unificacion a editar:";
+            // 
+            // panelConsultarMarca
+            // 
+            this.panelConsultarMarca.Controls.Add(this.groupBox7);
+            this.panelConsultarMarca.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelConsultarMarca.Location = new System.Drawing.Point(3, 3);
+            this.panelConsultarMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.panelConsultarMarca.Name = "panelConsultarMarca";
+            this.panelConsultarMarca.Size = new System.Drawing.Size(1365, 372);
+            this.panelConsultarMarca.TabIndex = 10;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.cmbEstado);
+            this.groupBox7.Controls.Add(this.label16);
+            this.groupBox7.Controls.Add(this.txtDepartamento);
+            this.groupBox7.Controls.Add(this.linkDepartamento);
+            this.groupBox7.Controls.Add(this.txtEmpleado);
+            this.groupBox7.Controls.Add(this.linkEmpleado);
+            this.groupBox7.Controls.Add(this.dtpFechaFin);
+            this.groupBox7.Controls.Add(this.ckbFechaFin);
+            this.groupBox7.Controls.Add(this.dtpFechaInicio);
+            this.groupBox7.Controls.Add(this.ckbFecha);
+            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox7.Location = new System.Drawing.Point(0, 0);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox7.Size = new System.Drawing.Size(1365, 372);
+            this.groupBox7.TabIndex = 0;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Filtro de busqueda:";
+            // 
+            // cmbEstado
+            // 
+            this.cmbEstado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Generado",
+            "Aprobado",
+            "Pagado"});
+            this.cmbEstado.Location = new System.Drawing.Point(4, 312);
+            this.cmbEstado.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(1357, 28);
+            this.cmbEstado.TabIndex = 65;
+            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.cmbEstado_SelectedIndexChanged_1);
+            // 
+            // label16
+            // 
+            this.label16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label16.Location = new System.Drawing.Point(4, 275);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.label16.Size = new System.Drawing.Size(1357, 37);
+            this.label16.TabIndex = 64;
+            this.label16.Text = "Seleccione el estado:";
+            // 
+            // txtDepartamento
+            // 
+            this.txtDepartamento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtDepartamento.Location = new System.Drawing.Point(4, 249);
+            this.txtDepartamento.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDepartamento.Name = "txtDepartamento";
+            this.txtDepartamento.ReadOnly = true;
+            this.txtDepartamento.Size = new System.Drawing.Size(1357, 26);
+            this.txtDepartamento.TabIndex = 63;
+            this.txtDepartamento.Text = "0";
+            this.txtDepartamento.TextChanged += new System.EventHandler(this.txtDepartamento_TextChanged_1);
+            // 
+            // linkDepartamento
+            // 
+            this.linkDepartamento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.linkDepartamento.LinkColor = System.Drawing.Color.Black;
+            this.linkDepartamento.Location = new System.Drawing.Point(4, 212);
+            this.linkDepartamento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkDepartamento.Name = "linkDepartamento";
+            this.linkDepartamento.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.linkDepartamento.Size = new System.Drawing.Size(1357, 37);
+            this.linkDepartamento.TabIndex = 62;
+            this.linkDepartamento.TabStop = true;
+            this.linkDepartamento.Text = "Seleccione el departamento:";
+            this.linkDepartamento.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkDepartamento_LinkClicked_1);
+            // 
+            // txtEmpleado
+            // 
+            this.txtEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEmpleado.Location = new System.Drawing.Point(4, 186);
+            this.txtEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmpleado.Name = "txtEmpleado";
+            this.txtEmpleado.ReadOnly = true;
+            this.txtEmpleado.Size = new System.Drawing.Size(1357, 26);
+            this.txtEmpleado.TabIndex = 61;
+            this.txtEmpleado.Text = "0";
+            this.txtEmpleado.TextChanged += new System.EventHandler(this.txtEmpleado_TextChanged_1);
+            // 
+            // linkEmpleado
+            // 
+            this.linkEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.linkEmpleado.LinkColor = System.Drawing.Color.Black;
+            this.linkEmpleado.Location = new System.Drawing.Point(4, 149);
+            this.linkEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkEmpleado.Name = "linkEmpleado";
+            this.linkEmpleado.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.linkEmpleado.Size = new System.Drawing.Size(1357, 37);
+            this.linkEmpleado.TabIndex = 60;
+            this.linkEmpleado.TabStop = true;
+            this.linkEmpleado.Text = "Seleccione el empleado:";
+            this.linkEmpleado.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkEmpleado_LinkClicked_1);
+            // 
+            // dtpFechaFin
+            // 
+            this.dtpFechaFin.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpFechaFin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaFin.Location = new System.Drawing.Point(4, 123);
+            this.dtpFechaFin.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpFechaFin.Name = "dtpFechaFin";
+            this.dtpFechaFin.Size = new System.Drawing.Size(1357, 26);
+            this.dtpFechaFin.TabIndex = 35;
+            this.dtpFechaFin.ValueChanged += new System.EventHandler(this.dtpFechaFin_ValueChanged_1);
+            // 
+            // ckbFechaFin
+            // 
+            this.ckbFechaFin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ckbFechaFin.Location = new System.Drawing.Point(4, 86);
+            this.ckbFechaFin.Margin = new System.Windows.Forms.Padding(4);
+            this.ckbFechaFin.Name = "ckbFechaFin";
+            this.ckbFechaFin.Size = new System.Drawing.Size(1357, 37);
+            this.ckbFechaFin.TabIndex = 34;
+            this.ckbFechaFin.Text = "Fecha fin:";
+            this.ckbFechaFin.UseVisualStyleBackColor = true;
+            this.ckbFechaFin.CheckedChanged += new System.EventHandler(this.ckbFechaFin_CheckedChanged_1);
+            // 
+            // dtpFechaInicio
+            // 
+            this.dtpFechaInicio.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpFechaInicio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaInicio.Location = new System.Drawing.Point(4, 60);
+            this.dtpFechaInicio.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpFechaInicio.Name = "dtpFechaInicio";
+            this.dtpFechaInicio.Size = new System.Drawing.Size(1357, 26);
+            this.dtpFechaInicio.TabIndex = 33;
+            this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechaInicio_ValueChanged_1);
+            // 
+            // ckbFecha
+            // 
+            this.ckbFecha.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ckbFecha.Location = new System.Drawing.Point(4, 23);
+            this.ckbFecha.Margin = new System.Windows.Forms.Padding(4);
+            this.ckbFecha.Name = "ckbFecha";
+            this.ckbFecha.Size = new System.Drawing.Size(1357, 37);
+            this.ckbFecha.TabIndex = 32;
+            this.ckbFecha.Text = "Fecha inicio:";
+            this.ckbFecha.UseVisualStyleBackColor = true;
+            this.ckbFecha.CheckedChanged += new System.EventHandler(this.ckbFecha_CheckedChanged);
             // 
             // PanelBusqueda
             // 

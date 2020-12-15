@@ -94,6 +94,16 @@ namespace AppPlanillas.GUI
                 this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteMedium.png");
 
             }
+            if (numeroSubMenu == 11)
+            {
+                this.btnInsertar.Text = "Consultar Unificacion";
+                this.btnEditar.Text = "Insertar Unificacion";
+                this.btnEliminar.Text = "Editar Unificacion";
+                this.btnInsertar.Image = new Bitmap(Application.StartupPath + @"\IMG\insertHolidayMedium.png");
+                this.btnEditar.Image = new Bitmap(Application.StartupPath + @"\IMG\editHolidayMedium.png");
+                this.btnEliminar.Image = new Bitmap(Application.StartupPath + @"\IMG\deleteHolidayMedium.png");
+
+            }
 
         }
 

@@ -392,6 +392,11 @@ namespace AppPlanillas
 
                 this.OpenChildFormContenedor(new PanelUsuario(entrada.boton - 1, this.UsuarioENT));
             }
+            if ((entrada.subMenu == 11))
+            {
+
+                this.OpenChildFormContenedor(new PanelUnificacion(entrada.boton - 1, this.UsuarioENT));
+            }
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -438,6 +443,14 @@ namespace AppPlanillas
             this.CLoseChildFormContenedor();
             this.CLoseChildForm();
             this.OpenChildForm(new PanelSubMenuMarcas(this));
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.CLoseChildFormContenedor();
+            this.CLoseChildForm();
+            this.OpenChildForm(new SubMenuFeriados(11, this));
 
         }
     }

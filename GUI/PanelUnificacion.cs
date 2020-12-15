@@ -23,14 +23,78 @@ namespace AppPlanillas.GUI
     {
         int fila = -1;
         UnificacionENT UnificacionENT = null;
-        public PanelUnificacion()
+        private List<System.Windows.Forms.TabPage> objColPages = null;
+        private bool[] arrBoolPagesVisible;
+        private UsuarioENT UsuarioENT;
+        public PanelUnificacion(int pestaña, UsuarioENT usuarioEnt)
         {
+            this.UsuarioENT = usuarioEnt;
             InitializeComponent();
+            this.HideTab(0);
+            this.HideTab(1);
+            this.HideTab(2);
+            //this.HideTab(3);
+            this.ShowTab(pestaña);
+            this.pintarTabla();
             this.OrdenaLink(false);
             this.ckbFecha_Click(null, null);
             this.ckbFechaFin_CheckedChanged(null, null);
             this.cmbEstado.SelectedIndex = 0;
 
+        }
+
+        private void pintarTabla()
+        {
+            this.dgvInsertar.DataSource = new UnificacionDAL().ObtenerUnificacion("", "", 0, 0, "");
+        }
+
+        public void ShowTab(int intTab)
+        {
+            ShowHideTab(intTab, true);
+        }
+
+        /// <summary>
+        ///     Oculta una ficha
+        /// </summary>
+        public void HideTab(int intTab)
+        {
+            ShowHideTab(intTab, false);
+        }
+
+        private void InitControl()
+        {
+            if (objColPages == null)
+            { // Inicializa la colección de páginas y elementos visibles
+                objColPages = new List<System.Windows.Forms.TabPage>();
+                arrBoolPagesVisible = new bool[this.tabUnificaciones.TabPages.Count];
+                // Añade las páginas de la ficha a la colección e indica que son visibles
+                for (int intIndex = 0; intIndex < this.tabUnificaciones.TabPages.Count; intIndex++)
+                { // Añade la página
+                    objColPages.Add(this.tabUnificaciones.TabPages[intIndex]);
+                    // Indica que es visible
+                    arrBoolPagesVisible[intIndex] = true;
+                }
+                this.tabEditUnificacion.Parent = null;
+               // this.tabFindUnificacion.Parent = null;
+                this.tabInsertUnificacion.Parent = null;
+            }
+
+        }
+
+        /// <summary>
+        ///     Muestra / oculta una ficha
+        /// </summary>
+        public void ShowHideTab(int intTab, bool blnVisible)
+        { // Inicializa el control
+            InitControl();
+            // Oculta la página
+            arrBoolPagesVisible[intTab] = blnVisible;
+            // Elimina todas las fichas
+            this.tabUnificaciones.TabPages.Clear();
+            // Añade únicamente las fichas visibles
+            for (int intIndex = 0; intIndex < objColPages.Count; intIndex++)
+                if (arrBoolPagesVisible[intIndex])
+                    this.tabUnificaciones.TabPages.Add(objColPages[intIndex]);
         }
 
         private void OrdenaLink(Boolean estado)
@@ -77,6 +141,9 @@ namespace AppPlanillas.GUI
                 this.UnificacionENT = new UnificacionENT(Int32.Parse(entrada.Unificacion.ElementAt(0)), DateTime.Parse(entrada.Unificacion.ElementAt(3)), DateTime.Parse(entrada.Unificacion.ElementAt(4)), Double.Parse(entrada.Unificacion.ElementAt(5)), Double.Parse(entrada.Unificacion.ElementAt(6)), Double.Parse(entrada.Unificacion.ElementAt(7)), Double.Parse(entrada.Unificacion.ElementAt(8)), Double.Parse(entrada.Unificacion.ElementAt(9)), Double.Parse(entrada.Unificacion.ElementAt(10)), Double.Parse(entrada.Unificacion.ElementAt(11)), Int32.Parse(entrada.Unificacion.ElementAt(1)), entrada.Unificacion.ElementAt(12), DateTime.Now, "", DateTime.Now, "pedro", Int32.Parse(entrada.Unificacion.ElementAt(13)));
                 this.txtEditarUnificacion.Text = entrada.Unificacion.ElementAt(0);
                 this.txtEditarIdEmpleado.Text= entrada.Unificacion.ElementAt(1);
+                List<PuestoENT> puestoENT = new PuestoDAL().ObtenerPuestos("Código",(new EmpleadoDAL().ObtenerEmpleados("Cédula",entrada.Unificacion.ElementAt(1)).ElementAt(0).Id_Puesto).ToString());
+                List<DepartamentoENT> departamentoENT = new DepartamentoDAL().ObtenerDepartamentos(puestoENT.ElementAt(0).Id_departamento.ToString(), "");
+                this.txtEditarDepartamento.Text = departamentoENT.ElementAt(0).getNombre;
                 this.txtEditarNombre.Text= entrada.Unificacion.ElementAt(2);
                 this.txtEditarInicio.Text = DateTime.Parse(entrada.Unificacion.ElementAt(3)).ToString("dd/MM/yyyy");//.ToString("dd/MM/yyyy");
                 this.txtEditarFin.Text = DateTime.Parse(entrada.Unificacion.ElementAt(4)).ToString("dd/MM/yyyy");
@@ -160,92 +227,6 @@ namespace AppPlanillas.GUI
 
             this.dgvInsertar.DataSource=new Unificacion().Unificacione(cedulas.Distinct(), this.dtpInsertarFechaEntrada.Value, this.dtpInsertarFechaSalida.Value, marcas, "creador", "modificaa");
             IEnumerable<int> DiferentesEmpleados = cedulas.Distinct();
-
-           /* foreach(int cedula in DiferentesEmpleados)
-            {
-                double horas = 0;
-                double horas_extras = 0;
-                double horas_feriados = 0;
-                double salario_horas = 0;
-                double salario_horas_extras = 0;
-                double salario_horas_feriados = 0;
-                double total_deduccion = 0;
-
-                foreach (MarcaENT marca in marcas)
-                {
-                    
-
-                    if (marca.IdEmpleado== cedula)
-                    {
-                        foreach(HorarioENT horario in Horarios)
-                        {
-                            if (this.DiaSemana(marca.marcar_inicio.Value.DayOfWeek).CompareTo(horario.Dia) == 0)
-                            {
-                                TimeSpan Horas1 = TimeSpan.Parse(marca.marcar_final.Value.ToString("HH:mm"));
-                                TimeSpan Horas2= TimeSpan.Parse(marca.marcar_inicio.Value.ToString("HH:mm"));
-                                int Horas = Horas1.Hours - Horas2.Hours;
-                                Console.WriteLine(Horas1 + " "+ Horas2 +  " Horas: " + Horas);
-                                if (Horas >= horario.Horas_Ordinarias)
-                                {
-                                    horas += horario.Horas_Ordinarias;
-                                    horas_extras += (Horas - horario.Horas_Ordinarias);
-                                }
-                                else
-                                {
-                                    horas += Horas;
-                                }
-
-                                foreach(Dia_feriadoENT feriado in Feriados)
-                                {
-                                    if(marca.marcar_inicio.Value.Month == feriado.Mes && marca.marcar_inicio.Value.Day == feriado.Dia)
-                                    {
-                                        horas_feriados += Horas;
-                                    }
-                                }
-
-                                break;
-                            }
-                        }
-
-                        
-                    }
-                }
-
-                double SalarioHora = new EmpleadoDAL().SalarioEmpleado(cedula);
-                foreach (DeduccionENT rebajar in Deducciones)
-                {
-                    if (rebajar.getSistema.CompareTo("Porcentaje")==0)
-                    {
-                        if(rebajar.getIdEmpleado==0)
-                            total_deduccion += ((horas * SalarioHora) + (horas_extras * (SalarioHora * 1.5)) + horas_feriados * SalarioHora)*(rebajar.getValor/100);
-                        else
-                        {
-                            if (rebajar.getIdEmpleado == cedula)
-                            {
-                                total_deduccion += ((horas * SalarioHora) + (horas_extras * (SalarioHora * 1.5)) + horas_feriados * SalarioHora) * (rebajar.getValor/100);
-                            }
-                        }
-                    }
-                    else
-                    {
-                        if (rebajar.getIdEmpleado == 0)
-                            total_deduccion += rebajar.getValor;
-                        else
-                        {
-                            if (rebajar.getIdEmpleado == cedula)
-                            {
-                                total_deduccion += rebajar.getValor;
-                            }
-                        }
-                    }
-                }
-                
-                unificaciones.Add(new UnificacionENT(1, this.dtpInsertarFechaEntrada.Value, this.dtpInsertarFechaSalida.Value, horas, horas_extras, horas_feriados, (horas * SalarioHora), (horas_extras * (SalarioHora * 1.5)), horas_feriados * SalarioHora, total_deduccion, cedula, "generado", DateTime.Now, "prueba", DateTime.Now, "yoOOOO", 0));
-
-            }*/
-
-            //this.dgvInsertar.DataSource = unificaciones;
-
 
         }
 
