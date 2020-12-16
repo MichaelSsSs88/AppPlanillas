@@ -321,19 +321,19 @@ namespace DAL
         }
 
 
-                public void EliminarMarca(int IdMarca)
-        {
-            try
+    public void EliminarMarca(int IdMarca)
             {
-                Parametro parametros = new Parametro();
-                AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
-                string sentenciaSQL = "DELETE FROM marca WHERE id= " + IdMarca;
+                try
+                {
+                    Parametro parametros = new Parametro();
+                    AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
+                    string sentenciaSQL = "DELETE FROM marca WHERE id= " + IdMarca;
+                }
+                catch
+                {
+                    throw;
+                }
             }
-            catch
-            {
-                throw;
-            }
-        }
 
         public void EditarMarcaEstadoUnificacio(MarcaENT marcaENT)
         {

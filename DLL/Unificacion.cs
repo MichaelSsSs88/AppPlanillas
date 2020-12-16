@@ -76,39 +76,78 @@ namespace AppPlanillas.DLL
 
                 double SalarioHora = new EmpleadoDAL().SalarioEmpleado(cedula);
                 total_deduccion = this.ObtenerDeducciones(Deducciones, horas, horas_extras, horas_feriados, SalarioHora, cedula);
-                /*foreach (DeduccionENT rebajar in Deducciones)
-                {
-                    if (rebajar.getSistema.CompareTo("Porcentaje") == 0)
-                    {
-                        if (rebajar.getIdEmpleado == 0)
-                            total_deduccion += ((horas * SalarioHora) + (horas_extras * (SalarioHora * 1.5)) + horas_feriados * SalarioHora) * (rebajar.getValor / 100);
-                        else
-                        {
-                            if (rebajar.getIdEmpleado == cedula)
-                            {
-                                total_deduccion += ((horas * SalarioHora) + (horas_extras * (SalarioHora * 1.5)) + horas_feriados * SalarioHora) * (rebajar.getValor / 100);
-                            }
-                        }
-                    }
-                    else
-                    {
-                        if (rebajar.getIdEmpleado == 0)
-                            total_deduccion += rebajar.getValor;
-                        else
-                        {
-                            if (rebajar.getIdEmpleado == cedula)
-                            {
-                                total_deduccion += rebajar.getValor;
-                            }
-                        }
-                    }
-                }*/
-
-                this.AgregarUnificacion(new UnificacionENT(1, fecha_inicio, fecha_fin, horas, horas_extras, horas_feriados, (horas * SalarioHora), (horas_extras * (SalarioHora * 1.5)), horas_feriados * SalarioHora, total_deduccion, cedula, "generado", DateTime.Now, creador, DateTime.Now, modificador, 0), marcas);
-
+                this.AgregarUnificacion(new UnificacionENT(1, fecha_inicio, fecha_fin, horas, horas_extras, horas_feriados, (horas * SalarioHora), (horas_extras * (SalarioHora * 1.5)), horas_feriados * SalarioHora, total_deduccion, cedula, "generado", DateTime.Now, creador, DateTime.Now, modificador, null), marcas);
             }
 
             return new UnificacionDAL().ObtenerUnificacion("", "", 0,0,"") ;
+        }
+
+        public List<PagoENT> Pagos(IEnumerable<int> DiferentesEmpleados, DateTime fecha_inicio, DateTime fecha_fin, string descripcion, List<UnificacionENT> unificaciones, string creador, string modificador)
+        {
+            List<PagoENT> pagoENTs= null;
+            foreach(int empleado in DiferentesEmpleados)
+            {
+                PagoENT pagoEmpleado = new PagoENT(-1, fecha_inicio, fecha_fin, descripcion, 0,DateTime.Now, "creador", DateTime.Now, "modificador");
+                List<UnificacionENT> UnificacionAux = new List<UnificacionENT>(); ;
+                List<MarcaENT> Marcas= new List<MarcaENT>();
+                foreach (UnificacionENT Unificacion in unificaciones)
+                {
+                    //Marcas = new List<MarcaENT>();
+                    if (Unificacion.idEmpleado== empleado)
+                    {
+                        UnificacionAux.Add(Unificacion);
+                        pagoEmpleado.total += Unificacion.total_regular + Unificacion.total_extra + Unificacion.total_doble - Unificacion.total_deduccion;
+                        foreach (MarcaENT marca in new MarcaDAL().ObtenerMarcasUnificadas(Unificacion.idUnificacion))
+                        {
+                            Marcas.Add(marca);
+                        }
+                    }
+
+                }
+                this.AgregarPago(pagoEmpleado, UnificacionAux, Marcas);
+
+                
+            }
+
+            return pagoENTs;
+        }
+
+        public void AgregarPago(PagoENT pago, List<UnificacionENT> punificacionENT, List<MarcaENT> marcas)
+        {
+            int numero = 0;
+            try
+            {
+                AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
+                try
+                {
+                    conexion.IniciarTransaccion();
+                    int pagado = new PagoDAL().AgregarPago(pago);
+
+                    foreach (MarcaENT marca in marcas)
+                    {
+                        /*
+                        if (marca.IdEmpleado == punificacionENT.idEmpleado)
+                        {
+                            marca.modificadoPor = punificacionENT.modificadoPor;
+                            marca.fechaModificacion = DateTime.Now;
+                            marca.IdUnificacion = unificacion;
+                            marca.estado = "aplicado";
+                            new MarcaDAL().EditarMarcaDatosCompletos(marca);
+                        }*/
+                    }
+                    conexion.CommitTransaccion();
+
+                }
+                catch (Exception e)
+                {
+                    conexion.RollbackTransaccion();
+                    throw e;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         private double ObtenerDeducciones(List<DeduccionENT> Deducciones, double horas, double horas_extras, double horas_feriados, double SalarioHora, int cedula)

@@ -97,7 +97,7 @@ namespace AppPlanillas.DAL
                 {
                         UnificacionENT unificacion = null;
                     
-                        unificacion = new UnificacionENT(Int32.Parse(fila["id"].ToString()), DateTime.Parse(fila["fecha_inicio"].ToString()), DateTime.Parse(fila["fecha_fin"].ToString()), Double.Parse(fila["hora_regular"].ToString()), Double.Parse(fila["hora_extra"].ToString()), Double.Parse(fila["hora_doble"].ToString()), Double.Parse(fila["total_regular"].ToString()), Double.Parse(fila["total_extra"].ToString()), Double.Parse(fila["total_doble"].ToString()),Double.Parse(fila["total_deduccion"].ToString()), Int32.Parse(fila["id_empleado"].ToString()), fila["estado"].ToString(),(DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), int.Parse(fila["id_pago"].ToString()));
+                        unificacion = new UnificacionENT(Int32.Parse(fila["id"].ToString()), DateTime.Parse(fila["fecha_inicio"].ToString()), DateTime.Parse(fila["fecha_fin"].ToString()), Double.Parse(fila["hora_regular"].ToString()), Double.Parse(fila["hora_extra"].ToString()), Double.Parse(fila["hora_doble"].ToString()), Double.Parse(fila["total_regular"].ToString()), Double.Parse(fila["total_extra"].ToString()), Double.Parse(fila["total_doble"].ToString()),Double.Parse(fila["total_deduccion"].ToString()), Int32.Parse(fila["id_empleado"].ToString()), fila["estado"].ToString(),(DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), /*(int?)(Object) fila["id_pago"].ToString()*/null);
                   
                     ListaUnificacion.Add(unificacion);
                 }

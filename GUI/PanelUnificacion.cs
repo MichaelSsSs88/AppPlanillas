@@ -138,7 +138,12 @@ namespace AppPlanillas.GUI
             }
             if (pestaña == 4)
             {
-                this.UnificacionENT = new UnificacionENT(Int32.Parse(entrada.Unificacion.ElementAt(0)), DateTime.Parse(entrada.Unificacion.ElementAt(3)), DateTime.Parse(entrada.Unificacion.ElementAt(4)), Double.Parse(entrada.Unificacion.ElementAt(5)), Double.Parse(entrada.Unificacion.ElementAt(6)), Double.Parse(entrada.Unificacion.ElementAt(7)), Double.Parse(entrada.Unificacion.ElementAt(8)), Double.Parse(entrada.Unificacion.ElementAt(9)), Double.Parse(entrada.Unificacion.ElementAt(10)), Double.Parse(entrada.Unificacion.ElementAt(11)), Int32.Parse(entrada.Unificacion.ElementAt(1)), entrada.Unificacion.ElementAt(12), DateTime.Now, "", DateTime.Now, "pedro", Int32.Parse(entrada.Unificacion.ElementAt(13)));
+                if(entrada.Unificacion.ElementAt(13)=="")
+                    this.UnificacionENT = new UnificacionENT(Int32.Parse(entrada.Unificacion.ElementAt(0)), DateTime.Parse(entrada.Unificacion.ElementAt(3)), DateTime.Parse(entrada.Unificacion.ElementAt(4)), Double.Parse(entrada.Unificacion.ElementAt(5)), Double.Parse(entrada.Unificacion.ElementAt(6)), Double.Parse(entrada.Unificacion.ElementAt(7)), Double.Parse(entrada.Unificacion.ElementAt(8)), Double.Parse(entrada.Unificacion.ElementAt(9)), Double.Parse(entrada.Unificacion.ElementAt(10)), Double.Parse(entrada.Unificacion.ElementAt(11)), Int32.Parse(entrada.Unificacion.ElementAt(1)), entrada.Unificacion.ElementAt(12), DateTime.Now, "", DateTime.Now, "pedro", null);
+                else
+                    this.UnificacionENT = new UnificacionENT(Int32.Parse(entrada.Unificacion.ElementAt(0)), DateTime.Parse(entrada.Unificacion.ElementAt(3)), DateTime.Parse(entrada.Unificacion.ElementAt(4)), Double.Parse(entrada.Unificacion.ElementAt(5)), Double.Parse(entrada.Unificacion.ElementAt(6)), Double.Parse(entrada.Unificacion.ElementAt(7)), Double.Parse(entrada.Unificacion.ElementAt(8)), Double.Parse(entrada.Unificacion.ElementAt(9)), Double.Parse(entrada.Unificacion.ElementAt(10)), Double.Parse(entrada.Unificacion.ElementAt(11)), Int32.Parse(entrada.Unificacion.ElementAt(1)), entrada.Unificacion.ElementAt(12), DateTime.Now, "", DateTime.Now, "pedro", Int32.Parse(entrada.Unificacion.ElementAt(13)));
+
+                this.txtEditarUnificacion.Text = entrada.Unificacion.ElementAt(0);
                 this.txtEditarUnificacion.Text = entrada.Unificacion.ElementAt(0);
                 this.txtEditarIdEmpleado.Text= entrada.Unificacion.ElementAt(1);
                 List<PuestoENT> puestoENT = new PuestoDAL().ObtenerPuestos("Código",(new EmpleadoDAL().ObtenerEmpleados("Cédula",entrada.Unificacion.ElementAt(1)).ElementAt(0).Id_Puesto).ToString());
@@ -225,7 +230,7 @@ namespace AppPlanillas.GUI
                 cedulas.Add(marca.IdEmpleado);
             }
 
-            this.dgvInsertar.DataSource=new Unificacion().Unificacione(cedulas.Distinct(), this.dtpInsertarFechaEntrada.Value, this.dtpInsertarFechaSalida.Value, marcas, "creador", "modificaa");
+            this.dgvInsertar.DataSource=new Unificacion().Unificacione(cedulas.Distinct(), this.dtpInsertarFechaEntrada.Value, this.dtpInsertarFechaSalida.Value, marcas, this.UnificacionENT.Nombre, this.UnificacionENT.modificadoPor);
             IEnumerable<int> DiferentesEmpleados = cedulas.Distinct();
 
         }
@@ -423,6 +428,9 @@ namespace AppPlanillas.GUI
                         if (usuario.Update)
                         {
                             this.UnificacionENT.estado = "aprobado";
+                            this.UnificacionENT.fechaModificacion = DateTime.Now;
+                            this.UnificacionENT.modificadoPor = this.UsuarioENT.Nombre;
+                           // MessageBox.Show("Unificacion aprobada, ya se encuentra lista para proceder con el pago", "Unificacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             this.txtEditarEstado.Text = this.UnificacionENT.estado;
                         }
                     }
@@ -430,7 +438,7 @@ namespace AppPlanillas.GUI
                     {
                         this.UnificacionENT.estado = "aprobado";
                         this.UnificacionENT.fechaModificacion = DateTime.Now;
-                        this.UnificacionENT.modificadoPor = "Carlitos";
+                        this.UnificacionENT.modificadoPor = this.UsuarioENT.Nombre;
                         new UnificacionDAL().EditarUnificacionQuitarMarca(this.UnificacionENT);
                         MessageBox.Show("Unificacion aprobada, ya se encuentra lista para proceder con el pago", "Unificacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         this.UnificacionENT.estado = "aprobado";
@@ -459,6 +467,8 @@ namespace AppPlanillas.GUI
                         if (usuario.Update)
                         {
                             this.UnificacionENT.estado = "generado";
+                            this.UnificacionENT.fechaModificacion = DateTime.Now;
+                            this.UnificacionENT.modificadoPor = this.UsuarioENT.Nombre;
                             this.txtEditarEstado.Text = this.UnificacionENT.estado;
                         }
                     }
@@ -466,7 +476,7 @@ namespace AppPlanillas.GUI
                     {
                         this.UnificacionENT.estado = "generado";
                         this.UnificacionENT.fechaModificacion = DateTime.Now;
-                        this.UnificacionENT.modificadoPor = "Juancito";
+                        this.UnificacionENT.modificadoPor = this.UsuarioENT.Nombre;
                         new UnificacionDAL().EditarUnificacionQuitarMarca(this.UnificacionENT);
                         MessageBox.Show("Unificacion reversada, ya se encuentra lista para proceder con modificaciones", "Unificacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         this.UnificacionENT.estado = "generado";

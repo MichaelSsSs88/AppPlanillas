@@ -609,7 +609,10 @@ namespace AppPlanillas.GUI
             this.Unificacion.Add(this.dgvConsultas.Rows[fila].Cells["total_doble"].Value.ToString());
             this.Unificacion.Add(this.dgvConsultas.Rows[fila].Cells["total_deduccion"].Value.ToString());
             this.Unificacion.Add(this.dgvConsultas.Rows[fila].Cells["estado"].Value.ToString());
-            this.Unificacion.Add(this.dgvConsultas.Rows[fila].Cells["id_pago"].Value.ToString());
+            if (this.dgvConsultas.Rows[fila].Cells["id_pago"].Value == null)
+                this.Unificacion.Add("");
+            else
+                this.Unificacion.Add(this.dgvConsultas.Rows[fila].Cells["id_pago"].Value.ToString());
             this.BotonPulsado();
             this.Close();
 

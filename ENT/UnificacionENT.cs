@@ -27,9 +27,9 @@ namespace ENT
         public DateTime fechaModificacion { get; set; }
         public string modificadoPor { get; set; }
         public List<MarcaENT> Marcas { get; set; }
-        public int IdPago { get; }
+        public int? IdPago { get; }
 
-        public UnificacionENT(int idUnificacion, DateTime fecha_inicio, DateTime fecha_fin, double hora_regular, double hora_extra, double hora_doble, double total_regular, double total_extra, double total_doble, double total_deduccion, int idEmpleado, string estado, DateTime fechaCreacion, string creadoPor, DateTime fechaModificacion, string modificadoPor, int idPago)
+        public UnificacionENT(int idUnificacion, DateTime fecha_inicio, DateTime fecha_fin, double hora_regular, double hora_extra, double hora_doble, double total_regular, double total_extra, double total_doble, double total_deduccion, int idEmpleado, string estado, DateTime fechaCreacion, string creadoPor, DateTime fechaModificacion, string modificadoPor, int? idPago)
         {
             this.idUnificacion = idUnificacion;
             this.fecha_inicio = fecha_inicio;
