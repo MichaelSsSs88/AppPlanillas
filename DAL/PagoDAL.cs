@@ -20,7 +20,7 @@ namespace DAL
                 AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
                 //conexion.IniciarTransaccion();
                 string sentenciaSQL = "INSERT INTO public.pago(fecha_inicio, fecha_fin, descripcion, total, fecha_creacion, creado_por, fecha_modificacion, modificado_por)" +
-                    "VALUES(@fecha_inicio, @fecha_fin, @hora_regular, @hora_extra, @hora_doble, @total_regular, @total_extra, @total_doble, @total_deduccion, @id_empleado, @id_pago, @estado, @fecha_creacion, @creado_por, @fecha_modificacion, @modificado_por) returning id;";
+                    "VALUES(@fecha_inicio, @fecha_fin, @descripcion, @total, @fecha_creacion, @creado_por, @fecha_modificacion, @modificado_por) returning id;";
                 parametros.AgregarParametro("@fecha_inicio", NpgsqlTypes.NpgsqlDbType.Timestamp, pPago.fecha_inicio);
                 parametros.AgregarParametro("@fecha_fin", NpgsqlTypes.NpgsqlDbType.Timestamp, pPago.fecha_fin);
                 parametros.AgregarParametro("@descripcion", NpgsqlTypes.NpgsqlDbType.Varchar, pPago.descripcion);

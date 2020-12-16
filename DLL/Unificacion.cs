@@ -125,15 +125,18 @@ namespace AppPlanillas.DLL
 
                     foreach (MarcaENT marca in marcas)
                     {
-                        /*
-                        if (marca.IdEmpleado == punificacionENT.idEmpleado)
-                        {
-                            marca.modificadoPor = punificacionENT.modificadoPor;
+                            marca.modificadoPor = pago.modificadoPor;
                             marca.fechaModificacion = DateTime.Now;
-                            marca.IdUnificacion = unificacion;
-                            marca.estado = "aplicado";
+                            marca.estado = "pagado";
                             new MarcaDAL().EditarMarcaDatosCompletos(marca);
-                        }*/
+                    }
+                    foreach (UnificacionENT unificacion in punificacionENT)
+                    {
+                        unificacion.modificadoPor = pago.modificadoPor;
+                        unificacion.fechaModificacion = DateTime.Now;
+                        unificacion.estado = "pagado";
+                        unificacion.IdPago = pagado;
+                        new UnificacionDAL().EditarUnificacionQuitarMarca(unificacion);
                     }
                     conexion.CommitTransaccion();
 
