@@ -453,6 +453,13 @@ namespace AppPlanillas
             this.OpenChildForm(new SubMenuFeriados(11, this));
 
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.CLoseChildFormContenedor();
+            this.CLoseChildForm();
+            this.OpenChildFormContenedor(new PanelPagos(this.UsuarioENT));
+        }
     }
 
 }

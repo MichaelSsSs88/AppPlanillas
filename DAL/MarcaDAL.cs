@@ -14,43 +14,48 @@ namespace DAL
         public List<MarcaENT> ObtenerMarcas(String fecha_inicio, String fecha_fin, string tipo_marca, int empleado, int departamento, string generado)
         {
             List<MarcaENT> ListaMarcas = new List<MarcaENT>();
+            Parametro parametros = new Parametro();
             string consulta = "select marca.* from marca join empleado on marca.id_empleado = empleado.id join puesto on puesto.id = empleado.id_puesto ";
             if (fecha_inicio != "" || fecha_fin != "" || tipo_marca != "" || empleado > 0 || departamento > 0 || generado != "")
             {
                 
                 if (fecha_inicio != "")
                 {
-                   
-                        if (tipo_marca == "Entrada")
+                    parametros.AgregarParametro("@fecha_inicio", NpgsqlTypes.NpgsqlDbType.Timestamp, DateTime.Parse(fecha_inicio));
+
+                    if (tipo_marca == "Entrada")
                         {
-                            consulta += "and marca.marca_inicio >='" + DateTime.Parse(fecha_inicio) + "'";
-                        }
+                            consulta += "and marca.marca_inicio >=@fecha_inicio";
+                           
+                    }
                         else if (tipo_marca == "Salida")
                         {
-                        consulta += "and marca.marca_final >='" + DateTime.Parse(fecha_inicio) + "'";
-                        }
+                        consulta += "and marca.marca_final >=@fecha_inicio";
+                        
+                    }
                         else
                         {
-                        consulta += "and marca.marca_inicio >'" + DateTime.Parse(fecha_inicio) + "'";
+                        consulta += "and marca.marca_inicio >=@fecha_inicio";
                         }   
                   
                 }
                 if (fecha_fin != "")
                 {
+                    parametros.AgregarParametro("@fecha_fin", NpgsqlTypes.NpgsqlDbType.Timestamp, DateTime.Parse(fecha_fin));
                     if (tipo_marca == "Entrada")
                     {
                         
-                            consulta += " and marca.marca_inicio <= '" + DateTime.Parse(fecha_fin) + "' ";
+                            consulta += " and marca.marca_inicio <=@fecha_fin";
                     }
                     else if (tipo_marca == "Salida")
                     {
                         
-                            consulta += " and marca.marca_final <= '" + DateTime.Parse(fecha_fin) + "' ";
+                            consulta += " and marca.marca_final <=@fecha_fin";
                     }
                     else
                     {
                         
-                            consulta += " and marca.marca_final <= '" + DateTime.Parse(fecha_fin) + "' ";
+                            consulta += " and marca.marca_final <=@fecha_fin";
                     }
                     
                     
@@ -78,7 +83,7 @@ namespace DAL
             try
             {
 
-                DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL(consulta);
+                DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL(consulta, parametros.ObtenerParametros());
                 foreach (DataRow fila in dsetClientes.Tables[0].Rows)
                 {
                     string str = fila["foto_inicio"].ToString();

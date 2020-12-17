@@ -8,7 +8,7 @@ namespace ENT
 {
     class PagoENT
     {
-        public int idPago { get; }
+        public int idPago { get; set; }
         public DateTime fecha_inicio { get; }
         public DateTime fecha_fin { get; }
 

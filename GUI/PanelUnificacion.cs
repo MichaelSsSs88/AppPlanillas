@@ -206,33 +206,42 @@ namespace AppPlanillas.GUI
 
         private void button4_Click(object sender, EventArgs e)
         {
-            List<MarcaENT> marcas = null;
-            switch (this.checkedListBox1.SelectedItem.ToString())
-            {  
-                
-                case "Empleado":
-                    marcas = new MarcaDAL().ObtenerMarcas(this.dtpInsertarFechaEntrada.Value.ToString("dd/MM/yyyy"), this.dtpInsertarFechaSalida.Value.ToString("dd/MM/yyyy"), "", Int32.Parse(this.txtInsertarBusqueda.Text), 0, "generado");
-                    break;
-                case "Departamento":
-                    marcas = new MarcaDAL().ObtenerMarcas(this.dtpInsertarFechaEntrada.Value.ToString("dd/MM/yyyy"), this.dtpInsertarFechaSalida.Value.ToString("dd/MM/yyyy"), "", 0, Int32.Parse(this.txtInsertarBusqueda.Text), "generado");
-                    break;
-            }
-            this.dgvInsertar.DataSource = marcas;
-
-            List<DeduccionENT> Deducciones = new DeduccionDAL().ObtenerDeducciones(-1,"");
-            List<HorarioENT> Horarios = new HorarioDAL().ObtenerHorarios(-1, "");
-            List<Dia_feriadoENT> Feriados = new Dia_feriadoDAL().ObtenerFeriados("Todos", "");
-            List<int> cedulas= new List<int>();
-            List<UnificacionENT> unificaciones = new List<UnificacionENT>();
-
-            foreach (MarcaENT marca in marcas)
+            if (this.checkedListBox1.SelectedItem != null)
             {
-                cedulas.Add(marca.IdEmpleado);
+                List<MarcaENT> marcas = null;
+                switch (this.checkedListBox1.SelectedItem.ToString())
+                {
+
+                    case "Empleado":
+                        marcas = new MarcaDAL().ObtenerMarcas(this.dtpInsertarFechaEntrada.Value.ToString("dd/MM/yyyy"), this.dtpInsertarFechaSalida.Value.ToString("dd/MM/yyyy"), "", Int32.Parse(this.txtInsertarBusqueda.Text), 0, "generado");
+                        break;
+                    case "Departamento":
+                        marcas = new MarcaDAL().ObtenerMarcas(this.dtpInsertarFechaEntrada.Value.ToString("dd/MM/yyyy"), this.dtpInsertarFechaSalida.Value.ToString("dd/MM/yyyy"), "", 0, Int32.Parse(this.txtInsertarBusqueda.Text), "generado");
+                        break;
+                }
+                this.dgvInsertar.DataSource = marcas;
+
+                List<DeduccionENT> Deducciones = new DeduccionDAL().ObtenerDeducciones(-1, "");
+                List<HorarioENT> Horarios = new HorarioDAL().ObtenerHorarios(-1, "");
+                List<Dia_feriadoENT> Feriados = new Dia_feriadoDAL().ObtenerFeriados("Todos", "");
+                List<int> cedulas = new List<int>();
+                List<UnificacionENT> unificaciones = new List<UnificacionENT>();
+
+                foreach (MarcaENT marca in marcas)
+                {
+                    cedulas.Add(marca.IdEmpleado);
+                }
+                Console.WriteLine(cedulas.Count());
+                //if(this.UnificacionENT!= null)
+                    this.dgvInsertar.DataSource = new Unificacion().Unificacione(cedulas.Distinct(), this.dtpInsertarFechaEntrada.Value, this.dtpInsertarFechaSalida.Value, marcas, this.UsuarioENT.Nombre, this.UsuarioENT.Nombre);
+                //else
+                    MessageBox.Show("Unificacion agregada correctamente", "Unificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                IEnumerable<int> DiferentesEmpleados = cedulas.Distinct();
             }
-
-            this.dgvInsertar.DataSource=new Unificacion().Unificacione(cedulas.Distinct(), this.dtpInsertarFechaEntrada.Value, this.dtpInsertarFechaSalida.Value, marcas, this.UnificacionENT.Nombre, this.UnificacionENT.modificadoPor);
-            IEnumerable<int> DiferentesEmpleados = cedulas.Distinct();
-
+            else
+            {
+                MessageBox.Show("Debe de seleccionar el tipo de unificacion a utilizar", "Unificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private string DiaSemana(DayOfWeek dow) 

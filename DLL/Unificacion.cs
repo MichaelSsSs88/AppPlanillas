@@ -44,8 +44,11 @@ namespace AppPlanillas.DLL
                         {
                             if (this.DiaSemana(marca.marcar_inicio.Value.DayOfWeek).CompareTo(horario.Dia) == 0)
                             {
-                                TimeSpan Horas1 = TimeSpan.Parse(marca.marcar_final.Value.ToString("HH:mm"));
-                                TimeSpan Horas2 = TimeSpan.Parse(marca.marcar_inicio.Value.ToString("HH:mm"));
+                                DateTime x = DateTime.Parse(marca.marcar_final.Value.ToString("HH:mm"));
+                                Console.WriteLine(x.ToString("HH:mm"));
+
+                                TimeSpan Horas1 = TimeSpan.Parse(x.ToString("HH:mm"));
+                                TimeSpan Horas2 = TimeSpan.Parse(DateTime.Parse(marca.marcar_inicio.Value.ToString()).ToString("HH:mm"));
                                 int Horas = Horas1.Hours - Horas2.Hours;
                                 
                                 if (Horas >= horario.Horas_Ordinarias)
@@ -84,7 +87,7 @@ namespace AppPlanillas.DLL
 
         public List<PagoENT> Pagos(IEnumerable<int> DiferentesEmpleados, DateTime fecha_inicio, DateTime fecha_fin, string descripcion, List<UnificacionENT> unificaciones, string creador, string modificador)
         {
-            List<PagoENT> pagoENTs= null;
+            List<PagoENT> pagoENTs= new List<PagoENT>();
             foreach(int empleado in DiferentesEmpleados)
             {
                 PagoENT pagoEmpleado = new PagoENT(-1, fecha_inicio, fecha_fin, descripcion, 0,DateTime.Now, "creador", DateTime.Now, "modificador");
@@ -104,7 +107,10 @@ namespace AppPlanillas.DLL
                     }
 
                 }
-                this.AgregarPago(pagoEmpleado, UnificacionAux, Marcas);
+                foreach(PagoENT pago in this.AgregarPago(pagoEmpleado, UnificacionAux, Marcas)){
+
+                    pagoENTs.Add(pago);
+                }
 
                 
             }
@@ -112,8 +118,9 @@ namespace AppPlanillas.DLL
             return pagoENTs;
         }
 
-        public void AgregarPago(PagoENT pago, List<UnificacionENT> punificacionENT, List<MarcaENT> marcas)
+        public List<PagoENT> AgregarPago(PagoENT pago, List<UnificacionENT> punificacionENT, List<MarcaENT> marcas)
         {
+            List<PagoENT> listaretorno = new List<PagoENT>();
             int numero = 0;
             try
             {
@@ -122,7 +129,8 @@ namespace AppPlanillas.DLL
                 {
                     conexion.IniciarTransaccion();
                     int pagado = new PagoDAL().AgregarPago(pago);
-
+                    pago.idPago = pagado;
+                    listaretorno.Add(pago);
                     foreach (MarcaENT marca in marcas)
                     {
                             marca.modificadoPor = pago.modificadoPor;
@@ -150,6 +158,45 @@ namespace AppPlanillas.DLL
             catch (Exception ex)
             {
                 throw ex;
+            }
+            return listaretorno;
+        }
+
+        public void AnularPago(int idPago, string modificador)
+        {
+            AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
+            try
+            {
+                conexion.IniciarTransaccion();
+                List<UnificacionENT> Unificacion = new UnificacionDAL().ObtenerUnificacion(idPago);
+                //List<MarcaENT> Marcas = new List<MarcaENT>();
+                foreach (UnificacionENT unificacion in Unificacion)
+                {
+                    if (unificacion.IdPago == idPago)
+                    {
+                        foreach (MarcaENT marca in new MarcaDAL().ObtenerMarcasUnificadas(unificacion.idUnificacion))
+                        {
+                            //Marcas.Add(marca);
+                            marca.estado = "aplicado";
+                            marca.fechaModificacion = DateTime.Now;
+                            marca.modificadoPor = modificador;
+                            new MarcaDAL().EditarMarcaEstadoUnificacio(marca);
+                        }
+                        unificacion.estado = "generado";
+                        unificacion.IdPago = null;
+                        unificacion.fechaModificacion = DateTime.Now;
+                        unificacion.modificadoPor = modificador;
+                        new UnificacionDAL().EditarUnificacionQuitarMarca(unificacion);
+                    }
+                }
+                new PagoDAL().EliminarPago(idPago);
+                conexion.CommitTransaccion();
+
+            }
+            catch (Exception e)
+            {
+                conexion.RollbackTransaccion();
+                throw e;
             }
         }
 

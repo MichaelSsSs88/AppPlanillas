@@ -265,6 +265,15 @@ namespace AppPlanillas.GUI
                 {
 
                 }
+                try
+                {
+                    ((PanelPagos)oyentepanelDeduccion).Clic(this, this.pestaña, 1);
+
+                }
+                catch
+                {
+
+                }
 
 
             }

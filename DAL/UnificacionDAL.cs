@@ -49,9 +49,39 @@ namespace AppPlanillas.DAL
             return numero;
         }
 
+        public List<UnificacionENT> ObtenerUnificacion(int IdPago)
+        {
+            List<UnificacionENT> ListaUnificacion = new List<UnificacionENT>();
+            try
+            {
+                Parametro parametros = new Parametro();
+                AccesoDatosPostgre conexion = AccesoDatosPostgre.Instance;
+                string consulta = "select UNIFICACION.* from UNIFICACION join empleado on UNIFICACION.id_empleado = empleado.id join puesto on puesto.id = empleado.id_puesto and UNIFICACION.id_pago=@id_pago";
+                parametros.AgregarParametro("@id_pago", NpgsqlTypes.NpgsqlDbType.Integer, IdPago);
+                DataSet dsetClientes = conexion.EjecutarConsultaSQL(consulta, parametros.ObtenerParametros());
+                foreach (DataRow fila in dsetClientes.Tables[0].Rows)
+                {
+                    UnificacionENT unificacion = null;
+
+                    if (fila["id_pago"] == null)
+                        unificacion = new UnificacionENT(Int32.Parse(fila["id"].ToString()), DateTime.Parse(fila["fecha_inicio"].ToString()), DateTime.Parse(fila["fecha_fin"].ToString()), Double.Parse(fila["hora_regular"].ToString()), Double.Parse(fila["hora_extra"].ToString()), Double.Parse(fila["hora_doble"].ToString()), Double.Parse(fila["total_regular"].ToString()), Double.Parse(fila["total_extra"].ToString()), Double.Parse(fila["total_doble"].ToString()), Double.Parse(fila["total_deduccion"].ToString()), Int32.Parse(fila["id_empleado"].ToString()), fila["estado"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), null);
+                    else
+                        unificacion = new UnificacionENT(Int32.Parse(fila["id"].ToString()), DateTime.Parse(fila["fecha_inicio"].ToString()), DateTime.Parse(fila["fecha_fin"].ToString()), Double.Parse(fila["hora_regular"].ToString()), Double.Parse(fila["hora_extra"].ToString()), Double.Parse(fila["hora_doble"].ToString()), Double.Parse(fila["total_regular"].ToString()), Double.Parse(fila["total_extra"].ToString()), Double.Parse(fila["total_doble"].ToString()), Double.Parse(fila["total_deduccion"].ToString()), Int32.Parse(fila["id_empleado"].ToString()), fila["estado"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), Int32.Parse(fila["id_pago"].ToString()));
+
+                    ListaUnificacion.Add(unificacion);
+                }
+            }
+            catch (Exception ex)
+            {
+                //throw ex;
+            }
+            return ListaUnificacion;
+            }
+
         public List<UnificacionENT> ObtenerUnificacion(String fecha_inicio, String fecha_fin, int empleado, int departamento, string generado)
         {
             List<UnificacionENT> ListaUnificacion = new List<UnificacionENT>();
+            Parametro parametros = new Parametro();
             string consulta = "select UNIFICACION.* from UNIFICACION join empleado on UNIFICACION.id_empleado = empleado.id join puesto on puesto.id = empleado.id_puesto ";
             if (fecha_inicio != "" || fecha_fin != "" || empleado > 0 || departamento > 0 || generado != "")
             {
@@ -59,13 +89,14 @@ namespace AppPlanillas.DAL
                 if (fecha_inicio != "")
                 {
 
-                   consulta += "and UNIFICACION.fecha_inicio >'" + DateTime.Parse(fecha_inicio) + "'";
-                    
+                   consulta += "and UNIFICACION.fecha_inicio >= @fecha_inicio";
+                   parametros.AgregarParametro("@fecha_inicio", NpgsqlTypes.NpgsqlDbType.Timestamp, DateTime.Parse(fecha_inicio));
 
                 }
                 if (fecha_fin != "")
                 {
-                        consulta += " and UNIFICACION.fecha_fin <= '" + DateTime.Parse(fecha_fin) + "' ";
+                        consulta += " and UNIFICACION.fecha_fin <= @fecha_fin";
+                        parametros.AgregarParametro("@fecha_fin", NpgsqlTypes.NpgsqlDbType.Timestamp, DateTime.Parse(fecha_fin));
 
 
                 }
@@ -92,13 +123,21 @@ namespace AppPlanillas.DAL
             try
             {
 
-                DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL(consulta);
+                DataSet dsetClientes = AccesoDatosPostgre.Instance.EjecutarConsultaSQL(consulta, parametros.ObtenerParametros());
                 foreach (DataRow fila in dsetClientes.Tables[0].Rows)
                 {
                         UnificacionENT unificacion = null;
-                    
-                        unificacion = new UnificacionENT(Int32.Parse(fila["id"].ToString()), DateTime.Parse(fila["fecha_inicio"].ToString()), DateTime.Parse(fila["fecha_fin"].ToString()), Double.Parse(fila["hora_regular"].ToString()), Double.Parse(fila["hora_extra"].ToString()), Double.Parse(fila["hora_doble"].ToString()), Double.Parse(fila["total_regular"].ToString()), Double.Parse(fila["total_extra"].ToString()), Double.Parse(fila["total_doble"].ToString()),Double.Parse(fila["total_deduccion"].ToString()), Int32.Parse(fila["id_empleado"].ToString()), fila["estado"].ToString(),(DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), /*(int?)(Object) fila["id_pago"].ToString()*/null);
-                  
+                    try
+                    {
+                        unificacion = new UnificacionENT(Int32.Parse(fila["id"].ToString()), DateTime.Parse(fila["fecha_inicio"].ToString()), DateTime.Parse(fila["fecha_fin"].ToString()), Double.Parse(fila["hora_regular"].ToString()), Double.Parse(fila["hora_extra"].ToString()), Double.Parse(fila["hora_doble"].ToString()), Double.Parse(fila["total_regular"].ToString()), Double.Parse(fila["total_extra"].ToString()), Double.Parse(fila["total_doble"].ToString()), Double.Parse(fila["total_deduccion"].ToString()), Int32.Parse(fila["id_empleado"].ToString()), fila["estado"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), Int32.Parse(fila["id_pago"].ToString()));
+
+
+                    }
+                    catch
+                    {
+                        unificacion = new UnificacionENT(Int32.Parse(fila["id"].ToString()), DateTime.Parse(fila["fecha_inicio"].ToString()), DateTime.Parse(fila["fecha_fin"].ToString()), Double.Parse(fila["hora_regular"].ToString()), Double.Parse(fila["hora_extra"].ToString()), Double.Parse(fila["hora_doble"].ToString()), Double.Parse(fila["total_regular"].ToString()), Double.Parse(fila["total_extra"].ToString()), Double.Parse(fila["total_doble"].ToString()), Double.Parse(fila["total_deduccion"].ToString()), Int32.Parse(fila["id_empleado"].ToString()), fila["estado"].ToString(), (DateTime)fila["fecha_creacion"], fila["creado_por"].ToString(), (DateTime)fila["fecha_modificacion"], fila["modificado_por"].ToString(), /*(int?)(Object) fila["id_pago"].ToString()*/null);
+
+                    }
                     ListaUnificacion.Add(unificacion);
                 }
             }
@@ -122,7 +161,7 @@ namespace AppPlanillas.DAL
                 string sentenciaSQL = "UPDATE unificacion SET  hora_regular=@hora_regular, hora_extra=@hora_extra, hora_doble=@hora_doble, total_regular=@total_regular, total_extra=@total_extra, total_doble=@total_doble,total_deduccion=@total_deduccion,estado=@estado, fecha_modificacion=@fecha_modificacion, modificado_por=@modificado_por, id_pago=@id_pago  WHERE id= @id";
 
                 //parametros.AgregarParametro("@fecha_inicio", NpgsqlTypes.NpgsqlDbType.Timestamp, pUnificacion.fecha_inicio);
-                //arametros.AgregarParametro("@fecha_fin", NpgsqlTypes.NpgsqlDbType.Timestamp, pUnificacion.fecha_fin);
+                //parametros.AgregarParametro("@fecha_fin", NpgsqlTypes.NpgsqlDbType.Timestamp, pUnificacion.fecha_fin);
                 parametros.AgregarParametro("@id", NpgsqlTypes.NpgsqlDbType.Integer, pUnificacion.idUnificacion);
                 parametros.AgregarParametro("@hora_regular", NpgsqlTypes.NpgsqlDbType.Double, pUnificacion.hora_regular);
                 parametros.AgregarParametro("@hora_extra", NpgsqlTypes.NpgsqlDbType.Double, pUnificacion.hora_extra);
